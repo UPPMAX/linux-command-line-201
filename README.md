@@ -30,7 +30,7 @@ Regular expressions       |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}
 Regular expressions       |Learners can use `grep` for pattern matching
 Links (hard/soft)         |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
 Archiving/Compressing data|Learners can compress and extract data, using `[tool to be decided]`
-.                         |Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)
+.                         |[?Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
 
 ## Curriculum overview
 
@@ -44,6 +44,7 @@ Archiving/Compressing data|Learners can compress and extract data, using `[tool 
 - Archiving/Compressing data. [to be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/5), but we have now:
     - (g)zip and tar
     - more?
+- [?Linux pipe](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
 
 ## References
 
