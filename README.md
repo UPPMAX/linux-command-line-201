@@ -7,14 +7,12 @@ UPPMAX is chosen for practical reasons unrelated to its importance.
 
 NAISS course on intermediate Bash/Linux.
 
-Preliminary estimated time [to be voted] hours
+Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2) hours
 
 ## Prerequisites
 
 - Basic linux:
-    - [to be voted]
-   - cd, pwd, ls, mv, rm, cp
-   - more??
+    - [to be voted](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
 
 ## Learning outcomes:
 
