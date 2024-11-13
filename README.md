@@ -11,9 +11,7 @@ Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_interme
 
 ## Prerequisites
 
-- Basic linux:
-    - [to be voted](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
-    - Possibly part of the stuff on [the basic Linux course that is also being prepared under NAISS](https://hpc2n.github.io/command-line-101/)
+- Knows the content o  [the basic Linux course that is also being prepared under NAISS](https://hpc2n.github.io/command-line-101/)
 
 ## Learning objectives
 
