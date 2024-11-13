@@ -20,9 +20,6 @@ Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediat
 
 ## Learning objectives
 
-[To be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/4),
-but here is a draft by RB:
-
 Curriculum item                                                                |Learning objective
 -------------------------------------------------------------------------------|-----------------------------------------------------
 Bash scripting                                                                 |Learners can use bash variables
