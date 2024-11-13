@@ -1,11 +1,12 @@
 # Intermediate Bash/Linux
 
 ```text
-This repository is part of UPPMAX until NAISS has its own GitHub account.
+This repository is part of UPPMAX
+until [some organisation] has its own GitHub account.
 UPPMAX is chosen for practical reasons unrelated to its importance.
 ```
 
-NAISS course on intermediate Bash/Linux.
+Course on intermediate Bash/Linux.
 
 Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2) (i.e. a full day or two half-days). Decided!
 
