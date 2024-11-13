@@ -11,7 +11,7 @@ Preliminary estimated time 6 hours (i.e. a full day or two half-days). Decided!
 
 ## Website 
 
-- We will use mkdocs. Decided!
+- [MkDocs](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/8)
 
 ## Prerequisites
 
