@@ -14,7 +14,7 @@ Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_interme
 - Basic linux:
     - [to be voted](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
 
-## Learning outcomes:
+## Learning objectives
 
 [To be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/4),
 but here is a draft by RB:
