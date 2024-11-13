@@ -15,7 +15,9 @@ Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediat
 
 ## Prerequisites
 
-[The Command Line 101 course content](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
+We [decided to](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1) use
+[The Command Line 101 course content](https://hpc2n.github.io/command-line-101/)
+as course prerequisite.
 
 ## Learning objectives
 
