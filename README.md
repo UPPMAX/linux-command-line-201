@@ -16,14 +16,21 @@ Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_interme
 
 ## Learning outcomes:
 
-- To be decided upon
-    - RB's suggestions, connected to `[Shotts, 2024]`:
-        - Learners can create symbolic links (3. Symbolic Links, p24)
-        - Learners can use `uniq` (6. uniq - Report or Omit Repeated Lines, p65)
-        - Learners can use `wc` (6. wc – Print Line, Word, and Byte Counts, p66)
-        - Learners can use `head` and `tail` (6. head / tail – Print First / Last Part of Files, p67)
-        - Learners can write basic regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
-        - Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)
+[To be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/4),
+but here is a draft by RB:
+
+Curriculum item           |Learning objective
+--------------------------|-----------------------------------------------------
+Bash scripting            |Learners can use bash variables
+Bash scripting            |Learners can use bash `if` statements
+Bash scripting            |Learners can use bash `for` statements
+Environment variables     |Learners can use environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
+Advanced redirect         |Learners can redirect output between the standard, error and log output streams
+Regular expressions       |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
+Regular expressions       |Learners can use `grep` for pattern matching
+Links (hard/soft)         |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
+Archiving/Compressing data|Learners can compress and extract data, using `[tool to be decided]`
+.                         |Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)
 
 ## Curriculum overview
 
