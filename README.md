@@ -19,18 +19,18 @@ Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_interme
 [To be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/4),
 but here is a draft by RB:
 
-Curriculum item           |Learning objective
---------------------------|-----------------------------------------------------
-Bash scripting            |Learners can use bash variables
-Bash scripting            |Learners can use bash `if` statements
-Bash scripting            |Learners can use bash `for` statements
-Environment variables     |Learners can use environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
-Advanced redirect         |Learners can redirect output between the standard, error and log output streams
-Regular expressions       |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
-Regular expressions       |Learners can use `grep` for pattern matching
-Links (hard/soft)         |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
-Archiving/Compressing data|Learners can compress and extract data, using `[tool to be decided]`
-.                         |[?Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
+Curriculum item                                                                |Learning objective
+-------------------------------------------------------------------------------|-----------------------------------------------------
+Bash scripting                                                                 |Learners can use bash variables
+Bash scripting                                                                 |Learners can use bash `if` statements
+Bash scripting                                                                 |Learners can use bash `for` statements
+Environment variables                                                          |Learners can use environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
+Advanced redirect                                                              |Learners can redirect output between the standard, error and log output streams
+Regular expressions                                                            |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
+Regular expressions                                                            |Learners can use `grep` for pattern matching
+Links (hard/soft)                                                              |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
+Archiving/Compressing data                                                     |Learners can compress and extract data, using `[tool to be decided]`
+[?Linux pipe](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)|[?Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
 
 ## Curriculum overview
 
@@ -41,7 +41,7 @@ Archiving/Compressing data|Learners can compress and extract data, using `[tool 
 - Advanced redirect 
 - Regular expressions 
 - Links (hard/soft) 
-- Archiving/Compressing data. [to be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/5), but we have now:
+- Archiving/Compressing data. [to be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/5), this is what we have now:
     - (g)zip and tar
     - more?
 - [?Linux pipe](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
