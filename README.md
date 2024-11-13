@@ -8,7 +8,7 @@ UPPMAX is chosen for practical reasons unrelated to its importance.
 
 Course on intermediate Bash/Linux.
 
-Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2) (i.e. a full day or two half-days). Decided!
+Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2) (i.e. a full day or two half-days).
 
 ## Website 
 
