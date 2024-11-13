@@ -24,7 +24,7 @@ Curriculum item                                                                |
 Bash scripting                                                                 |Learners can use bash variables
 Bash scripting                                                                 |Learners can use bash `if` statements
 Bash scripting                                                                 |Learners can use bash `for` statements
-Environment variables                                                          |Learners can use environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
+Environment variables                                                          |Learners can create, read and write to environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
 Advanced redirect                                                              |Learners can redirect output between the standard, error and log output streams
 Regular expressions                                                            |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
 Regular expressions                                                            |Learners can use `grep` for pattern matching
