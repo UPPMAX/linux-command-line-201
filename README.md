@@ -1,17 +1,22 @@
-# naiss_advanced_linux
+# Intermediate Bash/Linux
 
 ```text
 This repository is part of UPPMAX until NAISS has its own GitHub account.
 UPPMAX is chosen for practical reasons unrelated to its importance.
 ```
 
-NAISS course about advanced Linux
-- 
+NAISS course on intermediate Bash/Linux.
+
+Preliminary estimated time [to be voted] hours
+
 ## Prerequisites
 
-- To be decided by vote
+- Basic linux:
+    - [to be voted]
+   - cd, pwd, ls, mv, rm, cp
+   - more??
 
-## Learning outcomes
+## Learning outcomes:
 
 - To be decided upon
     - RB's suggestions, connected to `[Shotts, 2024]`:
@@ -21,6 +26,17 @@ NAISS course about advanced Linux
         - Learners can use `head` and `tail` (6. head / tail – Print First / Last Part of Files, p67)
         - Learners can write basic regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
         - Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)
+
+## Curriculum overview
+
+- Bash scripting 
+- Environment variables 
+- Advanced redirect 
+- Regular expressions 
+- Links (hard/soft) 
+- Archiving/Compressing data
+    - (g)zip and tar
+    - more?
 
 ## References
 
