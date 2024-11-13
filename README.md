@@ -15,8 +15,7 @@ Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediat
 
 ## Prerequisites
 
-- Basic linux:
-    - We will use the Command Line 101 course content as prereqisite. Decided!
+[The Command Line 101 course content](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
 
 ## Learning objectives
 
