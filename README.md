@@ -41,7 +41,7 @@ Archiving/Compressing data|Learners can compress and extract data, using `[tool 
 - Advanced redirect 
 - Regular expressions 
 - Links (hard/soft) 
-- Archiving/Compressing data
+- Archiving/Compressing data. [to be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/5), but we have now:
     - (g)zip and tar
     - more?
 
