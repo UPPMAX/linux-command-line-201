@@ -38,7 +38,7 @@ Regular expressions                                                            |
 Links (hard/soft)                                                              |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
 Archiving/Compressing data                                                     |Learners can compress and extract data, using `[tool to be decided]`
 Linux pipe                                                                     |[Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
-Finding information                                                            |[Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7) 
+Finding information                                                            |[Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)
 Quality of life                                                                |Learners can start a background process with `&` and terminate it
 Quality of life                                                                |Terminal shortcuts/usage
 Quality of life                                                                |Editing a `.bashrc`
