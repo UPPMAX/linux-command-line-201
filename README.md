@@ -27,6 +27,8 @@ Preliminary estimated time [to be voted](https://github.com/UPPMAX/naiss_interme
 
 ## Curriculum overview
 
+[To be decided upon](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/3), but here is the current list:
+
 - Bash scripting 
 - Environment variables 
 - Advanced redirect 
