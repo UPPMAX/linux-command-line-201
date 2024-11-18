@@ -5,7 +5,7 @@ site_dir: site.build
 theme:
   name: readthedocs
   locale: en
-  logo: images/bash-script.sh
+  logo: images/bash-script.png
     #  static_templates:
     #- sitemap.html
   include_sidebar: true
