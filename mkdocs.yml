@@ -1,0 +1,79 @@
+site_name: Intermediate bash/Linux 
+site_url: https://uppmax.github.io/naiss_intermediate_bash_linux 
+site_description: Material for the course Intermediate bash/Linux
+site_dir: site.build
+theme:
+  name: readthedocs
+  locale: en
+  logo: images/bash-script.sh
+    #  static_templates:
+    #- sitemap.html
+  include_sidebar: true
+  font:
+    code: Robot Mono
+  features:
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  tabs: true
+  language: en
+extra_css:
+  - css/extra.css
+    #extra_javascript:
+    #  - js/popper.min.js
+    #  - js/tippy-bundle.umd.js
+    #  - js/clipboard.js
+
+nav:
+  - Home: index.md
+  - Introduction: intro.md
+  - Environment variables: env-vars.md
+  - Regular expressions: reg-exp.md
+  - Redirects: redirects.md
+  - Symbolic links: symlinks.md
+  - Archiving/compressing data: arch.md
+  - Pipes: pipes.md 
+  - Quality of life: qual.md
+  - Linux tools: tools.md
+  - Scripting: scripting.md 
+  - Summary: summary.md
+  - Extras: 
+    - More scripting: more-script.md
+plugins:
+  - search
+  - external-markdown
+  - mkdocstrings
+  - markdown-exec
+  - open-in-new-tab
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - smarty
+  - pymdownx.details
+  - pymdownx.superfences
+  - codehilite
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      separator: "__"
