@@ -21,6 +21,8 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   tabs: true
   language: en
 extra_css:
