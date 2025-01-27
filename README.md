@@ -20,7 +20,7 @@ We [decided to](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1
 [The Command Line 101 course content](https://hpc2n.github.io/command-line-101/)
 as course prerequisite.
 
-## Learning objectives
+## Learning outcomes
 
 Curriculum item                                                                |Learning objective
 -------------------------------------------------------------------------------|-----------------------------------------------------
