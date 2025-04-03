@@ -12,13 +12,6 @@ Course on intermediate Bash/Linux, with an estimated duration of
 
 - [Go to the nicely rendered website of this course](https://uppmax.github.io/naiss_intermediate_bash_linux/index.md)
 
-## Prerequisites
-
-We [decided](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1)
-to use
-[The Command Line 101 course content](https://hpc2n.github.io/linux-command-line-101/)
-as course prerequisite.
-
 ## Learning outcomes
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->

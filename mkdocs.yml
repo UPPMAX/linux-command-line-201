@@ -38,6 +38,7 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Prerequisites: prerequisites.md
   - Introduction: intro.md
   - Environment variables: env-vars.md
   - Regular expressions: reg-exp.md
