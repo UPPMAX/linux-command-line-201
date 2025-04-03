@@ -15,6 +15,6 @@ tags:
 
 Week|Date                     |Time      |Registration closes
 ----|-------------------------|----------|-------------------
-?   |?                        |?         |?                  
+?   |?                        |?         |?
 
 <!-- markdownlint-enable MD013 -->

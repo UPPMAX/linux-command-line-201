@@ -39,6 +39,8 @@ extra_css:
 nav:
   - Home: index.md
   - Learning outcomes: learning_outcomes.md
+  - Course dates: course_dates.md
+  - Schedule: schedule.md
   - Prerequisites: prerequisites.md
   - Introduction: intro.md
   - Environment variables: env-vars.md
