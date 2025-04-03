@@ -6,13 +6,11 @@ until [some organisation] has its own GitHub account.
 UPPMAX is chosen for practical reasons unrelated to its importance.
 ```
 
-Course on intermediate Bash/Linux.
+Course on intermediate Bash/Linux, with an estimated duration of
+[6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2)
+(i.e. a full day or two half-days).
 
-Preliminary estimated time [6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2) (i.e. a full day or two half-days).
-
-## Website 
-
-- [MkDocs](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/8)
+- [Go to the nicely rendered website of this course](https://uppmax.github.io/naiss_intermediate_bash_linux)
 
 ## Prerequisites
 
@@ -21,6 +19,8 @@ We [decided to](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/1
 as course prerequisite.
 
 ## Learning outcomes
+
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
 Curriculum item                                                                |Learning objective
 -------------------------------------------------------------------------------|-----------------------------------------------------
@@ -46,6 +46,8 @@ Linux tools                                                                    |
 Linux tools                                                                    |`dos2unix`, `unix2dos`
 Linux tools                                                                    |`wc`
 
+<!-- markdownlint-enable MD013 -->
+
 Basic:
 
 - Using tab for autocomplete
@@ -54,14 +56,13 @@ Basic:
 - `cat`
 - `nano`
 
-
 ## Curriculum overview
 
-- Bash scripting 
-- Environment variables 
-- Advanced redirect 
-- Regular expressions 
-- Links (hard/soft) 
+- Bash scripting
+- Environment variables
+- Advanced redirect
+- Regular expressions
+- Links (hard/soft)
 - Archiving/Compressing data
 - [Linux pipe](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6)
 
