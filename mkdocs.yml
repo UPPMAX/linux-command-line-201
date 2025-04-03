@@ -1,5 +1,7 @@
 site_name: Intermediate bash/Linux 
 site_url: https://uppmax.github.io/naiss_intermediate_bash_linux
+edit_uri: blob/main/docs/
+
 site_description: Material for the course Intermediate bash/Linux
 site_dir: site.build
 
