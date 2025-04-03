@@ -43,8 +43,8 @@ nav:
   - Schedule: schedule.md
   - Prerequisites: prerequisites.md
   - Introduction: intro.md
-  - Environment variables: env-vars.md
-  - Regular expressions: reg-exp.md
+  - Environment variables: env_vars.md
+  - Regular expressions: reg_exp.md
   - Redirects: redirects.md
   - Symbolic links: symlinks.md
   - Archiving/compressing data: arch.md
@@ -54,7 +54,7 @@ nav:
   - Scripting: scripting.md 
   - Summary: summary.md
   - Extras: 
-    - More scripting: more-script.md
+    - More scripting: more_script.md
     - Books: books/README.md
 
 plugins:
