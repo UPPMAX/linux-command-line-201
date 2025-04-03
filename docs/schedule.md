@@ -12,6 +12,8 @@ tags:
 
 ???- question "For teachers"
 
+    <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
     Here is our current idea of who teaches what for how long:
 
     Topic                              |Estimated duration (minutes) |Volunteer(s) to teach this
@@ -29,6 +31,8 @@ tags:
     Archiving/Compressing              |30                           |BC
     Quality of life                    |60                           |BC
     Total                              |435 (= 7.25 hours)           |All
+
+    <!-- markdownlint-enable MD013 -->
 
 ## Morning 1: smarter command-line
 
@@ -50,6 +54,8 @@ Time        | Topic                                         |Teacher
 11:00-11:15 |Break                                          |
 11:15-12:00 |Quality of life                                |BC
 
-Removed:
+???- question "For teachers"
 
-- Archiving/Compressing
+    These are the topics not in the schedule:
+
+    - Archiving/Compressing
