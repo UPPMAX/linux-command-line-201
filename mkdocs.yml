@@ -38,6 +38,7 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Learning outcomes: learning_outcomes.md
   - Prerequisites: prerequisites.md
   - Introduction: intro.md
   - Environment variables: env-vars.md
