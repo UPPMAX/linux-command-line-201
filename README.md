@@ -1,13 +1,33 @@
 # Intermediate Bash/Linux
 
+<!-- markdownlint-disable MD013 --><!-- Badges cannot be split up over lines, hence will break 80 characters per line -->
+
+[![Check links](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_links.yaml)
+[![Check markdown](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_markdown.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_markdown.yaml)
+[![Check spelling](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_spelling.yaml)
+[![Create website](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_website.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_website.yaml)
+
+<!-- markdownlint-enable MD013 -->
+
 ```text
 This repository is part of UPPMAX
 until [some organisation] has its own GitHub account.
 UPPMAX is chosen for practical reasons unrelated to its importance.
 ```
 
-Course on intermediate Bash/Linux, with an estimated duration of
-[6 hours](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/2)
-(i.e. a full day or two half-days).
-
 - [Go to the nicely rendered website of this course](https://uppmax.github.io/naiss_intermediate_bash_linux)
+
+## Files used by continuous integration scripts
+
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+Filename                                  |Description
+------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------
+[mlc_config.json](mlc_config.json)        |Configuration of the link checker, use `markdown-link-check --config mlc_config.json --quiet docs/**/*.md` to do link checking locally
+[.spellcheck.yml](.spellcheck.yml)        |Configuration of the spell checker, use `pyspelling -c .spellcheck.yml` to do spellcheck locally
+[.wordlist.txt](.wordlist.txt)            |Whitelisted words for the spell checker, use `pyspelling -c .spellcheck.yml` to do spellcheck locally
+[.markdownlint.jsonc](.markdownlint.jsonc)|Configuration of the markdown linter, use `markdownlint "**/*.md"` to do markdown linting locally. The name of this file is a default name.
+[.markdownlintignore](.markdownlintignore)|Files ignored by the markdown linter, use `markdownlint "**/*.md"` to do markdown linting locally. The name of this file is a default name.
+
+<!-- markdownlint-enable MD013 -->
+
