@@ -52,10 +52,4 @@ Time        | Topic                                         |Teacher
 10:00-10:15 |Break                                          |.
 10:15-11:00 |Advanced redirect, environment variables, links|BB
 11:00-11:15 |Break                                          |.
-11:15-12:00 |Quality of life                                |BC
-
-???- question "For teachers"
-
-    These are the topics not in the schedule:
-
-    - Archiving/Compressing
+11:15-12:00 |Quality of life, compressing                   |BC
