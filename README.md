@@ -32,7 +32,7 @@ Bash scripting                                                                 |
 Bash scripting                                                                 |Learners can write scripts that require user input
 Environment variables                                                          |Learners can create, read and write to environment variables (e.g. `[Shotts, 2024]`, chapter 25, p390)
 Advanced redirect                                                              |Learners can redirect output between the standard, error and log output streams
-Regular expressions                                                            |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onwards)(or any regex course)
+Regular expressions                                                            |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onward)(or any regex course)
 Regular expressions                                                            |Learners can use `grep` for pattern matching
 Regular expressions                                                            |Learners can use `sed` for pattern matched replacing
 Links (hard/soft)                                                              |Learners can create soft and hard symbolic links (e.g. `[Shotts, 2024]`, '3. Symbolic Links', p24)
