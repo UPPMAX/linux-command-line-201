@@ -1,7 +1,8 @@
 site_name: Intermediate bash/Linux 
-site_url: https://uppmax.github.io/naiss_intermediate_bash_linux 
+site_url: https://uppmax.github.io/naiss_intermediate_bash_linux
 site_description: Material for the course Intermediate bash/Linux
 site_dir: site.build
+
 theme:
   name: readthedocs
   locale: en
@@ -25,6 +26,7 @@ theme:
     - content.action.view
   tabs: true
   language: en
+
 extra_css:
   - css/extra.css
     #extra_javascript:
@@ -47,6 +49,7 @@ nav:
   - Summary: summary.md
   - Extras: 
     - More scripting: more-script.md
+
 plugins:
   - search
   - external-markdown
