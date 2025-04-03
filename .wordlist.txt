@@ -1,2 +1,14 @@
+config
+json
+jsonc
+linter
+markdownlint
+markdownlintignore
+mlc
+txt
+wordlist
+yml
+
 autocomplete
 Shotts
+pdf
