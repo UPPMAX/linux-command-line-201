@@ -55,6 +55,7 @@ nav:
   - Summary: summary.md
   - Extras: 
     - More scripting: more-script.md
+    - Books: books/README.md
 
 plugins:
   - search
