@@ -1,6 +1,5 @@
-# This is a basic workflow for the Actions
-
-name: CI
+# Creates and deploys the rendered website version of this repository
+name: Create website
 
 # Controls when the workflow will run
 on:
@@ -19,8 +18,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
-  deploy:
+  # This workflow contains a single job called "create_website"
+  create_website:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
