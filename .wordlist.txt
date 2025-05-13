@@ -30,3 +30,7 @@ ReadTheDocs
 Repo
 UPPMAX
 uppmax
+lunarc
+mins
+ToDos
+QoL
