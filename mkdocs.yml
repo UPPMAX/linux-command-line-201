@@ -37,22 +37,27 @@ extra_css:
     #  - js/clipboard.js
 
 nav:
-  - Home: index.md
-  - Learning outcomes: learning_outcomes.md
-  - Course dates: course_dates.md
-  - Schedule: schedule.md
-  - Prerequisites: prerequisites.md
-  - Introduction: sessions/intro.md
-  - Environment variables: sessions/env_vars.md
-  - Regular expressions: sessions/reg_exp.md
-  - Redirects: sessions/redirects.md
-  - Symbolic links: sessions/symlinks.md
-  - Archiving/compressing data: sessions/arch.md
-  - Pipes: sessions/pipes.md 
-  - Quality of life: sessions/qual.md
-  - Linux tools: sessions/tools.md
-  - Scripting: sessions/scripting.md 
-  - Summary: summary.md
+  - Common:
+    - Home: index.md
+    - Learning outcomes: learning_outcomes.md
+    - Course dates: course_dates.md
+    - Schedule: schedule.md
+    - Prerequisites: prerequisites.md
+  - Lessons Day 1 (smarter command line): 
+    - Introduction: sessions/intro.md
+    - Linux pipe: sessions/pipe.md
+    - Linux tools I (wc, cut): sessions/wc-cut.md
+    - Linux tools II (grep): sessions/grep.md
+    - Linux tools III (awk, sed): sessions/awk-sed.md
+  - Lessons Day 2 (smarter bash): 
+    - Scripting: sessions/scripting.md
+    - Redirects: sessions/redirects.md
+    - Environment variables: sessions/env_vars.md
+    - Symbolic links: sessions/symlinks.md
+    - Regular expressions: sessions/reg_exp.md
+    - Quality of life: sessions/qual.md
+    - Archiving/compressing data: sessions/arch.md
+    - Summary: summary.md
   - Extras: 
     - More scripting: more_script.md
     - Books: books/README.md
