@@ -46,9 +46,9 @@ nav:
   - Lessons Day 1 (smarter command line): 
     - Introduction: sessions/intro.md
     - Linux pipe: sessions/pipe.md
-    - Linux tools I (wc, cut): sessions/wc-cut.md
+    - Linux tools I (wc, cut): sessions/wc_cut.md
     - Linux tools II (grep): sessions/grep.md
-    - Linux tools III (awk, sed): sessions/awk-sed.md
+    - Linux tools III (awk, sed): sessions/awk_sed.md
   - Lessons Day 2 (smarter bash): 
     - Scripting: sessions/scripting.md
     - Redirects: sessions/redirects.md
