@@ -29,24 +29,26 @@ Using a pipe between two or more commands look like this:
 
 We will use a number of Linux commands in this section for illustrating how pipes work. They were all covered in the Basic Linux course and are listed in prerequisites, but here is a brief reminder of their function: 
 
-- **less**: forward and backward navigation and also has search options. Usage ``less FILE``. Exit with: ``q``
-- **more**: forward navigation and limited backward navigation in a file named FILE. Usage: ``more FILE``. Exit with: ``q`` 
-- **cat**: a tool for file-related operations (view, concatenate, create, copy, merge, and manipulate file contents). Usage: ``cat [option] FILE`` where option is various optional options
-- **find**: The find command is used for file and directory search. You can search by name, size, modification time, or content. Usage: ``find [path] [options] [expression]`` where common options are 
-    - **-type f**: only search for files
-    - **-type d**: only search for directories
-    - **-name NAME**: only search for files with a specific name NAME or pattern
-    - **-size [+/-]n**: Searches for files based on size. +n finds larger files, -n finds smaller files. ‘n‘ measures size in characters.
-    - **-mtime n**: Finds files based on modification time. n represents the number of days ago.
-    - **-exec command {} \;**: Executes a command on each file found.
-- **sort**: The sort command is used in Linux to print the output of a file in given order.
-    - **-n**: compare according to string numerical value
-    - **-f**: ignore case
-    - **-b**: ignore leading blanks
-    - **-k keydef**: by size where keydef is start and stop position 
-- **head**: prints the first lines of a file. Usage: ``head -n FILE``
-- **tail**: prints the lines at the end of a file. Usage: ``tail -n FILE``
-- **echo**: displays lines of text or strings that are passed as arguments. Usage: ``echo [option] [string]`` 
+??? note "Click to reveal" 
+
+    - **less**: forward and backward navigation and also has search options. Usage ``less FILE``. Exit with: ``q``
+    - **more**: forward navigation and limited backward navigation in a file named FILE. Usage: ``more FILE``. Exit with: ``q`` 
+    - **cat**: a tool for file-related operations (view, concatenate, create, copy, merge, and manipulate file contents). Usage: ``cat [option] FILE`` where option is various optional options
+    - **find**: The find command is used for file and directory search. You can search by name, size, modification time, or content. Usage: ``find [path] [options] [expression]`` where common options are 
+        - **-type f**: only search for files
+        - **-type d**: only search for directories
+        - **-name NAME**: only search for files with a specific name NAME or pattern
+        - **-size [+/-]n**: Searches for files based on size. +n finds larger files, -n finds smaller files. ‘n‘ measures size in characters.
+        - **-mtime n**: Finds files based on modification time. n represents the number of days ago.
+        - **-exec command {} \;**: Executes a command on each file found.
+    - **sort**: The sort command is used in Linux to print the output of a file in given order.
+        - **-n**: compare according to string numerical value
+        - **-f**: ignore case
+        - **-b**: ignore leading blanks
+        - **-k keydef**: by size where keydef is start and stop position 
+    - **head**: prints the first lines of a file. Usage: ``head -n FILE``
+    - **tail**: prints the lines at the end of a file. Usage: ``tail -n FILE``
+    - **echo**: displays lines of text or strings that are passed as arguments. Usage: ``echo [option] [string]`` 
 
 ## Examples of piping 
 
