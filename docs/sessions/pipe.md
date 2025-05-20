@@ -28,6 +28,7 @@ Using a pipe between two or more commands look like this:
 ## Some commands 
 
 We will use a number of Linux commands in this section for illustrating how pipes work. They were all covered in the Basic Linux course and are listed in prerequisites, but here is a brief reminder of their function: 
+
 - **less**: forward and backward navigation and also has search options. Usage ``less FILE``. Exit with: ``q``
 - **more**: forward navigation and limited backward navigation in a file named FILE. Usage: ``more FILE``. Exit with: ``q`` 
 - **cat**: a tool for file-related operations (view, concatenate, create, copy, merge, and manipulate file contents). Usage: ``cat [option] FILE`` where option is various optional options
