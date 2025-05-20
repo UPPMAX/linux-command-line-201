@@ -12,3 +12,7 @@ We assume you know that:
 - `cat` shows text
 - `less` and `more` show scrollable text
 - `nano` is a text editor
+- the command `find` is used for file and directory search.
+- `sort` is a command that is used in Linux to print the output of a file in given order.
+- `head` is used to print the first lines of a file
+- `tail` prints the lines at the end of a file   
