@@ -42,16 +42,16 @@ nav:
   - Course dates: course_dates.md
   - Schedule: schedule.md
   - Prerequisites: prerequisites.md
-  - Introduction: intro.md
-  - Environment variables: env_vars.md
-  - Regular expressions: reg_exp.md
-  - Redirects: redirects.md
-  - Symbolic links: symlinks.md
-  - Archiving/compressing data: arch.md
-  - Pipes: pipes.md 
-  - Quality of life: qual.md
-  - Linux tools: tools.md
-  - Scripting: scripting.md 
+  - Introduction: sessions/intro.md
+  - Environment variables: sessions/env_vars.md
+  - Regular expressions: sessions/reg_exp.md
+  - Redirects: sessions/redirects.md
+  - Symbolic links: sessions/symlinks.md
+  - Archiving/compressing data: sessions/arch.md
+  - Pipes: sessions/pipes.md 
+  - Quality of life: sessions/qual.md
+  - Linux tools: sessions/tools.md
+  - Scripting: sessions/scripting.md 
   - Summary: summary.md
   - Extras: 
     - More scripting: more_script.md
