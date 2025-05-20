@@ -1,3 +1,3 @@
 # Archiving
 
-## (g)zip and tar 
+## (g)zip and tar
