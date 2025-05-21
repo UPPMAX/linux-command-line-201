@@ -77,7 +77,13 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     $ ls -l | sort -k 5
     ```
 
-    Of course, sorting files by size could also be done with ``ls -l -S`` but then you would have less control of how it was sorted (largest file first, sorted in lexicographical order). If you want to sort file size in reverse order you can do it like this: 
+    ![ls-l-sort](../images/ls-l-sort.png)
+
+    Of course, sorting files by size could also be done with ``ls -l -S`` but then you would have less control of how it was sorted (largest file first, sorted in lexicographical order). 
+
+    ![ls-l-S](../images/ls-l-S.png)
+
+    If you want to sort file size in reverse order you can do it like this: 
 
     ```bash
     $ ls -l -S | sort -k 5 n
@@ -85,7 +91,13 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
 
 !!! note "Using two pipes: head and tail to print lines in specific range in a file" 
 
-    $ cat sample2.txt | head -7 | tail -5
+    ```bash
+    $ cat newfile.txt | head -2 | tail -3
+    ```
+
+    Output (also showing the output of cat itself so you can see the file content): 
+
+    ![cat-head-tail](../images/cat-head-tail) 
 
 ### 
 
