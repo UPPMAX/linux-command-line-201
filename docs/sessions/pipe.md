@@ -52,11 +52,24 @@ We will use a number of Linux commands in this section for illustrating how pipe
 
 ## Examples of piping 
 
-### List all files and directories and give as input to `more` 
+!!! hit 
 
-```bash
-$ ls -l | more 
-```
+    "Type along! 
+
+To run the examples, go to the "exercises" -> "piping-wc-cut" directory where there are files that are suitable to run these examples on. 
+
+!!! note "List all files and directories and give as input to `more`" 
+
+    This is useful if there are many files in the directory and you would like to see them/scroll through them. 
+
+    ```bash
+    $ ls -l | more 
+    ```
+
+    Output: 
+
+    ![ls-more](../images/ls-more.png)
+
 
 ### Sort a list of files by size 
 
