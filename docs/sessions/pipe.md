@@ -46,19 +46,21 @@ We will use a number of Linux commands in this section for illustrating how pipe
         - **-f**: ignore case
         - **-b**: ignore leading blanks
         - **-k keydef**: by size where keydef is start and stop position 
-    - **head**: prints the first lines of a file. Usage: ``head -n FILE``
+        - **-r**: reverse 
+   - **head**: prints the first lines of a file. Usage: ``head -n FILE``
     - **tail**: prints the lines at the end of a file. Usage: ``tail -n FILE``
     - **echo**: displays lines of text or strings that are passed as arguments. Usage: ``echo [option] [string]`` 
-
+   - **tee**: Copy standard input to each file and also to standatd output. Usage: ``tee [option] ... [file1] [file2] ... ``
+   
 ## Examples of piping 
 
 !!! hint 
 
-    "Type along! 
+    Type along! 
 
 To run the examples, go to the "exercises" -> "piping-wc-cut" directory where there are files that are suitable to run these examples on. 
 
-!!! note "List all files and directories and give as input to `more`" 
+!!! note "Using one pipe: List all files and directories and give as input to `more`" 
 
     This is useful if there are many files in the directory and you would like to see them/scroll through them. 
 
@@ -71,7 +73,7 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     ![ls-more](../images/ls-more.png)
 
 
-!!! note "Sort a list of files by size" 
+!!! note "Using one pipe: Sort a list of files by size" 
 
     ```bash
     $ ls -l | sort -k 5
@@ -89,6 +91,27 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     $ ls -l -S | sort -k 5 n
     ```
 
+!!! note "Using one pipe: echo and sort"
+
+    I write a couple lines which I echo, then I sort the output
+
+    ```bash
+    $ echo "This is a line of text, which I am writing
+    > I am continuing to write another line
+    > and another line" | sort
+    ```
+
+    It will look like this:
+
+    ```bash
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ echo "This is a line of text, which I am writing
+    > I am continuing to write another line
+    > and another line" | sort
+    and another line
+    I am continuing to write another line
+    This is a line of text, which I am writing
+    ```
+
 !!! note "Using two pipes: head and tail to print lines in specific range in a file" 
 
     ```bash
@@ -97,41 +120,70 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
 
     Output (also showing the output of cat itself so you can see the file content): 
 
-    ![cat-head-tail](../images/cat-head-tail) 
+    ![cat-head-tail](../images/cat-head-tail.png) 
 
-### 
+!!! note "Using two pipes: head and tail to print lines of the output from the ls command" 
 
-find  $HOME/exercises/script/image -type f -name "*.png" -exec cp {} myimages \;   
-find myimages -type f -name "*er*"
+   ```bash
+   ls | head -3 | tail -1
+   ```
+
+   Output: 
+
+   ```bash
+   bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls
+   ada       fil4.txt           myfile0.txt  thisfile0.txt  thisfile7.txt
+   afa       file.c             myfile1.txt  thisfile1.txt  thisfile8.txt
+   aja       file.dat           myfile2.txt  thisfile2.txt  thisfile9.txt
+   ama       file_filtered.dat  myfile3.txt  thisfile3.txt  thisfile.txt
+   amina     file.txt           myfiles.txt  thisfile4.txt
+   fil2.txt  fil.txt            newfile.txt  thisfile5.txt
+   fil3.txt  image              numbers.txt  thisfile6.txt
+   bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls | head -3 | tail -1
+   aja
+   bbrydsoe@enterprise:~/exercises/piping-wc-cut$
+   ```
+
+!!! note "Using two pipes: sort the output of tail on ls"
+
+    ```bash
+    $ ls -l | tail -14 | sort -n
+    ```
+
+!!! note "Using more pipes: find, sort, tail"
+
+    Here I find all the files with a name with suffix .txt, sort them, and then pick the last 4 in the sorted list:
+
+    ```bash
+    find . -type f -name "*.txt" | sort | tail -4
+    ```
+
+    Output:
+
+    ```bash
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ find . -type f -name "*.txt" | sort | tail -4
+    ./thisfile7.txt
+    ./thisfile8.txt
+    ./thisfile9.txt
+    ./thisfile.txt
+    ```
+
+!!! note "Using more pipes: find, sort, head, tee"
+
+    Here I find all the files with a name with suffix .txt, sort them, and then pick the first 4 in the sorted list, which I then use tee to send to a file (named list.txt) and also to output:
+
+    ```bash
+    find . -type f -name "*.txt" | sort | head -4 | tee list.txt
+    ```
+
+## Summary
+
+As you have seen, ``pipe`` is a very useful operator, one which we will meet again in the later sections, combined with many commands and in scripts.
+
+!!! note "Keypoints"
+
+    - we learned about pipe
+    - we tried using one or more pipes to combine commands
 
 
-### Use ls and find to list and print all lines matching a particular pattern in matching files. 
-
-$ ls -l | find ./ -type f -name "*.txt" -exec grep "program" {} \;
-
-### Use cat, grep, tee and wc command to read the particular entry from user and store in a file and print line count. 
-
-$ cat result.txt | grep "Rajat Dua" | tee file2.txt | wc -l
-
-### cat contents.txt |wc -l
-
-### ls | head -3 | tail -1
-
-### ls | head -3 | tail -1 > myoutput
-
-### ls -l /etc | tail -n +2 | sort
-
-### command 2>&1 | less
-
-### echo yes | command > output.txt
-
-### If ‘|&’ is used, command1’s standard error, in addition to its standard output, is connected to command2’s standard input through the pipe; it is shorthand for 2>&1 | 
-
-###    Find all files with extension .txt in the directory you are standing in and below:
-
-find . -type f -name "*.txt"
-
-2. Find all files with file as part of the name in the directory expressions/patterns while standing in exercises/script
-
-find ../patterns/ -type f -name "*file*"
 
