@@ -47,10 +47,10 @@ We will use a number of Linux commands in this section for illustrating how pipe
         - **-b**: ignore leading blanks
         - **-k keydef**: by size where keydef is start and stop position 
         - **-r**: reverse 
-   - **head**: prints the first lines of a file. Usage: ``head -n FILE``
+    - **head**: prints the first lines of a file. Usage: ``head -n FILE``
     - **tail**: prints the lines at the end of a file. Usage: ``tail -n FILE``
     - **echo**: displays lines of text or strings that are passed as arguments. Usage: ``echo [option] [string]`` 
-   - **tee**: Copy standard input to each file and also to standatd output. Usage: ``tee [option] ... [file1] [file2] ... ``
+    - **tee**: Copy standard input to each file and also to standatd output. Usage: ``tee [option] ... [file1] [file2] ... ``
    
 ## Examples of piping 
 
@@ -124,25 +124,25 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
 
 !!! note "Using two pipes: head and tail to print lines of the output from the ls command" 
 
-   ```bash
-   ls | head -3 | tail -1
-   ```
+    ```bash
+    ls | head -3 | tail -1
+    ```
 
-   Output: 
+    Output: 
 
-   ```bash
-   bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls
-   ada       fil4.txt           myfile0.txt  thisfile0.txt  thisfile7.txt
-   afa       file.c             myfile1.txt  thisfile1.txt  thisfile8.txt
-   aja       file.dat           myfile2.txt  thisfile2.txt  thisfile9.txt
-   ama       file_filtered.dat  myfile3.txt  thisfile3.txt  thisfile.txt
-   amina     file.txt           myfiles.txt  thisfile4.txt
-   fil2.txt  fil.txt            newfile.txt  thisfile5.txt
-   fil3.txt  image              numbers.txt  thisfile6.txt
-   bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls | head -3 | tail -1
-   aja
-   bbrydsoe@enterprise:~/exercises/piping-wc-cut$
-   ```
+    ```bash
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls
+    ada       fil4.txt           myfile0.txt  thisfile0.txt  thisfile7.txt
+    afa       file.c             myfile1.txt  thisfile1.txt  thisfile8.txt
+    aja       file.dat           myfile2.txt  thisfile2.txt  thisfile9.txt
+    ama       file_filtered.dat  myfile3.txt  thisfile3.txt  thisfile.txt
+    amina     file.txt           myfiles.txt  thisfile4.txt
+    fil2.txt  fil.txt            newfile.txt  thisfile5.txt
+    fil3.txt  image              numbers.txt  thisfile6.txt
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ ls | head -3 | tail -1
+    aja
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$
+    ```
 
 !!! note "Using two pipes: sort the output of tail on ls"
 
