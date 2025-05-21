@@ -52,7 +52,7 @@ We will use a number of Linux commands in this section for illustrating how pipe
 
 ## Examples of piping 
 
-!!! hit 
+!!! hint 
 
     "Type along! 
 
@@ -71,22 +71,27 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     ![ls-more](../images/ls-more.png)
 
 
-### Sort a list of files by size 
+!!! note "Sort a list of files by size" 
 
-```bash
-$ ls -l | sort -k 5
-```
+    ```bash
+    $ ls -l | sort -k 5
+    ```
+
+    Of course, sorting files by size could also be done with ``ls -l -S`` but then you would have less control of how it was sorted (largest file first, sorted in lexicographical order). If you want to sort file size in reverse order you can do it like this: 
+
+    ```bash
+    $ ls -l -S | sort -k 5 n
+    ```
+
+!!! note "Using two pipes: head and tail to print lines in specific range in a file" 
+
+    $ cat sample2.txt | head -7 | tail -5
 
 ### 
 
 find  $HOME/exercises/script/image -type f -name "*.png" -exec cp {} myimages \;   
 find myimages -type f -name "*er*"
 
-
-
-### Use head and tail to print lines in a particular range in a file.  
-
-$ cat sample2.txt | head -7 | tail -5
 
 ### Use ls and find to list and print all lines matching a particular pattern in matching files. 
 
