@@ -266,7 +266,7 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
 
     A list following -c specifies a range of characters which will be returned 
 
-    ``basg
+    ```bash
     bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -c 2-5 newfile.txt 
     his 
     o ma
@@ -377,11 +377,25 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
     763 1242
     ``` 
 
-### Exercise 
+### Exercises 
 
 !!! note "<img src="../../images/shell-logo_small.png"> Exercise"
 
     The “exercises” -> “piping-wc-cut” directory is where there are files that are suitable to run these examples on.
 
-    
+    1. Use ``cut`` and suitable option(s) to print column 1 and 4 of the file "data.dat" 
+    2. Create a file where you use ":" delimiters in. Use ``cut`` for different combination of fields and this delimiter 
+    3. See that you get the same output with options **-c** and **-b** for the files you try 
+    4. Output the first 4 characters of each line for a file you pick 
+
+## Summary 
+
+!!! note "Keypoints" 
+
+    - we have learned about ``wc``
+        - and tried the options **-l** (lines), **-m** (characters), and **-w** (words) 
+    - we have learned about ``cut``
+        - and tried the options for selecting with **bytes**, **characters**, **fields**, and ysed delimiters 
+
+      
 
