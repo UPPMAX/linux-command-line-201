@@ -179,6 +179,8 @@ To run the examples, go to the “exercises” -> “piping-wc-cut” directory 
 
     If you have a lot if files, and so a lot of entries in the "filelength.txt", it might be better to use something like "less" to look in it so you can look through the file instead of getting it all output to screen. 
 
+### Exercise 
+
 !!! note "<img src="../../images/shell-logo_small.png"> Exercise"
 
     The “exercises” -> “piping-wc-cut” directory is where there are files that are suitable to run these examples on.
@@ -189,5 +191,197 @@ To run the examples, go to the “exercises” -> “piping-wc-cut” directory 
 
 ## cut
 
+``cut`` is a command which is used to extract sections from each line of input. 
 
+### Syntax
+
+```bash 
+cut [-b list] [-c list] [-f list] [-n] [-d delim] [-s] [file]
+```
+
+Extraction of line segments can typically be done by options/flags 
+
+- **bytes** (``-b``)
+- **characters** (``-c``)
+- **fields** (``-f``) 
+
+separated by a **delimiter** (``-d`` — the **tab character** by default). 
+
+A range must be provided in each case which consists of one of **N**, **N-M**, **N-** (N to the end of the line), or **-M** (beginning of the line to M), where N and M are counted from 1 (there is no zeroth value). 
+
+The options 
+
+- **-n** in combination with **-b** suppresses splits of multi-byte characters. 
+- **-s** bypasses lines which contain no field delimiters when **-f** is specified, unless otherwise indicated.
+
+### Examples 
+
+We are again going to use the directory “exercises” -> “piping-wc-cut” as a source of files that are suitable to run these examples on. 
+
+!!! note "cut with the -b flag" 
+
+    The ``-b n`` option returns the first n bytes of a line. 
+
+    ```bash
+    $ cut -b n FILE
+    ``` 
+
+    Output: 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -b 1 newfile.txt 
+    T
+    S
+    S
+    M
+    ``` 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -b 2 newfile.txt
+    h
+    o
+    t
+    u
+    ```
+ 
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -b 2-5 newfile.txt 
+    his 
+    o ma
+    trin
+    uaha
+    ```  
+
+    For reference, this is how the file looks: 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cat newfile.txt 
+    This is a file with some strings. How many instances of string are there?
+    So many times string!
+    String string string!
+    Muahahaha
+    ``` 
+
+!!! note "cut with the -c flag" 
+
+    A list following -c specifies a range of characters which will be returned 
+
+    ``basg
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -c 2-5 newfile.txt 
+    his 
+    o ma
+    trin
+    uaha
+    ``` 
+
+!!! warning "Note!" 
+
+    No difference between the **-b** and **-c** option right now. 
+
+    However, adding multibyte support is in progress and may enable a different behaviour of these two options in the future!     
+
+!!! note "cut with the -f and delimiter flags" 
+
+    ```bash 
+    $ cut -d "A-DELIMITER" -f FIELD-LIST 
+    ``` 
+
+    ??? note "Click to see content of file thisfile8.txt" 
+
+        ```bash 
+        bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cat thisfile8.txt 
+        Hello:helloe:hello:hi there!
+        What is this! Is this a list: yes, this, is, a, list
+        Weird list? Normal list: 1, 2, 3, 4, 5, 6, 7, 8
+        Why not?	I need a tab
+        I will write a longer sentence: there is a delimiter colon in this line 
+        One more line that has 	a tab	and one more 	and another	hahahaha
+        ```
+
+    Delimiter " " (space) and fields 2-4: 
+
+    ```bash
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -f 2-4 -d " " thisfile8.txt 
+    there!
+    is this! Is
+    list? Normal list:
+    not?	I need a
+    will write a
+    more line that
+    ```
+
+    Delimiter ":" (colon) and fields 2-4: 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -f 2-4 -d ":" thisfile8.txt 
+    helloe:hello:hi there!
+     yes, this, is, a, list
+     1, 2, 3, 4, 5, 6, 7, 8
+    Why not?	I need a tab
+    there is a delimiter colon in this line 
+    One more line that has 	a tab	and one more 	and another	hahahaha
+    ``` 
+
+    Delimiter ":" (colon) and fields 3- (from 3 to the end): 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -f 3- -d ":" thisfile8.txt 
+    hello:hi there!
+
+
+    Why not?    I need a tab
+
+    One more line that has 	a tab	and one more 	and another	hahahaha
+    ``` 
+
+    Default delimiter (tab) and fields 3-4: 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -f 3-4 thisfile8.txt
+    Hello:helloe:hello:hi there!
+    What is this! Is this a list: yes, this, is, a, list
+    Weird list? Normal list: 1, 2, 3, 4, 5, 6, 7, 8
+
+    I will write a longer sentence: there is a delimiter colon in this line 
+    and one more 	and another
+    ``` 
+
+!!! hint "Info" 
+
+    - **-c** option is useful for fixed-length lines. 
+    - Most unix files doesn't have fixed-length lines. To extract the useful information you need to cut by fields rather than columns. 
+    - List of the fields number specified must be separated by comma. Ranges are not described with -f option. 
+    - cut uses tab as a default field delimiter but can also work with other delimiter by using -d option. 
+
+!!! note "Example: columns of data" 
+
+    Here we work with the file "data.dat" which is in the same directory as the other files. 
+
+    ??? note "Content of data.dat - click to reveal" 
+
+        ```bash 
+        bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cat data.dat 
+        123 456 5685 6969
+        124 346 7322 5732
+        321 124 1546 1632
+        111 763 1242 1421
+        ```
+
+    Cutting column 2 and 3: 
+
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/piping-wc-cut$ cut -f 2,3 -d " " data.dat 
+    456 5685
+    346 7322
+    124 1546
+    763 1242
+    ``` 
+
+### Exercise 
+
+!!! note "<img src="../../images/shell-logo_small.png"> Exercise"
+
+    The “exercises” -> “piping-wc-cut” directory is where there are files that are suitable to run these examples on.
+
+    
 

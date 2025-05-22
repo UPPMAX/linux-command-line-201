@@ -50,7 +50,7 @@ We will use a number of Linux commands in this section for illustrating how pipe
     - **head**: prints the first lines of a file. Usage: ``head -n FILE``
     - **tail**: prints the lines at the end of a file. Usage: ``tail -n FILE``
     - **echo**: displays lines of text or strings that are passed as arguments. Usage: ``echo [option] [string]`` 
-    - **tee**: Copy standard input to each file and also to standatd output. Usage: ``tee [option] ... [file1] [file2] ... ``
+    - **tee**: Copy standard input to each file and also to standard output. Usage: ``tee [option] ... [file1] [file2] ... ``
    
 ## Examples of piping 
 
@@ -175,6 +175,13 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     ```bash
     find . -type f -name "*.txt" | sort | head -4 | tee list.txt
     ```
+
+## Exercise 
+
+1. Sort (string numerical, in reverse) files ending in .txt 
+2. Print the 4 first lines of the list of files ending in .txt 
+3. Print the last 5 lines of the list of files ending in .txt and sort them, then print the first line of the output  
+4. Use ``echo`` to output 5 lines you write then use tail to print the last line. 
 
 ## Summary
 
