@@ -16,4 +16,4 @@ We assume you know that:
 - `sort` is used to print the output of a file in given order
 - `head` is used to print the first lines of a file
 - `tail` prints the lines at the end of a file
-- `echo` displays lines of text or strings that are passed as arguments   
+- `echo` displays lines of text or strings that are passed as arguments
