@@ -34,7 +34,7 @@ To run the examples, go to the “exercises” -> “piping-wc-cut” directory 
 !!! note "wc on a file"
 
     ```bash
-    $ wc myfile1.txt 
+    $ wc FILE 
     ```
 
     Output: 
@@ -88,7 +88,7 @@ To run the examples, go to the “exercises” -> “piping-wc-cut” directory 
 !!! note "wc -l to get only the number of lines in a file" 
 
     ```bash
-    $ wc -l myfile2.txt 
+    $ wc -l FILE 
     ```
 
     Output: 
@@ -179,7 +179,7 @@ To run the examples, go to the “exercises” -> “piping-wc-cut” directory 
 
     If you have a lot if files, and so a lot of entries in the "filelength.txt", it might be better to use something like "less" to look in it so you can look through the file instead of getting it all output to screen. 
 
-!!! note "<img src="../images/shell-logo_small.png"> Exercise"
+!!! note "<img src="../../images/shell-logo_small.png"> Exercise"
 
     The “exercises” -> “piping-wc-cut” directory is where there are files that are suitable to run these examples on.
 
