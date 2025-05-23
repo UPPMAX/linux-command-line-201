@@ -31,5 +31,41 @@ Let us look at them one at a time and see some examples.
 
 ## Overwrite redirction 
 
+Let us assume you want to save the output of a command to a file and that you do not mind that the existing content of that file is overwritten (or you create a new file). In this situation, **overwrite redirection** is useful. 
+
+- **>**: standard output
+- **<**: standard input
+
+### Examples 
+
+**Output of ls to file mylsoutput.txt**
+```bash
+$ ls > mylsoutput.txt
+```
+
+**Anything written after ">" is written to myfile.txt - end with CTRL-C**
+```bash
+bbrydsoe@enterprise:~$ cat > myfile.txt
+This text will go to the file myfile.txt
+^C
+bbrydsoe@enterprise:~$
+``` 
+
+**This gives the input of "myfile.txt" to cat, which prints the content to screen**
+```bash
+$ cat < myfile.txt
+```
+
+**Splitting standard error and standard output - send standard error to file "error-log"**
+```bash
+./myprogram 2> error.log
+```
+
+**Send both standard output and standard error to file "mylog.log"** 
+```bash 
+./myprogram > mylog.log 2>&1
+``` 
+
+## Append redirection 
 
 
