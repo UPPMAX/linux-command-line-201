@@ -47,11 +47,10 @@ Let us assume you want to save the output of a command to a file and that you do
 $ ls > mylsoutput.txt
 ```
 
-**Anything written after ">" is written to myfile.txt - end with CTRL-C**
+**Anything written after ">" is written to myfile.txt - end with CTRL-D**
 ```bash
 bbrydsoe@enterprise:~$ cat > myfile.txt
 This text will go to the file myfile.txt
-^C
 bbrydsoe@enterprise:~$
 ``` 
 
