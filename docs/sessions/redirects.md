@@ -38,6 +38,10 @@ Let us assume you want to save the output of a command to a file and that you do
 
 ### Examples 
 
+!!! hint 
+
+    Code along! 
+
 **Output of ls to file mylsoutput.txt**
 ```bash
 $ ls > mylsoutput.txt
@@ -67,5 +71,12 @@ $ cat < myfile.txt
 ``` 
 
 ## Append redirection 
+
+It is also possible to append to a file with redirection, instead of overwriting. This is done with: 
+
+- **>>**: standard output
+- **<<**: standard input 
+
+### Examples 
 
 
