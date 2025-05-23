@@ -33,8 +33,8 @@ Let us look at them one at a time and see some examples.
 
 Let us assume you want to save the output of a command to a file and that you do not mind that the existing content of that file is overwritten (or you create a new file). In this situation, **overwrite redirection** is useful. 
 
-- **>**: standard output
-- **<**: standard input
+- **>** - standard output
+- **<** - standard input
 
 ### Examples 
 
@@ -66,16 +66,30 @@ $ cat < myfile.txt
 
 **Send both standard output and standard error to file "mylog.log"** 
 ```bash 
-./myprogram > mylog.log 2>&1
+$ ./myprogram > mylog.log 2>&1
 ``` 
 
 ## Append redirection 
 
 It is also possible to append to a file with redirection, instead of overwriting. This is done with: 
 
-- **>>**: standard output
-- **<<**: standard input 
+- **>>** - standard output
+- **<<** - standard input 
 
 ### Examples 
 
+**Add more text to an existing file** 
+```bash 
+$ echo 'text to append_add_here' >> myfile.txt
+```
+
+**Another way to add more text to an existing file**
+```bash
+printf "text to append\n" >> myfile.txt
+```
+
+**Append one existing file to another**
+```bash 
+cat file >> file2
+```
 
