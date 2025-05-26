@@ -54,4 +54,4 @@ felt like the best options.
 
 - `[Shotts, 2024]` Shotts, William.
   The Linux command line: a complete introduction. No Starch Press, 2024.
-  [PDF](books/the_linux_command_line.pdf)
+  (in `books/the_linux_command_line.pdf`)
