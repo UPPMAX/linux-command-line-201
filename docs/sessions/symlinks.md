@@ -41,7 +41,7 @@ ln -s real-file-or-lib link-name
     bbrydsoe@enterprise:~/exercises/redirects-env-link$ ln -s /home/bbrydsoe/exercises/redirects-env-link $HOME/exer
     bbrydsoe@enterprise:~$ cd
     bbrydsoe@enterprise:~$ ls -l
-    ...bash
+    ...
     drwxrwxr-x  6 bbrydsoe bbrydsoe       4096 nov 13  2023  course-intro-git
     drwxr-xr-x  8 bbrydsoe bbrydsoe       4096 maj 25 14:53  Desktop
     drwxr-xr-x  6 bbrydsoe bbrydsoe       4096 jun 20  2024  Documents
@@ -54,6 +54,7 @@ ln -s real-file-or-lib link-name
     drwxrwxr-x  5 bbrydsoe bbrydsoe       4096 apr  5 12:56  HPC2Ndocs
     -rw-rw-r--  1 bbrydsoe bbrydsoe         85 okt 23  2023  hpc2n-faktura.txt
     ...
+    ```
 
 
 !!! note "Create a symbolic link to a file in the same directory as the file" 
