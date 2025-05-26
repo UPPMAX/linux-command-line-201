@@ -71,12 +71,15 @@ such as regular expression.
 
 ## Exercise 1: use the `grep` manual
 
+In this exercise, we'll use the `grep` manual.
+
 ### Exercise 1.1: view the `grep` manual
 
-Use the `grep` manual for this exercise.
 View the `grep` manual.
 
-??? question "How do I view the `grep` manual?"
+Tip: `man` is the command to view a manual.
+
+??? question "Answer"
 
     In the terminal, type:
 
@@ -86,11 +89,11 @@ View the `grep` manual.
 
     Use the arrow keys to navigate and `q` to quit
 
-
 ### Exercise 1.2: what does `grep` do?
 
 According to the `grep` manual, in a one-line answer, what does `grep` do?
-Tip: it is at the top
+
+Tip: it is at the top.
 
 ??? question "Answer"
 
