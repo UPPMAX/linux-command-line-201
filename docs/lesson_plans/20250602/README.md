@@ -52,6 +52,11 @@ felt like the best options.
 Fixing the layout is harder, e.g. getting `mermaid` to work, making the
 admonitions prettier (fails).
 
+I will give up on `mermaid`:
+
+![Mermaid does not work](no_mermaid.png)
+
+
 ## References
 
 - `[Shotts, 2024]` Shotts, William.

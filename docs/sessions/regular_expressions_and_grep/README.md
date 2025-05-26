@@ -20,7 +20,8 @@ tags:
 
     Lesson plan (45 mins):
 
-    ```mermaid
+    <!-- mermaid
+
     gantt
       title Lesson plan
       dateFormat X
@@ -29,7 +30,8 @@ tags:
       Present: present, after prior, 5s
       Challenge: crit, challenge, after present, 20s
       Feedback: feedback, after challenge, 10s
-    ```
+
+    -->
 
     Prior:
 
@@ -45,7 +47,8 @@ tags:
 Regular expressions are used to filter for text that contains a pattern,
 such as a first name, a last name, a phone number, etc.
 
-```mermaid
+<!-- mermaid
+
 flowchart TD
 
   complete_text[Any text]
@@ -55,7 +58,8 @@ flowchart TD
 
   grep --> |Regular expression| filter
   complete_text --> filter --> filtered_text
-```
+
+-->
 
 ## Why use `grep`?
 
