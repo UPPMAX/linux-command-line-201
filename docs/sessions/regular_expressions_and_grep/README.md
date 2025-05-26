@@ -109,7 +109,9 @@ Tips:
 
     The first part of the answer is in the description:
 
-    ```
+    <!-- markdownlint-disable MD013 --><!-- Answer will be shown as-is, hence will break 80 characters per line -->
+
+    ```console
     DESCRIPTION
            grep  searches  for  PATTERNS  in  each  FILE. [...]
 
@@ -119,6 +121,8 @@ Tips:
            are the same as grep -E, grep -F, and grep -r, respectively. 
           [...]
     ```
+
+    <!-- markdownlint-enable MD013 -->
 
     Searching for `-E`, `-F` and `-r` takes us to the
     'OPTIONS | Pattern Syntax' subsection:
@@ -172,6 +176,8 @@ What did that regular expression do?
 
     This is what is shown on screen:
 
+    <!-- markdownlint-disable MD013 --><!-- Answer will be shown as-is, hence will break 80 characters per line -->
+
     ```bash
     $ man grep | grep "^[A-Z]"
     GREP(1)                               User Commands                              GREP(1)
@@ -191,6 +197,8 @@ What did that regular expression do?
     ```
 
     It shows all lines that start with an uppercase character.
+
+    <!-- markdownlint-enable MD013 -->
 
 ---
 
@@ -244,6 +252,8 @@ Can `grep` do a case-insensitive match?
     the word 'options' is searched in the manual
     in a case-insensitive manner.
 
+    <!-- markdownlint-disable MD013 --><!-- Verbatim text will be shown as-is, hence will break 80 characters per line -->
+
     ```bash
     $ man grep | grep --ignore-case "options"
     OPTIONS
@@ -258,6 +268,8 @@ Can `grep` do a case-insensitive match?
                   requires  that  unrecognized  options be diagnosed as “illegal”, but since
            treats expansions of “*g*.h” starting with “-” as file names not options, and the
     ```
+
+    <!-- markdownlint-enable MD013 -->
 
 ---
 
@@ -324,7 +336,11 @@ Can `grep` detect which files contain a match?
 
 ---
 
+<!-- markdownlint-disable MD013 --><!-- Indeed a long title, hence will break 80 characters per line -->
+
 ### (optional) Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?
+
+<!-- markdownlint-enable MD013 -->
 
 Can `grep` detect which files-with-a-certain-extension contain a match?
 
