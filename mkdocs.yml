@@ -58,7 +58,6 @@ nav:
     - Archiving/compressing data: sessions/arch.md
     - Linux tools (sed): sessions/sed.md  
     - Quality of life: sessions/qual.md
-    - Archiving/compressing data: sessions/arch.md
     - Summary: summary.md
   - Extras: 
     - More scripting: more_script.md
