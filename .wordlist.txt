@@ -50,3 +50,8 @@ sed
 ubuntu
 wc
 www
+seealso
+tldr
+todo
+faq
+Gantt
