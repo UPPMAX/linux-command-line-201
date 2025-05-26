@@ -362,7 +362,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
 ---
 
-??? info "For teachers"
+??? note "For teachers"
 
     - How many regular expression dialects exist?
 
