@@ -47,19 +47,7 @@ tags:
 Regular expressions are used to filter for text that contains a pattern,
 such as a first name, a last name, a phone number, etc.
 
-<!-- mermaid
-
-flowchart TD
-
-  complete_text[Any text]
-  grep
-  filter[Filter]
-  filtered_text[The filtered text]
-
-  grep --> |Regular expression| filter
-  complete_text --> filter --> filtered_text
-
--->
+![What regular expressions are used for](why_regular_expressions.png)
 
 ## Why use `grep`?
 
@@ -463,39 +451,6 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
         ```bash
         man grep | grep --ignore-case --invert-match "[a-f]"
         ```
-
-    ---
-
-## Tests
-
-Gantt chart:
-
-```mermaid
-gantt
-  title Lesson plan
-  dateFormat X
-  axisFormat %s
-  Prior : prior, 0, 10s
-  Present: present, after prior, 5s
-  Challenge: crit, challenge, after present, 20s
-  Feedback: feedback, after challenge, 10s
-```
-
-Flow chart:
-
-```mermaid
-flowchart TD
-
-  complete_text[Any text]
-  grep
-  filter[Filter]
-  filtered_text[The filtered text]
-
-  grep --> |Regular expression| filter
-  complete_text --> filter --> filtered_text
-```
-
----
 
 !!! info "Conclusions"
 
