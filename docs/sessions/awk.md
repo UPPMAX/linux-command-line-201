@@ -156,6 +156,20 @@ Some parts of this section was copied from <a href="https://www.geeksforgeeks.or
 
 Work with the files in the "exercises" - "awk-qol" directory. 
 
-1. 
+1. Search "myfile.txt" for the keyword "text". 
+2. Print column 2 only, from "file.dat"
+3. Display line numbers on "myfile.txt" 
+4. Count the lines in "myfile.txt" 
+5. Check for the string "carnivore" in column 1 of "file.dat"
+6. Check for the string "carnivore" in column 2 of "file.dat" 
+
+## Summary 
+
+!!! note "Keypoints 
+
+    - We learned about awk
+    - We used awk to find a keyword
+    - We used awk to count lines in a file
+    - We used awk to look at specific columns  
 
 
