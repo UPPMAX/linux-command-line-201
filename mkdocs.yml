@@ -55,6 +55,8 @@ nav:
     - Redirects: sessions/redirects.md
     - Environment variables: sessions/env_vars.md
     - Symbolic links: sessions/symlinks.md
+    - Archiving/compressing data: sessions/arch.md
+    - Linux tools (sed): sessions/sed.md  
     - Quality of life: sessions/qual.md
     - Archiving/compressing data: sessions/arch.md
     - Summary: summary.md
