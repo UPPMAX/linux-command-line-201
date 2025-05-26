@@ -22,23 +22,29 @@ My learning outcomes are:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Curriculum item                                                                |Learning objective                                                                                                                                       |Teacher
--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-------
-Regular expressions                                                            |Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions (19. What are Regular Expressions?, p266-onward)(or any regex course)|RB
-Regular expressions                                                            |Learners can use `grep` for pattern matching                                                                                                             |RB
-Finding information                                                            |[Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)                                   |RB
+- Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions                                   
+- Learners can use `grep` for pattern matching                                                                          
+- [Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)
 
 <!-- markdownlint-enable MD013 -->
 
-I consider to use 
+Add LOs are:
+
+- Learners have experienced that `grep` is a filter
+- Learners have sent text to `grep` using a pipe, e.g. `man grep | grep "[^A-Z]`
+- Learners know there are multiple flavours of regular expressions:
+  use `grep` and `grep -E` 
+
+As sources of text, I consider to use:
 
 - 'Frankenstein; Or, The Modern Prometheus',
   from [a plain text file at Project Gutenberg](https://www.gutenberg.org/cache/epub/84/pg84.txt).
-- `man grep`
+- `man grep` or `yelp man:grep` or `man grep | grep "^[A-Z]"`
 - [https://www.regexone.com/](https://www.regexone.com/)
 - `[Shotts, 2024]`, which can be downloaded
   [here](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
   and can be found in this repo at `books/the_linux_command_line.pdf`
+- man grep | grep "^[[:upper:]]"
 
 
 
