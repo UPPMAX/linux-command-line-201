@@ -76,8 +76,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
-  # Makes admonitions collapsible, from https://mkdocs-material-rtd-test.readthedocs.io/en/latest/reference/admonitions/#details
-  - pymdownx.details
+  - pymdownx.details # Makes admonitions collapsible, from https://mkdocs-material-rtd-test.readthedocs.io/en/latest/reference/admonitions/#details
   - pymdownx.arithmatex:
       generic: true
   - footnotes
