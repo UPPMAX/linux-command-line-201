@@ -220,7 +220,7 @@ What did that regular expression do?
 Go to [https://www.regexone.com/](https://www.regexone.com/)
 and do lessons 1 to (and including) 11.
 
-!!! info "Overview of lessons"
+??? question "Overview of lessons"
 
     Here is an overview of the regular expression patterns in each lesson:
 
