@@ -8,13 +8,13 @@ tags:
 
 !!! info "Learning outcomes"
 
-- [x] Learners can use `grep` for pattern matching
-- [x] Learners have practiced using the `grep` manual
-- [x] Learners have experienced that `grep` is a filter
-- [x] Learners have sent text to `grep` using a pipe
-- [x] Learners know there are multiple flavours of regular expressions
-- [x] Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
-- (optional) Learners have seen the flexibility of `grep`
+    - Learners can use `grep` for pattern matching
+    - Learners have practiced using the `grep` manual
+    - Learners have experienced that `grep` is a filter
+    - Learners have sent text to `grep` using a pipe
+    - Learners know there are multiple flavours of regular expressions
+    - Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
+    - (optional) Learners have seen the flexibility of `grep`
 
 ??? info "For teachers"
 
@@ -25,6 +25,7 @@ tags:
     - What is GNU?
     - What is `grep`?
     - In the context of command-line tools, what is a filter?
+
 
 ## Why use regular expressions?
 
@@ -69,6 +70,7 @@ Use the `grep` manual for this exercise.
 
     Use the arrow keys to navigate and `q` to quit
 
+
 - According to the `grep` manual, in a one-line answer, what does `grep` do?
   Tip: it is at the top
 
@@ -81,6 +83,7 @@ Use the `grep` manual for this exercise.
   NAME
          grep, egrep, fgrep, rgrep - print lines that match patterns
   ```
+
 
 - In the fourth line of the `grep` manual, the
   `grep`-like tools `egrep`, `fgrep` and `rgrep` are mentioned.
@@ -105,6 +108,7 @@ man grep | grep "^[A-Z]"
 
   The manual of `grep`, send it to `grep` and let it filter for
   some regular expression.
+
 
 - Run the command above. What does it show on screen?
   What did that regular expression do?
@@ -133,6 +137,7 @@ man grep | grep "^[A-Z]"
 
     It shows all lines that start with an uppercase character.
 
+
 ## Exercise x: practice regular expressions
 
 ???- question "For teachers"
@@ -153,6 +158,7 @@ man grep | grep "^[A-Z]"
     9     |`\s`
     10    |`^`
     11    |`()`
+
 
 - Go to [https://www.regexone.com/](https://www.regexone.com/)
   and do lessons 1 to (and including) 11.
@@ -192,6 +198,7 @@ Use the `grep` manual to answer these questions.
            treats expansions of “*g*.h” starting with “-” as file names not options, and the
     ```
 
+
 - Can `grep` show the lines that **do not** match?
 
 ???- question "Answer"
@@ -208,6 +215,7 @@ Use the `grep` manual to answer these questions.
     man grep | grep --invert-match " "
     ```
 
+
 - Can `grep` detect lines in multiple files?
 
     Yes.
@@ -222,6 +230,7 @@ Use the `grep` manual to answer these questions.
     cd /etc
     grep --recursive "ubuntu"
     ```
+
 
 - Can `grep` detect which files contain a match?
 
@@ -239,6 +248,7 @@ Use the `grep` manual to answer these questions.
     grep --recursive --files-with-matches "ubuntu"
     ```
 
+
 - Can `grep` detect which files-with-a-certain-extension contain a match?
 
     Yes.
@@ -255,6 +265,7 @@ Use the `grep` manual to answer these questions.
     grep --recursive "ubuntu" --include "*.conf"
     ```
 
+
 ## Feedback
 
 - How many regular expression dialects exist?
@@ -267,6 +278,7 @@ Use the `grep` manual to answer these questions.
     - `egrep` (extended)
     - `pgrep` (Perl-like)
 
+
 - We have sent the `grep` manual to `grep` using a pipe.
   Can we use any text?
 
@@ -274,11 +286,13 @@ Use the `grep` manual to answer these questions.
 
     Yes: the `grep` manual is just text like any other.
 
+
 - Can we send the output of `grep` to `grep`?
 
 ???- question "Answer"
 
     Yes: the `grep` output is just text like any other.
+
 
 - What is a Kleene star and what does it do?
 
@@ -287,6 +301,7 @@ Use the `grep` manual to answer these questions.
     The Kleene star is the regular expression pattern `*`.
     In English it would be read as: 'the thing before it
     repeated at least zero times'.
+
 
 - What is the difference between `[^A-Z]` and `^[A-Z]`?
 
@@ -298,12 +313,14 @@ Use the `grep` manual to answer these questions.
     The second regular expression means: 'At the start of a line, any uppercase
     letter'.
 
+
 - What is regular expression for 'any line of text' (including empty ones)?
 
 ???- question "Answer"
 
     The regular expression for 'any line of text' is `.*`,
     as `.` means 'Any character' and `*` means 'repeated at least zero times'.
+
 
 - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
 
@@ -315,6 +332,7 @@ Use the `grep` manual to answer these questions.
     The 'naked' `.*` is a `bash` expression of 'all hidden files',
     as hidden files start with a `.` (e.g. `ls .*`).
     This meaning can change depending on context (e.g. `cat .*`).
+
 
 - Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
   inverts the match (i.e. showing non-matching lines), how to combine these
@@ -335,3 +353,4 @@ Use the `grep` manual to answer these questions.
     ```bash
     man grep | grep --ignore-case --invert-match "[a-f]"
     ```
+
