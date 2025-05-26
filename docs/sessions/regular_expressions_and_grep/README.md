@@ -367,104 +367,104 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
 ---
 
-## Feedback
+??? info "For teachers"
 
-- How many regular expression dialects exist?
+    - How many regular expression dialects exist?
 
-??? question "Answer"
+    ??? question "Answer"
 
-    At least 3: 
+        At least 3: 
 
-    - `grep` (basic)
-    - `egrep` (extended)
-    - `pgrep` (Perl-like)
-
-
----
-
-- We have sent the `grep` manual to `grep` using a pipe.
-  Can we use any text?
-
-??? question "Answer"
-
-    Yes: the `grep` manual is just text like any other.
-
----
-
-- Can we send the output of `grep` to `grep`?
-
-??? question "Answer"
-
-    Yes: the `grep` output is just text like any other.
-
----
-
-- What is a Kleene star and what does it do?
-
-??? question "Answer"
-
-    The Kleene star is the regular expression pattern `*`.
-    In English it would be read as: 'the thing before it
-    repeated at least zero times'.
+        - `grep` (basic)
+        - `egrep` (extended)
+        - `pgrep` (Perl-like)
 
 
----
+    ---
 
-- What is the difference between `[^A-Z]` and `^[A-Z]`?
+    - We have sent the `grep` manual to `grep` using a pipe.
+      Can we use any text?
 
-??? question "Answer"
+    ??? question "Answer"
 
-    The first regular expression means: 'All characters, except all uppercase
-    letters'.
+        Yes: the `grep` manual is just text like any other.
 
-    The second regular expression means: 'At the start of a line, any uppercase
-    letter'.
+    ---
 
----
+    - Can we send the output of `grep` to `grep`?
 
-- What is regular expression for 'any line of text' (including empty ones)?
+    ??? question "Answer"
 
-??? question "Answer"
+        Yes: the `grep` output is just text like any other.
 
-    The regular expression for 'any line of text' is `.*`,
-    as `.` means 'Any character' and `*` means 'repeated at least zero times'.
+    ---
 
----
+    - What is a Kleene star and what does it do?
 
-- Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
+    ??? question "Answer"
 
-??? question "Answer"
+        The Kleene star is the regular expression pattern `*`.
+        In English it would be read as: 'the thing before it
+        repeated at least zero times'.
 
-    The double-quotes assure that the regular expression patter `.*` is
-    read as such.
 
-    The 'naked' `.*` is a `bash` expression of 'all hidden files',
-    as hidden files start with a `.` (e.g. `ls .*`).
-    This meaning can change depending on context (e.g. `cat .*`).
+    ---
 
----
+    - What is the difference between `[^A-Z]` and `^[A-Z]`?
 
-- Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
-  inverts the match (i.e. showing non-matching lines), how to combine these
-  in the same command?
+    ??? question "Answer"
 
-??? question "Answer"
+        The first regular expression means: 'All characters, except all uppercase
+        letters'.
 
-    Write these one after the other:
+        The second regular expression means: 'At the start of a line, any uppercase
+        letter'.
 
-    ```bash
-    grep --ignore-case --invert-match
-    ```
+    ---
 
-    For example, the command below shows all lines in the `grep` manual
-    that do not have the lower-case, nor upper-case letters 'a' to
-    (and including) 'f'.
+    - What is regular expression for 'any line of text' (including empty ones)?
 
-    ```bash
-    man grep | grep --ignore-case --invert-match "[a-f]"
-    ```
+    ??? question "Answer"
 
----
+        The regular expression for 'any line of text' is `.*`,
+        as `.` means 'Any character' and `*` means 'repeated at least zero times'.
+
+    ---
+
+    - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
+
+    ??? question "Answer"
+
+        The double-quotes assure that the regular expression patter `.*` is
+        read as such.
+
+        The 'naked' `.*` is a `bash` expression of 'all hidden files',
+        as hidden files start with a `.` (e.g. `ls .*`).
+        This meaning can change depending on context (e.g. `cat .*`).
+
+    ---
+
+    - Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
+      inverts the match (i.e. showing non-matching lines), how to combine these
+      in the same command?
+
+    ??? question "Answer"
+
+        Write these one after the other:
+
+        ```bash
+        grep --ignore-case --invert-match
+        ```
+
+        For example, the command below shows all lines in the `grep` manual
+        that do not have the lower-case, nor upper-case letters 'a' to
+        (and including) 'f'.
+
+        ```bash
+        man grep | grep --ignore-case --invert-match "[a-f]"
+        ```
+
+    ---
 
 ## Tests
 
