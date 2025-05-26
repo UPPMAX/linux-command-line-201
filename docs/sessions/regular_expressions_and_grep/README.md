@@ -73,7 +73,7 @@ such as regular expression.
 
 Use the `grep` manual for this exercise.
 
-???- question "How do I view the `grep` manual?"
+??? question "How do I view the `grep` manual?"
 
     In the terminal, type:
 
@@ -87,7 +87,7 @@ Use the `grep` manual for this exercise.
 - According to the `grep` manual, in a one-line answer, what does `grep` do?
   Tip: it is at the top
 
-???- question "Answer"
+??? question "Answer"
 
   `grep` is a tool to 'print lines that match patterns'
   It is in the fourth line:
@@ -96,7 +96,6 @@ Use the `grep` manual for this exercise.
   NAME
          grep, egrep, fgrep, rgrep - print lines that match patterns
   ```
-
 
 - In the fourth line of the `grep` manual, the
   `grep`-like tools `egrep`, `fgrep` and `rgrep` are mentioned.
@@ -110,23 +109,22 @@ Use the `grep` manual for this exercise.
 
 ## Exercise 2: use `grep` with a pipe
 
-- How would you explain the command below in English?
-  Use 'some regular expression' if you see a regular expression.
+How would you explain the command below in English?
+Use 'some regular expression' if you see a regular expression.
 
 ```bash
 man grep | grep "^[A-Z]"
 ```
 
-???- question "Answer"
+??? question "Answer"
 
   The manual of `grep`, send it to `grep` and let it filter for
   some regular expression.
 
+Run the command above. What does it show on screen?
+What did that regular expression do?
 
-- Run the command above. What does it show on screen?
-  What did that regular expression do?
-
-???- question "Answer"
+??? question "Answer"
 
     This is what is shown on screen:
 
@@ -150,10 +148,9 @@ man grep | grep "^[A-Z]"
 
     It shows all lines that start with an uppercase character.
 
-
 ## Exercise 3: practice regular expressions
 
-???- question "For teachers"
+??? question "For teachers"
 
     Here is an overview of the regular expression patterns in each lesson:
 
@@ -185,7 +182,7 @@ Use the `grep` manual to answer these questions.
 
 - Can `grep` do a case-insensitive match?
 
-???- question "Answer"
+??? question "Answer"
 
     Yes. 
 
@@ -214,7 +211,7 @@ Use the `grep` manual to answer these questions.
 
 - Can `grep` show the lines that **do not** match?
 
-???- question "Answer"
+??? question "Answer"
 
     Yes. 
 
@@ -283,7 +280,7 @@ Use the `grep` manual to answer these questions.
 
 - How many regular expression dialects exist?
 
-???- question "Answer"
+??? question "Answer"
 
     At least 3: 
 
@@ -295,21 +292,21 @@ Use the `grep` manual to answer these questions.
 - We have sent the `grep` manual to `grep` using a pipe.
   Can we use any text?
 
-???- question "Answer"
+??? question "Answer"
 
     Yes: the `grep` manual is just text like any other.
 
 
 - Can we send the output of `grep` to `grep`?
 
-???- question "Answer"
+??? question "Answer"
 
     Yes: the `grep` output is just text like any other.
 
 
 - What is a Kleene star and what does it do?
 
-???- question "Answer"
+??? question "Answer"
 
     The Kleene star is the regular expression pattern `*`.
     In English it would be read as: 'the thing before it
@@ -318,7 +315,7 @@ Use the `grep` manual to answer these questions.
 
 - What is the difference between `[^A-Z]` and `^[A-Z]`?
 
-???- question "Answer"
+??? question "Answer"
 
     The first regular expression means: 'All characters, except all uppercase
     letters'.
@@ -329,7 +326,7 @@ Use the `grep` manual to answer these questions.
 
 - What is regular expression for 'any line of text' (including empty ones)?
 
-???- question "Answer"
+??? question "Answer"
 
     The regular expression for 'any line of text' is `.*`,
     as `.` means 'Any character' and `*` means 'repeated at least zero times'.
@@ -337,7 +334,7 @@ Use the `grep` manual to answer these questions.
 
 - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
 
-???- question "Answer"
+??? question "Answer"
 
     The double-quotes assure that the regular expression patter `.*` is
     read as such.
@@ -351,7 +348,7 @@ Use the `grep` manual to answer these questions.
   inverts the match (i.e. showing non-matching lines), how to combine these
   in the same command?
 
-???- question "Answer"
+??? question "Answer"
 
     Write these one after the other:
 
@@ -366,5 +363,3 @@ Use the `grep` manual to answer these questions.
     ```bash
     man grep | grep --ignore-case --invert-match "[a-f]"
     ```
-
-10:32:08
