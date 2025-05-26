@@ -152,6 +152,10 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
 
 Some parts of this section was copied from <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/" target="_blank">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a>. 
 
-## Exercises 
+## Exercise 
+
+Work with the files in the "exercises" - "awk-qol" directory. 
+
+1. 
 
 

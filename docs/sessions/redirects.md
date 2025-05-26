@@ -29,7 +29,7 @@ There are different types of redirection:
 
 Let us look at them one at a time and see some examples. 
 
-## Overwrite redirction 
+## Overwrite redirection 
 
 Let us assume you want to save the output of a command to a file and that you do not mind that the existing content of that file is overwritten (or you create a new file). In this situation, **overwrite redirection** is useful. 
 
