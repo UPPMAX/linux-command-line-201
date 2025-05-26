@@ -93,6 +93,8 @@ Tip: `man` is the command to view a manual.
 
     Use the arrow keys to navigate and `q` to quit
 
+---
+
 ### Exercise 1.2: what does `grep` do?
 
 According to the `grep` manual, in a one-line answer, what does `grep` do?
@@ -108,6 +110,8 @@ Tip: it is at the top.
     NAME
            grep, egrep, fgrep, rgrep - print lines that match patterns
     ```
+
+---
 
 ### Exercise 1.3: what are the other `grep`s?
 
@@ -158,6 +162,8 @@ Tips:
     of regular expressions, such as a regular, extended and Perl-compatible
     regular expressions.
 
+---
+
 ## Exercise 2: use `grep` with a pipe
 
 ### Exercise 2.1: read a command that has a `grep` with a pipe
@@ -173,6 +179,8 @@ man grep | grep "^[A-Z]"
 
   The manual of `grep`, send it to `grep` and let it filter for
   some regular expression.
+
+---
 
 ### Exercise 2.2: run a command that has a `grep` with a pipe
 
@@ -202,6 +210,8 @@ What did that regular expression do?
     ```
 
     It shows all lines that start with an uppercase character.
+
+---
 
 ## Exercise 3: practice regular expressions
 
@@ -265,6 +275,7 @@ Can `grep` do a case-insensitive match?
            treats expansions of “*g*.h” starting with “-” as file names not options, and the
     ```
 
+---
 
 ### (optional) Exercise 4.2: Can `grep` show the lines that do not match?
 
@@ -283,6 +294,8 @@ Can `grep` show the lines that **do not** match?
     ```bash
     man grep | grep --invert-match " "
     ```
+
+---
 
 ### (optional) Exercise 4.3: Can `grep` detect lines in multiple files?
 
@@ -303,6 +316,7 @@ Can `grep` detect lines in multiple files?
     grep --recursive "ubuntu"
     ```
 
+---
 
 ### (optional) Exercise 4.4: Can `grep` detect which files contain a match?
 
@@ -324,6 +338,8 @@ Can `grep` detect which files contain a match?
     grep --recursive --files-with-matches "ubuntu"
     ```
 
+---
+
 ### (optional) Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?
 
 Can `grep` detect which files-with-a-certain-extension contain a match?
@@ -343,6 +359,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     cd /etc
     grep --recursive "ubuntu" --include "*.conf"
     ```
+
+---
 
 ## Feedback
 
