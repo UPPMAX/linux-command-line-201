@@ -69,9 +69,12 @@ such as regular expression.
 
 ## Exercises
 
-## Exercise 1: see the `grep` manual
+## Exercise 1: use the `grep` manual
+
+### Exercise 1.1: view the `grep` manual
 
 Use the `grep` manual for this exercise.
+View the `grep` manual.
 
 ??? question "How do I view the `grep` manual?"
 
@@ -84,8 +87,10 @@ Use the `grep` manual for this exercise.
     Use the arrow keys to navigate and `q` to quit
 
 
-- According to the `grep` manual, in a one-line answer, what does `grep` do?
-  Tip: it is at the top
+### Exercise 1.2: what does `grep` do?
+
+According to the `grep` manual, in a one-line answer, what does `grep` do?
+Tip: it is at the top
 
 ??? question "Answer"
 
@@ -97,15 +102,54 @@ Use the `grep` manual for this exercise.
          grep, egrep, fgrep, rgrep - print lines that match patterns
   ```
 
-- In the fourth line of the `grep` manual, the
-  `grep`-like tools `egrep`, `fgrep` and `rgrep` are mentioned.
-  What are these?
-  Tips:
+### Exercise 1.3: what are the other `grep`s?
+
+In the fourth line of the `grep` manual, the
+`grep`-like tools `egrep`, `fgrep` and `rgrep` are mentioned.
+What are these?
+
+Tips:
     - it is in the first two screens.
     - The first part of the answer can be found
       in the `DESCRIPTION` section,
     - The second part of the answer can be found
       in the `OPTIONS | Pattern syntax` section
+
+??? question "Answer"
+
+    The first part of the answer is in the description:
+
+    ```
+    DESCRIPTION
+           grep  searches  for  PATTERNS  in  each  FILE. [...]
+
+           [...]
+
+           Debian also includes the variant programs egrep, fgrep and rgrep.  These programs
+           are the same as grep -E, grep -F, and grep -r, respectively. 
+          [...]
+    ```
+
+    Searching for `-E`, `-F` and `-r` takes us to the
+    'OPTIONS | Pattern Syntax' subsection:
+
+    ```console
+    Pattern Syntax
+       -E, --extended-regexp
+              Interpret PATTERNS as extended regular expressions [...].
+
+       [...]
+
+       -G, --basic-regexp
+              Interpret  PATTERNS  as basic regular expressions [...].
+
+       -P, --perl-regexp
+              Interpret PATTERNS as Perl-compatible regular expressions [...].
+    ```
+
+    We can conclude from this that the different `grep`s have different types
+    of regular expressions, such as a regular, extended and Perl-compatible
+    regular expressions.
 
 ## Exercise 2: use `grep` with a pipe
 

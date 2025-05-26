@@ -49,6 +49,8 @@ As sources of text, I consider to use:
 Using the `grep` manual and [https://www.regexone.com/](https://www.regexone.com/)
 felt like the best options.
 
+Fixing the layout is harder, e.g. getting `mermaid` to work, making the
+admonitions prettier (fails).
 
 ## References
 
