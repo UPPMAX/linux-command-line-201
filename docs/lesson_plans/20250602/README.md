@@ -56,6 +56,10 @@ I will give up on `mermaid`:
 
 ![Mermaid does not work](no_mermaid.png)
 
+I think this session is ready now, but I can imagine
+writing the next session may influence it,
+so let's write the next session first,
+before creating a video.
 
 ## References
 
