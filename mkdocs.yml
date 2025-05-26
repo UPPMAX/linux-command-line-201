@@ -12,6 +12,7 @@ theme:
     #  static_templates:
     #- sitemap.html
   include_sidebar: true
+  include_homepage_in_sidebar: true
   font:
     code: Robot Mono
   features:
