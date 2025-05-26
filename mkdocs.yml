@@ -103,3 +103,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+# For mermaid, from https://facelessuser.github.io/pymdown-extensions/extras/mermaid/#using-in-mkdocs
+extra_javascript:
+  # - optionalConfig.js
+  - https://cdn.jsdelivr.net/npm/mermaid@11.5.0/dist/mermaid.min.js
+  # - extra-loader.js
