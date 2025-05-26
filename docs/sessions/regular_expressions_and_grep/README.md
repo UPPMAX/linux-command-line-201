@@ -85,7 +85,7 @@ View the `grep` manual.
 
 Tip: `man` is the command to view a manual.
 
-??? question "Answer"
+??? tip "Answer"
 
     In the terminal, type:
 
@@ -103,7 +103,7 @@ According to the `grep` manual, in a one-line answer, what does `grep` do?
 
 Tip: it is at the top.
 
-??? question "Answer"
+??? tip "Answer"
 
     `grep` is a tool to 'print lines that match patterns'
     It is in the fourth line:
@@ -128,7 +128,7 @@ Tips:
     - The second part of the answer can be found
       in the `OPTIONS | Pattern syntax` section
 
-??? question "Answer"
+??? tip "Answer"
 
     The first part of the answer is in the description:
 
@@ -177,7 +177,7 @@ Use 'some regular expression' if you see a regular expression.
 man grep | grep "^[A-Z]"
 ```
 
-??? question "Answer"
+??? tip "Answer"
 
   The manual of `grep`, send it to `grep` and let it filter for
   some regular expression.
@@ -189,7 +189,7 @@ man grep | grep "^[A-Z]"
 Run the command above. What does it show on screen?
 What did that regular expression do?
 
-??? question "Answer"
+??? tip "Answer"
 
     This is what is shown on screen:
 
@@ -220,7 +220,7 @@ What did that regular expression do?
 Go to [https://www.regexone.com/](https://www.regexone.com/)
 and do lessons 1 to (and including) 11.
 
-??? question "Overview of lessons"
+??? tip "Overview of lessons"
 
     Here is an overview of the regular expression patterns in each lesson:
 
@@ -254,7 +254,7 @@ Use the `grep` manual to answer these questions.
 
 Can `grep` do a case-insensitive match?
 
-??? question "Answer"
+??? tip "Answer"
 
     Yes. 
 
@@ -286,7 +286,7 @@ Can `grep` do a case-insensitive match?
 
 Can `grep` show the lines that **do not** match?
 
-??? question "Answer"
+??? tip "Answer"
 
     Yes. 
 
@@ -306,7 +306,7 @@ Can `grep` show the lines that **do not** match?
 
 Can `grep` detect lines in multiple files?
 
-??? question "Answer"
+??? tip "Answer"
 
     Yes.
 
@@ -327,7 +327,7 @@ Can `grep` detect lines in multiple files?
 
 Can `grep` detect which files contain a match?
 
-??? question "Answer"
+??? tip "Answer"
 
     Yes.
 
@@ -349,7 +349,7 @@ Can `grep` detect which files contain a match?
 
 Can `grep` detect which files-with-a-certain-extension contain a match?
 
-??? question "Answer"
+??? tip "Answer"
 
     Yes.
 
@@ -371,7 +371,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - How many regular expression dialects exist?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         At least 3: 
 
@@ -385,7 +385,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     - We have sent the `grep` manual to `grep` using a pipe.
       Can we use any text?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         Yes: the `grep` manual is just text like any other.
 
@@ -393,7 +393,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - Can we send the output of `grep` to `grep`?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         Yes: the `grep` output is just text like any other.
 
@@ -401,7 +401,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - What is a Kleene star and what does it do?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         The Kleene star is the regular expression pattern `*`.
         In English it would be read as: 'the thing before it
@@ -412,7 +412,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - What is the difference between `[^A-Z]` and `^[A-Z]`?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         The first regular expression means: 'All characters, except all uppercase
         letters'.
@@ -424,7 +424,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - What is regular expression for 'any line of text' (including empty ones)?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         The regular expression for 'any line of text' is `.*`,
         as `.` means 'Any character' and `*` means 'repeated at least zero times'.
@@ -433,7 +433,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         The double-quotes assure that the regular expression patter `.*` is
         read as such.
@@ -448,7 +448,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
       inverts the match (i.e. showing non-matching lines), how to combine these
       in the same command?
 
-    ??? question "Answer"
+    ??? tip "Answer"
 
         Write these one after the other:
 
@@ -515,122 +515,3 @@ flowchart TD
 !!! info "Next session"
 
     - `grep` cannot do replacements, use `sed` instead.
-
-
-## Admonition tests
-
-From [the documentation](https://mkdocs-material-rtd-test.readthedocs.io/en/latest/reference/admonitions/#supported-types):
-
-???- note "My note"
-
-    `note`
-
-???- seealso "My seealso"
-
-    `seealso`
-
-???- abstract "My abstract"
-
-    `abstract`
-
-???- tldr "My tldr"
-
-    `tldr`
-
-???- summary "My summary"
-
-    `summary`
-
-???- info "My info"
-
-    `info`
-
-???- todo "My todo"
-
-    `todo`
-
-
-???- tip "My tip"
-
-    `tip`
-
-???- hint "My hint"
-
-    `hint`
-
-???- important "My important"
-
-    `important`
-
-???- success "My success"
-
-    `success`
-
-???- check "My check"
-
-    `check`
-
-???- done "My done"
-
-    `done`
-
-???- question "My question"
-
-    `question`
-
-
-???- help "My help"
-
-    `help`
-
-???- faq "My faq"
-
-    `faq`
-
-???- warning "My warning"
-
-    `warning`
-
-???- caution "My caution"
-
-    `caution`
-
-???- attention "My attention"
-
-    `attention`
-
-???- failure "My failure"
-
-    `failure`
-
-???- fail "My fail"
-
-    `fail`
-
-???- missing "My missing"
-
-    `missing`
-
-???- danger "My danger"
-
-    `danger`
-
-???- error "My error"
-
-    `error`
-
-???- bug "My Bug"
-
-    `bug`
-
-???- example "My example"
-
-    `example`
-
-???- quote "My quote"
-
-    `quote`
-
-???- cite "My cite"
-
-    `cite`
