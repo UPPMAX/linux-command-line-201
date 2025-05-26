@@ -47,7 +47,7 @@ nav:
     - Introduction: sessions/intro.md
     - Linux pipe: sessions/pipe.md
     - Linux tools I (wc, cut): sessions/wc_cut.md
-    - Regular expressions and ``grep``: sessions/regular_expressions_and_grep/README.md
+    - Regular expressions and grep: sessions/regular_expressions_and_grep/README.md
     - Linux tools III (awk, sed): sessions/awk_sed.md
   - Lessons Day 2 (smarter bash): 
     - Scripting: sessions/scripting.md
