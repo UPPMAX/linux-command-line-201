@@ -18,6 +18,19 @@ tags:
 
 ??? info "For teachers"
 
+    Lesson plan (45 mins):
+
+    ```mermaid
+    gantt
+      title Lesson plan
+      dateFormat X
+      axisFormat %s
+      Prior : prior, 0, 10s
+      Present: present, after prior, 5s
+      Challenge: crit, challenge, after present, 20s
+      Feedback: feedback, after challenge, 10s
+    ```
+
     Prior:
 
     - What is a regular expression?
@@ -56,7 +69,7 @@ such as regular expression.
 
 ## Exercises
 
-## Exercise x: see the `grep` manual
+## Exercise 1: see the `grep` manual
 
 Use the `grep` manual for this exercise.
 
@@ -95,7 +108,7 @@ Use the `grep` manual for this exercise.
     - The second part of the answer can be found
       in the `OPTIONS | Pattern syntax` section
 
-## Exercise x: use `grep` with a pipe
+## Exercise 2: use `grep` with a pipe
 
 - How would you explain the command below in English?
   Use 'some regular expression' if you see a regular expression.
@@ -138,7 +151,7 @@ man grep | grep "^[A-Z]"
     It shows all lines that start with an uppercase character.
 
 
-## Exercise x: practice regular expressions
+## Exercise 3: practice regular expressions
 
 ???- question "For teachers"
 
@@ -163,7 +176,7 @@ man grep | grep "^[A-Z]"
 - Go to [https://www.regexone.com/](https://www.regexone.com/)
   and do lessons 1 to (and including) 11.
 
-## (optional) Exercise x: can `grep` do ...?
+## (optional) Exercise 4: can `grep` do ...?
 
 Here we'll experience the flexibility of `grep`.
 Pick those topics you are interested in.
