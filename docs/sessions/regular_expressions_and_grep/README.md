@@ -16,7 +16,7 @@ tags:
     - Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
     - (optional) Learners have seen the flexibility of `grep`
 
-??? info "For teachers"
+???- note "For teachers"
 
     Lesson plan (45 mins):
 
