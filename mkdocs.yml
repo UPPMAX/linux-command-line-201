@@ -51,7 +51,7 @@ nav:
     - Regular expressions and grep: sessions/regular_expressions_and_grep/README.md
     - Linux tools III (awk, sed): sessions/awk_sed.md
   - Lessons Day 2 (smarter bash): 
-    - Scripting: sessions/scripting.md
+    - Scripting: sessions/scripting/README.md
     - Redirects: sessions/redirects.md
     - Environment variables: sessions/env_vars.md
     - Symbolic links: sessions/symlinks.md

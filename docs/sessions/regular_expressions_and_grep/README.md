@@ -1,5 +1,7 @@
 ---
 tags:
+  - session
+  - lesson
   - grep
   - regular expressions
 ---
