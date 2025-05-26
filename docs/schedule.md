@@ -20,17 +20,16 @@ tags:
     -----------------------------------|-----------------------------|--------------------------
     Linux pipe                         |30                           |BB
     Linux tools, `wc`                  |15                           |BB
-    Linux tools, `cut`                 |30                           |BC
+    Linux tools, `cut`                 |15                           |BB
     `grep`                             |60                           |RB
-    `sed`                              |30                           |BC
     Linux tools, `awk`                 |30                           |BC
     Bash scripting                     |60                           |RB
     Advanced redirect                  |30                           |BB
     Environment variables              |30                           |BB
     Links (hard/soft)                  |30                           |BB
     Archiving/Compressing              |30                           |BC
-    Quality of life                    |60                           |BC
-    Total                              |435 (= 7.25 hours)           |All
+    Quality of life, `sed`             |45                           |BC
+    Total                              |375 (= 6.25 hours)           |All
 
     <!-- markdownlint-enable MD013 -->
 
@@ -42,7 +41,7 @@ Time        | Topic                     |Teacher
 10:00-10:15 |Break                      |.
 10:15-11:00 |Regular expressions, `grep`|RB
 11:00-11:15 |Break                      |.
-11:15-12:00 |`sed` and `awk`            |BC
+11:15-12:00 |`awk`                      |BC
 
 ## Morning 2: smarter bash
 
@@ -52,4 +51,4 @@ Time        | Topic                                         |Teacher
 10:00-10:15 |Break                                          |.
 10:15-11:00 |Advanced redirect, environment variables, links|BB
 11:00-11:15 |Break                                          |.
-11:15-12:00 |Quality of life, compressing                   |BC
+11:15-12:00 |Quality of life, compressing, `sed`            |BC
