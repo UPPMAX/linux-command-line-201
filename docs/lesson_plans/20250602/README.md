@@ -22,8 +22,8 @@ My learning outcomes are:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-- Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions                                   
-- Learners can use `grep` for pattern matching                                                                          
+- Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
+- Learners can use `grep` for pattern matching
 - [Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)
 
 <!-- markdownlint-enable MD013 -->
@@ -33,7 +33,7 @@ Add LOs are:
 - Learners have experienced that `grep` is a filter
 - Learners have sent text to `grep` using a pipe, e.g. `man grep | grep "[^A-Z]`
 - Learners know there are multiple flavours of regular expressions:
-  use `grep` and `grep -E` 
+  use `grep` and `grep -E`
 
 As sources of text, I consider to use:
 
@@ -46,9 +46,8 @@ As sources of text, I consider to use:
   and can be found in this repo at `books/the_linux_command_line.pdf`
 - man grep | grep "^[[:upper:]]"
 
-
-
-
+Using the `grep` manual and [https://www.regexone.com/](https://www.regexone.com/)
+felt like the best options.
 
 
 ## References

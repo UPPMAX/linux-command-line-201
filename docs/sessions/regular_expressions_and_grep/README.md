@@ -8,12 +8,12 @@ tags:
 
 !!! info "Learning outcomes"
 
-- [x] Learners can use `grep` for pattern matching                                                                          
+- [x] Learners can use `grep` for pattern matching
 - [x] Learners have practiced using the `grep` manual
 - [x] Learners have experienced that `grep` is a filter
 - [x] Learners have sent text to `grep` using a pipe
 - [x] Learners know there are multiple flavours of regular expressions
-- [x] Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions                                   
+- [x] Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
 - (optional) Learners have seen the flexibility of `grep`
 
 ??? info "For teachers"
@@ -46,7 +46,7 @@ flowchart TD
 ## Why use `grep`?
 
 The tool `grep` comes installed with Linux and is an abbreviation
-of 'GNU regular expression parser'. 
+of 'GNU regular expression parser'.
 GNU, an abbreviation of 'GNU's Not Unix!', is a
 collection of free software (among others: `grep`)
 that comes with Linux.
@@ -85,7 +85,7 @@ Use the `grep` manual for this exercise.
 - In the fourth line of the `grep` manual, the
   `grep`-like tools `egrep`, `fgrep` and `rgrep` are mentioned.
   What are these?
-  Tips: 
+  Tips:
     - it is in the first two screens.
     - The first part of the answer can be found
       in the `DESCRIPTION` section,
@@ -244,7 +244,7 @@ Use the `grep` manual to answer these questions.
     Yes.
 
     The `--include` allows you to let `grep`
-    only include files in its 
+    only include files in its
 
     For example, in the commands below,
     the folder `/etc` is searched in configuration (`.conf`)
