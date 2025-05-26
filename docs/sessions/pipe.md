@@ -194,5 +194,3 @@ As you have seen, ``pipe`` is a very useful operator, one which we will meet aga
     - we learned about pipe
     - we tried using one or more pipes to combine commands
 
-
-

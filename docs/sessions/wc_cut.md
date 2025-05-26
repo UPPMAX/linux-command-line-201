@@ -295,9 +295,9 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
         Hello:helloe:hello:hi there!
         What is this! Is this a list: yes, this, is, a, list
         Weird list? Normal list: 1, 2, 3, 4, 5, 6, 7, 8
-        Why not?	I need a tab
+        Why not? I need a tab
         I will write a longer sentence: there is a delimiter colon in this line
-        One more line that has 	a tab	and one more 	and another	hahahaha
+        One more line that has  a tab and one more  and another hahahaha
         ```
 
     Delimiter " " (space) and fields 2-4:
@@ -307,7 +307,7 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
     there!
     is this! Is
     list? Normal list:
-    not?	I need a
+    not? I need a
     will write a
     more line that
     ```
@@ -319,9 +319,9 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
     helloe:hello:hi there!
      yes, this, is, a, list
      1, 2, 3, 4, 5, 6, 7, 8
-    Why not?	I need a tab
+    Why not? I need a tab
     there is a delimiter colon in this line
-    One more line that has 	a tab	and one more 	and another	hahahaha
+    One more line that has  a tab and one more  and another hahahaha
     ```
 
     Delimiter ":" (colon) and fields 3- (from 3 to the end):
@@ -333,7 +333,7 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
 
     Why not?    I need a tab
 
-    One more line that has 	a tab	and one more 	and another	hahahaha
+    One more line that has  a tab and one more  and another hahahaha
     ```
 
     Default delimiter (tab) and fields 3-4:
@@ -345,7 +345,7 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
     Weird list? Normal list: 1, 2, 3, 4, 5, 6, 7, 8
 
     I will write a longer sentence: there is a delimiter colon in this line
-    and one more 	and another
+    and one more  and another
     ```
 
 !!! hint "Info"
@@ -398,6 +398,4 @@ We are again going to use the directory “exercises” -> “piping-wc-cut” a
         - and tried the options **-l** (lines), **-m** (characters), and **-w** (words)
     - we have learned about ``cut``
         - and tried the options for selecting with **bytes**, **characters**, **fields**, and ysed delimiters
-
-
 
