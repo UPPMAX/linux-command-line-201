@@ -20,18 +20,7 @@ tags:
 
     Lesson plan (45 mins):
 
-    <!-- mermaid
-
-    gantt
-      title Lesson plan
-      dateFormat X
-      axisFormat %s
-      Prior : prior, 0, 10s
-      Present: present, after prior, 5s
-      Challenge: crit, challenge, after present, 20s
-      Feedback: feedback, after challenge, 10s
-
-    -->
+    ![Lesson plan](lesson_plan.png)
 
     Prior:
 
