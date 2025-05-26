@@ -101,13 +101,13 @@ Tip: it is at the top.
 
 ??? question "Answer"
 
-  `grep` is a tool to 'print lines that match patterns'
-  It is in the fourth line:
+    `grep` is a tool to 'print lines that match patterns'
+    It is in the fourth line:
 
-  ```console
-  NAME
-         grep, egrep, fgrep, rgrep - print lines that match patterns
-  ```
+    ```console
+    NAME
+           grep, egrep, fgrep, rgrep - print lines that match patterns
+    ```
 
 ### Exercise 1.3: what are the other `grep`s?
 
@@ -160,6 +160,8 @@ Tips:
 
 ## Exercise 2: use `grep` with a pipe
 
+### Exercise 2.1: read a command that has a `grep` with a pipe
+
 How would you explain the command below in English?
 Use 'some regular expression' if you see a regular expression.
 
@@ -171,6 +173,8 @@ man grep | grep "^[A-Z]"
 
   The manual of `grep`, send it to `grep` and let it filter for
   some regular expression.
+
+### Exercise 2.2: run a command that has a `grep` with a pipe
 
 Run the command above. What does it show on screen?
 What did that regular expression do?
@@ -221,8 +225,8 @@ What did that regular expression do?
     11    |`()`
 
 
-- Go to [https://www.regexone.com/](https://www.regexone.com/)
-  and do lessons 1 to (and including) 11.
+Go to [https://www.regexone.com/](https://www.regexone.com/)
+and do lessons 1 to (and including) 11.
 
 ## (optional) Exercise 4: can `grep` do ...?
 
@@ -231,7 +235,9 @@ Pick those topics you are interested in.
 
 Use the `grep` manual to answer these questions.
 
-- Can `grep` do a case-insensitive match?
+### (optional) Exercise 4.1: Can `grep` do a case-insensitive match?
+
+Can `grep` do a case-insensitive match?
 
 ??? question "Answer"
 
@@ -260,7 +266,9 @@ Use the `grep` manual to answer these questions.
     ```
 
 
-- Can `grep` show the lines that **do not** match?
+### (optional) Exercise 4.2: Can `grep` show the lines that do not match?
+
+Can `grep` show the lines that **do not** match?
 
 ??? question "Answer"
 
@@ -276,8 +284,11 @@ Use the `grep` manual to answer these questions.
     man grep | grep --invert-match " "
     ```
 
+### (optional) Exercise 4.3: Can `grep` detect lines in multiple files?
 
-- Can `grep` detect lines in multiple files?
+Can `grep` detect lines in multiple files?
+
+??? question "Answer"
 
     Yes.
 
@@ -293,7 +304,11 @@ Use the `grep` manual to answer these questions.
     ```
 
 
-- Can `grep` detect which files contain a match?
+### (optional) Exercise 4.4: Can `grep` detect which files contain a match?
+
+Can `grep` detect which files contain a match?
+
+??? question "Answer"
 
     Yes.
 
@@ -309,8 +324,11 @@ Use the `grep` manual to answer these questions.
     grep --recursive --files-with-matches "ubuntu"
     ```
 
+### (optional) Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?
 
-- Can `grep` detect which files-with-a-certain-extension contain a match?
+Can `grep` detect which files-with-a-certain-extension contain a match?
+
+??? question "Answer"
 
     Yes.
 
@@ -325,7 +343,6 @@ Use the `grep` manual to answer these questions.
     cd /etc
     grep --recursive "ubuntu" --include "*.conf"
     ```
-
 
 ## Feedback
 
@@ -443,3 +460,20 @@ flowchart TD
   grep --> |Regular expression| filter
   complete_text --> filter --> filtered_text
 ```
+
+!!! info "Conclusions"
+
+    - `grep` is used for pattern matching
+    - `grep` has a useful manual
+    - `grep` is a filter
+    - `grep` works well with pipes
+    - There are multiple regular expression dialects
+    - The pattern `.`, `[]` and `[^]` are used
+      to (not) match a (set of) characters
+    - The pattern `*`, `+`, `?` and `{}` are used to indicate an amount
+    - The pattern `()` is used to capture a set of a match
+    - (optional) `grep` can do a lot of different things
+
+!!! info "Next session"
+
+    - `grep` cannot do replacements, use `sed` instead.
