@@ -76,7 +76,7 @@ Tip: `man` is the command to view a manual.
 
 ### Exercise 1.2: what does `grep` do?
 
-According to the `grep` manual, in a one-line answer, what does `grep` do?
+According to the `grep` manual, **in a one-liner**, what does `grep` do?
 
 Tip: it is at the top.
 
@@ -145,6 +145,8 @@ Tips:
 
 ## Exercise 2: use `grep` with a pipe
 
+In this exercise, we use `grep` with a pipe.
+
 ### Exercise 2.1: read a command that has a `grep` with a pipe
 
 How would you explain the command below in English?
@@ -156,8 +158,8 @@ man grep | grep "^[A-Z]"
 
 ??? tip "Answer"
 
-  The manual of `grep`, send it to `grep` and let it filter for
-  some regular expression.
+    The manual of `grep`, send it to `grep` and let it filter for
+    some regular expression.
 
 ---
 
@@ -197,7 +199,7 @@ What did that regular expression do?
 Go to [https://www.regexone.com/](https://www.regexone.com/)
 and do lessons 1 to (and including) 11.
 
-??? tip "Overview of lessons"
+???- info "Overview of these lessons"
 
     Here is an overview of the regular expression patterns in each lesson:
 
