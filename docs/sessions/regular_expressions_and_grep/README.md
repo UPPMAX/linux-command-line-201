@@ -77,6 +77,8 @@ such as regular expression.
 
 In this exercise, we'll use the `grep` manual.
 
+---
+
 ### Exercise 1.1: view the `grep` manual
 
 View the `grep` manual.
@@ -215,7 +217,10 @@ What did that regular expression do?
 
 ## Exercise 3: practice regular expressions
 
-??? question "For teachers"
+Go to [https://www.regexone.com/](https://www.regexone.com/)
+and do lessons 1 to (and including) 11.
+
+!!! info "Overview of lessons"
 
     Here is an overview of the regular expression patterns in each lesson:
 
@@ -234,9 +239,7 @@ What did that regular expression do?
     10    |`^`
     11    |`()`
 
-
-Go to [https://www.regexone.com/](https://www.regexone.com/)
-and do lessons 1 to (and including) 11.
+---
 
 ## (optional) Exercise 4: can `grep` do ...?
 
@@ -244,6 +247,8 @@ Here we'll experience the flexibility of `grep`.
 Pick those topics you are interested in.
 
 Use the `grep` manual to answer these questions.
+
+---
 
 ### (optional) Exercise 4.1: Can `grep` do a case-insensitive match?
 
@@ -375,6 +380,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     - `pgrep` (Perl-like)
 
 
+---
+
 - We have sent the `grep` manual to `grep` using a pipe.
   Can we use any text?
 
@@ -382,6 +389,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     Yes: the `grep` manual is just text like any other.
 
+---
 
 - Can we send the output of `grep` to `grep`?
 
@@ -389,6 +397,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     Yes: the `grep` output is just text like any other.
 
+---
 
 - What is a Kleene star and what does it do?
 
@@ -398,6 +407,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     In English it would be read as: 'the thing before it
     repeated at least zero times'.
 
+
+---
 
 - What is the difference between `[^A-Z]` and `^[A-Z]`?
 
@@ -409,6 +420,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     The second regular expression means: 'At the start of a line, any uppercase
     letter'.
 
+---
 
 - What is regular expression for 'any line of text' (including empty ones)?
 
@@ -417,6 +429,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     The regular expression for 'any line of text' is `.*`,
     as `.` means 'Any character' and `*` means 'repeated at least zero times'.
 
+---
 
 - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
 
@@ -429,6 +442,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     as hidden files start with a `.` (e.g. `ls .*`).
     This meaning can change depending on context (e.g. `cat .*`).
 
+---
 
 - Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
   inverts the match (i.e. showing non-matching lines), how to combine these
@@ -449,6 +463,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
     ```bash
     man grep | grep --ignore-case --invert-match "[a-f]"
     ```
+
+---
 
 ## Tests
 
@@ -479,6 +495,8 @@ flowchart TD
   complete_text --> filter --> filtered_text
 ```
 
+---
+
 !!! info "Conclusions"
 
     - `grep` is used for pattern matching
@@ -491,6 +509,8 @@ flowchart TD
     - The pattern `*`, `+`, `?` and `{}` are used to indicate an amount
     - The pattern `()` is used to capture a set of a match
     - (optional) `grep` can do a lot of different things
+
+---
 
 !!! info "Next session"
 
