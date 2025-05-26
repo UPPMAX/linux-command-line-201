@@ -114,7 +114,7 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
     This is a line of text, which I am writing
     ```
 
-!!! note "Using two pipes: head and tail to print lines in specific range in a file"
+!!! note "Using two pipes: head and tail to print lines in a specific range in a file"
 
     ```bash
     $ cat newfile.txt | head -2 | tail -3
