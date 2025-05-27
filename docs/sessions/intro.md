@@ -7,4 +7,6 @@
 
 ## Evaluation 
 
-- This course is running for the first time and we would very much like some input on how we did so we can develop and improve the course. Here is the link to the evaluation survey: 
+- This course is running for the first time and we would very much like some input on how we did so we can develop and improve the course. 
+- Here is the link to the evaluation survey: <a href="https://forms.office.com/e/dNviziEA6c" target="_blank">https://forms.office.com/e/dNviziEA6c</a>
+
