@@ -55,3 +55,12 @@ tldr
 todo
 faq
 Gantt
+Aho
+Kernighan
+Weinberger
+FS
+OFS
+ORS
+dat
+STDERR
+STDOUT

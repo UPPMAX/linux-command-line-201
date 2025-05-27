@@ -18,7 +18,7 @@ Time        | Topic                     |Teacher
 10:00-10:15 |Break                      |.
 10:15-11:00 |Regular expressions, `grep`|RB
 11:00-11:15 |Break                      |.
-11:15-12:00 |`sed` and `awk`            |BC
+11:15-12:00 |`awk`                      |BC
 
 ## Morning 2: smarter bash
 
@@ -28,4 +28,4 @@ Time        | Topic                                         |Teacher
 10:00-10:15 |Break                                          |.
 10:15-11:00 |Advanced redirect, environment variables, links|BB
 11:00-11:15 |Break                                          |.
-11:15-12:00 |Quality of life, compressing                   |BC
+11:15-12:00 |Quality of life, compressing, `sed`            |BC
