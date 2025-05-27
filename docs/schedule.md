@@ -14,11 +14,12 @@ tags:
 
 Time        | Topic                                                                        |Teacher
 ------------|------------------------------------------------------------------------------|-------
-9:00-10:00  |Linux pipe, `wc`, `cut`                                                       |BB
-10:00-10:15 |Break                                                                         |.
-10:15-11:00 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|RB
-11:00-11:15 |Break                                                                         |.
-11:15-12:00 |[`awk`](sessions/awk/README.md)                                               |RB
+9:00-9:10   |Introduction                                                                  |
+9:10-10:05  |Linux pipe, `wc`, `cut`                                                       |BB
+10:05-10:20 |Break                                                                         |.
+10:20-11:05 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|RB
+11:05-11:20 |Break                                                                         |.
+11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |RB
 
 ## Morning 2: smarter bash
 

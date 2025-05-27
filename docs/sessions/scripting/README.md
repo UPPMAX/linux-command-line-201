@@ -53,7 +53,7 @@ and allows you to continue studying after this course
 
 ![The book](book_cover_282_x_450.png)
 
-### Exercise x:
+### Exercise 1: Bash structure
 
 - Read the text at
   [chapter 2: 'Bash structure'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/002-bash-structure.md)
@@ -85,7 +85,7 @@ and allows you to continue studying after this course
 ---
 
 
-### Exercise x:
+### Exercise 2: Hello world
 
 - Read the text at
   [chapter 3: 'Hello world'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/003-bash-hello-world.md)
@@ -117,7 +117,7 @@ and allows you to continue studying after this course
 ---
 
  
-### Exercise x: bash variables
+### Exercise 3: bash variables
 
 - Read the text at
   [chapter 4: 'Bash Variables'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/004-bash-variables.md)
@@ -148,7 +148,7 @@ and allows you to continue studying after this course
 
 ---
 
-### Exercise x: counting files
+### Exercise 4: counting files
 
 Bash can store the output of other tools in variables.
 
@@ -186,7 +186,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 ---
 
-### Exercise x:
+### Exercise 5: user input
 
 - Read the text at
   [chapter 5: 'User input'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/005-bash-user-input.md)
@@ -218,7 +218,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 ---
 
-### Exercise x:
+### Exercise 6: conditional expressions
 
 - Read the text at
   [chapter 9: 'Conditional expressions'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/009-bash-conditional-expressions.md)
@@ -234,7 +234,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 ---
 
-### Exercise x:
+### Exercise 7: conditionals
 
 - Read the chapters 'If statement' and 'If Else statement' of
   [chapter 10: 'Conditionals'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/010-bash-conditionals.md),
@@ -273,7 +273,7 @@ Write a script that counts and shows the number of files in our current folder:
 ---
 
 
-### Exercise x: For loops
+### Exercise 8: For loops
 
 - Read only the 'For loops' section of
   [chapter 11: 'Bash loops'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/011-bash-loops.md)
@@ -310,7 +310,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 ---
 
-### Exercise x: For loops with bash commands
+### Exercise 9: For loops with bash commands
 
 Instead of iterating over names,
 we can iterate over something useful instead,
@@ -356,7 +356,4 @@ such as the output of a bash command.
 !!! info "Next session"
 
     - `bash` can do much more
-
-
-
 
