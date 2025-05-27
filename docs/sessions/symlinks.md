@@ -11,14 +11,28 @@ Symbolic links are also called soft links, or just symlinks. It is a pointer to 
 
     You may have heard symbolic links referred to as "soft links". So what is a hard link? 
 
-    Hard links are also shortcuts for files and folders, but a hard link cannot be created for a folder or file in a different file system. 
-
-    If you put a "hard link" to something (like maybe a library) in your program, then it can be either a relativ link or an absolute link. Regardless, if the file is not located in that place, then you may need to use a symbolic link (soft link) to create a pointer in that place. 
+    Hard links are also shortcuts for files (not directories), but a hard link cannot be created for a file in a different file system. 
 
 ## Syntax 
 
+Soft link/symbolic link:
+
 ```bash
-ln -s real-file-or-lib link-name
+ln -s real-file-folder-or-lib link-name
+```
+
+Hard link:
+
+```bash
+ln source-file linked-file
+```
+
+## Verify 
+
+To verify a soft or hard link, run: 
+
+```bash
+ls -l source link
 ```
 
 ## Examples 
@@ -26,6 +40,39 @@ ln -s real-file-or-lib link-name
 !!! hint
 
     You can type along to most of this! Use the files in "exercises" -> "redirects-env-links" for examples. 
+
+### Hard links 
+
+!!! hint
+
+    You can code along!
+
+    Either use one of the files/directories in "exercises" -> "redirect-env-link" or create a file to play with. This should work: 
+
+    ``echo 'This is my test file' > testfile``
+
+!!! note "Create a hard link, files"
+
+    ```bash
+    ln testfile linkfile
+    ```
+
+    To check what happened, do this: 
+    ```bash
+    ls -li testfile linkfile
+    ```
+
+    My output: 
+    ```bash
+    $ ls -li
+    total 8
+    808864781 -rw-r--r-- 2 bbrydsoe folk 21 May 27 16:36 linkfile
+    808864781 -rw-r--r-- 2 bbrydsoe folk 21 May 27 16:36 testfile
+    ``` 
+
+    808864781 is the inode, which is identical. An inode (index node) is a concept in Linux/Unix. Each object in a filesystem is represented by an inode. It is a data structure which stores basic info about files, directories, or other file system objects. More here if you are interested: <a href="https://www.cyberciti.biz/tips/understanding-unixlinux-filesystem-inodes.html" target="_blank">Understanding UNIX / Linux filesystem Inodes</a>. 
+
+### Soft/symbolic links 
 
 !!! note "Create a symbolic link to a directory" 
 
@@ -113,6 +160,7 @@ ln -s real-file-or-lib link-name
 !!! note "Keypoints" 
 
     - Symbolic links are pointers to another file or directory
+    - there are both soft/symbolic links and hard links 
     - they are useful both for ease and to avoid renaming/copying files 
     - you can remove symbolic links with ``rm`` or ``unlink`` 
 
