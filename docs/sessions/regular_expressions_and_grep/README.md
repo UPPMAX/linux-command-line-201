@@ -20,9 +20,14 @@ tags:
 
 ???- note "For teachers"
 
-    Lesson plan (45 mins):
+    Lesson plan:
 
-    ![Lesson plan](lesson_plan.png)
+    Time |Duration|Description
+    -----|--------|---------
+    0-10 |10      |Prior
+    10-15|5       |Present
+    15-35|20      |Challenge
+    35-45|10      |Feedback
 
     Prior:
 
@@ -31,7 +36,6 @@ tags:
     - What is GNU?
     - What is `grep`?
     - In the context of command-line tools, what is a filter?
-
 
 ## Why use regular expressions?
 
