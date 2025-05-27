@@ -25,8 +25,8 @@ Topics
 - Linux pipe, wc, cut
 - grep
 - sed and awk
-    Bash scripting
-    Advanced redirect, environment variables, links
-    Quality of life, compressing
+- Bash scripting
+- Advanced redirect, environment variables, links
+- Quality of life, compressing
 
 NOTE that the lectures (but not the exercises) will be recorded and uploaded to HPC2N's YouTube channel.
