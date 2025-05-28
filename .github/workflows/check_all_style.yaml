@@ -8,15 +8,7 @@ name: Check all style
 # 21st as the first letter of this repo is the 21st letter in the alphabet.
 on:
   push:
-    paths:
-      - .github/workflows/check_all_style.yaml
-      - 'docs/**'
-      - '**.md'
   pull_request:
-    paths:
-      - .github/workflows/check_all_style.yaml
-      - 'docs/**'
-      - '**.md'
   schedule:
   - cron: "0 0 21 * *"
 
