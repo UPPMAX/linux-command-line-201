@@ -48,8 +48,8 @@ nav:
     - Introduction: sessions/intro.md
     - Linux pipe: sessions/pipe.md
     - Linux tools (wc, cut): sessions/wc_cut.md
-    - Regular expressions and grep: sessions/regular_expressions_and_grep/README.md
-    - Linux tools (awk): sessions/awk.md
+    - Searching using regular expressions and grep: sessions/regular_expressions_and_grep/README.md
+    - Searching and transforming using AWK: sessions/awk/README.md
   - Lessons Day 2 (smarter bash): 
     - Scripting: sessions/scripting/README.md
     - Redirects: sessions/redirects.md
