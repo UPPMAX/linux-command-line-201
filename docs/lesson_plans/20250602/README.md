@@ -91,9 +91,34 @@ Non-LOs:
 
 Books to use:
 
-- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)
-- [Effective awk programming](https://www.dbooks.org/effective-awk-programming-1882114280/)
+- [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf)'
+  [chapter 6](https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_06.html),
+  from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html) 
+  to section 6.2.3 seems to work in my context
+- [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/abs-guide.pdf),
+  page [C2. Awk](https://tldp.org/LDP/abs/html/awk.html)
+  is a micro primer, with some usefulness 
+- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook): 
+  uses files, not pipes
+- [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/): too complex for the LOs
+- [The Linux Command Line](https://linuxcommand.org/tlcl.php): no chapter on AWK
+- [Introduction to Linux](https://tldp.org/LDP/intro-linux/intro-linux.pdf): no chapter on AWK
+- [Linux Fundamentals](https://linux-training.be/linuxfun.pdf): no chapter on AWK
+- [Ultimate Linux Newbie Guide](https://linuxnewbieguide.org/ulngebook2017/): no chapter on AWK
+- [Advanced Linux programming](http://www.cse.hcmut.edu.vn/~hungnq/courses/nap/alp.pdf): no chapter on AWK
+- [Linux From Scratch](https://www.linuxfromscratch.org/): no chapter on AWK
+- [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/read.html): no chapter on AWK
 
+I will use the Bash Beginners Guide.
+
+Mapping sessions to LOs:
+
+- 6.2.1: I can use `awk` in pipes
+- 6.2.3: I can use regular expressions in `awk`
+- 6.2.1: I can use `awk` to read a specific column
+- 6.2.2: I can use `awk` to transform text
+
+Seems this works!
 
 
 ## References
