@@ -12,6 +12,8 @@ tags:
 
 ## Morning 1: smarter command-line
 
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
 Time        | Topic                                                                        |Teacher
 ------------|------------------------------------------------------------------------------|-------
 9:00-9:10   |Introduction                                                                  |
@@ -21,12 +23,14 @@ Time        | Topic                                                             
 11:05-11:20 |Break                                                                         |.
 11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |R
 
+<!-- markdownlint-enable MD013 -->
+
 - Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
 
 ## Morning 2: smarter bash
 
 Time        | Topic                                         |Teacher
-------------|-----------------------------------------------|-----------------
+------------|-----------------------------------------------|-------
 9:00-10:00  |[Bash scripting](sessions/scripting/README.md) |R
 10:00-10:15 |Break                                          |.
 10:15-11:00 |Advanced redirect, environment variables, links|B

@@ -22,13 +22,9 @@ I should assume the learners can use a pipe,
 
 My learning outcomes are:
 
-<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
-
 - Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
 - Learners can use `grep` for pattern matching
 - [Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)
-
-<!-- markdownlint-enable MD013 -->
 
 Add LOs are:
 
@@ -40,7 +36,8 @@ Add LOs are:
 As sources of text, I consider to use:
 
 - 'Frankenstein; Or, The Modern Prometheus',
-  from [a plain text file at Project Gutenberg](https://www.gutenberg.org/cache/epub/84/pg84.txt).
+  from
+  [a plain text file at Project Gutenberg](https://www.gutenberg.org/cache/epub/84/pg84.txt)
 - `man grep` or `yelp man:grep` or `man grep | grep "^[A-Z]"`
 - [https://www.regexone.com/](https://www.regexone.com/)
 - `[Shotts, 2024]`
@@ -48,7 +45,8 @@ As sources of text, I consider to use:
   and can be found in this repo at `books/the_linux_command_line.pdf`
 - man grep | grep "^[[:upper:]]"
 
-Using the `grep` manual and [https://www.regexone.com/](https://www.regexone.com/)
+Using the `grep` manual and
+[https://www.regexone.com/](https://www.regexone.com/)
 felt like the best options.
 
 Fixing the layout is harder, e.g. getting `mermaid` to work, making the
@@ -91,7 +89,7 @@ Non-LOs:
 
 Books to use:
 
-- [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf)'
+- [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf)
   [chapter 6](https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_06.html),
   from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html)
   to section 6.2.3 seems to work in my context
@@ -100,14 +98,19 @@ Books to use:
   is a micro primer, with some usefulness
 - [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook):
   uses files, not pipes
-- [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/): too complex for the LOs
+- [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/):
+  too complex for the LOs
 - [The Linux Command Line](https://linuxcommand.org/tlcl.php): no chapter on AWK
-- [Introduction to Linux](https://tldp.org/LDP/intro-linux/intro-linux.pdf): no chapter on AWK
+- [Introduction to Linux](https://tldp.org/LDP/intro-linux/intro-linux.pdf):
+  no chapter on AWK
 - [Linux Fundamentals](https://linux-training.be/linuxfun.pdf): no chapter on AWK
-- [Ultimate Linux Newbie Guide](https://linuxnewbieguide.org/ulngebook2017/): no chapter on AWK
-- [Advanced Linux programming](http://www.cse.hcmut.edu.vn/~hungnq/courses/nap/alp.pdf): no chapter on AWK
+- [Ultimate Linux Newbie Guide](https://linuxnewbieguide.org/ulngebook2017/):
+  no chapter on AWK
+- [Advanced Linux programming](http://www.cse.hcmut.edu.vn/~hungnq/courses/nap/alp.pdf):
+  no chapter on AWK
 - [Linux From Scratch](https://www.linuxfromscratch.org/): no chapter on AWK
-- [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/read.html): no chapter on AWK
+- [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/read.html):
+  no chapter on AWK
 
 I will use the Bash Beginners Guide.
 
