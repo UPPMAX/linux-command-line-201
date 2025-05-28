@@ -33,6 +33,51 @@ it can -by definition- solve any computational problem.
     `awk`   |The program
     Awk     |A common misspelling
 
+## Exercises
+
+In these exercises, we'll be using the
+[Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/),
+as this online book fits this course well, is free, is open
+and allows you to continue studying after this course.
+
+
+[chapter 6](https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_06.html),
+from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html)
+
+
+![The book](book_cover_282_x_450.png)
+
+### Exercise 1: Bash structure
+
+- Read the text at
+  [chapter 2: 'Bash structure'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/002-bash-structure.md)
+- Create a file called `greeter.sh` with a shebang
+  following that chapter
+
+??? tip "Answer"
+
+    In a terminal, type:
+
+    ```bash
+    touch greeter.sh
+    ```
+
+    Add the following line to the file:
+
+    ```bash
+    #!/bin/bash
+    ```
+
+    Remember that if this does not work on your computer, use the more
+    flexible shebang:
+
+
+    ```bash
+    #!/usr/bin/env bash
+    ```
+
+---
+
 <!-- markdownlint-disable --><!-- Not checked for markdown style for now -->
 
 This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports.
@@ -213,8 +258,14 @@ Work with the files in the "exercises" - "awk-qol" directory.
 
 ---
 
-## Books on AWK
+!!! info Learning AWK
 
-- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)
-- [Effective awk programming](https://www.dbooks.org/effective-awk-programming-1882114280/)
+    Learning resource                                                              |Description
+    -------------------------------------------------------------------------------|-----------------------------
+    [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)|Book about AWK
+    [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/)   |Book about AWK
+    [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/         |Book with a chapter about AWK
+    [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)                |Book with a chapter about AWK
+    [To AWK or not](https://pmitev.github.io/to-awk-or-not/)                       |Course about AWK
+    [AWK course](https://richelbilderbeek.github.io/awk_course/)                   |Course about AWK
 
