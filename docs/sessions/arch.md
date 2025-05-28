@@ -120,7 +120,7 @@ Compression utility designed as a replacement for compress, with much better com
 
 !!! warning
 
-    ```gzip`` does not archive the files into one file, just compress them!  
+    ``gzip`` does not archive the files into one file, just compress them!  
 
     For archiving files, ``tar`` is your friend - often in combination with ``gzip``. More about that soon! 
 
@@ -250,9 +250,9 @@ The command ``tar --help`` will give the format (defaults to gnu). This is gener
 
 ### Syntax 
 
-    ```bash
-    tar [-options] <name of the tar archive> [files or directories which to add into archive]
-    ``` 
+```bash
+tar [-options] <name of the tar archive> [files or directories which to add into archive]
+``` 
 
 ### Basic options 
 
