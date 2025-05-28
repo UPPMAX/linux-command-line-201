@@ -185,15 +185,17 @@ Work with the files in the "exercises" - "awk-qol" directory.
 
 <!-- markdownlint-enable -->
 
-## Summary
+---
 
-!!! note "Keypoints
+!!! info "Conclusions"
 
     - `awk` can be used pipes: `[code]`
     - `awk` can be used to read a specific column: `[code]`
     - `awk` can be used to transform text: `[code]`
     - `awk` can use regular expressions: `[code]`
     - `awk` can do a lot more, `[link to book]`
+
+---
 
 ## Books on AWK
 
