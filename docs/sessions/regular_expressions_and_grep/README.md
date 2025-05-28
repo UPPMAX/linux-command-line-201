@@ -105,6 +105,7 @@ In the fourth line of the `grep` manual, the
 What are these?
 
 Tips:
+
     - it is in the first two screens.
     - The first part of the answer can be found
       in the `DESCRIPTION` section,
@@ -124,7 +125,7 @@ Tips:
            [...]
 
            Debian also includes the variant programs egrep, fgrep and rgrep.  These programs
-           are the same as grep -E, grep -F, and grep -r, respectively. 
+           are the same as grep -E, grep -F, and grep -r, respectively.
           [...]
     ```
 
@@ -249,7 +250,7 @@ Can `grep` do a case-insensitive match?
 
 ??? tip "Answer"
 
-    Yes. 
+    Yes.
 
     The `--ignore-case` allows you
     to let `grep` do a case-insensitive search.
@@ -285,7 +286,7 @@ Can `grep` show the lines that **do not** match?
 
 ??? tip "Answer"
 
-    Yes. 
+    Yes.
 
     The `--invert-match` allows you
     to let `grep` show lines that do not match.
@@ -374,7 +375,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ??? tip "Answer"
 
-        At least 3: 
+        At least 3:
 
         - `grep` (basic)
         - `egrep` (extended)
