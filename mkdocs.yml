@@ -32,10 +32,6 @@ theme:
 
 extra_css:
   - css/extra.css
-    #extra_javascript:
-    #  - js/popper.min.js
-    #  - js/tippy-bundle.umd.js
-    #  - js/clipboard.js
 
 nav:
   - Common:
@@ -99,17 +95,6 @@ markdown_extensions:
       separator: "__"
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        # Mermaid diagrams, from https://facelessuser.github.io/pymdown-extensions/extras/mermaid/#using-in-mkdocs
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
 
-  
 
-# For mermaid, from https://facelessuser.github.io/pymdown-extensions/extras/mermaid/#using-in-mkdocs
-extra_javascript:
-  # - optionalConfig.js
-  - https://cdn.jsdelivr.net/npm/mermaid@11.5.0/dist/mermaid.min.js # For mermaid
-  - extra-loader-B5CKpNQx.js # For mermaid, from https://github.com/facelessuser/pymdown-extensions/blob/main/docs/theme/assets/pymdownx-extras/extra-loader-B5CKpNQx.js
+
