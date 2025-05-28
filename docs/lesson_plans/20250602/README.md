@@ -13,7 +13,7 @@ Time        | Topic                 |Teacher
 10:00-10:15 |Break                  |.
 10:15-11:00 |`grep`                 |RB
 11:00-11:15 |Break                  |.
-11:15-12:00 |`sed` and `awk`        |BC
+11:15-12:00 |`awk`                  |RB
 
 I should assume the learners can use a pipe,
 BC should assume they learners can `grep` things.
