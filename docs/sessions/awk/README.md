@@ -10,11 +10,12 @@ tags:
 
 !!! info "Learning outcomes"
 
+    - Learners can use `awk`
+    - Learners have practiced using a book on `awk`
     - Learners can use `awk` in pipes
     - Learners can use `awk` to read a specific column
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
-
 
 This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports. 
 
