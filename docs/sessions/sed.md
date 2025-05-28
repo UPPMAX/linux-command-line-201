@@ -32,6 +32,11 @@ where
 - **question mark (?)** matches zero or one occurrence of the previous character.
 - **dot (.)** matches exactly one character.
 
+Some examples inspired by: 
+
+- https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
+- https://en.wikipedia.org/wiki/Sed
+
 ## Substitution command
 
 This is probably what ``sed`` is most commonly used for: substitution. It is also the original motivation for creating it. 
@@ -121,7 +126,7 @@ Besides substitution, ``sed`` can do many other things. There are around 24 ``se
     sed '/^ *$/d' inputFile 
     ```
    
-!!! note "Deleting a line from a specific file" 
+!!! note "Deleting a specific ine from a specific file" 
 
     Delete line 4
 
@@ -129,15 +134,44 @@ Besides substitution, ``sed`` can do many other things. There are around 24 ``se
     sed '4d' file1.txt 
     ``` 
 
- 
+!!! note "Delete a line containing a matching pattern" 
 
-
-## Other common commands 
-https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
-https://en.wikipedia.org/wiki/Sed
-
-
+    Lines matching the string "cat" 
+    ```bash 
+    sed '/cat/d' file1.txt 
+    
 ## Filtering
 
+It is also common to use ``sed`` as a filter, as part of a "pipeline". 
+
+In this example, the program "data-generating-program" is creating some data, but you named something wrong perhaps, and now you need to replace all instances of "right" with "left": 
+
+```bash
+data-generating-program | sed 's/right/left/g' 
+```
+
 ## In-place editing
+
+Using the ``-i`` option allows "in-place" editing instead of creating a new file with the editions (though in reality a temporary file is created in the background and then the original file is replaced by the temporary file). 
+
+**Example - change cat to dog** 
+
+```bash
+sed -i 's/cat/dog/' file1.txt
+``` 
+
+## Summary 
+
+!!! note "Keypoints" 
+
+    - we have learned about ``sed`` and some of its common commands
+    - we have used ``sed`` to replace strings matching a pattern
+    - we have used ``sed`` to delete specific lines 
+    - we have learned about ``sed`` for filtering 
+    - we have learned about ``sed`` in-place editing 
+
+
+
+
+
 
