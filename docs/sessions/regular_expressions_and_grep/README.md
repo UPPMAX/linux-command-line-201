@@ -10,12 +10,12 @@ tags:
 
 !!! info "Learning outcomes"
 
-    - Learners can use `grep` for pattern matching
-    - Learners have practiced using the `grep` manual
-    - Learners have experienced that `grep` is a filter
-    - Learners have sent text to `grep` using a pipe
     - Learners know there are multiple flavours of regular expressions
     - Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
+    - Learners can use `grep`
+    - Learners have practiced using the `grep` manual
+    - Learners can use `grep` to search for a regular expression
+    - Learners have sent text to `grep` using a pipe
     - (optional) Learners have seen the flexibility of `grep`
 
 ???- note "For teachers"
