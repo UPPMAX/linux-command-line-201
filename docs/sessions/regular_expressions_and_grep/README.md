@@ -15,7 +15,7 @@ tags:
     - Learners can use `grep`
     - Learners have practiced using the `grep` manual
     - Learners can use `grep` to search for a regular expression
-    - Learners have sent text to `grep` using a pipe
+    - Learners can send text to `grep` using a pipe
     - (optional) Learners have seen the flexibility of `grep`
 
 ???- note "For teachers"
