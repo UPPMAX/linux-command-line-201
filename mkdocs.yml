@@ -49,7 +49,7 @@ nav:
     - Linux pipe: sessions/pipe.md
     - Linux tools (wc, cut): sessions/wc_cut.md
     - Searching using regular expressions and grep: sessions/regular_expressions_and_grep/README.md
-    - Searching and transforming using AWK: sessions/awk/README.md
+    - Searching and transforming using awk: sessions/awk/README.md
   - Lessons Day 2 (smarter bash): 
     - Scripting: sessions/scripting/README.md
     - Redirects: sessions/redirects.md
