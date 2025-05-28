@@ -19,9 +19,10 @@ if [[ "$PWD" =~ scripts$ ]]; then
     exit 42
 fi
 
+mkdir /tmp/lint
 
+# Run locally
 docker run \
-  -e LOG_LEVEL=DEBUG \
   -e RUN_LOCAL=true \
-  -v /path/to/local/codebase:/tmp/lint \
+  -v .:/tmp/ \
   ghcr.io/super-linter/super-linter:latest
