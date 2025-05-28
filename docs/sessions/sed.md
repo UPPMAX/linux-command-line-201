@@ -116,7 +116,7 @@ sed 's/regexp/replacement/g' inputFileName > outputFileName
 
 ## Other common commands 
 
-Besides substitution, ``sed`` can do many other things. There are around 24 ``sed`` commands. 
+Besides substitution, ``sed`` can do many other things. There are around 25 ``sed`` commands. Here we will only look at the command to filter out specific lines. 
 
 ### Using the ``d`` command to filter out specific lines
 
