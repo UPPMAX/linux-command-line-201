@@ -1,18 +1,6 @@
 /* Styling to make the tabbed content work */
 
 /* General environment setup */
-/*html {
-  background-color: black;
-  height: 100%;
-}
-body {
-  font-size: 120%;
-  width: 20em;
-  padding: 1em 2em;
-  margin: 0 auto;
-  background-color: white;
-  height: 100%;
-}*/
 
 /* Tab style starts here */
 .tabbed-alternate {
@@ -35,9 +23,11 @@ body {
   box-shadow: 0 -0.1rem #ddd inset;
   scrollbar-width: none;
 }
+
 .tabbed-labels::-webkit-scrollbar {
   display: none;
 }
+
 .tabbed-labels > label {
   width: auto;
   padding: 0.9375em 1.25em 0.78125em;
@@ -51,6 +41,7 @@ body {
   cursor: pointer;
   transition: background-color 250ms, color 250ms;
 }
+
 .tabbed-labels > label:hover {
   color: red;
 }
@@ -84,6 +75,7 @@ body {
 .tabbed-alternate .tabbed-content {
   width: 100%;
 }
+
 .tabbed-alternate input:nth-child(1):checked ~ .tabbed-content > :nth-child(1),
 .tabbed-alternate input:nth-child(2):checked ~ .tabbed-content > :nth-child(2),
 .tabbed-alternate input:nth-child(3):checked ~ .tabbed-content > :nth-child(3),
@@ -92,9 +84,11 @@ body {
 .tabbed-alternate input:nth-child(6):checked ~ .tabbed-content > :nth-child(6) {
   display: block;
 }
+
 .tabbed-alternate .tabbed-block {
   display: none;
 }
+
 @media screen {
   .tabbed-alternate input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1),
   .tabbed-alternate input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2),
@@ -106,6 +100,7 @@ body {
     border-color: red;
   }
 }
+
 @media print {
   .tabbed-labels {
     display: contents;
