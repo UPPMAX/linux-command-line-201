@@ -20,9 +20,17 @@ if [[ "$PWD" =~ scripts$ ]]; then
 fi
 
 mkdir /tmp/lint
+touch /tmp/lint/README.md
+
+mkdir tmp
+touch tmp/README.md
+
+export GITHUB_WORKSPACE=${PWD}
+export GITHUB_SHA=$(git -C . rev-parse HEAD)
+
 
 # Run locally
 docker run \
   -e RUN_LOCAL=true \
-  -v .:/tmp/ \
+  --volume "${PWD}:${PWD}/tmp/README.md" \
   ghcr.io/super-linter/super-linter:latest
