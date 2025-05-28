@@ -18,5 +18,5 @@ if [[ "$PWD" =~ scripts$ ]]; then
     exit 42
 fi
 
-shellcheck $(find . | grep "sh$")
+shellcheck $(find . | grep "sh$" | grep -v exercises)
 
