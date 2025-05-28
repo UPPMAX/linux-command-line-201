@@ -17,8 +17,9 @@ on:
   workflow_dispatch:
 
 
+# No: really needs this to be able to deploy
 # Suggested by Super Linter
-permissions: read-all
+# permissions: read-all
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
