@@ -16,7 +16,7 @@ tags:
 
 Time        | Topic                                                                        |Teacher
 ------------|------------------------------------------------------------------------------|-------
-9:00-9:10   |Introduction                                                                  |?B
+9:00-9:10   |Introduction                                                                  |B
 9:10-10:05  |Linux pipe, `wc`, `cut`                                                       |B
 10:05-10:20 |Break                                                                         |.
 10:20-11:05 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|R
