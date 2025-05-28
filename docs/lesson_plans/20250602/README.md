@@ -123,6 +123,7 @@ Mapping sessions to LOs:
 
 Seems this works!
 
+I will map these to exercises, and adding a 'Can awk do ...?' section.
 
 ## References
 

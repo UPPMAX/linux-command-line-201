@@ -17,6 +17,22 @@ tags:
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
 
+## Why is `awk` important?
+
+AWK is a programming language for text processing
+that is included with Linux.
+
+As a Turing complete programming language,
+it can -by definition- solve any computational problem.
+
+!!! note "The different spellings"
+
+    Spelling|Description
+    --------|------------------------
+    AWK     |The programming language
+    `awk`   |The program
+    Awk     |A common misspelling
+
 <!-- markdownlint-disable --><!-- Not checked for markdown style for now -->
 
 This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports.
