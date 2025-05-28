@@ -19,7 +19,7 @@ Time        | Topic                                                             
 10:05-10:20 |Break                                                                         |.
 10:20-11:05 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|RB
 11:05-11:20 |Break                                                                         |.
-11:20-12:00 |`sed` and [`awk`](sessions/awk/README.md)                                     |RB
+11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |RB
 
 ## Morning 2: smarter bash
 
