@@ -2,6 +2,9 @@
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
+<!-- markdownlint-disable MD051 --><!-- Links to sections need a double underscore with the MkDocs ReadTheDocs theme -->
+
+
 Curriculum item           |Learning outcome
 --------------------------|-------------------------------------------------------------------------------
 Bash scripting            |See at [the 'Curriculum overview'](#curriculum__overview)
@@ -23,6 +26,7 @@ Linux tools               |See at [the 'Curriculum overview'](#curriculum__overv
 Linux tools               |`sed`
 
 <!-- markdownlint-enable MD013 -->
+<!-- markdownlint-enable MD051 -->
 
 ## Curriculum overview
 
