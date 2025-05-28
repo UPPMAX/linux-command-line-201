@@ -43,8 +43,8 @@ As sources of text, I consider to use:
   from [a plain text file at Project Gutenberg](https://www.gutenberg.org/cache/epub/84/pg84.txt).
 - `man grep` or `yelp man:grep` or `man grep | grep "^[A-Z]"`
 - [https://www.regexone.com/](https://www.regexone.com/)
-- `[Shotts, 2024]`, which can be downloaded
-  [here](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
+- `[Shotts, 2024]`
+  [download](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
   and can be found in this repo at `books/the_linux_command_line.pdf`
 - man grep | grep "^[[:upper:]]"
 
