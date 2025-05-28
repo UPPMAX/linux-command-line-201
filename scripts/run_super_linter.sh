@@ -23,7 +23,8 @@ mkdir /tmp/lint
 touch /tmp/lint/README.md
 
 mkdir tmp
-touch tmp/README.md
+mkdir tmp/lint
+touch tmp/lint/README.md
 
 export GITHUB_WORKSPACE=${PWD}
 export GITHUB_SHA=$(git -C . rev-parse HEAD)
@@ -33,4 +34,5 @@ export GITHUB_SHA=$(git -C . rev-parse HEAD)
 docker run \
   -e RUN_LOCAL=true \
   --volume "${PWD}:${PWD}/tmp/README.md" \
+  -w "${PWD}/tmp" \
   ghcr.io/super-linter/super-linter:latest

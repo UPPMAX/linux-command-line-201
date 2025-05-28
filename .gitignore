@@ -5,3 +5,4 @@ site.build
 *.swp
 *.swo
 wordlist.dic
+tmp/
