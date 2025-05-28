@@ -1,4 +1,20 @@
-# Linux tools: awk
+---
+tags:
+  - session
+  - lesson
+  - awk
+  - gawk
+---
+
+# `awk`
+
+!!! info "Learning outcomes"
+
+    - Learners can use `awk` in pipes
+    - Learners can use `awk` to read a specific column
+    - Learners can use `awk` to transform text
+    - Learners can use regular expressions in `awk`
+
 
 This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports. 
 

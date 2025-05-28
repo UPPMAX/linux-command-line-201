@@ -114,9 +114,9 @@ I will use the Bash Beginners Guide.
 Mapping sessions to LOs:
 
 - 6.2.1: I can use `awk` in pipes
-- 6.2.3: I can use regular expressions in `awk`
 - 6.2.1: I can use `awk` to read a specific column
 - 6.2.2: I can use `awk` to transform text
+- 6.2.3: I can use regular expressions in `awk`
 
 Seems this works!
 
