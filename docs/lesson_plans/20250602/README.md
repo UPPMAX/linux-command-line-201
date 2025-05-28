@@ -16,7 +16,9 @@ Time        | Topic                 |Teacher
 11:15-12:00 |`awk`                  |RB
 
 I should assume the learners can use a pipe,
-BC should assume they learners can `grep` things.
+
+
+## `grep`
 
 My learning outcomes are:
 
@@ -60,6 +62,39 @@ I think this session is ready now, but I can imagine
 writing the next session may influence it,
 so let's write the next session first,
 before creating a video.
+
+## `awk`
+
+It used to be `sed` and `awk` in an earlier schedule. Commit 
+`7282e58552cdbeb7bf70b0f3133ac2bee7702a33` moved `sed` to Day 2. 
+I will accept: we (me and BB) are probably both working in the weekend,
+so let's accept this change.
+
+My LOs are:
+
+- I can use `awk`
+- [Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)
+
+I've inherited the first one from BC and BB and is simple enough,
+unlike the ones for `grep`, where I added some details.
+
+I will add some LOs:
+
+- I can use `awk` in pipes
+- I can use regular expressions in `awk`
+- I can use `awk` to read a specific column
+- I can use `awk` to transform text
+
+Non-LOs:
+
+- I can use `awk` to analyse a file: the day is called 'Smart command-line'
+
+Books to use:
+
+- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)
+- [Effective awk programming](https://www.dbooks.org/effective-awk-programming-1882114280/)
+
+
 
 ## References
 

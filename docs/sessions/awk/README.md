@@ -163,6 +163,8 @@ Work with the files in the "exercises" - "awk-qol" directory.
 5. Check for the string "carnivore" in column 1 of "file.dat"
 6. Check for the string "carnivore" in column 2 of "file.dat" 
 
+
+
 ## Summary 
 
 !!! note "Keypoints 
@@ -170,6 +172,10 @@ Work with the files in the "exercises" - "awk-qol" directory.
     - We learned about awk
     - We used awk to find a keyword
     - We used awk to count lines in a file
-    - We used awk to look at specific columns  
+    - We used awk to look at specific columns
 
+## Free books on AWK
+
+- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)
+- [Effective awk programming](https://www.dbooks.org/effective-awk-programming-1882114280/)
 
