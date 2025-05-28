@@ -234,11 +234,13 @@ We are not going to cover ``bzip`` more than to briefly give the most common usa
 
 Archiving is generally done with ``tar``. 
 
-This program saves many files together into a single archive file, and it also restores individual files from the archive. Automatic archive compression/decompression options exists (with various different compression utilities), as well as special features that allow ``tar`` to be used for incremental and full backups. 
+This program saves many files together into a single archive file (concatenates them), and it also restores individual files from the archive. Automatic archive compression/decompression options exists (with various different compression utilities), as well as special features that allow ``tar`` to be used for incremental and full backups. 
 
 The command ``tar --help`` will give the format (defaults to gnu). This is generally only important for files larger than 8 GB.
 
 ``tar`` was originally developed for magnetic tape storage – reading and writing data for a sequential I/O device with no file system, and the name is short for the format description "tape archive". 
+
+![IBM 2401 magnetic tape storage](../../images/IBM2401-magnetic-tape-unit_small.jpg)
 
 !!! note 
 
@@ -255,10 +257,80 @@ The command ``tar --help`` will give the format (defaults to gnu). This is gener
 ### Basic options 
 
 - **-c, --create** - create a new archive 
-    -a, --auto-compress — additionally compress the archive with a compressor which will be automatically determined by the file name extension of the archive. If the archive's name ends with *.tar.gz then use gzip, if *.tar.xz then use xz, *.tar.zst for Zstandard etc.;
-    -r, --append — append files to the end of an archive;
-    -x, --extract, --get — extract files from an archive;
-    -f, --file — specify the archive's name;
-    -t, --list — show a list of files and folders in the archive;
-    -v, --verbose — show a list of processed files.
+- **-a, --auto-compress** - additionally compress the archive with a compressor which will be automatically determined by the file name extension of the archive. If the archive's name ends with *.tar.gz then use gzip, if *.tar.xz then use xz, *.tar.zst for Zstandard etc.
+- **-r, --append** - append files to the end of an archive 
+- **-x, --extract, --get** - extract files from an archive
+- **-f, --file** - specify the archive's name
+- **-t, --list** - show a list of files and folders in the archive
+- **-v, --verbose** - show a list of processed files 
+
+### Examples 
+
+!!! hint 
+
+    Code along! 
+
+    Again use the files and folders under "exercises" -> "arch" 
+
+!!! note "Generate a tarball" 
+
+    ```bash
+    tar -cvf arch.tar arch/
+    ``` 
+
+    Output: 
+    ```bash 
+    bbrydsoe@enterprise:~/exercises/arch$ cd ..
+    bbrydsoe@enterprise:~/exercises$ tar -cvf arch.tar arch/
+    arch/
+    arch/myfile.txt
+    arch/thisfile.txt
+    arch/morefile.c
+    arch/dir1/
+    arch/dir1/testfile
+    arch/dir1/testfile.txt
+    arch/dir1/testfile2.txt
+    arch/dir2/
+    arch/dir2/dir4/
+    arch/dir2/dir4/bfile.txt
+    arch/dir2/dir4/cfile.txt
+    arch/dir2/testfile3.txt
+    arch/dir2/myfile-new.txt
+    arch/dir2/testfile4.txt
+    arch/dir3/
+    arch/dir3/dfile.txt
+    arch/dir3/efile.txt
+    arch/dir3/ffile.txt
+    arch/afile.txt
+    arch/afile.zip
+    arch/afile-copy.txt
+    arch/dir1.zip
+    arch/C/
+    arch/C/Adding2.c
+    arch/C/Greeting.c
+    arch/C/hello.c
+    arch/C/mpi_greeting.c
+    arch/C/mpi_hello.c
+    arch/C/mpi_hi.c
+    arch/C/Mult2.c
+    arch/C/omp_hello.c
+    arch/my_c_files.zip
+    bbrydsoe@enterprise:~/exercises$ ls -al arch.tar 
+    -rw-r--r-- 1 bbrydsoe folk 40960 May 28 14:27 arch.tar
+    ```
+
+!!! info "Extracting the files from a tarball" 
+
+    ```bash
+    tar -xvf arch.tar
+    ``` 
+
+Generate a tarball and compress it with gzip
+
+tar -zcvf DIRECTORY.tar.gz DIRECTORY
+
+Uncompressing and extracting files from a tarball
+
+tar -zxvf DIRECTORY.tar.gz
+
 
