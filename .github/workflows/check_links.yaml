@@ -20,6 +20,9 @@ on:
   schedule:
   - cron: "0 0 21 * *"
 
+# Suggested by Super Linter
+permissions: read-all
+
 jobs:
   check-links:
     runs-on: ubuntu-latest
