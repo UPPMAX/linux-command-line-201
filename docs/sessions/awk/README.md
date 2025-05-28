@@ -17,6 +17,8 @@ tags:
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
 
+<!-- markdownlint-disable --><!-- Not checked for markdown style for now -->
+
 This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports.
 
 It allows the user to use variables, numeric functions, string functions, and logical operators.
@@ -181,17 +183,19 @@ Work with the files in the "exercises" - "awk-qol" directory.
 5. Check for the string "carnivore" in column 1 of "file.dat"
 6. Check for the string "carnivore" in column 2 of "file.dat"
 
+<!-- markdownlint-enable -->
 
 ## Summary
 
 !!! note "Keypoints
 
-    - We learned about awk
-    - We used awk to find a keyword
-    - We used awk to count lines in a file
-    - We used awk to look at specific columns
+    - `awk` can be used pipes: `[code]`
+    - `awk` can be used to read a specific column: `[code]`
+    - `awk` can be used to transform text: `[code]`
+    - `awk` can use regular expressions: `[code]`
+    - `awk` can do a lot more, `[link to book]`
 
-## Free books on AWK
+## Books on AWK
 
 - [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)
 - [Effective awk programming](https://www.dbooks.org/effective-awk-programming-1882114280/)
