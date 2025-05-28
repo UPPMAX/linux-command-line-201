@@ -23,6 +23,15 @@ where
 - **-f** - Reads ``sed`` commands from a file instead of the command line.
 - **-r** - Enables extended regular expressions. 
 
+## Commonly used regular expression meta characters 
+
+- **caret (^)** matches the beginning of the line.
+- **dollar sign ($)** matches the end of the line.
+- **asterisk (*)** matches zero or more occurrences of the previous character.
+- **plus (+)** matches one or more occurrence(s) of the previous character.
+- **question mark (?)** matches zero or one occurrence of the previous character.
+- **dot (.)** matches exactly one character.
+
 ## Substitution command
 
 This is probably what ``sed`` is most commonly used for: substitution. It is also the original motivation for creating it. 
@@ -39,7 +48,7 @@ sed 's/regexp/replacement/g' inputFileName > outputFileName
 
 **s** stands for substitute, **g** for global (all instances), and **/** is the conventional delimiting symbol used. 
 
-### Example 
+### Examples 
 
 !!! note "Replace all instances of 'cat' with 'ferret' and send to screen" 
 
@@ -65,18 +74,63 @@ sed 's/regexp/replacement/g' inputFileName > outputFileName
     sed 's/word/book/3' file3.txt 
     ```
 
+!!! note "Replace occurences from n and the rest of the way"
+
+    Here from 3rd occurence 
+
+    ```bash 
+    sed 's/word/book/3g' file3.txt
+    ```
+
+!!! note "Replace only the occurence of a string on a specific line" 
+
+    This for line 3
+
+    ```bash 
+    sed '3 s/word/book/' file3.txt 
+    ```
+
+!!! note "Put a parentheses around the first character of each word" 
+
+    ```bash 
+    echo "Hello I am learning more Linux" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+    ``` 
+
 !!! note "Replace all instances of 'cat' or 'dog' with 'cats' or 'dogs' - do not duplicate existing plurals" 
 
-   Use all files named starting with "file" in the "exercises" -> "sed" folder (but not subdirs). Here the changed text is just thrown to screen.  
+    Use all files named starting with "file" in the "exercises" -> "sed" folder (but not subdirs). Here the changed text is just thrown to screen.  
 
-   ```bash 
-   sed -r "s/(cat|dog)s?/\1s/g" file*
-   ```
+    ```bash 
+    sed -r "s/(cat|dog)s?/\1s/g" file*
+    ```
 
-   - (cat|dog) is the 1st (and only) saved sub-expression in the regexp, and \1 in the format string substitutes this into the output. 
-   - You can see in the output that i.e. "dogs" did not get turned into "dogss"
-   - However, it did not catch things were for instance "cat" is in the middle of a word, like "located" which did get changed to "locatsed" 
-   - This could be fixed with ``sed -r "s/(' cat '|dog)s?/\1s/g" file*`` 
+    - (cat|dog) is the 1st (and only) saved sub-expression in the regexp, and \1 in the format string substitutes this into the output. 
+    - You can see in the output that i.e. "dogs" did not get turned into "dogss"
+    - However, it did not catch things were for instance "cat" is in the middle of a word, like "located" which did get changed to "locatsed" 
+    - This could be fixed with ``sed -r "s/(' cat '|dog)s?/\1s/g" file*`` 
+
+## Other common commands 
+
+Besides substitution, ``sed`` can do many other things. There are around 24 ``sed`` commands. 
+
+### Using the ``d`` command to filter out specific lines
+
+!!! note "filter lines that only contain spaces, or only contain the end of line character" 
+
+    ```bash 
+    sed '/^ *$/d' inputFile 
+    ```
+   
+!!! note "Deleting a line from a specific file" 
+
+    Delete line 4
+
+    ```bash
+    sed '4d' file1.txt 
+    ``` 
+
+ 
+
 
 ## Other common commands 
 https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
