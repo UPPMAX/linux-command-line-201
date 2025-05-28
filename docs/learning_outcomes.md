@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
 Curriculum item                                         |Learning objective                                                                                                    |Teacher
--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------
+--------------------------------------------------------|-----------------------------------------------------------------------------------------------|-------
 Bash scripting                                          |Learners can use bash variables                                                                                       |R
 Bash scripting                                          |Learners can use bash `if` statements                                                                                 |R
 Bash scripting                                          |Learners can use bash `if` statements with the 'or' and 'and' symbols                                                 |R
@@ -34,7 +34,16 @@ Linux tools                                             |`awk`                  
 
 ## Curriculum overview
 
-- Bash scripting
+??? note "Bash scripting" 
+
+    - Learners can write bash scripts
+    - Learners have practiced using a book on bash scripting
+    - Learners can write bash scripts that require user input
+    - Learners can use variables in bash scripts
+    - Learners can use `if` statements in bash scripts
+    - Learners can use `if` statements with the 'or' and 'and' symbols  in bash scripts
+    - Learners can use `for` statements  in bash scripts
+
 - Environment variables
 - Advanced redirect
 - Regular expressions

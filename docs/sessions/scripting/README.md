@@ -11,12 +11,13 @@ tags:
 
 !!! info "Learning outcomes"
 
-    - Learners can write scripts that require user input
-    - Learners can use bash variables
-    - Learners can use bash `if` statements
-    - Learners can use bash `if` statements with the 'or' and 'and' symbols
-    - Learners can use bash `for` statements
-    - [Learners have practiced using a book on bash/Linux](https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7)                       |RB
+    - Learners can write bash scripts
+    - Learners have practiced using a book on bash scripting
+    - Learners can write bash scripts that require user input
+    - Learners can use variables in bash scripts
+    - Learners can use `if` statements in bash scripts
+    - Learners can use `if` statements with the 'or' and 'and' symbols  in bash scripts
+    - Learners can use `for` statements  in bash scripts
 
 
 ???- note "For teachers"
