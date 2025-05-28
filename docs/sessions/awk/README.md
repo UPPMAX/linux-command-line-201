@@ -40,43 +40,61 @@ In these exercises, we'll be using the
 as this online book fits this course well, is free, is open
 and allows you to continue studying after this course.
 
-
-[chapter 6](https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_06.html),
-from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html)
-
-
-![The book](book_cover_282_x_450.png)
-
-### Exercise 1: Bash structure
+### Exercise 1: printing selected fields
 
 - Read the text at
-  [chapter 2: 'Bash structure'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/002-bash-structure.md)
-- Create a file called `greeter.sh` with a shebang
-  following that chapter
+  [chapter 6.2.1: 'Printing selected fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01)
+
+- ...
 
 ??? tip "Answer"
 
-    In a terminal, type:
+    ...
 
-    ```bash
-    touch greeter.sh
-    ```
+    
+---
 
-    Add the following line to the file:
+### Exercise 2: printing selected fields
 
-    ```bash
-    #!/bin/bash
-    ```
+- Read the text at
+  [chapter 6.2.2: 'Formatting fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_02)
 
-    Remember that if this does not work on your computer, use the more
-    flexible shebang:
+- ...
 
+??? tip "Answer"
 
-    ```bash
-    #!/usr/bin/env bash
-    ```
+    ...
+
+    
+---
+
+### Exercise 3: printing selected fields
+
+- Read the text at
+  [chapter 6.2.3: 'The print command and regular expressions'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_03)
+
+- ...
+
+??? tip "Answer"
+
+    ...
+
+    
+---
+
+## (optional) Exercise 4: can `awk` do ...?
+
+Here we'll experience the flexibility of `awk`.
+Pick those topics you are interested in.
 
 ---
+
+### (optional) Exercise 4.1: Can `grep` do X?
+
+Can `awk` do X?
+
+---
+
 
 <!-- markdownlint-disable --><!-- Not checked for markdown style for now -->
 
@@ -250,11 +268,14 @@ Work with the files in the "exercises" - "awk-qol" directory.
 
 !!! info "Conclusions"
 
-    - `awk` can be used pipes: `[code]`
-    - `awk` can be used to read a specific column: `[code]`
-    - `awk` can be used to transform text: `[code]`
-    - `awk` can use regular expressions: `[code]`
-    - `awk` can do a lot more, `[link to book]`
+    - `awk` can be used pipes: `ls -l | awk '{ print $5 $9 }'`
+    - `awk` can be used to read a specific column:
+      `ls -l | awk '{ print $5 $9 }'`
+    - `awk` can be used to transform text:
+      `ls -ldh * | grep -v total | awk '{ print "Size is " $5 " bytes for " $9 }'`
+    - `awk` can use regular expressions:
+      `df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'`
+    - `awk` can do a lot more
 
 ---
 
