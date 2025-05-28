@@ -137,8 +137,10 @@ Besides substitution, ``sed`` can do many other things. There are around 25 ``se
 !!! note "Delete a line containing a matching pattern" 
 
     Lines matching the string "cat" 
+
     ```bash 
     sed '/cat/d' file1.txt 
+    ```
     
 ## Filtering
 
