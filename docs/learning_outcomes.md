@@ -28,7 +28,7 @@ Linux tools               |`sed`
 
 The detailed curriculum can be found in the drop-down boxes.
 
-??? note "Bash scripting"
+??? note "[Bash scripting](sessions/scripting/README.md)"
 
     - Learners can write bash scripts
     - Learners have practiced using a book on bash scripting
@@ -41,7 +41,7 @@ The detailed curriculum can be found in the drop-down boxes.
 - Environment variables
 - Advanced redirect
 
-??? note "Regular expressions and `grep`"
+??? note "[Regular expressions and `grep`](sessions/regular_expressions_and_grep/README.md)"
 
     - Learners know there are multiple flavours of regular expressions
     - Learners can use `.`, `*`, `+`, `?`, `[]`, `[^]`, `{}`, `()` in regular expressions
@@ -51,7 +51,7 @@ The detailed curriculum can be found in the drop-down boxes.
     - Learners have sent text to `grep` using a pipe
     - (optional) Learners have seen the flexibility of `grep`
 
-??? note "`awk`"
+??? note "[`awk`](sessions/awk/README.md)"
 
     - Learners can use `awk`
     - Learners have practiced using a book on `awk`
