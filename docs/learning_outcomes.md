@@ -28,7 +28,7 @@ Linux tools               |`sed`
 
 The detailed curriculum can be found in the drop-down boxes.
 
-??? note "Bash scripting"
+??? note "[Bash scripting](sessions/scripting/README.md)"
 
     - Learners can write bash scripts
     - Learners have practiced using a book on bash scripting
