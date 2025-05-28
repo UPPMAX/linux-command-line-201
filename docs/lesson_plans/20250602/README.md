@@ -65,8 +65,8 @@ before creating a video.
 
 ## `awk`
 
-It used to be `sed` and `awk` in an earlier schedule. Commit 
-`7282e58552cdbeb7bf70b0f3133ac2bee7702a33` moved `sed` to Day 2. 
+It used to be `sed` and `awk` in an earlier schedule. Commit
+`7282e58552cdbeb7bf70b0f3133ac2bee7702a33` moved `sed` to Day 2.
 I will accept: we (me and BB) are probably both working in the weekend,
 so let's accept this change.
 
@@ -93,12 +93,12 @@ Books to use:
 
 - [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf)'
   [chapter 6](https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_06.html),
-  from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html) 
+  from [section 6.2](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html)
   to section 6.2.3 seems to work in my context
 - [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/abs-guide.pdf),
   page [C2. Awk](https://tldp.org/LDP/abs/html/awk.html)
-  is a micro primer, with some usefulness 
-- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook): 
+  is a micro primer, with some usefulness
+- [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook):
   uses files, not pipes
 - [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/): too complex for the LOs
 - [The Linux Command Line](https://linuxcommand.org/tlcl.php): no chapter on AWK

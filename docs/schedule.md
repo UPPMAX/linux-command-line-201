@@ -21,7 +21,7 @@ Time        | Topic                                                             
 11:05-11:20 |Break                                                                         |.
 11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |R
 
-- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek 
+- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
 
 ## Morning 2: smarter bash
 
@@ -33,4 +33,4 @@ Time        | Topic                                         |Teacher
 11:00-11:15 |Break                                          |.
 11:15-12:00 |Quality of life, compressing, `sed`            |B
 
-- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek 
+- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
