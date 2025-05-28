@@ -4,14 +4,14 @@
 
 Curriculum item           |Learning outcome
 --------------------------|-------------------------------------------------------------------------------
-Bash scripting            |See at [the 'Curriculum overview'](#curriculum_overview)
+Bash scripting            |See at [the 'Curriculum overview'](#curriculum__overview)
 Environment variables     |Learners can create, read and write to environment variables
 Advanced redirect         |Learners can redirect output between the standard, error and log output streams
 Regular expressions       |Learners can use `sed` for pattern matched replacing
 Links (hard/soft)         |Learners can create soft and hard symbolic links
 Archiving/Compressing data|Learners can compress and extract data, using `(g)zip` and `tar`
 Linux pipe                |Learners can chain commands using the Linux pipe
-Finding information       |See at [the 'Curriculum overview'](#curriculum_overview)
+Finding information       |See at [the 'Curriculum overview'](#curriculum__overview)
 Quality of life           |Learners can start a background process with `&` and terminate it
 Quality of life           |Terminal shortcuts/usage
 Quality of life           |Editing a `.bashrc`
@@ -19,7 +19,7 @@ Quality of life           |Using aliases
 Linux tools               |`cut`
 Linux tools               |`dos2unix`, `unix2dos`
 Linux tools               |`wc`
-Linux tools               |See at [the 'Curriculum overview'](#curriculum_overview)
+Linux tools               |See at [the 'Curriculum overview'](#curriculum__overview)
 Linux tools               |`sed`
 
 <!-- markdownlint-enable MD013 -->
