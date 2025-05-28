@@ -15,18 +15,22 @@ tags:
 Time        | Topic                                                                        |Teacher
 ------------|------------------------------------------------------------------------------|-------
 9:00-9:10   |Introduction                                                                  |
-9:10-10:05  |Linux pipe, `wc`, `cut`                                                       |BB
+9:10-10:05  |Linux pipe, `wc`, `cut`                                                       |B
 10:05-10:20 |Break                                                                         |.
-10:20-11:05 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|RB
+10:20-11:05 |[Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md)|R
 11:05-11:20 |Break                                                                         |.
-11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |RB
+11:20-12:00 |[`awk`](sessions/awk/README.md)                                               |R
+
+- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek 
 
 ## Morning 2: smarter bash
 
 Time        | Topic                                         |Teacher
 ------------|-----------------------------------------------|-----------------
-9:00-10:00  |[Bash scripting](sessions/scripting/README.md) |RB
+9:00-10:00  |[Bash scripting](sessions/scripting/README.md) |R
 10:00-10:15 |Break                                          |.
-10:15-11:00 |Advanced redirect, environment variables, links|BB
+10:15-11:00 |Advanced redirect, environment variables, links|B
 11:00-11:15 |Break                                          |.
-11:15-12:00 |Quality of life, compressing, `sed`            |BB
+11:15-12:00 |Quality of life, compressing, `sed`            |B
+
+- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek 
