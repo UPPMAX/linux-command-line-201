@@ -319,18 +319,78 @@ The command ``tar --help`` will give the format (defaults to gnu). This is gener
     -rw-r--r-- 1 bbrydsoe folk 40960 May 28 14:27 arch.tar
     ```
 
-!!! info "Extracting the files from a tarball" 
+!!! note "Extracting the files from a tarball" 
 
     ```bash
     tar -xvf arch.tar
     ``` 
 
-Generate a tarball and compress it with gzip
+    Warning! If there is already a directory with the same name in the directory you do this, it will overwrite without asking! 
 
-tar -zcvf DIRECTORY.tar.gz DIRECTORY
+!!! note "Generate a tarball and compress it with gzip" 
 
-Uncompressing and extracting files from a tarball
+    ```bash
+    tar -zcvf arch.tar.gz arch/
+    ```
 
-tar -zxvf DIRECTORY.tar.gz
+    Output:
+    ```bash 
+    bbrydsoe@enterprise:~/exercises$ tar -zcvf arch.tar.gz arch/
+    arch/
+    arch/dir1/
+    arch/dir1/testfile
+    arch/dir1/testfile.txt
+    arch/dir1/testfile2.txt
+    arch/dir2/
+    arch/dir2/dir4/
+    arch/dir2/dir4/bfile.txt
+    arch/dir2/dir4/cfile.txt
+    arch/dir2/testfile3.txt
+    arch/dir2/myfile-new.txt
+    arch/dir2/testfile4.txt
+    arch/dir3/
+    arch/dir3/dfile.txt
+    arch/dir3/efile.txt
+    arch/dir3/ffile.txt
+    arch/C/
+    arch/C/Adding2.c
+    arch/C/Greeting.c
+    arch/C/hello.c
+    arch/C/mpi_greeting.c
+    arch/C/mpi_hello.c
+    arch/C/mpi_hi.c
+    arch/C/Mult2.c
+    arch/C/omp_hello.c
+    arch/myfile.txt
+    arch/thisfile.txt
+    arch/morefile.c
+    arch/afile.txt
+    arch/afile.zip
+    arch/afile-copy.txt
+    arch/dir1.zip
+    arch/my_c_files.zip
+    bbrydsoe@enterprise:~/exercises$ ls -la arch.tar.gz 
+    -rw-r--r-- 1 bbrydsoe folk 4500 May 28 14:44 arch.tar.gz
+    ```
 
+    Compared to the size of the uncompressed tarball: 
+    ```bash
+    bbrydsoe@enterprise:~/exercises$ ls -al arch.tar 
+    -rw-r--r-- 1 bbrydsoe folk 40960 May 28 14:27 arch.tar
+    ``` 
+
+!!! note "Uncompressing and extracting files from a tarball" 
+
+    ```bash
+    tar -zxvf arch.tar.gz
+    ``` 
+
+    Warning! If there is already a directory with the same name in the directory you do this, it will overwrite without asking!     
+
+## Summary 
+
+!!! note "Keypoints" 
+
+    - we learned about gzip, bzip2, and zip
+    - we learned about tarballs and compressed tarballs 
 
