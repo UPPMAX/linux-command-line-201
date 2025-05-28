@@ -26,9 +26,11 @@ mkdir tmp
 mkdir tmp/lint
 touch tmp/lint/README.md
 
-export GITHUB_WORKSPACE=${PWD}
-export GITHUB_SHA=$(git -C . rev-parse HEAD)
+GITHUB_WORKSPACE=${PWD}
+GITHUB_SHA=$(git -C . rev-parse HEAD)
 
+export GITHUB_WORKSPACE
+export GITHUB_SHA
 
 # Run locally
 docker run \
