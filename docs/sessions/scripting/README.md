@@ -409,10 +409,10 @@ such as the output of a bash command.
     - A bash script can be run by writing `./` in front of the filename:
       `./greeter.sh`
     - A bash script can use variables: `greeting="Hello"`
-    - A bash script can run bash commands and store the result in a variable: 
+    - A bash script can run bash commands and store the result in a variable:
       `n_files=$(ls | wc --lines)`
     - A bash script can ask the user for input: `read name`
-    - A bash script can do conditionals: 
+    - A bash script can do conditionals:
 
       ```bash
       if [[ name -eq "Bond" ]]`
@@ -423,7 +423,7 @@ such as the output of a bash command.
       fi
       ```
 
-    - A bash script can use for-loops: 
+    - A bash script can use for-loops:
 
       ```bash
       for name in ${names}
