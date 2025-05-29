@@ -16,10 +16,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-
-# No: really needs this to be able to deploy
-# Suggested by Super Linter
-# permissions: read-all
+# This script writes to gh-pages,
+# fixes warning from https://github.com/bridgecrewio/checkov/blob/main/checkov/github_actions/checks/graph_checks/ReadOnlyTopLevelPermissions.yaml
+# yamllint disable rule:CKV2_GHA_1
+permissions: write-all
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
