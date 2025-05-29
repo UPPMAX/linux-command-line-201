@@ -442,7 +442,7 @@ Use the `df` manual.
 
 Run the command in full. What do you see?
 
-Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
+Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'`
 
 ??? tip "Answer"
 

@@ -103,8 +103,6 @@ Uncompress
 Uncompressing
 zst
 Uncompressing
-df
-dev
 PID
 JOBID
 afile
