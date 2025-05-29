@@ -108,6 +108,7 @@ dev
 PID
 JOBID
 afile
+favourite
 
 ERcoEh
 drLkxhD
