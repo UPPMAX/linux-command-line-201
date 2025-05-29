@@ -71,23 +71,23 @@ sed 's/regexp/replacement/g' inputFileName > outputFileName
     sed 's/cat/ferret/g' file1.txt > output.txt
     ```
 
-!!! note "Replace the nth occurance of a pattern in a line" 
+!!! note "Replace the nth occurrence of a pattern in a line" 
 
-    Let us change the 3rd occurance in the same line of word to book in file3.txt
+    Let us change the 3rd occurrence in the same line of word to book in file3.txt
 
     ```bash
     sed 's/word/book/3' file3.txt 
     ```
 
-!!! note "Replace occurences from n and the rest of the way"
+!!! note "Replace occurrences from n and the rest of the way"
 
-    Here from 3rd occurence 
+    Here from 3rd occurrence 
 
     ```bash 
     sed 's/word/book/3g' file3.txt
     ```
 
-!!! note "Replace only the occurence of a string on a specific line" 
+!!! note "Replace only the occurrence of a string on a specific line" 
 
     This for line 3
 
