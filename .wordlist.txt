@@ -92,6 +92,17 @@ symlink
 symlinks
 umeauniversity
 unixlinux
+shellcheckrc
+inputfile
+inputfiles
+unix
+wikipedia
+inputFileName
+outputFileName
+Uncompress
+Uncompressing
+zst
+Uncompressing
 
 ERcoEh
 drLkxhD
