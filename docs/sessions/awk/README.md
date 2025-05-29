@@ -745,7 +745,7 @@ Read the text at
 [chapter 6.2.4: 'Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
 
 Use a pipe to direct the output of `ls -l` to `awk`,
-where the text `Permissions:` is shown, after which 
+where the text `Permissions:` is shown, after which
 the values in the first column are shown.
 
 If the word `total` shows up in your results, you can ignore it
@@ -776,7 +776,7 @@ Read the text at
 [chapter 6.2.4: '6.2.4. Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
 
 Use a pipe to direct the output of `ls -l` to `awk`,
-after which 
+after which
 the values in the first column are shown.
 At the end of the output, it should show the text `Done!`
 
