@@ -16,13 +16,14 @@ tags:
     - Learners can use `awk` to read a specific column
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
+    - Learners have practiced reading bash commands
 
 ## Why is `awk` important?
 
 AWK is a programming language for text processing
 that is included with Linux.
 
-As a Turing complete programming language,
+As a Turing-complete programming language,
 it can -by definition- solve any computational problem.
 
 !!! note "The different spellings"
@@ -45,11 +46,17 @@ and allows you to continue studying after this course.
 Read the text at
 [chapter 6.2.1: 'Printing selected fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01).
 
-The single line of code in this chapter uses a pipe.
+The single line of code in this subsection uses a pipe.
 Run the command until the pipe. What
 do you see? How do you explain in English what this does?
 
 ??? tip "Answer"
+
+    This is the full command shows in this subsection:
+
+    ```bash
+    ls -l | awk '{ print $5 $9 }'
+    ```
 
     The command before the pipe is:
 
@@ -80,8 +87,8 @@ do you see? How do you explain in English what this does?
 
 ---
 
-The single line of code in this chapter
-forwards the output of `ls` to `awk`.
+The single line of code in this subsection
+forwards its output (from `ls`) to `awk`.
 Run it. What do you see?
 How do you explain in English what this does?
 
@@ -104,8 +111,8 @@ How do you explain in English what this does?
     4096Downloads
     ```
 
-   In English: from a list of files (in long format),
-   show the 5th and 9th columns.
+    In English: from a list of files (in long format),
+    show the 5th and 9th columns.
 
 ---
 
@@ -131,7 +138,7 @@ How does `awk` deal with lines that do not have a 5th and/or 9th column?
 
 ---
 
-Optional: try to use `cut` (and only `cut`!)
+**Optional**: try to use `cut` (and only `cut`!)
 to achieve the same, by selecting the
 same columns. This will not work! Observe and explain what you see.
 
@@ -184,16 +191,181 @@ same columns. This will not work! Observe and explain what you see.
 - Read the text at
   [chapter 6.2.2: 'Formatting fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_02)
 
-- ...
+- The first code example in this subsection uses multiple pipes.
+  Run the command until the first pipe. What
+  do you see? How do you explain in English what this does?
+  Use the `ls` manual.
 
 ??? tip "Answer"
 
-    ...
+    The first code example in this subsection is:
 
+    ```bash
+    ls -ldh * | grep -v total | awk '{ print "Size is " $5 " bytes for " $9 }
+    ```
+
+    The command until the first pipe is:
+
+    ```bash
+    ls -ldh *
+    ```
+
+    Running it shows something similar to this:
+
+    ```bash
+    $ ls -ldh *
+    drwxrwxr-x   2 richel richel 4.0K Jun 10  2024 bin
+    drwxr-xr-x   2 richel richel 4.0K Jan  8 20:05 Desktop
+    drwxr-xr-x  10 richel richel 4.0K Feb 27 09:44 Documents
+    drwxr-xr-x   3 richel richel 4.0K May 28 08:51 Downloads
+    ```
+
+    Using the manual of `ls`:
+
+    ```bash
+    man ls
+    ```
+
+    In English: the command shows the list of files and directories (`ls`) ...
+
+    - in a long format (`-l`)
+    - with directories as themselves
+      (`-d`, also `--directory`, i.e. not their contents)
+    - in a human-readable format (`-h`, also `--human-readable`).
 
 ---
 
-### Exercise 3: printing selected fields
+- The first code example in this subsection uses multiple pipes.
+  Run the command until the second pipe. What
+  do you see? How do you explain in English what this does?
+
+??? tip "Answer"
+
+    The first code example in this subsection is:
+
+    ```bash
+    ls -ldh * | grep -v total | awk '{ print "Size is " $5 " bytes for " $9 }
+    ```
+
+    The command until the second pipe is:
+
+    ```bash
+    ls -ldh * | grep -v total
+    ```
+
+    Running it shows something similar to this:
+
+    ```bash
+    $ ls -ldh * | grep -v total
+    drwxrwxr-x   2 richel richel 4.0K Jun 10  2024 bin
+    drwxr-xr-x   2 richel richel 4.0K Jan  8 20:05 Desktop
+    drwxr-xr-x  10 richel richel 4.0K Feb 27 09:44 Documents
+    drwxr-xr-x   3 richel richel 4.0K May 28 08:51 Downloads
+    ```
+
+    Note that, for the computer used, there is no difference.
+
+    In English: the command shows the list of files
+    for lines that have no match (`-v`, also `--invert-match`)
+    to the regular expression `total`. 
+
+    Or shorter: it shows the content, excluding a possible
+    final line that shows the total file size. 
+    
+---
+
+The first code example in this subsection uses multiple pipes.
+Run the command in full. What do you see?
+
+??? tip "Answer"
+
+    The first code example in this subsection is:
+
+    ```bash
+    ls -ldh * | grep -v total | awk '{ print "Size is " $5 " bytes for " $9 }'
+    ```
+
+    Running it shows something similar to this:
+
+    ```bash
+    $ ls -ldh * | grep -v total | awk '{ print "Size is " $5 " bytes for " $9 }'
+    Size is 4.0K bytes for bin
+    Size is 4.0K bytes for Desktop
+    Size is 4.0K bytes for Documents
+    Size is 4.0K bytes for Downloads
+    ```
+    
+---
+
+A first thing to notice is that the `awk` command is put
+into a single quote `'` (instead of a double-quote, `"`).
+Why is that?
+
+??? tip "Answer"
+
+    Text between single quote is used as-is:
+
+    ```bash
+    $ echo 'He said: "Hi!".'
+    He said: "Hi!".
+    ```
+
+    Where the other way around, the `!` triggers
+    something:
+
+    ```bash
+    $ echo "He said: 'Hi!'."
+    bash: !'.: event not found
+    ```
+    
+---
+
+**Optional**:
+Zooming in on the printing of `awk`,
+i.e. the part `print "Size is " $5 " bytes for " $9`,
+we can see that the elements to be printed are
+seperated by a space.
+This is unlike most (?all) modern languages, where
+elements are seperated by a comma. Rewrite the expression
+to use a comma between the elements.
+
+??? tip "Answer"
+
+    The first attempt would be:
+
+    ```bash
+    ls -ldh * | grep -v total | awk '{ print "Size is ", $5, " bytes for ", $9 }'
+    ```
+
+    This, however, gives double spaces now:
+
+    ```bash
+    $ ls -ldh * | grep -v total | awk '{ print "Size is ", $5, " bytes for ", $9 }'
+    Size is  4.0K  bytes for  bin
+    Size is  4.0K  bytes for  Desktop
+    Size is  4.0K  bytes for  Documents
+    Size is  4.0K  bytes for  Downloads
+    ```
+
+    Removing the spaces between the double-quotes (`"`) solves this:
+
+    ```bash
+    ls -ldh * | grep -v total | awk '{ print "Size is", $5, "bytes for", $9 }'
+    ```
+
+    The output will look similar to this:
+
+    ```bash
+    $ ls -ldh * | grep -v total | awk '{ print "Size is", $5, "bytes for", $9 }'
+    Size is 4.0K bytes for bin
+    Size is 4.0K bytes for Desktop
+    Size is 4.0K bytes for Documents
+    Size is 4.0K bytes for Downloads
+    ```
+
+---
+
+### Exercise 3: regular expressions
 
 - Read the text at
   [chapter 6.2.3: 'The print command and regular expressions'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_03)
