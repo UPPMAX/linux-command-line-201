@@ -6,23 +6,22 @@ tags:
   - gawk
 ---
 
-# `awk`
+# AWK
 
 !!! info "Learning outcomes"
 
     - Learners can use `awk`
-    - Learners have practiced using a book on `awk`
+    - Learners have practiced using a book on AWK
     - Learners can use `awk` in pipes
     - Learners can use `awk` to read a specific column
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
     - Learners have practiced reading bash commands
 
-## Why is `awk` important?
+## Why is AWK important?
 
 AWK is a programming language for text processing
 that is included with Linux.
-
 As a Turing-complete programming language,
 it can -by definition- solve any computational problem.
 
@@ -188,13 +187,13 @@ same columns. This will not work! Observe and explain what you see.
 
 ### Exercise 2: printing selected fields
 
-- Read the text at
-  [chapter 6.2.2: 'Formatting fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_02)
+Read the text at
+[chapter 6.2.2: 'Formatting fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_02)
 
-- The first code example in this subsection uses multiple pipes.
-  Run the command until the first pipe. What
-  do you see? How do you explain in English what this does?
-  Use the `ls` manual.
+The first code example in this subsection uses multiple pipes.
+Run the command until the first pipe. What
+do you see? How do you explain in English what this does?
+Use the `ls` manual.
 
 ??? tip "Answer"
 
@@ -235,9 +234,9 @@ same columns. This will not work! Observe and explain what you see.
 
 ---
 
-- The first code example in this subsection uses multiple pipes.
-  Run the command until the second pipe. What
-  do you see? How do you explain in English what this does?
+The first code example in this subsection uses multiple pipes.
+Run the command until the second pipe. What
+do you see? How do you explain in English what this does?
 
 ??? tip "Answer"
 
@@ -372,16 +371,131 @@ to use a comma between the elements.
 
 ### Exercise 3: regular expressions
 
-- Read the text at
-  [chapter 6.2.3: 'The print command and regular expressions'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_03)
+Read the text at
+[chapter 6.2.3: 'The print command and regular expressions'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_03)
 
-- ...
+The first code example in this subsection uses a pipe.
+Run the command until the pipe. What
+do you see? How do you explain in English what this does?
+Use the `df` manual.
 
 ??? tip "Answer"
 
-    ...
+    The first code example in this subsection is:
+
+    ```bash
+    df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    ```
+
+    The command until the pipe is:
+
+    ```bash
+    df -h
+    ```
+
+    Running it shows something similar to this:
+
+    ```bash
+    $ df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    tmpfs           1.6G  2.9M  1.6G   1% /run
+    /dev/nvme0n1p2  468G  226G  219G  51% /
+    tmpfs           7.6G   29M  7.6G   1% /dev/shm
+    tmpfs           5.0M  8.0K  5.0M   1% /run/lock
+    efivarfs        438K  293K  141K  68% /sys/firmware/efi/efivars
+    /dev/nvme0n1p1  511M   73M  439M  15% /boot/efi
+    tmpfs           1.6G  148K  1.6G   1% /run/user/1000
+    ```
+
+    Using the manual of `df`:
+
+    ```bash
+    man df
+    ```
+
+    In English: show the file system space usage (`df`)
+    in a human-readable format (`-h`, also `--human-readable`).
 
 
+---
+
+Run the command in full. What do you see?
+
+Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
+
+??? tip "Answer"
+
+    The first code example in this subsection is:
+
+    ```bash
+    df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    ```
+
+    Running it shows something similar to this:
+
+    ```bash
+    $ df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    ```
+    
+    On the computer used, this shows no output.
+
+    Running the alternative:
+
+    ```bash
+    $ df -h | awk '/dev\// { print $6 "\t: " $5 }'
+    /	: 51%
+    /dev/shm	: 1%
+    /boot/efi	: 15%
+    ```
+
+    It shows the percentage of disk space in use for all the
+    devices that have `dev` in the same. 
+
+---
+
+This `awk` command uses a regular expression. What is it **exactly**?
+If it is formatted 'weirdly', why is that? 
+
+??? tip "Answer"
+
+    The first code example in this subsection is:
+
+    ```bash
+    df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    ```
+
+    The exact regular expression is the exact text between the
+    (unescaped) slashes:
+
+    ```bash
+    dev\/hd
+    ```
+    
+    This is formatted 'weirdly', as it uses `\/` instead of
+    just `/`. This is because `awk` uses `/` to indicate the
+    start and end of a regular expression. Hence, for the same
+    character to be part of that regular expression, it is escaped
+    using a backslash.
+    
+---
+
+In the `awk` command, there is a `\t` in the printing
+part. What does it do, and why is it written like that?
+
+??? tip "Answer"
+
+    The first code example in this subsection is:
+
+    ```bash
+    df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    ```
+
+    The `\t` prints a tab.
+    
+    It is written like that,
+    as `\t` is simply decided as the way how we write a tab,
+    similar to the convention that `\n` is a newline.
+    
 ---
 
 ## (optional) Exercise 4: can `awk` do ...?
@@ -391,135 +505,21 @@ Pick those topics you are interested in.
 
 ---
 
-### (optional) Exercise 4.1: Can `grep` do X?
+### (optional) Exercise 4.1: Can `awk` display the entire line?
 
-Can `awk` do X?
-
----
-
-
-<!-- markdownlint-disable --><!-- Not checked for markdown style for now -->
-
-This is a very powerful command which finds patterns in a file and can perform arithmetic/string operations. You can use it to transform data files and produce formatted reports.
-
-It allows the user to use variables, numeric functions, string functions, and logical operators.
-
-Things ``awk`` can do:
-
-- Scan a file line by line
-- Split each input line into fields
-- Compare input line/fields to pattern
-- Perform action(s) on matched lines
-
-!!! note
-
-    - In fact, ``awk`` is a scripting language which can do a set of actions on streams of textual data.
-    - You can either run it directly on a file or use it as part of a pipeline (with the operator "pipe").
-    - You can extract or transform text, and for instance produce formatted reports.
-    - Like ``sed`` and ``grep``, it is a filter, and it is a standard feature of most Unix-like operating systems.
-    - In short: it searches one (or more) files to find if they contain line(s) that match the pattern given and then it performs the action required.
-
-Awk is abbreviated from the names of the developers - Aho, Weinberger, and Kernighan.
-
-## Syntax
-
-``awk options 'selection-criteria {action }' input-file > output-file``
-
-Important options:
-
-- **-F** - Sets a custom field separator
-- **-f** - Reads ``awk`` program from a file
-- **'{}'** - Encloses action to take on match
-
-### Built-in variables
-
-``awk`` has built-in variables, which includes the field variables:
-
-- **$1**
-- **$2**
-- **$3**
-- etc.
-
-The field variable **$0** is the entire line.
-
-These field variables break a line of text into individual words or pieces called *fields*.
-
-Aside from the field-variables, ``awk`` also has other built-in variables:
-
-- **NR**: keeps a current count of the number of input records (usually lines). Awk command performs the pattern/action statements once for each record in a file.
-- **NF**: keeps a count of the number of fields within the current input record.
-- **FS**: contains the field separator character used to divide fields on the input line. Default is "white space" (space or tab). **FS** can be reassigned to another character (typically in BEGIN) to change the field separator.
-- **RS**: stores the current record separator character. Since, by default, an input line is the input record, the default record separator character is a newline.
-- **OFS**: stores the output field separator, which separates the fields when ``awk`` prints them. Default is a blank space. Whenever print has several parameters separated with commas, it will print the value of OFS in between each parameter.
-- **ORS**: stores the output record separator, which separates the output lines when ``awk`` prints them. The default is a newline character. Print automatically outputs the contents of **ORS** at the end of whatever it is given to print.
-
-## Examples
-
-!!! hint
-
-    Code along!
-
-    Good files for this exercise can be found in the "exercises" -> "awk-qol" directory.
-
-!!! note "Search lines for a keyword"
-
-    ```bash
-    $ awk '/carnivore/ {print}' file.dat
-    ```
-
-!!! note "Print only specific columns"
-
-    ```bash
-    $ awk '{print $1,$4}' file.dat
-    ```
-
-!!! note "Search for the pattern ‘snow’ in the file 'myfile.txt' and print out the first column"
-
-    ```bash
-    $ awk '/snow/ {print$1}' myfile.txt
-    ```
-
-!!! note "Print column 3 and 4 from file file.dat"
-
-    ```bash
-    $ awk '{print $3 "\t" $4}' file.dat
-    ```
-
-!!! note "Print column 2 and 3 from file 'file.dat', but only those rows that contain the letter ‘r’"
-
-    ```bash
-    $ awk '/r/ {print $2 "\t" $3}' file.dat
-    ```
+Can `awk` display the entire line?
 
 !!! note "Display line number"
 
     ```bash
-    $ awk '{print NR,$0}' file.dat
+    $ awk '{print $0}' file.dat
     ```
 
-!!! note "Display first and last field, using NF"
+---
 
-    ```bash
-    $ awk '{print $1,$NF}' file.dat
-    ```
+### (optional) Exercise 4.1: Can `awk` display the number of columns?
 
-!!! note "Display line from 2 to 5"
-
-    ```bash
-    $ awk 'NR==3, NR==6 {print NR,$0}' file.dat
-    ```
-
-!!! note "Print the first field and the row number(NR) separated with ' - '"
-
-    ```bash
-    $ awk '{print NR " - " $1 }' file.dat
-    ```
-
-!!! note "Print third column/field"
-
-    ```bash
-    $ awk '{print $3}' file.dat
-    ```
+Can `awk` display the number of columns?
 
 !!! note "Print any empty line if such exists"
 
@@ -527,11 +527,23 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
     $ awk 'NF == 0 {print NR}' file.dat
     ```
 
-!!! note "Finding the length of the longest line"
+---
+
+### (optional) Exercise 4.1: Can `awk` display the last column?
+
+Can `awk` display the last column?
+
+!!! note "Display first and last field, using NF"
 
     ```bash
-    $ awk '{ if (length($0) > max) max = length($0) } END { print max }' file.dat
+    $ awk '{print $1,$NF}' file.dat
     ```
+
+---
+
+### (optional) Exercise 4.1: Can `awk` count the number of lines?
+
+Can `awk` count the number of lines?
 
 !!! note "Count the lines in file.dat"
 
@@ -539,32 +551,49 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
     $ awk 'END { print NR }' file.dat
     ```
 
-!!! note "Print all lines that has more than 20 characters"
+Similar to `wc --lines`
+---
+
+### (optional) Exercise 4.1: Can `awk` display the line number?
+
+Can `awk` display the line number?
+
+!!! note "Display line number"
 
     ```bash
-    $ awk 'length($0) > 20' file.dat
+    $ awk '{print NR,$0}' file.dat
     ```
 
-!!! note "Check for a specific string in any specific column"
+Similar to `cat --number`
+---
+
+### (optional) Exercise 4.1: Can `awk` work on comma-seperated files?
+
+Can `awk` work on comma-seperated files?
+
+---
+
+### (optional) Exercise 4.1: Can `awk` show something once at the start?
+
+Can `awk` do X?
+
+---
+
+### (optional) Exercise 4.1: Can `awk` show something once at the end?
+
+Can `awk` do X?
+
+---
+
+### (optional) Exercise 4.1: Can `awk` use variables?
+
+Can `awk` use variables?
+
+!!! note "Finding the length of the longest line"
 
     ```bash
-    $ awk '{ if($3 == "fur") print $0;}' file.dat
+    $ awk '{ if (length($0) > max) max = length($0) } END { print max }' file.dat
     ```
-
-Some parts of this section was copied from <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/" target="_blank">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a>.
-
-## Exercise
-
-Work with the files in the "exercises" - "awk-qol" directory.
-
-1. Search "myfile.txt" for the keyword "text".
-2. Print column 2 only, from "file.dat"
-3. Display line numbers on "myfile.txt"
-4. Count the lines in "myfile.txt"
-5. Check for the string "carnivore" in column 1 of "file.dat"
-6. Check for the string "carnivore" in column 2 of "file.dat"
-
-<!-- markdownlint-enable -->
 
 ---
 
