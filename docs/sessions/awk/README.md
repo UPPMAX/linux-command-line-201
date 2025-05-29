@@ -24,10 +24,10 @@ tags:
 
     Time |Duration|Description
     -----|--------|---------
-    0-10 |10      |Prior
-    10-15|5       |Present
-    15-35|20      |Challenge
-    35-45|10      |Feedback
+    0-5  |5       |Prior
+    5-10 |5       |Present
+    10-30|20      |Challenge
+    30-40|10      |Feedback
 
     Prior:
 

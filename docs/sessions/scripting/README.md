@@ -26,8 +26,8 @@ tags:
     -----|--------|---------
     0-10 |10      |Prior
     10-15|5       |Present
-    15-35|20      |Challenge
-    35-45|10      |Feedback
+    15-50|35      |Challenge
+    50-60|10      |Feedback
 
     Prior:
 
