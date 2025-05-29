@@ -306,4 +306,20 @@ Here we are just going to add them to ".bashrc".
 
 ## Exercises 
 
-1. 
+1. Start a job in the background with ``&`` 
+2. Start a job that takes some time to run. Suspend it. Send it to the background. Look that it runs. Return it to the foreground. 
+    - Suggestion: Make a tarball of a directory with many files in. 
+    - If you do not have a suitable directory, you can instead run the script ``slowcommand.sh`` in "exercises" -> "awk-qol" (make sure it is executable, ``chmod +x slowcommand.sh``)  
+3. Try out several of the terminal shortcuts
+4. Create a couple aliases (non-persistent) and try them out
+5. Add some nice aliases to your ".bashrc", ``source`` the ".bashrc" and try the aliases! 
+
+## Summary 
+
+!!! note "Keypoints"
+
+    - we learned about foreground and background processes
+    - we tried some terminal short-cuts
+    - we learned about ``alias``
+    - we learned about ".bashrc" 
+
