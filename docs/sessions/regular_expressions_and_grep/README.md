@@ -466,6 +466,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
         man grep | grep --ignore-case --invert-match "[a-f]"
         ```
 
+## Conclusions
+
 !!! info "Conclusions"
 
     - `grep` is used for pattern matching
@@ -481,6 +483,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
 ---
 
+## Next session
+
 !!! info "Next session"
 
-    - `grep` cannot do replacements, use `sed` instead.
+    - `grep` is not a programming language: use `awk` instead.

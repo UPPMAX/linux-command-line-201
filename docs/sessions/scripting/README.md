@@ -348,11 +348,15 @@ such as the output of a bash command.
 
 ---
 
+## Conclusions
+
 !!! info "Conclusions"
 
     - `bash` can do most things one expects from a programming language
 
 ---
+
+## Next session
 
 !!! info "Next session"
 
