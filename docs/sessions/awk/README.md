@@ -40,10 +40,12 @@ In these exercises, we'll be using the
 because this free online book fits this course well
 and allows you to continue studying after this course.
 
-### Exercise 1: printing selected fields
+## Exercise 1: printing selected fields
 
 Read the text at
 [chapter 6.2.1: 'Printing selected fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01).
+
+### Exercise 1.1: understanding the first part
 
 The single line of code in this subsection uses a pipe.
 Run the command until the pipe. What
@@ -86,6 +88,8 @@ do you see? How do you explain in English what this does?
 
 ---
 
+### Exercise 1.2: understanding the `awk` part
+
 The single line of code in this subsection
 forwards its output (from `ls`) to `awk`.
 Run it. What do you see?
@@ -115,6 +119,8 @@ How do you explain in English what this does?
 
 ---
 
+### Exercise 1.3: how `awk` deals with missing columns
+
 The command shows the 5th and 9th columns of a list of files (in long format).
 How does `awk` deal with lines that do not have a 5th and/or 9th column?
 
@@ -137,7 +143,9 @@ How does `awk` deal with lines that do not have a 5th and/or 9th column?
 
 ---
 
-**Optional**: try to use `cut` (and only `cut`!)
+### (optional) Exercise 1.4: `awk` versus `cut`
+
+Try to use `cut` (and only `cut`!)
 to achieve the same, by selecting the
 same columns. This will not work! Observe and explain what you see.
 
@@ -185,10 +193,12 @@ same columns. This will not work! Observe and explain what you see.
 
 ---
 
-### Exercise 2: printing selected fields
+## Exercise 2: printing selected fields
 
 Read the text at
 [chapter 6.2.2: 'Formatting fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_02)
+
+### Exercise 2.1: understanding the first part
 
 The first code example in this subsection uses multiple pipes.
 Run the command until the first pipe. What
@@ -234,6 +244,8 @@ Use the `ls` manual.
 
 ---
 
+### Exercise 2.2: understanding the second part
+
 The first code example in this subsection uses multiple pipes.
 Run the command until the second pipe. What
 do you see? How do you explain in English what this does?
@@ -273,6 +285,8 @@ do you see? How do you explain in English what this does?
     
 ---
 
+### Exercise 2.3: understanding the `awk` part
+
 The first code example in this subsection uses multiple pipes.
 Run the command in full. What do you see?
 
@@ -295,6 +309,8 @@ Run the command in full. What do you see?
     ```
     
 ---
+
+### Exercise 2.4: understanding the single quote
 
 A first thing to notice is that the `awk` command is put
 into a single quote `'` (instead of a double-quote, `"`).
@@ -319,7 +335,8 @@ Why is that?
     
 ---
 
-**Optional**:
+### (Optional) Exercise 2.5: using commas between elements to print
+
 Zooming in on the printing of `awk`,
 i.e. the part `print "Size is " $5 " bytes for " $9`,
 we can see that the elements to be printed are
@@ -369,10 +386,12 @@ to use a comma between the elements.
 
 ---
 
-### Exercise 3: regular expressions
+## Exercise 3: regular expressions
 
 Read the text at
 [chapter 6.2.3: 'The print command and regular expressions'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_03)
+
+### Exercise 3.1: understanding the first part
 
 The first code example in this subsection uses a pipe.
 Run the command until the pipe. What
@@ -419,6 +438,8 @@ Use the `df` manual.
 
 ---
 
+### Exercise 3.2: understanding the `awk` part
+
 Run the command in full. What do you see?
 
 Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
@@ -443,9 +464,9 @@ Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
 
     ```bash
     $ df -h | awk '/dev\// { print $6 "\t: " $5 }'
-    /	: 51%
-    /dev/shm	: 1%
-    /boot/efi	: 15%
+    / : 51%
+    /dev/shm : 1%
+    /boot/efi : 15%
     ```
 
     It shows the percentage of disk space in use for all the
@@ -453,8 +474,10 @@ Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
 
 ---
 
+### Exercise 3.3: understanding the regular expression
+
 This `awk` command uses a regular expression. What is it **exactly**?
-If it is formatted 'weirdly', why is that? 
+If it is formatted 'weirdly', why is that?
 
 ??? tip "Answer"
 
@@ -478,6 +501,8 @@ If it is formatted 'weirdly', why is that?
     using a backslash.
     
 ---
+
+### Exercise 3.4: understanding the `\t`
 
 In the `awk` command, there is a `\t` in the printing
 part. What does it do, and why is it written like that?
@@ -552,6 +577,7 @@ Can `awk` count the number of lines?
     ```
 
 Similar to `wc --lines`
+
 ---
 
 ### (optional) Exercise 4.1: Can `awk` display the line number?
@@ -565,6 +591,7 @@ Can `awk` display the line number?
     ```
 
 Similar to `cat --number`
+
 ---
 
 ### (optional) Exercise 4.1: Can `awk` work on comma-seperated files?
