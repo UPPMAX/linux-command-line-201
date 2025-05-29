@@ -37,21 +37,146 @@ it can -by definition- solve any computational problem.
 
 In these exercises, we'll be using the
 [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/),
-as this online book fits this course well, is free, is open
+because this free online book fits this course well
 and allows you to continue studying after this course.
 
 ### Exercise 1: printing selected fields
 
-- Read the text at
-  [chapter 6.2.1: 'Printing selected fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01)
+Read the text at
+[chapter 6.2.1: 'Printing selected fields'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01).
 
-- ...
+The single line of code in this chapter uses a pipe.
+Run the command until the pipe. What
+do you see? How do you explain in English what this does?
 
 ??? tip "Answer"
 
-    ...
+    The command before the pipe is:
 
+    ```bash
+    ls -l
+    ```
+
+    When running it, you will see something similar to:
+
+    ```
+    $ ls -l
+    total 4
+    drwxrwxr-x   2 richel richel 4096 Jun 10  2024 bin
+    drwxr-xr-x   2 richel richel 4096 Jan  8 20:05 Desktop
+    drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
+    drwxr-xr-x   3 richel richel 4096 May 28 08:51 Downloads
+    ```
+
+    Searching the manual of `ls`, using `man ls`, gives us the
+    following description of the `-l` flag:
+
+    ```bash
+    -l     use a long listing format
+    ```
+
+    Hence, `ls -l` lists files in the current folder
+    using a long listing format.
     
+---
+
+The single line of code in this chapter 
+forwards the output of `ls` to `awk`.
+Run it. What do you see?
+How do you explain in English what this does?
+
+??? tip "Answer"
+
+    The command to run is:
+
+    ```bash
+    ls -l | awk '{ print $5 $9 }'
+    ```
+
+    When running it, you will see something similar to:
+
+    ```
+    $ ls -l | awk '{ print $5 $9 }'
+
+    4096bin
+    4096Desktop
+    4096Documents
+    4096Downloads
+    ```
+
+   In English: from a list of files (in long format),
+   show the 5th and 9th columns.
+
+---
+
+The command shows the 5th and 9th columns of a list of files (in long format).
+How does `awk` deal with lines that do not have a 5th and/or 9th column?
+
+??? tip "Answer"
+
+    When running the command, we have already seen the empty first line
+    of output:
+
+    ```
+    $ ls -l | awk '{ print $5 $9 }'
+
+    4096bin
+    4096Desktop
+    4096Documents
+    4096Downloads
+    ```
+
+    Hence, if there is no 5th and/or 9th column to display,
+    `awk` shows an empty line 
+
+---
+
+Optional: try to use `cut` (and only `cut`!)
+to achieve the same, by selecting the
+same columns. This will not work! Observe and explain what you see.
+
+??? tip "Answer"
+
+    To get the most similar output, we need to use columns 6 and 10:
+
+    ```bash
+    $ ls -l | cut --delimiter " " --fields 6,10
+
+    richel 
+    richel 8
+    4096 Documents
+    ```
+
+    This is not because we actually wanted to use columns 6 and 10:
+    Due to the multiple and varying amount of spaces in each line,
+    the counting is off.
+
+    If you know the `tr` command, you can remove duplicate spaces:
+
+    ```bash
+    $ ls -l | tr --squeeze-repeats " " | cut --delimiter " " --fields 5,9
+
+    4096 bin
+    4096 Desktop
+    4096 Documents
+    4096 Downloads
+    ```
+
+    The output does put a space between the columns, we can remove that too:
+
+    <!-- markdownlint-disable MD013 --><!-- A one-line of code cannot be split up over lines, hence will break 80 characters per line -->
+
+    ```bash
+    $ ls -l | tr --squeeze-repeats " " | cut --delimiter " " --fields 5,9 | tr --delete " "
+
+    4096bin
+    4096Desktop
+    4096Documents
+    4096Downloads
+    ```
+
+    <!-- markdownlint-enable MD013 -->
+
 ---
 
 ### Exercise 2: printing selected fields
