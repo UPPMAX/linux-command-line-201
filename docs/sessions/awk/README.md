@@ -577,22 +577,26 @@ where the whole line is printed.
 
 Can `awk` display the line number?
 
+Read the text at
+[chapter 6.3.3: 'The number of records'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_03).
+
 The answer is: yes!
 
-To do so, print the variable `NR`, as shown in the (useless)
-program below:
-
-```bash
-awk '{ print NR }'
-```
-
 Use a pipe to direct the output of `ls -l` to `awk`,
-where the line number and the value in the first column are printed
+where the line number and the values in the first are printed
 
 ??? tip "Answer"
 
     ```bash
     ls -l | awk '{ print NR,$1 }'
+    ```
+
+    When printing the content of a file, with number lines,
+    use can use both `awk` and `cat`:
+
+    ```bash
+    ls -l | awk '{ print NR,$0 }'
+    ls -l | cat --number
     ```
 
 ---
@@ -700,66 +704,96 @@ where the number of lines is printed.
 
 ---
 
-### (optional) Exercise 4.6: Can `awk` display the line number?
-
-Can `awk` display the line number?
-
-??? tip "Answer"
-
-    ```bash
-    $ awk '{print NR,$0}' file.dat
-    ```
-
-Similar to `cat --number`
-
----
-
 ### (optional) Exercise 4.7: Can `awk` work on comma-seperated files?
+
+Can `awk` work on comma-seperated files?
+
+The answer is: yes!
 
 Read the text at
 [chapter 6.2.4: 'The input field separator'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_01).
 
-Can `awk` work on comma-seperated files?
+Here we convert the output of `ls -l` to its comma-seperated
+equivalent:
+
+```bash
+ls -l | tr -s ' ' ','
+```
+
+Using this input, use a pipe to show the 5th and 9th column.
 
 ??? tip "Answer"
 
     ```bash
-    $ awk 'BEGIN { FS="," } {print NR,$0}' file.dat
+    ls -l | tr -s ' ' ',' | awk 'BEGIN { FS="," } { print $5, $9 }'
     ```
 
     Alternatively;
 
     ```bash
-    $ awk --field-separator "," '{print NR,$0}' file.dat
+    ls -l | tr -s ' ' ',' | awk --field-separator "," '{ print $5, $9 }'
     ```
 
 
 ### (optional) Exercise 4.8: Can `awk` show something once at the start?
 
-Read the text at
-[chapter 6.2.4: '6.2.4. Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
+Can `awk` show something once at the start?
 
-TODO
+The answer is: yes!
+
+Read the text at
+[chapter 6.2.4: 'Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
+
+Use a pipe to direct the output of `ls -l` to `awk`,
+where the text `Permissions:` is shown, after which 
+the values in the first column are shown.
+
+If the word `total` shows up in your results, you can ignore it
+for this exercise.
 
 ??? tip "Answer"
 
     ```bash
-    $ awk { BEGIN { print "Counting ..."} { print NR } }' file.dat
+    ls -l | awk 'BEGIN { print "Permissions:" } { print $1 }'
+    ```
+
+    If you do not want `total` in your results,
+    use a regular expression for 'lines starting with a d or a dash':
+
+    ```bash
+    ls -l | awk 'BEGIN { print "Permissions:" } /^[d\-]/ { print $1 }'
     ```
 
 ---
 
 ### (optional) Exercise 4.9: Can `awk` show something once at the end?
 
+Can `awk` show something once at the end?
+
+The answer is: yes!
+
 Read the text at
 [chapter 6.2.4: '6.2.4. Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
 
-TODO
+Use a pipe to direct the output of `ls -l` to `awk`,
+after which 
+the values in the first column are shown.
+At the end of the output, it should show the text `Done!`
+
+If the word `total` shows up in your results, you can ignore it
+for this exercise.
 
 ??? tip "Answer"
 
     ```bash
-    $ awk { { print NR } END { print "Counting ..."} }' file.dat
+    ls -l | awk '{ print $1 } END { print "Done!" }'
+    ```
+
+    If you do not want `total` in your results,
+    use a regular expression for 'lines starting with a d or a dash':
+
+    ```bash
+    ls -l | awk '/^[d\-]/ { print $1 } END { print "Done!" }'
     ```
 
 ---
@@ -768,19 +802,19 @@ TODO
 
 Can `awk` use variables?
 
+The answer is: yes!
+
 Read the text at
 [chapter 6.3.4: 'User defined variables'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_04).
 
-!!! note "Finding the length of the longest line"
+Use a pipe to direct the output of `ls -l` to `awk`.
+Sum the values of the 5th column and show it
 
-
-    <!-- markdownlint-disable MD013 --><!-- A bash one-liner cannot be split up over lines, hence will break 80 characters per line -->
+??? tip "Answer"
 
     ```bash
-    $ awk '{ BEGIN { max = 0 } { if (length($0) > max) max = length($0) } } END { print max }' file.dat
+    ls -l | awk 'BEGIN { sum = 0 } { sum = sum + $5 } END { print sum }'
     ```
-
-    <!-- markdownlint-enable MD013 -->
 
 ---
 
