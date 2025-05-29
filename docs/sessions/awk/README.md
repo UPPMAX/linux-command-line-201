@@ -851,7 +851,10 @@ Sum the values of the fifth column and show it
         are just as good.
 
         For harder problems, use a modern programming language
-        instead.
+        instead, as these have libraries/packages that can,
+        for example, read or analyse an entire table at once.
+
+---
 
 ## Conclusions
 

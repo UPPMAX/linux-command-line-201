@@ -348,11 +348,70 @@ such as the output of a bash command.
 
 ---
 
+??? note "For teachers"
+
+    What is the difference between AWK and bash?
+
+    ??? tip "Answer"
+
+        They are different programming languages.
+
+    What can bash not do?
+
+    ??? tip "Answer"
+
+        bash, like any Turning complete language,
+        can solve any computational problem,
+        but cannot do this:
+
+        - run computations at any speed (i.e. a problem
+          may take billions of year to complete)
+        - use any amount of memory (i.e. a problem
+          may require billions of gigabytes to solve)
+
+    When not to use bash?
+
+    ??? tip "Answer"
+
+        bash shines at problems of low and intermediate complexity.
+
+        For harder problems, use a modern programming language
+        instead.
+
+---
+
 ## Conclusions
 
 !!! info "Conclusions"
 
-    - `bash` can do most things one expects from a programming language
+    - Bash can do most things one expects from a programming language
+    - A bash script starts with a shebang: `#!/bin/bash`
+    - A bash script can be made executable: `chmod +x greeter.sh`
+    - A bash script can be run by writing `./` in front of the filename:
+      `./greeter.sh`
+    - A bash script can use variables: `greeting="Hello"`
+    - A bash script can run bash commands and store the result in a variable: 
+      `n_files=$(ls | wc --lines)`
+    - A bash script can ask the user for input: `read name`
+    - A bash script can do conditionals: 
+
+      ```bash
+      if [[ name -eq "Bond" ]]`
+      then
+          echo "It is Bond. James Bond!"
+      else
+          echo "$greeting $name!"
+      fi
+      ```
+
+    - A bash script can use for-loops: 
+
+      ```bash
+      for name in ${names}
+      do
+          echo "Hello ${name}!"
+      done
+      ```
 
 ---
 
