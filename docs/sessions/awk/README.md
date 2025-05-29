@@ -822,9 +822,36 @@ Sum the values of the fifth column and show it
 
     What is the difference between AWK and `awk`?
 
+    ??? tip "Answer"
+
+        AWK is the name of the programming language.
+
+        `awk` is the name of the program that can run AWK.
+
     What can AWK not do?
 
+    ??? tip "Answer"
+
+        AWK, like any Turning complete language,
+        can solve any computational problem,
+        but cannot do this:
+
+        - run computations at any speed (i.e. a problem
+          may take billions of year to complete)
+        - use any amount of memory (i.e. a problem
+          may require billions of gigabytes to solve)
+
     When not to use AWK?
+
+    ??? tip "Answer"
+
+        AWK shines at problems of intermediate complexity.
+
+        For simple problems, tools such as `grep`, `cut` and `wc`
+        are just as good.
+
+        For harder problems, use a modern programming language
+        instead.
 
 ## Conclusions
 
