@@ -106,11 +106,11 @@ What are these?
 
 Tips:
 
-    - it is in the first two screens.
-    - The first part of the answer can be found
-      in the `DESCRIPTION` section,
-    - The second part of the answer can be found
-      in the `OPTIONS | Pattern syntax` section
+- it is in the first two screens.
+- The first part of the answer can be found
+  in the `DESCRIPTION` section,
+- The second part of the answer can be found
+  in the `OPTIONS | Pattern syntax` section
 
 ??? tip "Answer"
 
