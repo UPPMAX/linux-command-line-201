@@ -39,7 +39,6 @@ The detailed curriculum can be found in the drop-down boxes.
     - Learners can write bash scripts that require user input
     - Learners can use variables in bash scripts
     - Learners can use `if` statements in bash scripts
-    - Learners can use `if` statements with the 'or' and 'and' symbols  in bash scripts
     - Learners can use `for` statements  in bash scripts
 
 - Environment variables

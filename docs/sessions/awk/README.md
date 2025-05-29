@@ -18,6 +18,22 @@ tags:
     - Learners can use regular expressions in `awk`
     - Learners have practiced reading bash commands
 
+???- note "For teachers"
+
+    Lesson plan:
+
+    Time |Duration|Description
+    -----|--------|---------
+    0-10 |10      |Prior
+    10-15|5       |Present
+    15-35|20      |Challenge
+    35-45|10      |Feedback
+
+    Prior:
+
+    - What is AWK?
+
+
 ## Why is AWK important?
 
 AWK is a programming language for text processing

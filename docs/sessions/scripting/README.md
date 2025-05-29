@@ -16,9 +16,28 @@ tags:
     - Learners can write bash scripts that require user input
     - Learners can use variables in bash scripts
     - Learners can use `if` statements in bash scripts
-    - Learners can use `if` statements with the 'or' and 'and' symbols  in bash scripts
     - Learners can use `for` statements  in bash scripts
 
+???- note "For teachers"
+
+    Lesson plan:
+
+    Time |Duration|Description
+    -----|--------|---------
+    0-10 |10      |Prior
+    10-15|5       |Present
+    15-35|20      |Challenge
+    35-45|10      |Feedback
+
+    Prior:
+
+    - What is script?
+    - What is bash?
+    - What is meant with 'user input'?
+    - What is a variable?
+    - What is a condition?
+    - What is a conditional?
+    - What is a for-loop?
 
 ???- note "For teachers"
 
