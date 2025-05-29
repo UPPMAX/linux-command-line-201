@@ -8,7 +8,6 @@ This chapter is a little different to the others. It is not about a tool or an o
 - We will look at some useful terminal shortcuts and their usage
 - We will learn how to edit a ".bashrc" file 
 - We will learn about using aliases 
-- Also a few other small odds and ends 
 
 ## Background processes 
 
@@ -135,11 +134,121 @@ $ cat $HOME/.bashrc
 
 To edit it, use your favourite (command-line) editor. Here ``vi``/``vim`` or ``nano`` are common. 
 
+```bash
+$ nano $HOME/.bashrc
+```
 
+!!! warning 
 
-- We will learn about using aliases
-- Also a few other small odds and ends
+    - If you are editing your ".bashrc" file at one of the HPC centres in Sweden, it is usually a bad idea to add any ``module load <software`` to the ".bashrc". A few months on you may have forgotten about it and now you want to use another module which does not load correctly or the program does not run as expected because you have already loaded another version in your ".bashrc". 
+    - In general, it is a good idea to make a backup of your ".bashrc" file if you are doing something that might break things. Do ``cp $HOME/.bashrc $HOME/.bashrc.bak`` or similar first. Otherwise, there are usually "skeleton versions" of these files in ``/etc/skel/``. 
 
-history 
+### Useful suggestions 
+
+So what should you put in the ".bashrc"? It depends on your work style of course, and what you are working with, but these are some suggestions: 
+
+- Aliases (see next part, very soon)
+- Environment variables, Python environments
+- PATHs and library paths to own-installed software 
+- Custumizations of the terminal
+- Anything you need persistent between sessions 
+
+!!! warning "Important"
+
+    Any changes you make to ".bashrc" will not be active until you have done one of: 
+
+    - logged out and in again
+    - ``source .bashrc``
+    - ``. .bashrc``
+
+#### Examples 
+
+!!! note "Setting the path in .bashrc" 
+
+    Assuming you have installed some software and now need to set the path to libraries and binaries. 
+ 
+    In this example the new software is installed in /opt/SOFTWARE/ and we add the new path to the old, which included OTHERSOFTWARE installed in your homedirectory (for user username): 
+
+    ```bash
+    export PATH=$PATH:/home/username/OTHERSOFTWARE/bin:opt/SOFTWARE/bin
+    ```
+
+    We sometimes also need to set the path to the softwares libraries: 
+
+    ```bash
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/username/OTHERSOFTWARE/lib:/opt/SOFTWARE/lib 
+    ``` 
+
+!!! note "Customizing the terminal" 
+
+    These includes a comment before that says what they do. Always good to put! 
+
+    ```bash 
+    # Change number of commands stored in memory during running to 1000 (those you can access with arrow-up or CTRL-P)
+    HISTSIZE=1000
+
+    # Change number of commands stored on disk to 2000 (you can see them with "history")
+    HISTFILESIZE=2000
+
+    # Append to the history file, don't overwrite it**
+    shopt -s histappend
+
+    # make less more friendly for non-text input files**
+    [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+    # set variable identifying the chroot you work in (used in the prompt below)**
+    if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+    # set a fancy prompt (non-color, unless we know we "want" color)
+    case "$TERM" in
+        xterm-color|*-256color) color_prompt=yes;;
+    esac
+
+    # If this is an xterm set the title to user@host:dir
+    case "$TERM" in
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
+    esac
+
+    # enable color support of ls 
+    if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=auto'
+        #alias vdir='vdir --color=auto'
+
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
+
+    # colored GCC warnings and errors - uncomment to use 
+    #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+  
+## Aliases
+
+An alias for a command means that there are two commands for the same action. The reason to make an alias is usually to get something that is shorter and/or easier to remember. 
+
+Aliases can be persistent or non-persistent. 
+
+### Non-persistent aliases
+
+These are alieases you just need for a short time, during that specific session. They will go away next time you logout and login, and they will not be available in another shell. 
+
+They are easy to create: 
+
+```bash
+$ alias ALIASNAME="command" 
+```
+
+!!! note "Example" 
+ 
+       
+
 
 
