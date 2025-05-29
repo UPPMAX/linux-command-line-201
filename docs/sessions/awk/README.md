@@ -59,7 +59,7 @@ do you see? How do you explain in English what this does?
 
     When running it, you will see something similar to:
 
-    ```
+    ```bash
     $ ls -l
     total 4
     drwxrwxr-x   2 richel richel 4096 Jun 10  2024 bin
@@ -77,7 +77,7 @@ do you see? How do you explain in English what this does?
 
     Hence, `ls -l` lists files in the current folder
     using a long listing format.
-    
+
 ---
 
 The single line of code in this chapter
@@ -95,7 +95,7 @@ How do you explain in English what this does?
 
     When running it, you will see something similar to:
 
-    ```
+    ```bash
     $ ls -l | awk '{ print $5 $9 }'
 
     4096bin
@@ -117,7 +117,7 @@ How does `awk` deal with lines that do not have a 5th and/or 9th column?
     When running the command, we have already seen the empty first line
     of output:
 
-    ```
+    ```bash
     $ ls -l | awk '{ print $5 $9 }'
 
     4096bin
@@ -127,7 +127,7 @@ How does `awk` deal with lines that do not have a 5th and/or 9th column?
     ```
 
     Hence, if there is no 5th and/or 9th column to display,
-    `awk` shows an empty line 
+    `awk` shows an empty line
 
 ---
 
@@ -142,7 +142,7 @@ same columns. This will not work! Observe and explain what you see.
     ```bash
     $ ls -l | cut --delimiter " " --fields 6,10
 
-    richel 
+    richel
     richel 8
     4096 Documents
     ```
@@ -190,7 +190,7 @@ same columns. This will not work! Observe and explain what you see.
 
     ...
 
-    
+
 ---
 
 ### Exercise 3: printing selected fields
@@ -204,7 +204,7 @@ same columns. This will not work! Observe and explain what you see.
 
     ...
 
-    
+
 ---
 
 ## (optional) Exercise 4: can `awk` do ...?
@@ -236,11 +236,11 @@ Things ``awk`` can do:
 
 !!! note
 
-    - In fact, ``awk`` is a scripting language which can do a set of actions on streams of textual data. 
-    - You can either run it directly on a file or use it as part of a pipeline (with the operator "pipe"). 
-    - You can extract or transform text, and for instance produce formatted reports. 
-    - Like ``sed`` and ``grep``, it is a filter, and it is a standard feature of most Unix-like operating systems. 
-    - In short: it searches one (or more) files to find if they contain line(s) that match the pattern given and then it performs the action required. 
+    - In fact, ``awk`` is a scripting language which can do a set of actions on streams of textual data.
+    - You can either run it directly on a file or use it as part of a pipeline (with the operator "pipe").
+    - You can extract or transform text, and for instance produce formatted reports.
+    - Like ``sed`` and ``grep``, it is a filter, and it is a standard feature of most Unix-like operating systems.
+    - In short: it searches one (or more) files to find if they contain line(s) that match the pattern given and then it performs the action required.
 
 Awk is abbreviated from the names of the developers - Aho, Weinberger, and Kernighan.
 
@@ -280,21 +280,21 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
 
 !!! hint
 
-    Code along! 
+    Code along!
 
-    Good files for this exercise can be found in the "exercises" -> "awk-qol" directory. 
+    Good files for this exercise can be found in the "exercises" -> "awk-qol" directory.
 
 !!! note "Search lines for a keyword"
 
     ```bash
     $ awk '/carnivore/ {print}' file.dat
-    ``` 
+    ```
 
 !!! note "Print only specific columns"
 
     ```bash
     $ awk '{print $1,$4}' file.dat
-    ``` 
+    ```
 
 !!! note "Search for the pattern ‘snow’ in the file 'myfile.txt' and print out the first column"
 
@@ -306,7 +306,7 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
 
     ```bash
     $ awk '{print $3 "\t" $4}' file.dat
-    ``` 
+    ```
 
 !!! note "Print column 2 and 3 from file 'file.dat', but only those rows that contain the letter ‘r’"
 
@@ -334,10 +334,10 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
 
 !!! note "Print the first field and the row number(NR) separated with ' - '"
 
-    ```bash 
+    ```bash
     $ awk '{print NR " - " $1 }' file.dat
     ```
-    
+
 !!! note "Print third column/field"
 
     ```bash
@@ -352,26 +352,26 @@ Aside from the field-variables, ``awk`` also has other built-in variables:
 
 !!! note "Finding the length of the longest line"
 
-    ```bash 
-    $ awk '{ if (length($0) > max) max = length($0) } END { print max }' file.dat 
+    ```bash
+    $ awk '{ if (length($0) > max) max = length($0) } END { print max }' file.dat
     ```
 
 !!! note "Count the lines in file.dat"
 
-    ```bash 
+    ```bash
     $ awk 'END { print NR }' file.dat
-    ``` 
+    ```
 
 !!! note "Print all lines that has more than 20 characters"
 
-    ```bash 
+    ```bash
     $ awk 'length($0) > 20' file.dat
-    ``` 
+    ```
 
 !!! note "Check for a specific string in any specific column"
 
-    ```bash 
-    $ awk '{ if($3 == "fur") print $0;}' file.dat 
+    ```bash
+    $ awk '{ if($3 == "fur") print $0;}' file.dat
     ```
 
 Some parts of this section was copied from <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/" target="_blank">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a>.
@@ -412,7 +412,7 @@ Work with the files in the "exercises" - "awk-qol" directory.
     -------------------------------------------------------------------------------|-----------------------------
     [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)|Book about AWK
     [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/)   |Book about AWK
-    [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/         |Book with a chapter about AWK
+    [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/)        |Book with a chapter about AWK
     [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)                |Book with a chapter about AWK
     [To AWK or not](https://pmitev.github.io/to-awk-or-not/)                       |Course about AWK
     [AWK course](https://richelbilderbeek.github.io/awk_course/)                   |Course about AWK
