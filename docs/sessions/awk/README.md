@@ -339,6 +339,9 @@ to use a comma between the elements.
 
     This, however, gives double spaces now:
 
+    <!-- markdownlint-disable MD013 --><!-- A bash one-liner cannot be split up over lines, hence will break 80 characters per line -->
+
+
     ```bash
     $ ls -ldh * | grep -v total | awk '{ print "Size is ", $5, " bytes for ", $9 }'
     Size is  4.0K  bytes for  bin
@@ -346,6 +349,8 @@ to use a comma between the elements.
     Size is  4.0K  bytes for  Documents
     Size is  4.0K  bytes for  Downloads
     ```
+
+    <!-- markdownlint-enable MD013 -->
 
     Removing the spaces between the double-quotes (`"`) solves this:
 
