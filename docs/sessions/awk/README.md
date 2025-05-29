@@ -115,14 +115,14 @@ How do you explain in English what this does?
     ```
 
     In English: from a list of files (in long format),
-    show the 5th and 9th columns.
+    show the fifth and ninth columns.
 
 ---
 
 ### Exercise 1.3: how `awk` deals with missing columns
 
-The command shows the 5th and 9th columns of a list of files (in long format).
-How does `awk` deal with lines that do not have a 5th and/or 9th column?
+The command shows the fifth and ninth columns of a list of files (in long format).
+How does `awk` deal with lines that do not have a fifth and/or ninth column?
 
 ??? tip "Answer"
 
@@ -138,7 +138,7 @@ How does `awk` deal with lines that do not have a 5th and/or 9th column?
     4096Downloads
     ```
 
-    Hence, if there is no 5th and/or 9th column to display,
+    Hence, if there is no fifth and/or ninth column to display,
     `awk` shows an empty line
 
 ---
@@ -340,9 +340,9 @@ Why is that?
 Zooming in on the printing of `awk`,
 i.e. the part `print "Size is " $5 " bytes for " $9`,
 we can see that the elements to be printed are
-seperated by a space.
+separated by a space.
 This is unlike most (?all) modern languages, where
-elements are seperated by a comma. Rewrite the expression
+elements are separated by a comma. Rewrite the expression
 to use a comma between the elements.
 
 ??? tip "Answer"
@@ -470,7 +470,7 @@ Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
     ```
 
     It shows the percentage of disk space in use for all the
-    devices that have `dev` in the same.
+    devices that have `dev` in the name.
 
 ---
 
@@ -704,23 +704,23 @@ where the number of lines is printed.
 
 ---
 
-### (optional) Exercise 4.7: Can `awk` work on comma-seperated files?
+### (optional) Exercise 4.7: Can `awk` work on comma-separated files?
 
-Can `awk` work on comma-seperated files?
+Can `awk` work on comma-separated files?
 
 The answer is: yes!
 
 Read the text at
 [chapter 6.2.4: 'The input field separator'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_01).
 
-Here we convert the output of `ls -l` to its comma-seperated
+Here we convert the output of `ls -l` to its comma-separated
 equivalent:
 
 ```bash
 ls -l | tr -s ' ' ','
 ```
 
-Using this input, use a pipe to show the 5th and 9th column.
+Using this input, use a pipe to show the fifth and ninth column.
 
 ??? tip "Answer"
 
@@ -808,7 +808,7 @@ Read the text at
 [chapter 6.3.4: 'User defined variables'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_04).
 
 Use a pipe to direct the output of `ls -l` to `awk`.
-Sum the values of the 5th column and show it
+Sum the values of the fifth column and show it
 
 ??? tip "Answer"
 
