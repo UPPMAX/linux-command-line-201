@@ -371,7 +371,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
 ??? note "For teachers"
 
-    - How many regular expression dialects exist?
+    How many regular expression dialects exist?
 
     ??? tip "Answer"
 
@@ -384,8 +384,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - We have sent the `grep` manual to `grep` using a pipe.
-      Can we use any text?
+    We have sent the `grep` manual to `grep` using a pipe.
+    Can we use any text?
 
     ??? tip "Answer"
 
@@ -393,7 +393,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - Can we send the output of `grep` to `grep`?
+    Can we send the output of `grep` to `grep`?
 
     ??? tip "Answer"
 
@@ -401,7 +401,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - What is a Kleene star and what does it do?
+    What is a Kleene star and what does it do?
 
     ??? tip "Answer"
 
@@ -412,7 +412,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - What is the difference between `[^A-Z]` and `^[A-Z]`?
+    What is the difference between `[^A-Z]` and `^[A-Z]`?
 
     ??? tip "Answer"
 
@@ -424,7 +424,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - What is regular expression for 'any line of text' (including empty ones)?
+    What is regular expression for 'any line of text' (including empty ones)?
 
     ??? tip "Answer"
 
@@ -433,7 +433,7 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
+    Why does `man grep | grep .*` not work, where `man grep | grep ".*"` does?
 
     ??? tip "Answer"
 
@@ -446,9 +446,9 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
 
     ---
 
-    - Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
-      inverts the match (i.e. showing non-matching lines), how to combine these
-      in the same command?
+    Knowing that `grep --ignore-case` ignores case, and `grep --invert-match`
+    inverts the match (i.e. showing non-matching lines), how to combine these
+    in the same command?
 
     ??? tip "Answer"
 
@@ -465,6 +465,8 @@ Can `grep` detect which files-with-a-certain-extension contain a match?
         ```bash
         man grep | grep --ignore-case --invert-match "[a-f]"
         ```
+
+---
 
 ## Conclusions
 
