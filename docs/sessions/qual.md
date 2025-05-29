@@ -150,7 +150,7 @@ So what should you put in the ".bashrc"? It depends on your work style of course
 - Aliases (see next part, very soon)
 - Environment variables, Python environments
 - PATHs and library paths to own-installed software 
-- Custumizations of the terminal
+- Customizations of the terminal
 - Anything you need persistent between sessions 
 
 !!! warning "Important"

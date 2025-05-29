@@ -108,6 +108,10 @@ JOBID
 afile
 favourite
 PATHs
+Zstandard
+xz
+fi
+
 
 ERcoEh
 drLkxhD

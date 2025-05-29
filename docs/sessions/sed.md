@@ -126,7 +126,7 @@ Besides substitution, ``sed`` can do many other things. There are around 25 ``se
     sed '/^ *$/d' inputFile 
     ```
    
-!!! note "Deleting a specific ine from a specific file" 
+!!! note "Deleting a specific line from a specific file" 
 
     Delete line 4
 
