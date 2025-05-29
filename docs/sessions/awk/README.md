@@ -537,18 +537,15 @@ Pick those topics you are interested in.
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` display the entire line?
+### (optional) Exercise 4.1: Can `awk` display all columns?
 
-??? note "Can `awk` display the entire line?"
+Can `awk` display all columns?
 
-    Can `awk` display the entire line?
+??? tip "Answer"
 
-
-    ??? tip "Answer"
-
-        ```bash
-        $ awk '{print $0}' file.dat
-        ```
+    ```bash
+    $ awk '{print $0}' file.dat
+    ```
 
 ---
 
@@ -656,6 +653,8 @@ Can `awk` use variables?
 
 ---
 
+## Conclusions
+
 !!! info "Conclusions"
 
     - `awk` can be used pipes: `ls -l | awk '{ print $5 $9 }'`
@@ -668,6 +667,8 @@ Can `awk` use variables?
     - `awk` can do a lot more
 
 ---
+
+## Learning AWK
 
 !!! info "Learning AWK"
 
