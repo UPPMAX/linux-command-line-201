@@ -278,11 +278,11 @@ do you see? How do you explain in English what this does?
 
     In English: the command shows the list of files
     for lines that have no match (`-v`, also `--invert-match`)
-    to the regular expression `total`. 
+    to the regular expression `total`.
 
     Or shorter: it shows the content, excluding a possible
-    final line that shows the total file size. 
-    
+    final line that shows the total file size.
+
 ---
 
 ### Exercise 2.3: understanding the `awk` part
@@ -307,7 +307,7 @@ Run the command in full. What do you see?
     Size is 4.0K bytes for Documents
     Size is 4.0K bytes for Downloads
     ```
-    
+
 ---
 
 ### Exercise 2.4: understanding the single quote
@@ -332,7 +332,7 @@ Why is that?
     $ echo "He said: 'Hi!'."
     bash: !'.: event not found
     ```
-    
+
 ---
 
 ### (Optional) Exercise 2.5: using commas between elements to print
@@ -455,9 +455,9 @@ Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
     Running it shows something similar to this:
 
     ```bash
-    $ df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
+    df -h | awk '/dev\/hd/ { print $6 "\t: " $5 }'
     ```
-    
+
     On the computer used, this shows no output.
 
     Running the alternative:
@@ -470,7 +470,7 @@ Tip: if you see nothing, use `df -h | awk '/dev\// { print $6 "\t: " $5 }'
     ```
 
     It shows the percentage of disk space in use for all the
-    devices that have `dev` in the same. 
+    devices that have `dev` in the same.
 
 ---
 
@@ -493,13 +493,13 @@ If it is formatted 'weirdly', why is that?
     ```bash
     dev\/hd
     ```
-    
+
     This is formatted 'weirdly', as it uses `\/` instead of
     just `/`. This is because `awk` uses `/` to indicate the
     start and end of a regular expression. Hence, for the same
     character to be part of that regular expression, it is escaped
     using a backslash.
-    
+
 ---
 
 ### Exercise 3.4: understanding the `\t`
@@ -516,11 +516,11 @@ part. What does it do, and why is it written like that?
     ```
 
     The `\t` prints a tab.
-    
+
     It is written like that,
     as `\t` is simply decided as the way how we write a tab,
     similar to the convention that `\n` is a newline.
-    
+
 ---
 
 ## (optional) Exercise 4: can `awk` do ...?
@@ -559,12 +559,12 @@ where the whole line is printed.
     ```
 
     On its own, this program is not useful: it just echoes its input.
-    
+
     `$0` becomes useful when used with other `awk` features, such
     as matching lines for a regular expression:
 
     ```bash
-    $ ls -l | awk '/Feb/ { print $0 }' 
+    $ ls -l | awk '/Feb/ { print $0 }'
     drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
     drwxrwxr-x   6 richel richel 4096 Feb  7 07:18 inkcut_venv
     drwxrwxr-x   2 richel richel 4096 Feb 25 11:38 misc
