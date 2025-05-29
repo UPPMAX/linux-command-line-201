@@ -119,10 +119,27 @@ There are other ways of killing a job, with the command ``kill`` and the process
 
 ## How to edit a ".bashrc" file 
 
+The file ".bashrc" is in your home directory ($HOME) and is a script file that is executed on login. It contains some configurations for the terminal session and can be used to modify how i.e. shell history, aliases, paths, and other things are configured. 
+
+First and foremost; ".bashrc" is a "hidden" file. To see those, add the flag/option ``-a`` to ls. 
+
+```bash
+$ ls -a 
+``` 
+
+If you just want to see what is in it, you can use cat: 
+
+```bash
+$ cat $HOME/.bashrc 
+``` 
+
+To edit it, use your favourite (command-line) editor. Here ``vi``/``vim`` or ``nano`` are common. 
+
+
 
 - We will learn about using aliases
 - Also a few other small odds and ends
 
- 
+history 
 
 
