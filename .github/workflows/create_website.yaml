@@ -19,7 +19,10 @@ on:
 # This script writes to gh-pages,
 # fixes warning from https://github.com/bridgecrewio/checkov/blob/main/checkov/github_actions/checks/graph_checks/ReadOnlyTopLevelPermissions.yaml
 # yamllint disable rule:CKV2_GHA_1
-permissions: write-all
+# checkov:skip=CKV2_GHA_1:Please ignore
+checkov: skip=CKV2_GHA_1:This script does need to write
+permissions: write-all 
+
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
