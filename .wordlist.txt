@@ -107,6 +107,7 @@ PID
 JOBID
 afile
 favourite
+PATHs
 
 ERcoEh
 drLkxhD
