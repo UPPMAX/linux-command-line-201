@@ -80,7 +80,7 @@ do you see? How do you explain in English what this does?
     
 ---
 
-The single line of code in this chapter 
+The single line of code in this chapter
 forwards the output of `ls` to `awk`.
 Run it. What do you see?
 How do you explain in English what this does?
