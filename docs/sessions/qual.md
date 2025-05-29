@@ -229,6 +229,7 @@ fi
 
     # colored GCC warnings and errors - uncomment to use 
     #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+    ``` 
   
 ## Aliases
 
@@ -238,7 +239,7 @@ Aliases can be persistent or non-persistent.
 
 ### Non-persistent aliases
 
-These are alieases you just need for a short time, during that specific session. They will go away next time you logout and login, and they will not be available in another shell. 
+These are aliases you just need for a short time, during that specific session. They will go away next time you logout and login, and they will not be available in another shell. 
 
 They are easy to create: 
 
@@ -248,7 +249,61 @@ $ alias ALIASNAME="command"
 
 !!! note "Example" 
  
-       
+    **Making it easier to list all files with info, including hidden files**
+    ```bash
+    alias lah="ls -lah"   
+    ```
 
+    It looks like this: 
+    bbrydsoe@enterprise:~/exercises/awk-qol$ lah
+    Command 'lah' not found, did you mean:
+      command 'lha' from deb jlha-utils (0.1.6-4.1)
+      command 'lha' from deb lhasa (0.3.1-4)
+      command 'lsh' from deb lsh-client (2.1-13)
+    Try: sudo apt install <deb name>
+    bbrydsoe@enterprise:~/exercises/awk-qol$ alias lah="ls -lah"
+    bbrydsoe@enterprise:~/exercises/awk-qol$ lah
+    total 16K
+    drwxrwxr-x 2 bbrydsoe bbrydsoe 4,0K maj 26 16:15 .
+    drwxr-xr-x 8 bbrydsoe bbrydsoe 4,0K maj 26 19:41 ..
+    -rw-rw-r-- 1 bbrydsoe bbrydsoe  182 maj 26 15:43 file.dat
+    -rw-rw-r-- 1 bbrydsoe bbrydsoe  224 maj 26 15:45 myfile.txt
+    ```
 
+### Persistent aliases 
 
+So what do you do if you want to keep the aliases more permanently, and can use them from session to session? 
+
+- Add them to ".bashrc"
+- Possibly add them to a file you create, ".bash_aliases" and then let ".bashrc" load ".bash_aliases"
+  ```if [ -f ~/.bash_aliases ]; then
+         . ~/.bash_aliases
+     fi
+  ```
+
+Here we are just going to add them to ".bashrc". 
+
+!!! note "Examples"
+
+    1. Open "$HOME/.bashrc" with ``nano`` or ``vi``/``vim`` or similar. 
+    2. If you already have some aliases there, just add new ones after, otherwise scroll to the bottom and make a comment ``# Aliases`` then add your aliases after. 
+    3. Common aliases are: 
+    ```bash
+    alias ..='cd ..'
+    alias ...='cd ../..'
+    alias ....='cd ../../..'
+    alias .4='cd ../../../../'
+    alias .5='cd ../../../../..'
+    alias la='ls -a'
+    alias sl="ls"
+    alias l="ls"
+    alias s="ls"
+    alias rm='rm -i' #-i prompts user before deletion
+    alias cp='cp -i' #-i prompts user before overwriting
+    # If you have some environments you often use  
+    alias env1="source ~/project1/env/bin/activate"
+    ```
+
+## Exercises 
+
+1. 
