@@ -525,20 +525,30 @@ part. What does it do, and why is it written like that?
 
 ## (optional) Exercise 4: can `awk` do ...?
 
-Here we'll experience the flexibility of `awk`.
+AWK is a Turning complete language,
+hence the answer to 'Can AWK do ...?'
+(applied to text)
+is always true.
+
+Below are some question you may have
+and how to solve this in `awk`.
+
 Pick those topics you are interested in.
 
 ---
 
 ### (optional) Exercise 4.1: Can `awk` display the entire line?
 
-Can `awk` display the entire line?
+??? note "Can `awk` display the entire line?"
 
-??? tip "Answer"
+    Can `awk` display the entire line?
 
-    ```bash
-    $ awk '{print $0}' file.dat
-    ```
+
+    ??? tip "Answer"
+
+        ```bash
+        $ awk '{print $0}' file.dat
+        ```
 
 ---
 
