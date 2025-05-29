@@ -24,7 +24,7 @@ UPPMAX is chosen for practical reasons unrelated to its importance.
 Filename                                  |Description
 ------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------
 [mlc_config.json](mlc_config.json)        |Configuration of the link checker, use `markdown-link-check --config mlc_config.json --quiet docs/**/*.md` to do link checking locally
-[.shellcheckrc](.shellcheckrc)            |Configuration of the bash style checker, run [scripts/run_bash_check.sh](scripts/run_bash_check.sh) 
+[.shellcheckrc](.shellcheckrc)            |Configuration of the bash style checker, run [scripts/run_bash_check.sh](scripts/run_bash_check.sh)
 [.spellcheck.yml](.spellcheck.yml)        |Configuration of the spell checker, use `pyspelling -c .spellcheck.yml` to do spellcheck locally
 [.wordlist.txt](.wordlist.txt)            |Whitelisted words for the spell checker, use `pyspelling -c .spellcheck.yml` to do spellcheck locally
 [.markdownlint.jsonc](.markdownlint.jsonc)|Configuration of the markdown linter, use `markdownlint "**/*.md"` to do markdown linting locally. The name of this file is a default name.

@@ -281,6 +281,8 @@ Work with the files in the "exercises" - "awk-qol" directory.
 
 !!! info Learning AWK
 
+    <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
     Learning resource                                                              |Description
     -------------------------------------------------------------------------------|-----------------------------
     [A practical guide to learning awk](https://opensource.com/downloads/awk-ebook)|Book about AWK
@@ -290,3 +292,4 @@ Work with the files in the "exercises" - "awk-qol" directory.
     [To AWK or not](https://pmitev.github.io/to-awk-or-not/)                       |Course about AWK
     [AWK course](https://richelbilderbeek.github.io/awk_course/)                   |Course about AWK
 
+    <!-- markdownlint-enable MD013 -->
