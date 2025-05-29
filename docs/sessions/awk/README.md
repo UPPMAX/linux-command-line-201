@@ -534,7 +534,7 @@ Pick those topics you are interested in.
 
 Can `awk` display the entire line?
 
-!!! note "Display line number"
+??? tip "Answer"
 
     ```bash
     $ awk '{print $0}' file.dat
@@ -542,35 +542,35 @@ Can `awk` display the entire line?
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` display the number of columns?
+### (optional) Exercise 4.2: Can `awk` display the number of columns?
 
 Can `awk` display the number of columns?
 
-!!! note "Print any empty line if such exists"
+??? tip "Answer"
 
     ```bash
-    $ awk 'NF == 0 {print NR}' file.dat
+    $ awk '{print NR}' file.dat
     ```
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` display the last column?
+### (optional) Exercise 4.3: Can `awk` display the last column?
 
 Can `awk` display the last column?
 
-!!! note "Display first and last field, using NF"
+??? tip "Answer"
 
     ```bash
-    $ awk '{print $1,$NF}' file.dat
+    $ awk '{print $NF}' file.dat
     ```
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` count the number of lines?
+### (optional) Exercise 4.4: Can `awk` count the number of lines?
 
 Can `awk` count the number of lines?
 
-!!! note "Count the lines in file.dat"
+??? tip "Answer"
 
     ```bash
     $ awk 'END { print NR }' file.dat
@@ -580,11 +580,11 @@ Similar to `wc --lines`
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` display the line number?
+### (optional) Exercise 4.5: Can `awk` display the line number?
 
 Can `awk` display the line number?
 
-!!! note "Display line number"
+??? tip "Answer"
 
     ```bash
     $ awk '{print NR,$0}' file.dat
@@ -594,33 +594,55 @@ Similar to `cat --number`
 
 ---
 
-### (optional) Exercise 4.1: Can `awk` work on comma-seperated files?
+### (optional) Exercise 4.6: Can `awk` work on comma-seperated files?
 
 Can `awk` work on comma-seperated files?
 
----
+??? tip "Answer"
 
-### (optional) Exercise 4.1: Can `awk` show something once at the start?
+    ```bash
+    $ awk --field-separator "," '{print NR,$0}' file.dat
+    ```
+
+
+### (optional) Exercise 4.7: Can `awk` show something once at the start?
 
 Can `awk` do X?
 
+??? tip "Answer"
+
+    ```bash
+    $ awk { BEGIN { print "Counting ..."} { print NR } }' file.dat
+    ```
+
 ---
 
-### (optional) Exercise 4.1: Can `awk` show something once at the end?
+### (optional) Exercise 4.8: Can `awk` show something once at the end?
 
 Can `awk` do X?
 
+??? tip "Answer"
+
+    ```bash
+    $ awk { { print NR } END { print "Counting ..."} }' file.dat
+    ```
+
 ---
 
-### (optional) Exercise 4.1: Can `awk` use variables?
+### (optional) Exercise 4.9: Can `awk` use variables?
 
 Can `awk` use variables?
 
 !!! note "Finding the length of the longest line"
 
+
+    <!-- markdownlint-disable MD013 --><!-- A bash one-liner cannot be split up over lines, hence will break 80 characters per line -->
+
     ```bash
-    $ awk '{ if (length($0) > max) max = length($0) } END { print max }' file.dat
+    $ awk '{ BEGIN { max = 0 } { if (length($0) > max) max = length($0) } } END { print max }' file.dat
     ```
+
+    <!-- markdownlint-enable MD013 -->
 
 ---
 
@@ -637,7 +659,7 @@ Can `awk` use variables?
 
 ---
 
-!!! info Learning AWK
+!!! info "Learning AWK"
 
     <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
