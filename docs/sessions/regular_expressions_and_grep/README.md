@@ -241,7 +241,7 @@ and do lessons 1 to (and including) 11.
 Here we'll experience the flexibility of `grep`.
 Pick those topics you are interested in.
 
-??? seealso "Exercise 4.1: Can `grep` do a case-insensitive match?"
+??? seealso "(optional) Exercise 4.1: Can `grep` do a case-insensitive match?"
 
     Can `grep` do a case-insensitive match?
 
@@ -277,7 +277,7 @@ Pick those topics you are interested in.
 
         <!-- markdownlint-enable MD013 -->
 
-??? seealso "Exercise 4.2: Can `grep` show the lines that do not match?"
+??? seealso "(optional) Exercise 4.2: Can `grep` show the lines that do not match?"
 
     Can `grep` show the lines that **do not** match?
 
@@ -297,7 +297,7 @@ Pick those topics you are interested in.
         man grep | grep --invert-match " "
         ```
 
-??? seealso "Exercise 4.3: Can `grep` detect lines in multiple files?"
+??? seealso "(optional) Exercise 4.3: Can `grep` detect lines in multiple files?"
 
     Can `grep` detect lines in multiple files?
 
@@ -318,7 +318,7 @@ Pick those topics you are interested in.
         grep --recursive "ubuntu"
         ```
 
-??? seealso "Exercise 4.4: Can `grep` detect which files contain a match?"
+??? seealso "(optional) Exercise 4.4: Can `grep` detect which files contain a match?"
 
     Can `grep` detect which files contain a match?
 
@@ -342,7 +342,7 @@ Pick those topics you are interested in.
 
 <!-- markdownlint-disable MD013 --><!-- Indeed a long title, hence will break 80 characters per line -->
 
-??? seealso "Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?"
+??? seealso "(optional) Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?"
 
     <!-- markdownlint-enable MD013 -->
 
