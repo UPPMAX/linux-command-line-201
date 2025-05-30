@@ -199,7 +199,7 @@ So what should you put in the ".bashrc"? It depends on your work style of course
     # set variable identifying the chroot you work in (used in the prompt below)**
     if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
-fi
+    fi
 
     # set a fancy prompt (non-color, unless we know we "want" color)
     case "$TERM" in
@@ -255,6 +255,7 @@ $ alias ALIASNAME="command"
     ```
 
     It looks like this: 
+    ```bash
     bbrydsoe@enterprise:~/exercises/awk-qol$ lah
     Command 'lah' not found, did you mean:
       command 'lha' from deb jlha-utils (0.1.6-4.1)
@@ -276,10 +277,11 @@ So what do you do if you want to keep the aliases more permanently, and can use 
 
 - Add them to ".bashrc"
 - Possibly add them to a file you create, ".bash_aliases" and then let ".bashrc" load ".bash_aliases"
-  ```if [ -f ~/.bash_aliases ]; then
-         . ~/.bash_aliases
-     fi
-  ```
+    ```bash
+       if [ -f ~/.bash_aliases ]; then
+           . ~/.bash_aliases
+       fi
+    ```
 
 Here we are just going to add them to ".bashrc". 
 
