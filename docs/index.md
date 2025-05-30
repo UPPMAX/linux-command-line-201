@@ -34,3 +34,5 @@ Remote/online participation: The course will be completely online and we will us
 ---
 
 NOTE that the lectures (but not the exercises) will be recorded and uploaded to HPC2N's YouTube channel.
+
+[![DOI](https://zenodo.org/badge/887694497.svg)](https://doi.org/10.5281/zenodo.15551066)
