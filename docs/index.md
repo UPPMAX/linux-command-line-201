@@ -19,7 +19,7 @@ Doing so, you will learn more Bash commands, scripting and some quality of life 
 
 NOTE: You can run on your own (Linux) computer or on your favorite HPC cluster (that you already have access to).
 
-At the end of each day, you should feel able to work smarter and able to avoid more grunt work (i.e. anything that involves repeated copy-paste).
+At the end of each day, you should feel able to work smarter and able to avoid more grunt work (i.e. anything that involves repeated copypaste).
 
 Intended participants: The workshop is intended for users with some Linux experience, see the prerequisites.
 
