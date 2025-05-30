@@ -40,4 +40,3 @@ Here is an overview of the videos in this course.
     - [Exercise 9](https://youtu.be/1TWkDTePzxE?t=1308)
     - [Feedback](https://youtu.be/1TWkDTePzxE?t=1403)
     - [Conclusion](https://youtu.be/1TWkDTePzxE?t=1503)
-
