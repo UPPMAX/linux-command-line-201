@@ -5,7 +5,7 @@ name: Check all style
 # Thanks to https://stackoverflow.com/a/63822945
 #
 # Check spelling on the 21st day of the month.
-# 21st as the first letter of this repo is the 21st letter in the alphabet.
+# 21st as the first letter of this repository is the 21st letter in the alphabet.
 on:
   push:
   pull_request:

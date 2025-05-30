@@ -1,9 +1,9 @@
 Set up for local view of edits
 ===============================
 
-If you do not want to wait for github to check and render the pages, or want to be sure it looks right before doing git push, you can view the pages locally. To do that, do the following (after ´ǵit clone' the repo of course):
+If you do not want to wait for github to check and render the pages, or want to be sure it looks right before doing git push, you can view the pages locally. To do that, do the following (after ´ǵit clone' the repository of course):
 
-1) Create a Python virtual environment OUTSIDE THE REPO DIR !!!
+1) Create a Python virtual environment OUTSIDE THE repository DIR !!!
 
 python -m venv /path/to/myvenv
 

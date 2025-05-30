@@ -42,7 +42,7 @@ As sources of text, I consider to use:
 - [https://www.regexone.com/](https://www.regexone.com/)
 - `[Shotts, 2024]`
   [download](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
-  and can be found in this repo at `books/the_linux_command_line.pdf`
+  and can be found in this repository at `books/the_linux_command_line.pdf`
 - man grep | grep "^[[:upper:]]"
 
 Using the `grep` manual and

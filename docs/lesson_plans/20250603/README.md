@@ -29,7 +29,7 @@ As sources of text, I consider to use:
 
 - `man bash`
 - `[Shotts, 2024]`
-  and can be found in this repo at `books/the_linux_command_line.pdf`
+  and can be found in this repository at `books/the_linux_command_line.pdf`
 - `[Iliev, 2020]`
 
 
