@@ -338,7 +338,7 @@ Use the `grep` manual to answer these questions.
 
 ??? seealso "Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?"
 
-<!-- markdownlint-enable MD013 -->
+    <!-- markdownlint-enable MD013 -->
 
     Can `grep` detect which files-with-a-certain-extension contain a match?
 
