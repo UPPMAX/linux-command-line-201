@@ -112,6 +112,8 @@ Zstandard
 xz
 fi
 DOI
+checkov
+yaml
 
 ERcoEh
 drLkxhD
