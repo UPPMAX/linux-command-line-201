@@ -7,14 +7,13 @@
 
 I am at the middle of the schedule:
 
-Time        | Topic                                         |Teacher
-------------|-----------------------------------------------|-----------------
-9:00-10:00  |Bash scripting                                 |RB
-10:00-10:15 |Break                                          |.
-10:15-11:00 |Advanced redirect, environment variables, links|BB
-11:00-11:15 |Break                                          |.
-11:15-12:00 |Quality of life, compressing                   |BC
-
+| Time        | Topic                                           | Teacher |
+| ----------- | ----------------------------------------------- | ------- |
+| 9:00-10:00  | Bash scripting                                  | RB      |
+| 10:00-10:15 | Break                                           | .       |
+| 10:15-11:00 | Advanced redirect, environment variables, links | BB      |
+| 11:00-11:15 | Break                                           | .       |
+| 11:15-12:00 | Quality of life, compressing                    | BC      |
 
 My learning outcomes are:
 
@@ -31,7 +30,6 @@ As sources of text, I consider to use:
 - `[Shotts, 2024]`
   and can be found in this repository at `books/the_linux_command_line.pdf`
 - `[Iliev, 2020]`
-
 
 Missing: `dos2unix` and `unix2dos`
 
