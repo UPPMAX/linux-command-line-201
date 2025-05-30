@@ -29,7 +29,7 @@ UPPMAX is chosen for practical reasons unrelated to its importance.
 | [.shellcheckrc](.shellcheckrc)             | Configuration of the Bash style checker, run [scripts/run_bash_check.sh](scripts/run_bash_check.sh)                                         |
 | [.spellcheck.yml](.spellcheck.yml)         | Configuration of the spell checker, use `pyspelling -c .spellcheck.yml` to do a spell check locally                                         |
 | [.wordlist.txt](.wordlist.txt)             | Whitelisted words for the spell checker, use `pyspelling -c .spellcheck.yml` to do a spell check locally                                    |
-| [.markdownlint.jsonc](.markdownlint.jsonc) | Configuration of the Markdown linter, use `markdownlint "**/*.md"` to do markdown linting locally. The name of this file is a default name. |
-| [.markdownlintignore](.markdownlintignore) | Files ignored by the Markdown linter, use `markdownlint "**/*.md"` to do markdown linting locally. The name of this file is a default name. |
+| [.markdownlint.jsonc](.markdownlint.jsonc) | Configuration of the Markdown linter, use `markdownlint "**/*.md"` to do Markdown linting locally. The name of this file is a default name. |
+| [.markdownlintignore](.markdownlintignore) | Files ignored by the Markdown linter, use `markdownlint "**/*.md"` to do Markdown linting locally. The name of this file is a default name. |
 
 <!-- markdownlint-enable MD013 -->
