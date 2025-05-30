@@ -54,6 +54,7 @@ nav:
       - Quality of life: sessions/qual.md
   - Extras:
       - Books: books/README.md
+      - Videos: videos.md
 
 not_in_nav: |
   lesson_plans/20250602/README.md
