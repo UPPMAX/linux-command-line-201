@@ -295,74 +295,68 @@ Use the `grep` manual to answer these questions.
         man grep | grep --invert-match " "
         ```
 
-### (optional) Exercise 4.3: Can `grep` detect lines in multiple files?
+??? seealso "Exercise 4.3: Can `grep` detect lines in multiple files?"
 
-Can `grep` detect lines in multiple files?
+    Can `grep` detect lines in multiple files?
 
-??? tip "Answer"
+    ??? tip "Answer"
 
-    Yes.
+        Yes.
 
-    The `--recursive` allows you to let `grep`
-    search in multiple files.
+        The `--recursive` allows you to let `grep`
+        search in multiple files.
 
-    For example, in the commands below,
-    the folder `/etc` is searched for files that contain the text 'ubuntu':
+        For example, in the commands below,
+        the folder `/etc` is searched for files that contain the text 'ubuntu':
 
-    ```bash
-    cd /etc
-    grep --recursive "ubuntu"
-    ```
+        ```bash
+        cd /etc
+        grep --recursive "ubuntu"
+        ```
 
----
+??? seealso "Exercise 4.4: Can `grep` detect which files contain a match?"
 
-### (optional) Exercise 4.4: Can `grep` detect which files contain a match?
+    Can `grep` detect which files contain a match?
 
-Can `grep` detect which files contain a match?
+    ??? tip "Answer"
 
-??? tip "Answer"
+        Yes.
 
-    Yes.
+        The `--files-with-matches` allows you to let `grep`
+        output which files contained a match.
 
-    The `--files-with-matches` allows you to let `grep`
-    output which files contained a match.
+        For example, in the commands below,
+        the folder `/etc` is searched for files that contain the text 'ubuntu',
+        showing the files in which a match is found:
 
-    For example, in the commands below,
-    the folder `/etc` is searched for files that contain the text 'ubuntu',
-    showing the files in which a match is found:
-
-    ```bash
-    cd /etc
-    grep --recursive --files-with-matches "ubuntu"
-    ```
-
----
+        ```bash
+        cd /etc
+        grep --recursive --files-with-matches "ubuntu"
+        ```
 
 <!-- markdownlint-disable MD013 --><!-- Indeed a long title, hence will break 80 characters per line -->
 
-### (optional) Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?
+??? seealso "Exercise 4.5: Can `grep` detect which files-with-a-certain-extension contain a match?"
 
 <!-- markdownlint-enable MD013 -->
 
-Can `grep` detect which files-with-a-certain-extension contain a match?
+    Can `grep` detect which files-with-a-certain-extension contain a match?
 
-??? tip "Answer"
+    ??? tip "Answer"
 
-    Yes.
+        Yes.
 
-    The `--include` allows you to let `grep`
-    only include files in its
+        The `--include` allows you to let `grep`
+        only include files in its
 
-    For example, in the commands below,
-    the folder `/etc` is searched in configuration (`.conf`)
-    files that contain the text 'ubuntu'.
+        For example, in the commands below,
+        the folder `/etc` is searched in configuration (`.conf`)
+        files that contain the text 'ubuntu'.
 
-    ```bash
-    cd /etc
-    grep --recursive "ubuntu" --include "*.conf"
-    ```
-
----
+        ```bash
+        cd /etc
+        grep --recursive "ubuntu" --include "*.conf"
+        ```
 
 ??? note "For teachers"
 
