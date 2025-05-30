@@ -1,6 +1,5 @@
 // Example markdownlint configuration with all properties set to their default value
 {
-
   // Default state for all rules
   "default": true,
 
@@ -9,7 +8,7 @@
   // That markdownlint has a different default is the error of markdownlint
   "MD007": { "indent": 4 },
 
-  // Standard markdown does not allow for two correct consecutive blank lines 
+  // Standard markdown does not allow for two correct consecutive blank lines
   // i an admonitions (a.o. the 'question' admonition):
   //
   // ???- question "A question"
@@ -24,7 +23,7 @@
   //
   "MD012": {
     // Consecutive blank lines, CHANGED FROM 1
-    "maximum": 2
+    "maximum": 2,
   },
 
   // Standard markdown does not allow for valid indent code like this:
@@ -34,10 +33,9 @@
   //     ```
   //     echo "indented code here :-)
   //     ````
-  //     
+  //
   // Hence we allow valid indented code.
   //
   // MD046/code-block-style : Code block style : https://github.com/DavidAnson/markdownlint/blob/v0.34.0/doc/md046.md
-  "MD046": false
-
+  "MD046": false,
 }
