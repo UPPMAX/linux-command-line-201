@@ -9,6 +9,19 @@ tags:
 
 # Regular expressions and `grep`
 
+???- note "Need a video?"
+
+    - [Introduction](https://youtu.be/sh52duacLWY)
+    - [Exercise 1](https://youtu.be/sh52duacLWY?t=155)
+    - [Exercise 2](https://youtu.be/sh52duacLWY?t=349)
+    - [Exercise 3](https://youtu.be/sh52duacLWY?t=455)
+    - [Exercise 4](https://youtu.be/sh52duacLWY?t=875)
+    - [Feedback](https://youtu.be/sh52duacLWY?t=1279)
+    - [Conclusion](https://youtu.be/sh52duacLWY?t=1486)
+
+https://youtu.be/sh52duacLWY
+
+
 !!! info "Learning outcomes"
 
     - Learners know there are multiple flavours of regular expressions
