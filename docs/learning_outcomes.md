@@ -4,7 +4,7 @@
 
     - Learners can chain commands using the Linux pipe
 
-??? note "[Linux pipe](sessions/wc_cut.md)"
+??? note "[`wc` and `cut`](sessions/wc_cut.md)"
 
     - Learners can use `wc`
     - Learners can use `cut`
