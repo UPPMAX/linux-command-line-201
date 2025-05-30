@@ -11,12 +11,12 @@ tags:
 
 !!! info "Learning outcomes"
 
-    - Learners can write bash scripts
-    - Learners have practiced using a book on bash scripting
-    - Learners can write bash scripts that require user input
-    - Learners can use variables in bash scripts
-    - Learners can use `if` statements in bash scripts
-    - Learners can use `for` statements  in bash scripts
+    - Learners can write Bash scripts
+    - Learners have practiced using a book on Bash scripting
+    - Learners can write Bash scripts that require user input
+    - Learners can use variables in Bash scripts
+    - Learners can use `if` statements in Bash scripts
+    - Learners can use `for` statements  in Bash scripts
 
 ???- note "For teachers"
 
@@ -64,10 +64,17 @@ tags:
 Scripts allow you to run you (bash) commands in an easy and
 reproducible manner.
 
+!!! note "The different spellings"
+
+    Spelling|Description
+    --------|------------------------
+    Bash    |The programming language
+    `bash`  |The program
+
 ## Exercises
 
 In these exercises, we'll be using the
-book 'Introduction to Bash Scripting for developers',
+book 'Introduction to Bash scripting for developers',
 as this book fits this course well, is free and open source
 and allows you to continue studying after this course
 
@@ -109,7 +116,7 @@ and allows you to continue studying after this course
 
 - Read the text at
   [chapter 3: 'Hello world'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/003-bash-hello-world.md)
-- Modify your bash script called `greeter.sh` in such a way that
+- Modify your Bash script called `greeter.sh` in such a way that
   you can run ('execute') it. When it runs, it should show 'Hello World!'
   on the screen. Run the script to verify
 
@@ -137,11 +144,11 @@ and allows you to continue studying after this course
 ---
 
 
-### Exercise 3: bash variables
+### Exercise 3: Bash variables
 
 - Read the text at
   [chapter 4: 'Bash Variables'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/004-bash-variables.md)
-- Modify your bash script called `greeter.sh` in such a way that
+- Modify your Bash script called `greeter.sh` in such a way that
   it uses two variables:
     - `greeting`, which should have value `Hello`
     - `name`, which should have value `World`
@@ -210,7 +217,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 - Read the text at
   [chapter 5: 'User input'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/005-bash-user-input.md)
-- Modify your bash script called `greeter.sh` in such a way that
+- Modify your Bash script called `greeter.sh` in such a way that
   the script asks for a name using the text 'Who to greet?'.
   If the name `World` is typed it, it should (again) show 'Hello World!'
   on the screen. Run the script to verify
@@ -242,7 +249,7 @@ Write a script that counts and shows the number of files in our current folder:
 
 - Read the text at
   [chapter 9: 'Conditional expressions'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/009-bash-conditional-expressions.md)
-- We will modify your bash script called `greeter.sh` in such a way that
+- We will modify your Bash script called `greeter.sh` in such a way that
   when the name 'Bond' it chosen, the program shows `It is Bond. James Bond!`,
   else it shows the regular greeting. Which conditional will you need?
 
@@ -259,7 +266,7 @@ Write a script that counts and shows the number of files in our current folder:
 - Read the chapters 'If statement' and 'If Else statement' of
   [chapter 10: 'Conditionals'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/010-bash-conditionals.md),
   do **not read** 'Switch case statements'
-- Modify your bash script called `greeter.sh` in such a way that
+- Modify your Bash script called `greeter.sh` in such a way that
   when the name 'Bond' it chosen, the program shows `It is Bond. James Bond!`,
   else it shows the regular greeting. Run the script to verify
 
@@ -297,12 +304,12 @@ Write a script that counts and shows the number of files in our current folder:
 
 - Read only the 'For loops' section of
   [chapter 11: 'Bash loops'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/011-bash-loops.md)
-- Create a new bash script called `greet_names.sh`.
+- Create a new Bash script called `greet_names.sh`.
   The script should:
-    - Ask who to great, with the text `Who shall I greet?`.
-    The expected input are names separated by spaces, e.g. `Anna Berndt Cindy`
+    - Ask who to greet, with the text `Who shall I greet?`.
+      The expected input are names separated by spaces, e.g. `Anna Berndt Cindy`
     - Greet all of these people in the form `Hello [name]!`,
-    using a for loop to go through the names
+      using a for loop to go through the names
     - Run the script to verify
 
 ??? tip "Answer"
@@ -330,13 +337,13 @@ Write a script that counts and shows the number of files in our current folder:
 
 ---
 
-### Exercise 9: For loops with bash commands
+### Exercise 9: For loops with Bash commands
 
 Instead of iterating over names,
 we can iterate over something useful instead,
-such as the output of a bash command.
+such as the output of a Bash command.
 
-- Create a new bash script called `show_files.sh`.
+- Create a new Bash script called `show_files.sh`.
   The script should:
     - Store the output of `ls` in a variable called `filenames`
     - Per filename, show `I found a file called [filename]!`,
@@ -369,17 +376,17 @@ such as the output of a bash command.
 
 ??? note "For teachers"
 
-    What is the difference between AWK and bash?
+    What is the difference between AWK and Bash?
 
     ??? tip "Answer"
 
         They are different programming languages.
 
-    What can bash not do?
+    What can Bash not do?
 
     ??? tip "Answer"
 
-        bash, like any Turning complete language,
+        Bash, like any Turning complete language,
         can solve any computational problem,
         but cannot do this:
 
@@ -388,11 +395,12 @@ such as the output of a bash command.
         - use any amount of memory (i.e. a problem
           may require billions of gigabytes to solve)
 
-    When not to use bash?
+    When not to use Bash?
 
     ??? tip "Answer"
 
-        bash shines at problems of low and intermediate complexity.
+        Bash shines at problems of low and intermediate complexity,
+        as it can connect all Bash commands.
 
         For harder problems, use a modern programming language
         instead.
@@ -404,15 +412,15 @@ such as the output of a bash command.
 !!! info "Conclusions"
 
     - Bash can do most things one expects from a programming language
-    - A bash script starts with a shebang: `#!/bin/bash`
-    - A bash script can be made executable: `chmod +x greeter.sh`
-    - A bash script can be run by writing `./` in front of the filename:
+    - A Bash script starts with a shebang: `#!/bin/bash`
+    - A Bash script can be made executable: `chmod +x greeter.sh`
+    - A Bash script can be run by writing `./` in front of the filename:
       `./greeter.sh`
-    - A bash script can use variables: `greeting="Hello"`
-    - A bash script can run bash commands and store the result in a variable:
+    - A Bash script can use variables: `greeting="Hello"`
+    - A Bash script can run Bash commands and store the result in a variable:
       `n_files=$(ls | wc --lines)`
-    - A bash script can ask the user for input: `read name`
-    - A bash script can do conditionals:
+    - A Bash script can ask the user for input: `read name`
+    - A Bash script can do conditionals:
 
       ```bash
       if [[ name -eq "Bond" ]]`
@@ -423,7 +431,7 @@ such as the output of a bash command.
       fi
       ```
 
-    - A bash script can use for-loops:
+    - A Bash script can use for-loops:
 
       ```bash
       for name in ${names}
@@ -438,5 +446,5 @@ such as the output of a bash command.
 
 !!! info "Next session"
 
-    - `bash` can do much more
+    - Bash can do much more
 
