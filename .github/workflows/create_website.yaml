@@ -18,8 +18,11 @@ on:
 # fixes warning from https://github.com/bridgecrewio/checkov/blob/main/checkov/github_actions/checks/graph_checks/ReadOnlyTopLevelPermissions.yaml
 # yamllint disable rule:CKV2_GHA_1
 # checkov:skip=CKV2_GHA_1:Please ignore
-checkov: skip=CKV2_GHA_1:This script does need to write
-permissions: write-all 
+#
+# Remove these:
+#
+# checkov: skip=CKV2_GHA_1:This script does need to write
+# permissions: write-all 
 
 
 
