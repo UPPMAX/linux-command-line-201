@@ -9,6 +9,16 @@ tags:
 
 # AWK
 
+???- note "Need a video?"
+
+    - [Introduction](https://youtu.be/MtnbqAjmav4?si=7MCt_byeLFOF1C0n)
+    - [Exercise 1](https://youtu.be/MtnbqAjmav4?t=101)
+    - [Exercise 2](https://youtu.be/MtnbqAjmav4?t=525)
+    - [Exercise 3](https://youtu.be/MtnbqAjmav4?t=1032)
+    - [Exercise 4](https://youtu.be/MtnbqAjmav4?t=1385)
+    - [Feedback](https://youtu.be/MtnbqAjmav4?t=1634)
+    - [Conclusion](https://youtu.be/MtnbqAjmav4?t=1787)
+
 !!! info "Learning outcomes"
 
     - Learners can use `awk`
