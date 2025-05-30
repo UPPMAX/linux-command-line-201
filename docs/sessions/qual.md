@@ -199,7 +199,7 @@ So what should you put in the ".bashrc"? It depends on your work style of course
     # set variable identifying the chroot you work in (used in the prompt below)**
     if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
-fi
+    fi
 
     # set a fancy prompt (non-color, unless we know we "want" color)
     case "$TERM" in
