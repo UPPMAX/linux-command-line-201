@@ -417,22 +417,22 @@ such as the output of a Bash command.
     - A Bash script can ask the user for input: `read name`
     - A Bash script can do conditionals:
 
-      ```bash
-      if [[ "${name}" == "Bond" ]] ; then
+    ```bash
+    if [[ "${name}" == "Bond" ]] ; then
         echo "It is Bond. James Bond!"
-      else
+    else
         echo "$greeting $name!"
-      fi
-      ```
+    fi
+    ```
 
     - A Bash script can use for-loops:
 
-      ```bash
-      for name in ${names}
-      do
-          echo "Hello ${name}!"
-      done
-      ```
+    ```bash
+    for name in ${names}
+    do
+        echo "Hello ${name}!"
+    done
+    ```
 
 ---
 
