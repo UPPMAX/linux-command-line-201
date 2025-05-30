@@ -243,9 +243,7 @@ Pick those topics you are interested in.
 
 Use the `grep` manual to answer these questions.
 
----
-
-??? question "Exercise 4.1: Can `grep` do a case-insensitive match?"
+??? seealso "Exercise 4.1: Can `grep` do a case-insensitive match?"
 
     Can `grep` do a case-insensitive match?
 
@@ -279,7 +277,7 @@ Use the `grep` manual to answer these questions.
 
         <!-- markdownlint-enable MD013 -->
 
-??? question "Exercise 4.2: Can `grep` show the lines that do not match?"
+??? seealso "Exercise 4.2: Can `grep` show the lines that do not match?"
 
     Can `grep` show the lines that **do not** match?
 
