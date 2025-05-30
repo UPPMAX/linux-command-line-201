@@ -39,26 +39,6 @@ tags:
     - What is a conditional?
     - What is a for-loop?
 
-???- note "For teachers"
-
-    Lesson plan:
-
-    Time |Duration|Description
-    -----|--------|---------
-    0-10 |10      |Prior
-    10-15|5       |Present
-    15-35|20      |Challenge
-    35-45|10      |Feedback
-
-    Prior:
-
-    - What is a script?
-    - What is bash?
-    - What does the program `touch` do?
-    - What is a shebang?
-    - What is a variable?
-    - What is 'user input'?
-
 ## Why use scripts?
 
 Scripts allow you to run you (bash) commands in an easy and
