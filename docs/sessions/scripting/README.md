@@ -236,7 +236,7 @@ Write a script that counts and shows the number of files in our current folder:
 ??? tip "Answer"
 
     ```bash
-    [[ ${arg1} -eq ${arg2} ]]
+    [[ ${string1} == ${string2} ]]
     ```
 
 ---
@@ -263,11 +263,10 @@ Write a script that counts and shows the number of files in our current folder:
 
     greeting="Hello"
 
-    if [[ name -eq "Bond" ]]
-    then
-        echo "It is Bond. James Bond!"
+    if [[ "${name}" == "Bond" ]] ; then
+      echo "It is Bond. James Bond!"
     else
-        echo "$greeting $name!"
+      echo "$greeting $name!"
     fi
     ```
 
@@ -403,11 +402,10 @@ such as the output of a Bash command.
     - A Bash script can do conditionals:
 
       ```bash
-      if [[ name -eq "Bond" ]]`
-      then
-          echo "It is Bond. James Bond!"
+      if [[ "${name}" == "Bond" ]] ; then
+        echo "It is Bond. James Bond!"
       else
-          echo "$greeting $name!"
+        echo "$greeting $name!"
       fi
       ```
 
