@@ -31,8 +31,7 @@ Remote/online participation: The course will be completely online and we will us
 
     See [the learning outcomes of this course](learning_outcomes.md).
 
----
-
-NOTE that the lectures (but not the exercises) will be recorded and uploaded to HPC2N's YouTube channel.
+The lectures will be recorded and uploaded to HPC2N's YouTube channel.
+You can find an overview [at the course videos](videos.md).
 
 [![DOI](https://zenodo.org/badge/887694497.svg)](https://doi.org/10.5281/zenodo.15551066)
