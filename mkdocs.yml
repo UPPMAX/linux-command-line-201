@@ -54,10 +54,19 @@ nav:
     - Archiving/compressing data: sessions/arch.md
     - Linux tools (sed): sessions/sed.md  
     - Quality of life: sessions/qual.md
-    - Summary: summary.md
   - Extras: 
     - More scripting: more_script.md
     - Books: books/README.md
+
+
+not_in_nav: |
+  lesson_plans/20250602/README.md
+  lesson_plans/20250603/README.md
+  meeting_notes/README.md
+  meeting_notes/20250403.md
+  meeting_notes/20250409.md
+  misc/test_admonitions.md
+  misc/test_mermaid.md
 
 plugins:
   - search
