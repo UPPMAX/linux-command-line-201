@@ -34,7 +34,6 @@ tags:
 
     - What is AWK?
 
-
 ## Why is AWK important?
 
 AWK is a programming language for text processing
@@ -452,7 +451,6 @@ Use the `df` manual.
     In English: show the file system space usage (`df`)
     in a human-readable format (`-h`, also `--human-readable`).
 
-
 ---
 
 ### Exercise 3.2: understanding the `awk` part
@@ -668,7 +666,6 @@ where the value in the first and last column are printed
 
 ### (optional) Exercise 4.5: Can `awk` count the number of lines?
 
-
 Can `awk` count the number of lines?
 
 The answer is: yes!
@@ -750,7 +747,6 @@ Using this input, use a pipe to show the fifth and ninth column.
     ```bash
     ls -l | tr -s ' ' ',' | awk --field-separator "," '{ print $5, $9 }'
     ```
-
 
 ### (optional) Exercise 4.8: Can `awk` show something once at the start?
 
