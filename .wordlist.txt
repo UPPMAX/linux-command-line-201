@@ -116,6 +116,7 @@ checkov
 yaml
 Pavlin
 Mitev
+copypaste
 
 ERcoEh
 drLkxhD
