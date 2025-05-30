@@ -5,7 +5,7 @@
 [![Check links](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_links.yaml)
 [![Check markdown](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_markdown.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_markdown.yaml)
 [![Check spelling](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/check_spelling.yaml)
-[![Create website](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_website.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_website.yaml)
+[![Create site](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_site.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/naiss_intermediate_bash_linux/actions/workflows/create_site.yaml)
 [![DOI](https://zenodo.org/badge/887694497.svg)](https://doi.org/10.5281/zenodo.15551066)
 
 <!-- markdownlint-enable MD013 -->
@@ -16,7 +16,7 @@ until [some organisation] has its own GitHub account.
 UPPMAX is chosen for practical reasons unrelated to its importance.
 ```
 
-- [Go to the nicely rendered website of this course](https://uppmax.github.io/naiss_intermediate_bash_linux)
+- [Go to the nicely rendered site of this course](https://uppmax.github.io/naiss_intermediate_bash_linux)
 
 ## Files used by continuous integration scripts
 

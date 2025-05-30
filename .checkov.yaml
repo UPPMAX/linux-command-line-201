@@ -14,9 +14,9 @@
 
 skip-check:
   policy_id: CKV2_GHA_1 # Example Checkov policy ID to suppress
-  file_path: .github/workflows/create_website.yaml
+  file_path: .github/workflows/create_site.yaml
   suppress_comment: "This script must write to gh-pages"
 
 skip-path:
-  file_path: .github/workflows/create_website.yaml
+  file_path: .github/workflows/create_site.yaml
   suppress_comment: "This script must write to gh-pages"

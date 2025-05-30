@@ -40,7 +40,7 @@ Missing: `dos2unix` and `unix2dos`
 ## References
 
 - `[Iliev, 2020]` Bobby Iliev. Introduction to bash scripting for developers.
-  [Website](https://github.com/bobbyiliev/introduction-to-bash-scripting).
+  [Site](https://github.com/bobbyiliev/introduction-to-bash-scripting).
 - `[Shotts, 2024]` Shotts, William.
   The Linux command line: a complete introduction. No Starch Press, 2024.
   [Download](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
