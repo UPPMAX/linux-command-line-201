@@ -245,6 +245,8 @@ Pick those topics you are interested in.
 
     Can `grep` do a case-insensitive match?
 
+    The answer is: yes!
+
     Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
@@ -281,6 +283,8 @@ Pick those topics you are interested in.
 
     Can `grep` show the lines that **do not** match?
 
+    The answer is: yes!
+
     Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
@@ -300,6 +304,8 @@ Pick those topics you are interested in.
 ??? seealso "(optional) Exercise 4.3: Can `grep` detect lines in multiple files?"
 
     Can `grep` detect lines in multiple files?
+
+    The answer is: yes!
 
     Use the `grep` manual to answer this question.
 
@@ -321,6 +327,8 @@ Pick those topics you are interested in.
 ??? seealso "(optional) Exercise 4.4: Can `grep` detect which files contain a match?"
 
     Can `grep` detect which files contain a match?
+
+    The answer is: yes!
 
     Use the `grep` manual to answer this question.
 
@@ -347,6 +355,8 @@ Pick those topics you are interested in.
     <!-- markdownlint-enable MD013 -->
 
     Can `grep` detect which files-with-a-certain-extension contain a match?
+
+    The answer is: yes!
 
     Use the `grep` manual to answer this question.
 

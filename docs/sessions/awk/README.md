@@ -550,286 +550,268 @@ and how to solve this in `awk`.
 
 Pick those topics you are interested in.
 
----
+??? seealso "(optional) Exercise 4.1: Can `awk` display all columns?"
 
-### (optional) Exercise 4.1: Can `awk` display all columns?
+    Can `awk` display all columns? Or: upon a match,
+    can `awk` display the whole line?
 
-Can `awk` display all columns? Or: upon a match,
-can `awk` display the whole line?
+    The answer is: yes!
 
-The answer is: yes!
+    Read the text at
+    [subsection 6.2.1: 'Printing selected fields](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01).
 
-Read the text at
-[subsection 6.2.1: 'Printing selected fields](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_01).
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the whole line is printed.
 
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the whole line is printed.
+    ??? tip "Answer"
 
-??? tip "Answer"
+        The symbol `$0` is used for 'all columns'/'the whole line':
 
-    The symbol `$0` is used for 'all columns'/'the whole line':
+        ```bash
+        ls -l | awk '{ print $0 }'
+        ```
 
-    ```bash
-    ls -l | awk '{ print $0 }'
-    ```
+        On its own, this program is not useful: it just echoes its input.
 
-    On its own, this program is not useful: it just echoes its input.
+        `$0` becomes useful when used with other `awk` features, such
+        as matching lines for a regular expression:
 
-    `$0` becomes useful when used with other `awk` features, such
-    as matching lines for a regular expression:
+        ```bash
+        $ ls -l | awk '/Feb/ { print $0 }'
+        drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
+        drwxrwxr-x   6 richel richel 4096 Feb  7 07:18 inkcut_venv
+        drwxrwxr-x   2 richel richel 4096 Feb 25 11:38 misc
+        drwx------   2 richel richel 4096 Feb 25 13:45 my_folder
+        ```
 
-    ```bash
-    $ ls -l | awk '/Feb/ { print $0 }'
-    drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
-    drwxrwxr-x   6 richel richel 4096 Feb  7 07:18 inkcut_venv
-    drwxrwxr-x   2 richel richel 4096 Feb 25 11:38 misc
-    drwx------   2 richel richel 4096 Feb 25 13:45 my_folder
-    ```
+??? seealso "(optional) Exercise 4.2: Can `awk` display the line number?"
 
----
+    Can `awk` display the line number?
 
-### (optional) Exercise 4.2: Can `awk` display the line number?
+    Read the text at
+    [chapter 6.3.3: 'The number of records'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_03).
 
-Can `awk` display the line number?
+    The answer is: yes!
 
-Read the text at
-[chapter 6.3.3: 'The number of records'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_03).
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the line number and the values in the first are printed
 
-The answer is: yes!
+    ??? tip "Answer"
 
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the line number and the values in the first are printed
+        ```bash
+        ls -l | awk '{ print NR,$1 }'
+        ```
 
-??? tip "Answer"
+        When printing the content of a file, with number lines,
+        use can use both `awk` and `cat`:
 
-    ```bash
-    ls -l | awk '{ print NR,$1 }'
-    ```
+        ```bash
+        ls -l | awk '{ print NR,$0 }'
+        ls -l | cat --number
+        ```
 
-    When printing the content of a file, with number lines,
-    use can use both `awk` and `cat`:
+??? seealso "(optional) Exercise 4.3: Can `awk` display the number of columns?"
 
-    ```bash
-    ls -l | awk '{ print NR,$0 }'
-    ls -l | cat --number
-    ```
+    Can `awk` display the number of column?
 
----
+    The answer is: yes!
 
-### (optional) Exercise 4.3: Can `awk` display the number of columns?
-
-Can `awk` display the number of column?
-
-The answer is: yes!
-
-To do so, print the variable `NF`, as shown in the
-program below:
-
-```bash
-awk '{ print NF }'
-```
-
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the number of columns are printed
-
-??? tip "Answer"
+    To do so, print the variable `NF`, as shown in the
+    program below:
 
     ```bash
-    ls -l | awk '{ print NF }'
+    awk '{ print NF }'
     ```
 
----
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the number of columns are printed
 
-### (optional) Exercise 4.4: Can `awk` display the last column?
+    ??? tip "Answer"
 
-Can `awk` display the last column?
+        ```bash
+        ls -l | awk '{ print NF }'
+        ```
 
-The answer is: yes!
+??? seealso "(optional) Exercise 4.4: Can `awk` display the last column?"
 
-To do so, print the variable `$NF`, as shown in the
-program below:
+    Can `awk` display the last column?
 
-```bash
-awk '{ print $NF }'
-```
+    The answer is: yes!
 
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the value in the first and last column are printed
-
-??? tip "Answer"
+    To do so, print the variable `$NF`, as shown in the
+    program below:
 
     ```bash
-    ls -l | awk '{ print $1,$NF }'
+    awk '{ print $NF }'
     ```
 
----
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the value in the first and last column are printed
 
-### (optional) Exercise 4.5: Can `awk` count the number of lines?
+    ??? tip "Answer"
 
-Can `awk` count the number of lines?
+        ```bash
+        ls -l | awk '{ print $1,$NF }'
+        ```
 
-The answer is: yes!
+??? seealso "(optional) Exercise 4.5: Can `awk` count the number of lines?"
 
-Read the text at
-[chapter 6.3.3: 'The number of records'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_03).
+    Can `awk` count the number of lines?
 
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the number of lines is printed.
+    The answer is: yes!
 
-??? tip "Answer"
+    Read the text at
+    [chapter 6.3.3: 'The number of records'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_03).
 
-    A good first guess, but incorrect, is to use the command
-    below, which is good for numbering lines:
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the number of lines is printed.
+
+    ??? tip "Answer"
+
+        A good first guess, but incorrect, is to use the command
+        below, which is good for numbering lines:
+
+        ```bash
+        ls -l | awk '{ print NR }'
+        ```
+
+        The last number is indeed the number of lines.
+
+        The AWK way to solve it, is to use the `END` clause,
+        which is only run at the end:
+
+        ```bash
+        ls -l | awk 'END { print NR }'
+        ```
+
+        `NR` only becomes useful when used with other `awk` features,
+        such printing a descriptive text around it:
+
+        ```bash
+        ls -l | awk 'END { print "Number of lines:", NR }'
+        ```
+
+        There are many ways to print the number of lines,
+        such as to combine the incorrect `awk` way with `tail`:
+
+        ```bash
+        ls -l | awk '{ print NR }' | tail -n 1
+        ```
+
+        Clumsy, but it works.
+
+        Alternatively, `wc` is made exactly for the purpose of counting lines:
+
+        ```bash
+        ls -l | wc --lines
+        ```
+
+??? seealso "(optional) Exercise 4.7: Can `awk` work on comma-separated files?"
+
+    Can `awk` work on comma-separated files?
+
+    The answer is: yes!
+
+    Read the text at
+    [chapter 6.2.4: 'The input field separator'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_01).
+
+    Here we convert the output of `ls -l` to its comma-separated
+    equivalent:
 
     ```bash
-    ls -l | awk '{ print NR }'
+    ls -l | tr -s ' ' ','
     ```
 
-    The last number is indeed the number of lines.
+    Using this input, use a pipe to show the fifth and ninth column.
 
-    The AWK way to solve it, is to use the `END` clause,
-    which is only run at the end:
+    ??? tip "Answer"
 
-    ```bash
-    ls -l | awk 'END { print NR }'
-    ```
+        ```bash
+        ls -l | tr -s ' ' ',' | awk 'BEGIN { FS="," } { print $5, $9 }'
+        ```
 
-    `NR` only becomes useful when used with other `awk` features,
-    such printing a descriptive text around it:
+        Alternatively;
 
-    ```bash
-    ls -l | awk 'END { print "Number of lines:", NR }'
-    ```
+        ```bash
+        ls -l | tr -s ' ' ',' | awk --field-separator "," '{ print $5, $9 }'
+        ```
 
-    There are many ways to print the number of lines,
-    such as to combine the incorrect `awk` way with `tail`:
+??? seealso "(optional) Exercise 4.8: Can `awk` show something once at the start?"
 
-    ```bash
-    ls -l | awk '{ print NR }' | tail -n 1
-    ```
+    Can `awk` show something once at the start?
 
-    Clumsy, but it works.
+    The answer is: yes!
 
-    Alternatively, `wc` is made exactly for the purpose of counting lines:
+    Read the text at
+    [chapter 6.2.4: 'Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
 
-    ```bash
-    ls -l | wc --lines
-    ```
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    where the text `Permissions:` is shown, after which
+    the values in the first column are shown.
 
----
+    If the word `total` shows up in your results, you can ignore it
+    for this exercise.
 
-### (optional) Exercise 4.7: Can `awk` work on comma-separated files?
+    ??? tip "Answer"
 
-Can `awk` work on comma-separated files?
+        ```bash
+        ls -l | awk 'BEGIN { print "Permissions:" } { print $1 }'
+        ```
 
-The answer is: yes!
+        If you do not want `total` in your results,
+        use a regular expression for 'lines starting with a d or a dash':
 
-Read the text at
-[chapter 6.2.4: 'The input field separator'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_01).
+        ```bash
+        ls -l | awk 'BEGIN { print "Permissions:" } /^[d\-]/ { print $1 }'
+        ```
 
-Here we convert the output of `ls -l` to its comma-separated
-equivalent:
+??? seealso "(optional) Exercise 4.9: Can `awk` show something once at the end?"
 
-```bash
-ls -l | tr -s ' ' ','
-```
+    Can `awk` show something once at the end?
 
-Using this input, use a pipe to show the fifth and ninth column.
+    The answer is: yes!
 
-??? tip "Answer"
+    Read the text at
+    [chapter 6.2.4: '6.2.4. Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
 
-    ```bash
-    ls -l | tr -s ' ' ',' | awk 'BEGIN { FS="," } { print $5, $9 }'
-    ```
+    Use a pipe to direct the output of `ls -l` to `awk`,
+    after which
+    the values in the first column are shown.
+    At the end of the output, it should show the text `Done!`
 
-    Alternatively;
+    If the word `total` shows up in your results, you can ignore it
+    for this exercise.
 
-    ```bash
-    ls -l | tr -s ' ' ',' | awk --field-separator "," '{ print $5, $9 }'
-    ```
+    ??? tip "Answer"
 
-### (optional) Exercise 4.8: Can `awk` show something once at the start?
+        ```bash
+        ls -l | awk '{ print $1 } END { print "Done!" }'
+        ```
 
-Can `awk` show something once at the start?
+        If you do not want `total` in your results,
+        use a regular expression for 'lines starting with a d or a dash':
 
-The answer is: yes!
+        ```bash
+        ls -l | awk '/^[d\-]/ { print $1 } END { print "Done!" }'
+        ```
 
-Read the text at
-[chapter 6.2.4: 'Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
+??? seealso "(optional) Exercise 4.10: Can `awk` use variables?"
 
-Use a pipe to direct the output of `ls -l` to `awk`,
-where the text `Permissions:` is shown, after which
-the values in the first column are shown.
+    Can `awk` use variables?
 
-If the word `total` shows up in your results, you can ignore it
-for this exercise.
+    The answer is: yes!
 
-??? tip "Answer"
+    Read the text at
+    [chapter 6.3.4: 'User defined variables'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_04).
 
-    ```bash
-    ls -l | awk 'BEGIN { print "Permissions:" } { print $1 }'
-    ```
+    Use a pipe to direct the output of `ls -l` to `awk`.
+    Sum the values of the fifth column and show it
 
-    If you do not want `total` in your results,
-    use a regular expression for 'lines starting with a d or a dash':
+    ??? tip "Answer"
 
-    ```bash
-    ls -l | awk 'BEGIN { print "Permissions:" } /^[d\-]/ { print $1 }'
-    ```
-
----
-
-### (optional) Exercise 4.9: Can `awk` show something once at the end?
-
-Can `awk` show something once at the end?
-
-The answer is: yes!
-
-Read the text at
-[chapter 6.2.4: '6.2.4. Special patterns'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_02.html#sect_06_02_04).
-
-Use a pipe to direct the output of `ls -l` to `awk`,
-after which
-the values in the first column are shown.
-At the end of the output, it should show the text `Done!`
-
-If the word `total` shows up in your results, you can ignore it
-for this exercise.
-
-??? tip "Answer"
-
-    ```bash
-    ls -l | awk '{ print $1 } END { print "Done!" }'
-    ```
-
-    If you do not want `total` in your results,
-    use a regular expression for 'lines starting with a d or a dash':
-
-    ```bash
-    ls -l | awk '/^[d\-]/ { print $1 } END { print "Done!" }'
-    ```
-
----
-
-### (optional) Exercise 4.10: Can `awk` use variables?
-
-Can `awk` use variables?
-
-The answer is: yes!
-
-Read the text at
-[chapter 6.3.4: 'User defined variables'](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_06_03.html#sect_06_03_04).
-
-Use a pipe to direct the output of `ls -l` to `awk`.
-Sum the values of the fifth column and show it
-
-??? tip "Answer"
-
-    ```bash
-    ls -l | awk 'BEGIN { sum = 0 } { sum = sum + $5 } END { print sum }'
-    ```
-
----
+        ```bash
+        ls -l | awk 'BEGIN { sum = 0 } { sum = sum + $5 } END { print sum }'
+        ```
 
 ??? note "For teachers"
 
