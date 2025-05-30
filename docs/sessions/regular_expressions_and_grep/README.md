@@ -245,61 +245,57 @@ Use the `grep` manual to answer these questions.
 
 ---
 
-### (optional) Exercise 4.1: Can `grep` do a case-insensitive match?
+??? question "Exercise 4.1: Can `grep` do a case-insensitive match?"
 
-Can `grep` do a case-insensitive match?
+    Can `grep` do a case-insensitive match?
 
-??? tip "Answer"
+    ??? tip "Answer"
 
-    Yes.
+        Yes.
 
-    The `--ignore-case` allows you
-    to let `grep` do a case-insensitive search.
+        The `--ignore-case` allows you
+        to let `grep` do a case-insensitive search.
 
-    For example, in the command below,
-    the word 'options' is searched in the manual
-    in a case-insensitive manner.
+        For example, in the command below,
+        the word 'options' is searched in the manual
+        in a case-insensitive manner.
 
-    <!-- markdownlint-disable MD013 --><!-- Verbatim text will be shown as-is, hence will break 80 characters per line -->
+        <!-- markdownlint-disable MD013 --><!-- Verbatim text will be shown as-is, hence will break 80 characters per line -->
 
-    ```bash
-    $ man grep | grep --ignore-case "options"
-    OPTIONS
-                  use -i, to cancel its effects because the two options override each other.
-                  options that prefix their output to the actual content: -H,-n, and -b.  In
-                  options are given, the  last  matching  one  wins.   If  no  --include  or
-                  --exclude  options  match, a file is included unless the first such option
-       Other Options
-                  other GNU programs.  POSIX requires that options that  follow  file  names
-                  must  be  treated  as file names; by default, such options are permuted to
-                  the front of the operand list and are treated  as  options.   Also,  POSIX
-                  requires  that  unrecognized  options be diagnosed as “illegal”, but since
-           treats expansions of “*g*.h” starting with “-” as file names not options, and the
-    ```
+        ```bash
+        $ man grep | grep --ignore-case "options"
+        OPTIONS
+                      use -i, to cancel its effects because the two options override each other.
+                      options that prefix their output to the actual content: -H,-n, and -b.  In
+                      options are given, the  last  matching  one  wins.   If  no  --include  or
+                      --exclude  options  match, a file is included unless the first such option
+           Other Options
+                      other GNU programs.  POSIX requires that options that  follow  file  names
+                      must  be  treated  as file names; by default, such options are permuted to
+                      the front of the operand list and are treated  as  options.   Also,  POSIX
+                      requires  that  unrecognized  options be diagnosed as “illegal”, but since
+               treats expansions of “*g*.h” starting with “-” as file names not options, and the
+        ```
 
-    <!-- markdownlint-enable MD013 -->
+        <!-- markdownlint-enable MD013 -->
 
----
+??? question "Exercise 4.2: Can `grep` show the lines that do not match?"
 
-### (optional) Exercise 4.2: Can `grep` show the lines that do not match?
+    Can `grep` show the lines that **do not** match?
 
-Can `grep` show the lines that **do not** match?
+    ??? tip "Answer"
 
-??? tip "Answer"
+        Yes.
 
-    Yes.
+        The `--invert-match` allows you
+        to let `grep` show lines that do not match.
 
-    The `--invert-match` allows you
-    to let `grep` show lines that do not match.
+        For example, in the command below,
+        the `grep` manual is search for lines that *do not* have a space.
 
-    For example, in the command below,
-    the `grep` manual is search for lines that *do not* have a space.
-
-    ```bash
-    man grep | grep --invert-match " "
-    ```
-
----
+        ```bash
+        man grep | grep --invert-match " "
+        ```
 
 ### (optional) Exercise 4.3: Can `grep` detect lines in multiple files?
 
