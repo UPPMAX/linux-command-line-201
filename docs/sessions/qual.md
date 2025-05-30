@@ -277,10 +277,11 @@ So what do you do if you want to keep the aliases more permanently, and can use 
 
 - Add them to ".bashrc"
 - Possibly add them to a file you create, ".bash_aliases" and then let ".bashrc" load ".bash_aliases"
-  ```if [ -f ~/.bash_aliases ]; then
-         . ~/.bash_aliases
-     fi
-  ```
+    ```bash
+       if [ -f ~/.bash_aliases ]; then
+           . ~/.bash_aliases
+       fi
+    ```
 
 Here we are just going to add them to ".bashrc". 
 
