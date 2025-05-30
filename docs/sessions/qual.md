@@ -255,6 +255,7 @@ $ alias ALIASNAME="command"
     ```
 
     It looks like this: 
+    ```bash
     bbrydsoe@enterprise:~/exercises/awk-qol$ lah
     Command 'lah' not found, did you mean:
       command 'lha' from deb jlha-utils (0.1.6-4.1)
