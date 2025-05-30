@@ -10,29 +10,27 @@ on:
   push:
     paths:
       - .github/workflows/check_markdown.yaml
-      - 'docs/**'
+      - "docs/**"
       - .markdownlintignore
       - .markdownlint.jsonc
   pull_request:
     paths:
       - .github/workflows/check_markdown.yaml
-      - 'docs/**'
+      - "docs/**"
       - .markdownlintignore
       - .markdownlint.jsonc
   schedule:
-  - cron: "0 0 21 * *"
+    - cron: "0 0 21 * *"
 
 # Suggested by Super Linter
 permissions: read-all
 
 jobs:
   check_markdown:
-
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-
       - name: Set up Git repository
         uses: actions/checkout@v4
 
@@ -57,4 +55,3 @@ jobs:
       # this is the linter whose documentation to look into :-)
       - name: Linter is at https://github.com/DavidAnson/markdownlint
         run: echo "Linter is at https://github.com/DavidAnson/markdownlint"
-
