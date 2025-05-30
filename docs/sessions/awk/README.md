@@ -86,10 +86,10 @@ do you see? How do you explain in English what this does?
     ```bash
     $ ls -l
     total 4
-    drwxrwxr-x   2 richel richel 4096 Jun 10  2024 bin
-    drwxr-xr-x   2 richel richel 4096 Jan  8 20:05 Desktop
-    drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
-    drwxr-xr-x   3 richel richel 4096 May 28 08:51 Downloads
+    drwxrwxr-x   2 sven sven 4096 Jun 10  2024 bin
+    drwxr-xr-x   2 sven sven 4096 Jan  8 20:05 Desktop
+    drwxr-xr-x  10 sven sven 4096 Feb 27 09:44 Documents
+    drwxr-xr-x   3 sven sven 4096 May 28 08:51 Downloads
     ```
 
     Searching the manual of `ls`, using `man ls`, gives us the
@@ -172,8 +172,8 @@ same columns. This will not work! Observe and explain what you see.
     ```bash
     $ ls -l | cut --delimiter " " --fields 6,10
 
-    richel
-    richel 8
+    sven
+    sven 8
     4096 Documents
     ```
 
@@ -239,10 +239,10 @@ Use the `ls` manual.
 
     ```bash
     $ ls -ldh *
-    drwxrwxr-x   2 richel richel 4.0K Jun 10  2024 bin
-    drwxr-xr-x   2 richel richel 4.0K Jan  8 20:05 Desktop
-    drwxr-xr-x  10 richel richel 4.0K Feb 27 09:44 Documents
-    drwxr-xr-x   3 richel richel 4.0K May 28 08:51 Downloads
+    drwxrwxr-x   2 sven sven 4.0K Jun 10  2024 bin
+    drwxr-xr-x   2 sven sven 4.0K Jan  8 20:05 Desktop
+    drwxr-xr-x  10 sven sven 4.0K Feb 27 09:44 Documents
+    drwxr-xr-x   3 sven sven 4.0K May 28 08:51 Downloads
     ```
 
     Using the manual of `ls`:
@@ -284,10 +284,10 @@ do you see? How do you explain in English what this does?
 
     ```bash
     $ ls -ldh * | grep -v total
-    drwxrwxr-x   2 richel richel 4.0K Jun 10  2024 bin
-    drwxr-xr-x   2 richel richel 4.0K Jan  8 20:05 Desktop
-    drwxr-xr-x  10 richel richel 4.0K Feb 27 09:44 Documents
-    drwxr-xr-x   3 richel richel 4.0K May 28 08:51 Downloads
+    drwxrwxr-x   2 sven sven 4.0K Jun 10  2024 bin
+    drwxr-xr-x   2 sven sven 4.0K Jan  8 20:05 Desktop
+    drwxr-xr-x  10 sven sven 4.0K Feb 27 09:44 Documents
+    drwxr-xr-x   3 sven sven 4.0K May 28 08:51 Downloads
     ```
 
     Note that, for the computer used, there is no difference.
@@ -578,10 +578,10 @@ Pick those topics you are interested in.
 
         ```bash
         $ ls -l | awk '/Feb/ { print $0 }'
-        drwxr-xr-x  10 richel richel 4096 Feb 27 09:44 Documents
-        drwxrwxr-x   6 richel richel 4096 Feb  7 07:18 inkcut_venv
-        drwxrwxr-x   2 richel richel 4096 Feb 25 11:38 misc
-        drwx------   2 richel richel 4096 Feb 25 13:45 my_folder
+        drwxr-xr-x  10 sven sven 4096 Feb 27 09:44 Documents
+        drwxrwxr-x   6 sven sven 4096 Feb  7 07:18 inkcut_venv
+        drwxrwxr-x   2 sven sven 4096 Feb 25 11:38 misc
+        drwx------   2 sven sven 4096 Feb 25 13:45 my_folder
         ```
 
 ??? seealso "(optional) Exercise 4.2: Can `awk` display the line number?"
