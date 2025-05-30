@@ -1,5 +1,7 @@
 # Learning outcomes
 
+## Day 1: smarter command line
+
 ??? note "[Linux pipe](sessions/pipe.md)"
 
     - Learners can chain commands using the Linux pipe
@@ -28,14 +30,16 @@
     - Learners can use `awk` to transform text
     - Learners can use regular expressions in `awk`
 
+## Day 2: smarter Bash
+
 ??? note "[Bash scripting](sessions/scripting/README.md)"
 
-    - Learners can write bash scripts
-    - Learners have practiced using a book on bash scripting
-    - Learners can write bash scripts that require user input
-    - Learners can use variables in bash scripts
-    - Learners can use `if` statements in bash scripts
-    - Learners can use `for` statements  in bash scripts
+    - Learners can write Bash scripts
+    - Learners have practiced using a book on Bash scripting
+    - Learners can write Bash scripts that require user input
+    - Learners can use variables in Bash scripts
+    - Learners can use `if` statements in Bash scripts
+    - Learners can use `for` statements  in Bash scripts
 
 ??? note "[Environment variables](sessions/env_vars.md)"
 
