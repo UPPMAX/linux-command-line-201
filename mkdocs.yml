@@ -1,4 +1,4 @@
-site_name: Intermediate bash/Linux 
+site_name: Intermediate bash/Linux
 repo_url: https://github.com/UPPMAX/naiss_intermediate_bash_linux
 edit_uri: blob/main/docs/
 
@@ -8,7 +8,8 @@ site_dir: site.build
 theme:
   name: readthedocs
   locale: en
-  logo: images/bash-script.png
+  logo:
+    images/bash-script.png
     #  static_templates:
     #- sitemap.html
   include_sidebar: true
@@ -32,27 +33,27 @@ theme:
 
 nav:
   - Common:
-    - Home: index.md
-    - Learning outcomes: learning_outcomes.md
-    - Course dates: course_dates.md
-    - Schedule: schedule.md
-    - Prerequisites: prerequisites.md
-  - Lessons Day 1 (smarter command line): 
-    - Introduction: sessions/intro.md
-    - Linux pipe: sessions/pipe.md
-    - Linux tools (wc, cut): sessions/wc_cut.md
-    - Searching using regular expressions and grep: sessions/regular_expressions_and_grep/README.md
-    - Using the programming language AWK: sessions/awk/README.md
-  - Lessons Day 2 (smarter bash): 
-    - Scripting: sessions/scripting/README.md
-    - Redirects: sessions/redirects.md
-    - Environment variables: sessions/env_vars.md
-    - Symbolic links: sessions/symlinks.md
-    - Archiving/compressing data: sessions/arch.md
-    - Linux tools (sed): sessions/sed.md  
-    - Quality of life: sessions/qual.md
-  - Extras: 
-    - Books: books/README.md
+      - Home: index.md
+      - Learning outcomes: learning_outcomes.md
+      - Course dates: course_dates.md
+      - Schedule: schedule.md
+      - Prerequisites: prerequisites.md
+  - Lessons Day 1 (smarter command line):
+      - Introduction: sessions/intro.md
+      - Linux pipe: sessions/pipe.md
+      - Linux tools (wc, cut): sessions/wc_cut.md
+      - Searching using regular expressions and grep: sessions/regular_expressions_and_grep/README.md
+      - Using the programming language AWK: sessions/awk/README.md
+  - Lessons Day 2 (smarter bash):
+      - Scripting: sessions/scripting/README.md
+      - Redirects: sessions/redirects.md
+      - Environment variables: sessions/env_vars.md
+      - Symbolic links: sessions/symlinks.md
+      - Archiving/compressing data: sessions/arch.md
+      - Linux tools (sed): sessions/sed.md
+      - Quality of life: sessions/qual.md
+  - Extras:
+      - Books: books/README.md
 
 not_in_nav: |
   lesson_plans/20250602/README.md
@@ -99,6 +100,3 @@ markdown_extensions:
       separator: "__"
   - admonition
   - pymdownx.details
-
-
-
