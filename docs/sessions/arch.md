@@ -240,7 +240,7 @@ The command ``tar --help`` will give the format (defaults to gnu). This is gener
 
 ``tar`` was originally developed for magnetic tape storage – reading and writing data for a sequential I/O device with no file system, and the name is short for the format description "tape archive". 
 
-![IBM 2401 magnetic tape storage](../../images/IBM2401-magnetic-tape-unit_small.jpg)
+![IBM 2401 magnetic tape storage](../images/IBM2401-magnetic-tape-unit_small.jpg)
 
 !!! note 
 

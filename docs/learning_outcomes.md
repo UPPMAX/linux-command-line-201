@@ -50,7 +50,7 @@
 
     - Learners can create soft and hard symbolic links
 
-??? note "[Quality of life](sessions/quality.md)"
+??? note "[Quality of life](sessions/qual.md)"
 
     - Learners can start a background process with `&` and terminate it
     - Terminal shortcuts/usage
