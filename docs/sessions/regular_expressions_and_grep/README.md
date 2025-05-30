@@ -241,11 +241,11 @@ and do lessons 1 to (and including) 11.
 Here we'll experience the flexibility of `grep`.
 Pick those topics you are interested in.
 
-Use the `grep` manual to answer these questions.
-
 ??? seealso "Exercise 4.1: Can `grep` do a case-insensitive match?"
 
     Can `grep` do a case-insensitive match?
+
+    Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
 
@@ -281,6 +281,8 @@ Use the `grep` manual to answer these questions.
 
     Can `grep` show the lines that **do not** match?
 
+    Use the `grep` manual to answer this question.
+
     ??? tip "Answer"
 
         Yes.
@@ -298,6 +300,8 @@ Use the `grep` manual to answer these questions.
 ??? seealso "Exercise 4.3: Can `grep` detect lines in multiple files?"
 
     Can `grep` detect lines in multiple files?
+
+    Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
 
@@ -317,6 +321,8 @@ Use the `grep` manual to answer these questions.
 ??? seealso "Exercise 4.4: Can `grep` detect which files contain a match?"
 
     Can `grep` detect which files contain a match?
+
+    Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
 
@@ -341,6 +347,8 @@ Use the `grep` manual to answer these questions.
     <!-- markdownlint-enable MD013 -->
 
     Can `grep` detect which files-with-a-certain-extension contain a match?
+
+    Use the `grep` manual to answer this question.
 
     ??? tip "Answer"
 
