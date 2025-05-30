@@ -19,9 +19,6 @@ tags:
     - [Feedback](https://youtu.be/sh52duacLWY?t=1279)
     - [Conclusion](https://youtu.be/sh52duacLWY?t=1486)
 
-https://youtu.be/sh52duacLWY
-
-
 !!! info "Learning outcomes"
 
     - Learners know there are multiple flavours of regular expressions
