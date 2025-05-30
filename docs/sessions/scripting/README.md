@@ -9,6 +9,22 @@ tags:
 
 # Scripting
 
+
+???- note "Need a video?"
+
+    - [Introduction](https://youtu.be/1TWkDTePzxE)
+    - [Exercise 1](https://youtu.be/1TWkDTePzxE?t=58)
+    - [Exercise 2](https://youtu.be/1TWkDTePzxE?t=204)
+    - [Exercise 3](https://youtu.be/1TWkDTePzxE?t=300)
+    - [Exercise 4](https://youtu.be/1TWkDTePzxE?t=472)
+    - [Exercise 5](https://youtu.be/1TWkDTePzxE?t=591)
+    - [Exercise 6](https://youtu.be/1TWkDTePzxE?t=693)
+    - [Exercise 7](https://youtu.be/1TWkDTePzxE?t=827)
+    - [Exercise 8](https://youtu.be/1TWkDTePzxE?t=1125)
+    - [Exercise 9](https://youtu.be/1TWkDTePzxE?t=1308)
+    - [Feedback](https://youtu.be/1TWkDTePzxE?t=1403)
+    - [Conclusion](https://youtu.be/1TWkDTePzxE?t=1503)
+
 !!! info "Learning outcomes"
 
     - Learners can write Bash scripts

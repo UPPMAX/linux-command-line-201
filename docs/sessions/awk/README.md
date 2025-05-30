@@ -11,7 +11,7 @@ tags:
 
 ???- note "Need a video?"
 
-    - [Introduction](https://youtu.be/MtnbqAjmav4?si=7MCt_byeLFOF1C0n)
+    - [Introduction](https://youtu.be/MtnbqAjmav4)
     - [Exercise 1](https://youtu.be/MtnbqAjmav4?t=101)
     - [Exercise 2](https://youtu.be/MtnbqAjmav4?t=525)
     - [Exercise 3](https://youtu.be/MtnbqAjmav4?t=1032)
