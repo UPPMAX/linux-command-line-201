@@ -1,14 +1,22 @@
+# Checkov configuration file
+#
+# Fails: it does not actually suppress the
+# policy needed in the file indicated :-(
+#
+# Due to lack of documentation, the checkov
+# tests are disabled entirely.
+#
 # .checkov.yaml - Example configuration to suppress a policy for a specific file
+#
 
+#checkov:skip=CKV2_GHA_1:This script must write to gh-pages
 # checkov:skip=CKV2_GHA_1:This script must write to gh-pages
 
-#checkov:skip=CKV2_GHA_1:The bucket is a public static content host
-
 skip-check:
-  policy_id: CKV2_GHA_1  # Example Checkov policy ID to suppress
+  policy_id: CKV2_GHA_1 # Example Checkov policy ID to suppress
   file_path: .github/workflows/create_website.yaml
   suppress_comment: "This script must write to gh-pages"
 
-skip-path: 
+skip-path:
   file_path: .github/workflows/create_website.yaml
   suppress_comment: "This script must write to gh-pages"
