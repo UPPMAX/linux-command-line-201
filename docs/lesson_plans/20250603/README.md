@@ -33,6 +33,10 @@ As sources of text, I consider to use:
 - `[Iliev, 2020]`
 
 
+Missing: `dos2unix` and `unix2dos`
+
+- [ ] Suggest to add it to curriculum
+
 ## References
 
 - `[Iliev, 2020]` Bobby Iliev. Introduction to bash scripting for developers.
