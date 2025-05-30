@@ -1,3 +1,10 @@
+---
+tags:
+  - first
+  - home
+  - main
+---
+
 # Intermediate Bash/Linux
 
 Course on intermediate Bash/Linux, with an estimated duration of
@@ -20,15 +27,10 @@ Eligibility: the NAISS course is open to current and future users in Swedish aca
 
 Remote/online participation: The course will be completely online and we will use Zoom. The participants will use their own computer or a computer system they have access to.
 
-[Topics](learning_outcomes.md)
+??? note "What are the [learning outcomes](learning_outcomes.md)?"
 
-- Linux pipe, wc, cut
-- [Regular expressions](sessions/regular_expressions_and_grep/README.md)
-- [`grep`](sessions/regular_expressions_and_grep/README.md)
-- sed
-- [`awk`](sessions/awk/README.md)
-- [Bash scripting](sessions/scripting/README.md)
-- Advanced redirect, environment variables, links
-- Quality of life, compressing
+    See [the learning outcomes of this course](learning_outcomes.md).
+
+---
 
 NOTE that the lectures (but not the exercises) will be recorded and uploaded to HPC2N's YouTube channel.

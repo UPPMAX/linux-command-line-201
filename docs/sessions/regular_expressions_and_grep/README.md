@@ -4,6 +4,7 @@ tags:
   - lesson
   - grep
   - regular expressions
+  - gnu
 ---
 
 # Regular expressions and `grep`

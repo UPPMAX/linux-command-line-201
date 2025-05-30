@@ -1,3 +1,10 @@
+---
+tags:
+  - session
+  - introduction
+  - intro
+---
+
 # Introduction
 
 - Welcome page and syllabus: <a href="https://uppmax.github.io/naiss_intermediate_bash_linux/" target="_blank">https://uppmax.github.io/naiss_intermediate_bash_linux/</a>

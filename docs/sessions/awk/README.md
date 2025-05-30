@@ -4,6 +4,7 @@ tags:
   - lesson
   - awk
   - gawk
+  - gnu
 ---
 
 # AWK
