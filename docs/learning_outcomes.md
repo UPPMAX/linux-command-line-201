@@ -2,12 +2,12 @@
 
 ??? note "[Linux pipe](sessions/pipe.md)"
 
-    - Learners can chain commands using the Linux pipe 
+    - Learners can chain commands using the Linux pipe
 
 ??? note "[Linux pipe](sessions/wc_cut.md)"
 
-    - Learners can use `wc` 
-    - Learners can use `cut` 
+    - Learners can use `wc`
+    - Learners can use `cut`
 
 ??? note "[Regular expressions and `grep`](sessions/regular_expressions_and_grep/README.md)"
 

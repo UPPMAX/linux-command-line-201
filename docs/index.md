@@ -13,9 +13,9 @@ given in two half-days.
 
 This course is given under <a href="https://www.naiss.se/" target="_blank">NAISS</a>, by staff working at the branches located at <a href="https://www.uu.se/centrum/uppmax/" target="_blank">UPPMAX</a> and <a href="https://www.hpc2n.umu.se" target="_blank">HPC2N</a>.
 
-In this 6-hour, 2-day ONLINE workshop you will learn how to work smarter from a command line. You can follow either day or both. 
+In this 6-hour, 2-day ONLINE workshop you will learn how to work smarter from a command line. You can follow either day or both.
 
-Doing so, you will learn more Bash commands, scripting and some quality of life topics. 
+Doing so, you will learn more Bash commands, scripting and some quality of life topics.
 
 NOTE: You can run on your own (Linux) computer or on your favorite HPC cluster (that you already have access to).
 
