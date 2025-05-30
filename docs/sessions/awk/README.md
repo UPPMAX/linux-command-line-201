@@ -878,7 +878,7 @@ Pick those topics you are interested in.
     [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/)   |Book about AWK
     [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/)        |Book with a chapter about AWK
     [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)                |Book with a chapter about AWK
-    [To AWK or not](https://pmitev.github.io/to-awk-or-not/)                       |Course about AWK
-    [AWK course](https://richelbilderbeek.github.io/awk_course/)                   |Course about AWK
+    [To AWK or not](https://pmitev.github.io/to-awk-or-not/)                       |Course about AWK, by Pavlin Mitev
+    [AWK course](https://uppmax.github.io/awk_course/)                             |Course about AWK, by Richèl Bilderbeek
 
     <!-- markdownlint-enable MD013 -->
