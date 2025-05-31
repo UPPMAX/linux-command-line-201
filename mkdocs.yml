@@ -38,6 +38,7 @@ nav:
       - Course dates: course_dates.md
       - Schedule: schedule.md
       - Prerequisites: prerequisites.md
+      - Evaluation: evaluation.md
   - Lessons Day 1 (smarter command line):
       - Introduction: sessions/intro.md
       - Linux pipe: sessions/pipe.md
@@ -52,9 +53,13 @@ nav:
       - Archiving/compressing data: sessions/arch.md
       - Linux tools (sed): sessions/sed.md
       - Quality of life: sessions/qual.md
-  - Extras:
+  - Other teaching materials:
       - Books: books/README.md
       - Videos: videos.md
+  - Miscellaneous:
+      - Lesson plans: lesson_plans/README.md
+      - Evaluations: evaluations/README.md
+      - Reflections: reflections/README.md
 
 not_in_nav: |
   lesson_plans/20250602/README.md
