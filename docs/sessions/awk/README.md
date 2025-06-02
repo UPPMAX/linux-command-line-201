@@ -45,7 +45,8 @@ tags:
     - Imagine a file that contains plain-text tabular data.
       How would you work with it?
     - What is a Turing-complete programming language?
-    - What is AWK?
+    - What is AWK (in upper case)?
+    - What is `awk` (in lower case)?
 
 ## Why is AWK important?
 
