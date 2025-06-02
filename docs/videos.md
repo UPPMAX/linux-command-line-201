@@ -12,10 +12,10 @@ Here is an overview of the videos in this course.
 
     - [Linux pipe](https://www.youtube.com/watch?v=GMMSvKZuMmk)
 
-??? note "[Linux tools ('wc', 'cut')](sessions/wc_cut)"
+??? note "[Linux tools ('wc', 'cut')](sessions/wc_cut.md)"
 
-    - [Linux tools 'wc'](https://www.youtube.com/watch?v=nIhiINT73XY) 
-    - [Linux tools 'cut'](https://www.youtube.com/watch?v=fB1sGPkKkhY) 
+    - [Linux tools 'wc'](https://www.youtube.com/watch?v=nIhiINT73XY)
+    - [Linux tools 'cut'](https://www.youtube.com/watch?v=fB1sGPkKkhY)
 
 ??? note "[Regular expressions and `grep`](sessions/regular_expressions_and_grep/README.md)"
 
