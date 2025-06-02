@@ -47,6 +47,9 @@ tags:
     - And a human phone number?
     - Are there more things that have certain features like that?
     - What is a regular expression?
+    - What is `grep`?
+    - What is GNU?
+    - In the context of software, what is a parser?
     - In the context of command-line tools, what is a filter?
 
 ## Why use regular expressions?
