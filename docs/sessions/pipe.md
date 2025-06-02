@@ -117,7 +117,7 @@ To run the examples, go to the "exercises" -> "piping-wc-cut" directory where th
 !!! note "Using two pipes: head and tail to print lines in a specific range in a file"
 
     ```bash
-    $ cat newfile.txt | head -2 | tail -3
+    $ cat newfile.txt | head -3 | tail -2
     ```
 
     Output (also showing the output of cat itself so you can see the file content):
