@@ -25,7 +25,7 @@ Time        | Topic                                                             
 
 <!-- markdownlint-enable MD013 -->
 
-- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
+- Teachers: `B`: Birgitte Brydsö, `R`: Richèl Bilderbeek
 
 ## Morning 2: smarter bash
 
@@ -38,4 +38,4 @@ Time        | Topic                                         |Teacher
 11:15-12:00 |Quality of life, compressing, `sed`            |B
 11:53-12:00 |[Evaluation](evaluation.md)                    |R
 
-- Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
+- Teachers: `B`: Birgitte Brydsö, `R`: Richèl Bilderbeek
