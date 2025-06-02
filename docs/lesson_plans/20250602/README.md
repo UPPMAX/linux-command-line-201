@@ -150,7 +150,7 @@ I will mention this to them, so they are less disappointed.
 I think this problem is worse for AWK, as it has less
 time and its video is longer:
 
-Sessesion|Scheduled time|Video duration
+Session  |Scheduled time|Video duration
 ---------|--------------|--------------
 `grep`   |45 minutes    |27 minutes
 AWK      |40 minutes    |31 minutes
