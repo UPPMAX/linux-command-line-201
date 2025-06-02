@@ -126,7 +126,7 @@ I will map these to exercises, and adding a 'Can awk do ...?' section.
 
 ## Teaching
 
-I want to practive my Mike Bell teaching cycles.
+I want to practice my Mike Bell teaching cycles.
 I feel the Feedback phase is weakest,
 hence I added this explicitly to the materials
 and schedule time for it. I have written a schedule in my 
