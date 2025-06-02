@@ -4,6 +4,19 @@ Here is an overview of the videos in this course.
 
 ## Day 1: smarter command line
 
+??? note "[Introduction](sessions/intro.md)"
+
+    - [Introduction to the course](https://www.youtube.com/watch?v=oT9VlB1-FeU)
+
+??? note "[Linux 'pipe'](sessions/pipe.md)"
+
+    - [Linux pipe](https://www.youtube.com/watch?v=GMMSvKZuMmk)
+
+??? note "[Linux tools ('wc', 'cut')](sessions/wc_cut)" 
+
+    - [Linux tools 'wc'](https://www.youtube.com/watch?v=nIhiINT73XY) 
+    - [Linux tools 'cut'](https://www.youtube.com/watch?v=fB1sGPkKkhY) 
+
 ??? note "[Regular expressions and `grep`](sessions/regular_expressions_and_grep/README.md)"
 
     - [Introduction](https://youtu.be/sh52duacLWY)
@@ -40,3 +53,7 @@ Here is an overview of the videos in this course.
     - [Exercise 9](https://youtu.be/1TWkDTePzxE?t=1308)
     - [Feedback](https://youtu.be/1TWkDTePzxE?t=1403)
     - [Conclusion](https://youtu.be/1TWkDTePzxE?t=1503)
+
+## Or a playlist for the course 
+
+- [https://www.youtube.com/watch?v=oT9VlB1-FeU&list=PL6jMHLEmPVLzPdi1CsGWFQETAHykdbf7B](https://www.youtube.com/watch?v=oT9VlB1-FeU&list=PL6jMHLEmPVLzPdi1CsGWFQETAHykdbf7B)
