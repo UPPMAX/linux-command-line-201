@@ -69,7 +69,7 @@ I found the following:
   this document for learners to interact with each other.
 - 'Online teaching at its best', page 170, middle, does recommend to
   collect questions and their answers, without specifying how.
-  I do see how the Q&A document would shape my course. 
+  I do see how the Q&A document would shape my course.
   However, I also see how the same effect is achieved
   by talking to learners in a breakout room.
 - All my other books do not even mention a shared or Q&A document
@@ -184,10 +184,7 @@ Time scheduled|Actual time|Activity
 In the second hour, I followed the teaching cycle well.
 Too bad I messed up the last minutes. Self-grade: 7
 
-In the third hour, I feel bad about teaching in the dark, 
+In the third hour, I feel bad about teaching in the dark,
 even though I agree with my choices in the moment.
 Self-grade: 6
-
-
-
 
