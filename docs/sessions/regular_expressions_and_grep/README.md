@@ -57,13 +57,11 @@ such as a first name, a last name, a phone number, etc.
 
 ## Why use `grep`?
 
-The tool `grep` comes installed with Linux and is an abbreviation
-of 'GNU regular expression parser'.
-GNU, an abbreviation of 'GNU's Not Unix!', is a
-collection of free software (among others: `grep`)
-that comes with Linux.
-A parser is a program that can work with a text pattern,
-such as regular expression.
+The tool `grep` comes installed with Linux
+and is an abbreviation
+of 'GNU regular expression parser',
+where GNU is a collection of free software
+and a parser is a program that can work with a text patterns.
 
 ## Exercises
 
