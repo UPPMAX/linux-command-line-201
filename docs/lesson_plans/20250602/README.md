@@ -129,7 +129,7 @@ I will map these to exercises, and adding a 'Can awk do ...?' section.
 I want to practice my Mike Bell teaching cycles.
 I feel the Feedback phase is weakest,
 hence I added this explicitly to the materials
-and schedule time for it. I have written a schedule in my 
+and schedule time for it. I have written a schedule in my
 sessions and in my notebook: I intend to keep track of the actual timing.
 
 During Challenge, I will put them into breakout rooms of 2 or 3,
