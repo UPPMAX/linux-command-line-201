@@ -33,12 +33,12 @@ tags:
 
     Lesson plan:
 
-    Time |Duration|Description
-    -----|--------|---------
-    0-10 |10      |Prior
-    10-15|5       |Present
-    15-35|20      |Challenge
-    35-45|10      |Feedback
+    Time         |Minutes|Duration|Description
+    -------------|-------|--------|---------
+    10:20-10:30  |0-10   |10      |Prior
+    10:30-10:35  |10-15  |5       |Present
+    10:35-10:55  |15-35  |20      |Challenge
+    10:55-11:05  |35-45  |10      |Feedback and conclusion
 
     Prior:
 
