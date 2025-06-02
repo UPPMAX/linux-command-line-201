@@ -5,7 +5,7 @@
 
 ## Morning 1: smarter command-line
 
-I am in the middle of the schedule:
+I am scheduled second:
 
 Time        | Topic                 |Teacher
 ------------|-----------------------|-------
@@ -15,8 +15,7 @@ Time        | Topic                 |Teacher
 11:00-11:15 |Break                  |.
 11:15-12:00 |`awk`                  |RB
 
-I should assume the learners can use a pipe,
-
+I should assume the learners can use a pipe.
 
 ## `grep`
 
@@ -124,6 +123,29 @@ Mapping sessions to LOs:
 Seems this works!
 
 I will map these to exercises, and adding a 'Can awk do ...?' section.
+
+## Form
+
+I want to practive my Mike Bell teaching cycles.
+I feel the Feedback phase is weakest,
+hence I added this explicitly to the materials
+and schedule time for it. I have written a schedule in my 
+sessions and in my notebook: I intend to keep track of the actual timing.
+
+During Challenge, I will put them into breakout rooms of 2 or 3,
+as this is better for learning, as well as a better place to answer questions.
+
+My biggest worry is Zoom. I've switched to a new computer, installed
+Zoom there, but it seems to prefer to work via the browser.
+I've just checked it -and it was good I did!- as it required an update.
+After updating, I went through all the settings and I now have better
+settings, e.g. that sharing my screen only takes 1 instead of 3
+dialogs (1 dialog asks to share a window or a screen: I've set this
+to always share my screen)! Took me 10 minutes and I am happy I had the time
+to go through this.
+
+There are 40 registrations, so I expect 27% (same as the NAISS
+File Transfer course) to show up, which is 11 learners.
 
 ## References
 
