@@ -42,6 +42,9 @@ tags:
 
     Prior:
 
+    - Imagine a file that contains plain-text tabular data.
+      How would you work with it?
+    - What is a Turing-complete programming language?
     - What is AWK?
 
 ## Why is AWK important?

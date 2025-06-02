@@ -42,10 +42,11 @@ tags:
 
     Prior:
 
+    - How would tell an alien how a human name is made up
+      out of English characters?
+    - And a human phone number?
+    - Are there more things that have certain features like that?
     - What is a regular expression?
-    - What is a parser?
-    - What is GNU?
-    - What is `grep`?
     - In the context of command-line tools, what is a filter?
 
 ## Why use regular expressions?
@@ -57,11 +58,7 @@ such as a first name, a last name, a phone number, etc.
 
 ## Why use `grep`?
 
-The tool `grep` comes installed with Linux
-and is an abbreviation
-of 'GNU regular expression parser',
-where GNU is a collection of free software
-and a parser is a program that can work with a text patterns.
+The tool `grep` comes installed with Linux.
 
 ## Exercises
 
