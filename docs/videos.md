@@ -12,7 +12,7 @@ Here is an overview of the videos in this course.
 
     - [Linux pipe](https://www.youtube.com/watch?v=GMMSvKZuMmk)
 
-??? note "[Linux tools ('wc', 'cut')](sessions/wc_cut)" 
+??? note "[Linux tools ('wc', 'cut')](sessions/wc_cut)"
 
     - [Linux tools 'wc'](https://www.youtube.com/watch?v=nIhiINT73XY) 
     - [Linux tools 'cut'](https://www.youtube.com/watch?v=fB1sGPkKkhY) 
@@ -54,6 +54,6 @@ Here is an overview of the videos in this course.
     - [Feedback](https://youtu.be/1TWkDTePzxE?t=1403)
     - [Conclusion](https://youtu.be/1TWkDTePzxE?t=1503)
 
-## Or a playlist for the course 
+## Or a playlist for the course
 
 - [https://www.youtube.com/watch?v=oT9VlB1-FeU&list=PL6jMHLEmPVLzPdi1CsGWFQETAHykdbf7B](https://www.youtube.com/watch?v=oT9VlB1-FeU&list=PL6jMHLEmPVLzPdi1CsGWFQETAHykdbf7B)
