@@ -24,6 +24,8 @@ Time|Activity
 60  |Start exercise, 3x interruption
 65  |End
 
+- Time spent on exercises: 18%
+
 ### Discussion from shared document, during the first hour
 
 - Q: The `sort` command doesn’t behave quite the same for me as in the example,
@@ -46,6 +48,35 @@ I put the learners in breakout rooms with 2-3 learners each.
 There were around 5 questions in total and around 10 other
 interactions.
 
+Before putting the learners in breakout rooms, my colleague
+reminded them about the shared Q&A document.
+I did not want to use the shared Q&A document:
+although there are some advantages (anybody can post anonymously, questions
+by others may inspire others), I feel
+the disadvantages (divide attention or need an extra volunteer for answering,
+No direct feedback, no interaction) outweight these.
+Us teachers discussed about what the literature states.
+(note that in the third hour, the Q&A document effects my teaching
+because of the feedback feedback! I will always be up for a place to
+post anonymous feedback)
+
+After teaching, I've searched the literature and the books in my
+possession for some wisdom.
+I found the following:
+
+- 'Online teaching at its best', page 169, bottom, recommends a 'Question
+  and answer space', as it fosters student interactions. We do not use
+  this document for learners to interact with each other.
+- 'Online teaching at its best', page 170, middle, does recommend to
+  collect questions and their answers, without specifying how.
+  I do see how the Q&A document would shape my course. 
+  However, I also see how the same effect is achieved
+  by talking to learners in a breakout room.
+- All my other books do not even mention a shared or Q&A document
+
+I conclude using a shared document for Q&A is not a thing,
+where having small group discussions is.
+
 Time scheduled|Actual time|Activity
 --------------|-----------|-----------------------
 0             |0          |Prior
@@ -53,6 +84,8 @@ Time scheduled|Actual time|Activity
 15            |13         |Challenge
 35            |35         |Feedback and conclusion
 45            |43         |Break
+
+- Time spent on exercises: 22 / 45 = 49%
 
 I expected the break to be 5 minutes earlier,
 because I mistook my time schedule for this session
@@ -111,6 +144,8 @@ Time scheduled|Actual time|Activity
 30            |30         |Feedback and conclusion
 40            |40         |Break
 
+- Time spent on exercises: 20 / 40 = 50%
+
 ### Discussion from shared document, during the third hour
 
 - Q: Can you recommend a short online intro to awk (not a whole book)
@@ -142,3 +177,17 @@ Time scheduled|Actual time|Activity
                                   like this, so prefer a short text like that.
                                   Would have preferred one styled to the course
                                   so I know what we are expected to know
+
+
+## Conclusion
+
+In the second hour, I followed the teaching cycle well.
+Too bad I messed up the last minutes. Self-grade: 7
+
+In the third hour, I feel bad about teaching in the dark, 
+even though I agree with my choices in the moment.
+Self-grade: 6
+
+
+
+
