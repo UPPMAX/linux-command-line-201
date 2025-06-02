@@ -7,7 +7,7 @@ tags:
 
 This is the page for evaluating the current iteration of the course.
 
-???- question "Where can I find the results of earlier evaluations?"
+???- note "Where can I find the results of earlier evaluations?"
 
     At [the 'Evaluations' page](evaluations/README.md).
 
