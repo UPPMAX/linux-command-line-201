@@ -54,7 +54,7 @@ I did not want to use the shared Q&A document:
 although there are some advantages (anybody can post anonymously, questions
 by others may inspire others), I feel
 the disadvantages (divide attention or need an extra volunteer for answering,
-No direct feedback, no interaction) outweight these.
+No direct feedback, no interaction) outweigh these.
 Us teachers discussed about what the literature states.
 (note that in the third hour, the Q&A document effects my teaching
 because of the feedback feedback! I will always be up for a place to
