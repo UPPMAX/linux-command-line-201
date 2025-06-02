@@ -36,5 +36,6 @@ Time        | Topic                                         |Teacher
 10:15-11:00 |Advanced redirect, environment variables, links|B
 11:00-11:15 |Break                                          |.
 11:15-12:00 |Quality of life, compressing, `sed`            |B
+11:53-12:00 |[Evaluation](evaluation.md)                    |R
 
 - Teachers: `B`: Birgitte Brydso, `R`: Richèl Bilderbeek
