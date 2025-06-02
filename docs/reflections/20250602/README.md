@@ -55,7 +55,7 @@ Time scheduled|Actual time|Activity
 45            |43         |Break
 
 I expected the break to be 5 minutes earlier,
-because I mistaked my time schedule for this session
+because I mistook my time schedule for this session
 with the next one in my (paper) logbook.
 
 - [ ] Use 1 session per page
@@ -135,10 +135,10 @@ Time scheduled|Actual time|Activity
                               AWK of which 3 are used.
                               Maybe that is little enough...
                             - There is a cheat sheet here:
-                              <https://quickref.me/awk.html>
+                              [AWK cheat sheet](https://quickref.me/awk.html)
                                 - [Richel] Well done!
-                                - Thnx for finding this! I also get intimidated
+                                - Thanks for finding this! I also get intimidated
                                   having to look in a book for a short course
                                   like this, so prefer a short text like that.
-                                  Would have prefered one styled to the course
+                                  Would have preferred one styled to the course
                                   so I know what we are expected to know
