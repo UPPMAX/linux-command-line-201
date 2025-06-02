@@ -2,6 +2,9 @@
 
 - Date: 2025-06-02
 - Author: Richel
+- [Lesson plan](../../lesson_plans/20250602/README.md)
+- [Evaluation](../../evaluations/20250602/README.md)
+- [Reflection](../../reflections/20250602/README.md)
 
 ## Morning 1: smarter command-line
 
