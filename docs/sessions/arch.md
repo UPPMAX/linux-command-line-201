@@ -124,7 +124,7 @@ Compression utility designed as a replacement for compress, with much better com
 
     For archiving files, ``tar`` is your friend - often in combination with ``gzip``. More about that soon! 
 
-### bzip
+### bzip (optional)
 
 **bzip** offers strong, lossless data compressor based on the Burrows-Wheeler transform. Also available as a library. 
 
@@ -146,7 +146,7 @@ We are not going to cover ``bzip`` more than to briefly give the most common usa
     bunzip2 afile.txt.bz2 
     ``` 
 
-### zip 
+### zip (optional)
 
 **zip** is a simple compression and file packaging utility. 
 
