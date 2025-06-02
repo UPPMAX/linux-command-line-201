@@ -124,7 +124,7 @@ Seems this works!
 
 I will map these to exercises, and adding a 'Can awk do ...?' section.
 
-## Form
+## Teaching
 
 I want to practive my Mike Bell teaching cycles.
 I feel the Feedback phase is weakest,
@@ -143,6 +143,23 @@ settings, e.g. that sharing my screen only takes 1 instead of 3
 dialogs (1 dialog asks to share a window or a screen: I've set this
 to always share my screen)! Took me 10 minutes and I am happy I had the time
 to go through this.
+
+I predict there will not be time to let the learners
+do even the essential exercises.
+I will mention this to them, so they are less disappointed.
+I think this problem is worse for AWK, as it has less
+time and its video is longer:
+
+Sessesion|Scheduled time|Video duration
+---------|--------------|--------------
+`grep`   |45 minutes    |27 minutes
+AWK      |40 minutes    |31 minutes
+
+I do think AWK is useless, so I hope we can remove this in the next
+course iteration. Instead, `sed` feels the more natural session
+after `grep`.
+
+- [ ] In next meeting, suggest to remove AWK from the schedule
 
 There are 40 registrations, so I expect 27% (same as the NAISS
 File Transfer course) to show up, which is 11 learners.
