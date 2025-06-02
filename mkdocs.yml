@@ -55,6 +55,7 @@ nav:
       - Quality of life: sessions/qual.md
   - Other teaching materials:
       - Books: books/README.md
+      - Courses: courses.md
       - Videos: videos.md
   - Miscellaneous:
       - Lesson plans: lesson_plans/README.md
