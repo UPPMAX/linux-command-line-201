@@ -12,7 +12,7 @@
     - A: [Richel] Well spotted! Besides echoing, `tee`also produces a file as
       a by-product. `tee` is named after a T junction (imagine a river!),
       where 'water’ (in this case: text) is going via two ways
-      now. [Thanks!][Richel: You are welcome 😊]
+      now. `[Thanks!][Richel: You are welcome :-)]`
 - Q: Is there any advantage to using egrep instead of grep –E etc.?
   Why have both/teach us both?  
     - A: [Birgitte] they are equivalent, it is just personal preference.
@@ -47,7 +47,11 @@
                               The book used, however, only shows 4 lines of
                               AWK of which 3 are used.
                               Maybe that is little enough...
-                            - There is a cheat sheet here: 
+                            - There is a cheat sheet here:
                               <https://quickref.me/awk.html>  
                                 - [Richel] Well done!
-                                - Thnx for finding this! I also get intimidated having to look in a book for a short course like this, so prefer a short text like that. Would have prefered one styled to the course so I know what we are expected to know  
+                                - Thnx for finding this! I also get intimidated
+                                  having to look in a book for a short course
+                                  like this, so prefer a short text like that.
+                                  Would have prefered one styled to the course
+                                  so I know what we are expected to know  
