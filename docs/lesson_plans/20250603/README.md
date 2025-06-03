@@ -40,6 +40,8 @@ Missing: `dos2unix` and `unix2dos`
 I want to do most of the things the same as yesterday.
 Yesterday, there were 11 learners (exactly as predicted!)
 
+I am unhappy about my Feedback phase, I consider
+doing quizzes next time instead.
 
 ## References
 
