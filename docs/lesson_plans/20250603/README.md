@@ -35,6 +35,12 @@ Missing: `dos2unix` and `unix2dos`
 
 - [ ] Suggest to add it to curriculum
 
+## Teaching
+
+I want to do most of the things the same as yesterday.
+Yesterday, there were 11 learners (exactly as predicted!)
+
+
 ## References
 
 - `[Iliev, 2020]` Bobby Iliev. Introduction to bash scripting for developers.
