@@ -1,12 +1,62 @@
 # Reflection 2025-06-03
 
-One learners used Dardel.
-Apparently, `nano` is absent on Dardel.
-I will ask NPC to add `nano` on Dardel.
+## First hour
 
-- [ ] Ask NPC to install `nano` on Dardel
+The first hour went smoothly and followed the schedule
+smoothly:
+
+Scheduled time|Actual time|Phase
+--------------|-----------|---------
+9:00          |9:00       |Prior
+9:10          |9:08 (-2)  |Present
+9:15          |9:11 (-4)  |Challenge
+9:50          |9:50       |Feedback
+10:00         |10:00      |Done
+
+- 65% of the time spent on exercises
+
+I had 4 breakout rooms, with exactly 2 learners each.
+3 out of 4 rooms were duos that were sharing
+their screen and had fun discussions, with the
+occassional question. 1 room has 1 learner that could not
+actually work: she uses Dardel and Dardel does not have `nano` installed ...?
+I recommended `emacs`, which she enjoyed much better than `vi`.
+
+I will ask PDC to add `nano` on Dardel.
+
+- [ ] Ask PDC to install `nano` on Dardel
+
+I was unhapy with my Feedback yesterday,
+so I did it differently: I went through
+the answers of the questions. This felt way
+better! Instead of going through all answers,
+however, I got only to answer 4 of 9.
+I did sidetrack by choice, yet, I feel that next time,
+I should go through all the answers first, and only then ask
+the harder questions.
+
+- Grade: 8.0
 
 ## Second hour
+
+Directly after the break, 6 out of 11
+learners turned on their camera.
+When the recording started, this turned into 1
+learner that kept his camera on.
+
+I made an activity diagram:
+
+Time |Activity
+-----|---------
+10:15|Lecturing
+10:32|Exercise
+10:36|Lecture
+10:47|Exercise
+10:50|Lecture
+10:57|Code along
+11:00|Break
+
+- 16% of the time spent on exercises
 
 ### Shared document, of second hour
 
@@ -55,6 +105,17 @@ I will ask NPC to add `nano` on Dardel.
       you can always contact me at `[Richel's work email address]` :-)
 
 ## Third hour
+
+I made an activity diagram:
+
+Time |Activity
+-----|---------
+11:15|Lecturing
+11:57|Evaluation
+
+- 0% of the time spent on exercises
+
+I did the evaluation here.
 
 ### Shared document, of third hour
 
