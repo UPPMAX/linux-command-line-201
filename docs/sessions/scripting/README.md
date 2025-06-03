@@ -364,39 +364,6 @@ such as the output of a Bash command.
 
 ---
 
-??? note "For teachers"
-
-    What is the difference between AWK and Bash?
-
-    ??? tip "Answer"
-
-        They are different programming languages.
-
-    What can Bash not do?
-
-    ??? tip "Answer"
-
-        Bash, like any Turning complete language,
-        can solve any computational problem,
-        but cannot do this:
-
-        - run computations at any speed (i.e. a problem
-          may take billions of year to complete)
-        - use any amount of memory (i.e. a problem
-          may require billions of gigabytes to solve)
-
-    When not to use Bash?
-
-    ??? tip "Answer"
-
-        Bash shines at problems of low and intermediate complexity,
-        as it can connect all Bash commands.
-
-        For harder problems, use a modern programming language
-        instead.
-
----
-
 ## Conclusions
 
 !!! info "Conclusions"
@@ -428,6 +395,39 @@ such as the output of a Bash command.
         echo "Hello ${name}!"
     done
     ```
+
+---
+
+??? note "For teachers"
+
+    What is the difference between AWK and Bash?
+
+    ??? tip "Answer"
+
+        They are different programming languages.
+
+    What can Bash not do?
+
+    ??? tip "Answer"
+
+        Bash, like any Turning complete language,
+        can solve any computational problem,
+        but cannot do this:
+
+        - run computations at any speed (i.e. a problem
+          may take billions of year to complete)
+        - use any amount of memory (i.e. a problem
+          may require billions of gigabytes to solve)
+
+    When not to use Bash?
+
+    ??? tip "Answer"
+
+        Bash shines at problems of low and intermediate complexity,
+        as it can connect all Bash commands.
+
+        For harder problems, use a modern programming language
+        instead.
 
 ---
 
