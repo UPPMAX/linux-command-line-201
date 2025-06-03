@@ -1,5 +1,9 @@
 # Reflection 2025-06-03
 
+- [Lesson plan](../../lesson_plans/20250603/README.md)
+- [Evaluation](../../evaluations/20250602/README.md)
+- [Reflection](../../reflections/20250603/README.md)
+
 ## First hour
 
 The first hour went smoothly and followed the schedule
@@ -171,4 +175,17 @@ I did the evaluation here.
       ```bash
       alias ls="/usr/bin/ls -l" 
       ```
+
+## Course reflection
+
+I think the course went well,
+although I've not read the feedback of the learners yet.
+
+Here are my current ideas:
+
+- [ ] Suggest to replace `awk` by `sed`:
+
+    - B will have more time for the quality of life session
+    - R thinks `sed` is a better follow-up after `grep`
+    - R thinks `awk` is useless
 
