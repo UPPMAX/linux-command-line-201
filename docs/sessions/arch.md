@@ -257,7 +257,7 @@ tar [-options] <name of the tar archive> [files or directories which to add into
 ### Basic options
 
 - **-c, --create** - create a new archive
-- **-a, --auto-compress** - additionally compress the archive with a compressor which will be automatically determined by the file name extension of the archive. If the archive's name ends with *.tar.gz then use gzip, if *.tar.xz then use xz, *.tar.zst for Zstandard etc.
+- **-a, --auto-compress** - additionally compress the archive with a compressor which will be automatically determined by the file name extension of the archive. If the archive's name ends with *.tar.gz then use gzip, if*.tar.xz then use xz, *.tar.zst for Zstandard etc.
 - **-r, --append** - append files to the end of an archive
 - **-x, --extract, --get** - extract files from an archive
 - **-f, --file** - specify the archive's name

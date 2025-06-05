@@ -11,6 +11,7 @@ sed [options] 'command' [inputfile...]
 ```
 
 where
+
 - **options** are optional flags that modify the behavior of the sed command
 - **command** is a command or sequence of commands to execute on the inputfile(s)
 - **inputfile** is one or more inputfiles that is to be processed
@@ -34,14 +35,15 @@ where
 
 Some examples inspired by:
 
-- https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
-- https://en.wikipedia.org/wiki/Sed
+- <https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/>
+- <https://en.wikipedia.org/wiki/Sed>
 
 ## Substitution command
 
 This is probably what ``sed`` is most commonly used for: substitution. It is also the original motivation for creating it.
 
 **Syntax**
+
 ```bash
 sed 's/regexp/replacement/g' inputFileName > outputFileName
 ```
@@ -171,9 +173,4 @@ sed -i 's/cat/dog/' file1.txt
     - we have used ``sed`` to delete specific lines
     - we have learned about ``sed`` for filtering
     - we have learned about ``sed`` in-place editing
-
-
-
-
-
 

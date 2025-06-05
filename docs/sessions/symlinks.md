@@ -164,7 +164,3 @@ ls -l source link
     - they are useful both for ease and to avoid renaming/copying files
     - you can remove symbolic links with ``rm`` or ``unlink``
 
-
-
-
-

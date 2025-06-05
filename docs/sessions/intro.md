@@ -27,7 +27,7 @@ The exercises are mostly on the pages, but you need some files to work with for 
 
 You get it with:
 
-- wget https://github.com/UPPMAX/naiss_intermediate_bash_linux/raw/refs/heads/main/exercises.tar.gz
+- wget <https://github.com/UPPMAX/naiss_intermediate_bash_linux/raw/refs/heads/main/exercises.tar.gz>
 
 Then you unpack it with:
 

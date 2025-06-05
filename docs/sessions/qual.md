@@ -24,12 +24,13 @@ With the bash feature of *job control* you can move processes to the background 
 This is done by adding an ``&`` at the end of the command, like this:
 
 ```bash
-$ <command> <options> <input> ... &
+<command> <options> <input> ... &
 ```
 
 **Example**:
+
 ```bash
-$ tar -zcvf mydir.tar.gz LOTS-FILE-DIR/ &
+tar -zcvf mydir.tar.gz LOTS-FILE-DIR/ &
 ```
 
 The job keeps running in the background.
@@ -50,6 +51,7 @@ Assume you have started a program/job, like normal, in the foreground and you wa
 - You can check that it is running with the command ``jobs``
 
 **Example**:
+
 ```bash
 bbrydsoe@enterprise:~$ tar -zcvf Downloads.tar.gz Downloads/
 Downloads/
@@ -70,8 +72,9 @@ bbrydsoe@enterprise:~$ jobs
 To get the job running in the background back to the foreground you can give the command ``fg %JOBID``
 
 **Example for above job**:
+
 ```bash
-$ fg %1
+fg %1
 ```
 
 If you do not give a JOBID, then ``fg`` will assume the current suspended job.
@@ -81,6 +84,7 @@ If you do not give a JOBID, then ``fg`` will assume the current suspended job.
 You can restart a suspended job in either:
 
 the background:
+
 ```bash
 bg %JOBID
 ```
@@ -123,19 +127,19 @@ The file ".bashrc" is in your home directory ($HOME) and is a script file that i
 First and foremost; ".bashrc" is a "hidden" file. To see those, add the flag/option ``-a`` to ls.
 
 ```bash
-$ ls -a
+ls -a
 ```
 
 If you just want to see what is in it, you can use cat:
 
 ```bash
-$ cat $HOME/.bashrc
+cat $HOME/.bashrc
 ```
 
 To edit it, use your favourite (command-line) editor. Here ``vi``/``vim`` or ``nano`` are common.
 
 ```bash
-$ nano $HOME/.bashrc
+nano $HOME/.bashrc
 ```
 
 !!! warning
@@ -244,7 +248,7 @@ These are aliases you just need for a short time, during that specific session. 
 They are easy to create:
 
 ```bash
-$ alias ALIASNAME="command"
+alias ALIASNAME="command"
 ```
 
 !!! note "Example"
@@ -277,6 +281,7 @@ So what do you do if you want to keep the aliases more permanently, and can use 
 
 - Add them to ".bashrc"
 - Possibly add them to a file you create, ".bash_aliases" and then let ".bashrc" load ".bash_aliases"
+
     ```bash
        if [ -f ~/.bash_aliases ]; then
            . ~/.bash_aliases
