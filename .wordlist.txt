@@ -131,6 +131,15 @@ stderr
 stdout
 Dardel
 uncompress
+bioinformatics
+Birgittes
+csv
+Fortran
+multiline
+Ok
+organised
+Richèls
+xlsx
 FeU
 VlB
 oT
