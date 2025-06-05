@@ -95,15 +95,15 @@ Time |Activity
     - A [Richel]: as far as I know, this works exactly the same, where one
       uses `$?` To get the exit code of a previous command, e.g.
 
-      ```bash
-      #!/bin/bash
+```bash
+#!/bin/bash
 
-      ./run_something.sh
+./run_something.sh
 
-      if [[ $? -ne 0 ]]; then
-        echo “ERROR happened!”
-      fi
-      ```
+if [[ $? -ne 0 ]]; then
+  echo “ERROR happened!”
+fi
+```
 
       Does that help you? If not, or there is another problem,
       you can always contact me at `[Richel's work email address]` :-)
