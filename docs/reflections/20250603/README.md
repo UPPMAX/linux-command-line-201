@@ -22,7 +22,7 @@ Scheduled time|Actual time|Phase
 I had 4 breakout rooms, with exactly 2 learners each.
 3 out of 4 rooms were duos that were sharing
 their screen and had fun discussions, with the
-occassional question. 1 room has 1 learner that could not
+occasional question. 1 room has 1 learner that could not
 actually work: she uses Dardel and Dardel does not have `nano` installed ...?
 I recommended `emacs`, which she enjoyed much better than `vi`.
 
@@ -30,7 +30,7 @@ I will ask PDC to add `nano` on Dardel.
 
 - [ ] Ask PDC to install `nano` on Dardel
 
-I was unhapy with my Feedback yesterday,
+I was unhappy with my Feedback yesterday,
 so I did it differently: I went through
 the answers of the questions. This felt way
 better! Instead of going through all answers,
@@ -81,10 +81,10 @@ Time |Activity
   stats concept...
 
     - A [Richel]: any program can create different types of output.
-      Regular output goes to ‘the standard output’ (also called stdout).
+      Regular output goes to `the standard output` (also called stdout).
       In a similar fashion, programs can write their error messages
-      to a different ‘thing’ (called a ‘stream’), called ‘standard error’
-      or ‘stderr’. When this stream is displayed on screen, it sometimes is
+      to a different `thing` (called a `stream`), called `standard error`
+      or `stderr`. When this stream is displayed on screen, it sometimes is
       colored red, to indicate the text was sent to the standard error stream.
       Does that help? Yes thanks
 
@@ -142,14 +142,14 @@ I did the evaluation here.
 
         - Sort of. I just was wondering what is the functional difference.
           The procedure is different (first tar to make several files into
-          one ‘tarball’, then compress, second using zip directly just
+          one `tarball`, then compress, second using zip directly just
           directly compresses all the files in the folder). Does it is mean
           that zip directly applies compression on every file individually
           and tar + gzip would apply compression on the tarball (so only 1
           file). Is there a performance difference there?
           [Answer is on next page :-) ]
 
-            - A [Richel]: I don’t know the exact technical details here.
+            - A [Richel]: I don`t know the exact technical details here.
               Sure, I can google :-). Maybe creating a script and measuring
               directly is easier. I would bet on timings being identical.
 
@@ -157,18 +157,19 @@ I did the evaluation here.
 
                     - A [Richel]: Fun!
 
-- What is “nohup” doing along with &?
+- What is `nohup` doing along with `&`?
 
-    - A [Richel]: nohup allows one to run something that continues after
-      ending a terminal (‘to hang up’ was how terminals one day were ended).
-      ‘&’ allows one to run something in the background, which means a
+    - A [Richel]: `nohup` allows one to run something that continues after
+      ending a terminal (`to hang up` was how terminals one day were ended).
+      `&` allows one to run something in the background, which means a
       terminal can be used for running commands wile a process is running.
       Together, they allow for commands that run in the background while you
       remain logged in to the computer.
 
-- Could you "overwrite” existing commands (e.g. ls) with an alias? If you
-  prefer list format e.g. ls –l, might be nice to only have
-  alias ls=/usr/bin/ls -l. Will the bash alias be prioritized over system’s ls?
+- Could you "overwrite” existing commands (e.g. `ls`) with an alias? If you
+  prefer list format e.g. `ls -l`, might be nice to only have
+  `alias ls=/usr/bin/ls -l`.
+  Will the bash alias be prioritized over system's `ls`?
 
     - A [Richel]: yes. I just tried it and it works!
 

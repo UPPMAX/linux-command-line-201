@@ -125,6 +125,11 @@ html
 wget
 youtube
 ethernet
+PDC
+dardel
+stderr
+stdout
+Dardel
 
 FeU
 VlB
