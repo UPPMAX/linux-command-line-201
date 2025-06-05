@@ -7,7 +7,7 @@
     - Being present most of the time: 11 (28% actively participating)
 
 ## Analysis
-- [Success score](success_score.txt): 70%
+
 - [Evaluation results (csv)](results.csv)
 - [Evaluation results (xlsx)](results.xlsx)
 - [Analysis script](analyse.R)
