@@ -127,7 +127,7 @@ I did the evaluation here.
   with gzip?
 
     - A [Richel]: both tools achieve similar results, so you can use either.
-      It can be, however, that you want to un-compress a file on –for
+      It can be, however, that you want to uncompress a file on –for
       example- an old version of windows that does not support tar
       out-of-the-box. In that case, you may prefer to use gzip.
 
