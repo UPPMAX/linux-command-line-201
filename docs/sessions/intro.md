@@ -7,7 +7,7 @@ tags:
 
 # Introduction
 
-- Welcome page and syllabus: <a href="https://uppmax.github.io/naiss_intermediate_bash_linux/" target="_blank">https://uppmax.github.io/naiss_intermediate_bash_linux/</a>
+- Welcome page and syllabus: <a href="https://uppmax.github.io/linux-command-line-201/" target="_blank">https://uppmax.github.io/linux-command-line-201/</a>
     - Also link at the House symbol at the top of the page.
 
 Most of the commands you learn in this course is agnostic and works on any Linux/Unix like system.
@@ -27,7 +27,7 @@ The exercises are mostly on the pages, but you need some files to work with for 
 
 You get it with:
 
-- wget <https://github.com/UPPMAX/naiss_intermediate_bash_linux/raw/refs/heads/main/exercises.tar.gz>
+- wget <https://github.com/UPPMAX/linux-command-line-201/raw/refs/heads/main/exercises.tar.gz>
 
 Then you unpack it with:
 
