@@ -96,12 +96,12 @@ Time |Activity
       uses `$?` To get the exit code of a previous command, e.g.
 
       ```bash
-      #!/bin/bash 
+      #!/bin/bash
 
-      ./run_something.sh 
+      ./run_something.sh
 
-      if [[ $? -ne 0 ]]; then 
-        echo “ERROR happened!” 
+      if [[ $? -ne 0 ]]; then
+        echo “ERROR happened!”
       fi
       ```
 
@@ -173,7 +173,7 @@ I did the evaluation here.
     - A [Richel]: yes. I just tried it and it works!
 
       ```bash
-      alias ls="/usr/bin/ls -l" 
+      alias ls="/usr/bin/ls -l"
       ```
 
 ## Course reflection

@@ -1,19 +1,19 @@
-# Symbolic links 
+# Symbolic links
 
 Symbolic links are also called soft links, or just symlinks. It is a pointer to another file or directory (called the "target").
 
 - It is useful both for ease
     - you avoid using a long path each time you change to a directory, like your project directory
-- As well as to avoid changing hard links within other scripts or programs. 
+- As well as to avoid changing hard links within other scripts or programs.
     - This is good if you for instance install a program or use a script that assumes the library it uses is called ``libcoolness.a`` and not ``libcoolness.2.0.a``. You can then just update the symlink instead of renaming the library or updating potentially many instances where it is mentioned in the program.
 
-!!! note "Hard links and soft links" 
+!!! note "Hard links and soft links"
 
-    You may have heard symbolic links referred to as "soft links". So what is a hard link? 
+    You may have heard symbolic links referred to as "soft links". So what is a hard link?
 
-    Hard links are also shortcuts for files (not directories), but a hard link cannot be created for a file in a different file system. 
+    Hard links are also shortcuts for files (not directories), but a hard link cannot be created for a file in a different file system.
 
-## Syntax 
+## Syntax
 
 Soft link/symbolic link:
 
@@ -27,27 +27,27 @@ Hard link:
 ln source-file linked-file
 ```
 
-## Verify 
+## Verify
 
-To verify a soft or hard link, run: 
+To verify a soft or hard link, run:
 
 ```bash
 ls -l source link
 ```
 
-## Examples 
+## Examples
 
 !!! hint
 
-    You can type along to most of this! Use the files in "exercises" -> "redirects-env-links" for examples. 
+    You can type along to most of this! Use the files in "exercises" -> "redirects-env-links" for examples.
 
-### Hard links 
+### Hard links
 
 !!! hint
 
     You can code along!
 
-    Either use one of the files/directories in "exercises" -> "redirect-env-link" or create a file to play with. This should work: 
+    Either use one of the files/directories in "exercises" -> "redirect-env-link" or create a file to play with. This should work:
 
     ``echo 'This is my test file' > testfile``
 
@@ -57,32 +57,32 @@ ls -l source link
     ln testfile linkfile
     ```
 
-    To check what happened, do this: 
+    To check what happened, do this:
     ```bash
     ls -li testfile linkfile
     ```
 
-    My output: 
+    My output:
     ```bash
     $ ls -li
     total 8
     808864781 -rw-r--r-- 2 bbrydsoe folk 21 May 27 16:36 linkfile
     808864781 -rw-r--r-- 2 bbrydsoe folk 21 May 27 16:36 testfile
-    ``` 
+    ```
 
-    808864781 is the inode, which is identical. An inode (index node) is a concept in Linux/Unix. Each object in a filesystem is represented by an inode. It is a data structure which stores basic info about files, directories, or other file system objects. More here if you are interested: <a href="https://www.cyberciti.biz/tips/understanding-unixlinux-filesystem-inodes.html" target="_blank">Understanding UNIX / Linux filesystem Inodes</a>. 
+    808864781 is the inode, which is identical. An inode (index node) is a concept in Linux/Unix. Each object in a filesystem is represented by an inode. It is a data structure which stores basic info about files, directories, or other file system objects. More here if you are interested: <a href="https://www.cyberciti.biz/tips/understanding-unixlinux-filesystem-inodes.html" target="_blank">Understanding UNIX / Linux filesystem Inodes</a>.
 
-### Soft/symbolic links 
+### Soft/symbolic links
 
-!!! note "Create a symbolic link to a directory" 
+!!! note "Create a symbolic link to a directory"
 
     ```bash
     ln -s /path/to/home/exercises/redirects-env-link $HOME/exer
-    ``` 
+    ```
 
     This creates a symbolic link named “exer” in the home directory, pointing to the location /path/to/home/exercises/redirects-env-link. For me, this would look like this:
 
-    ```bash 
+    ```bash
     bbrydsoe@enterprise:~/exercises/redirects-env-link$ pwd
     /home/bbrydsoe/exercises/redirects-env-link
     bbrydsoe@enterprise:~/exercises/redirects-env-link$ ln -s /home/bbrydsoe/exercises/redirects-env-link $HOME/exer
@@ -104,65 +104,65 @@ ls -l source link
     ```
 
 
-!!! note "Create a symbolic link to a file in the same directory as the file" 
+!!! note "Create a symbolic link to a file in the same directory as the file"
 
-    ```bash 
-    ln -s /path/to/file/the-file /path/to/file/<new-name> 
+    ```bash
+    ln -s /path/to/file/the-file /path/to/file/<new-name>
     ```
 
-!!! note "Create a symbolic link to a library" 
+!!! note "Create a symbolic link to a library"
 
-    This is to give the library the name is is presumably assumed to have in some program that uses it. Here it is in the same directory.     
+    This is to give the library the name is is presumably assumed to have in some program that uses it. Here it is in the same directory.
 
-    This is how it looks for me:  
+    This is how it looks for me:
 
     ```bash
     ln -s /home/bbrydsoe/exercises/redirects-env-link/libcoolness.2.0.a /home/bbrydsoe/exercises/redirects-env-link/libcoolness.a
-    ``` 
+    ```
 
-!!! note "Create a symbolic link to a library in a different directory" 
+!!! note "Create a symbolic link to a library in a different directory"
 
-    Sometimes a program expects a library to be in another directory than it is. An easy way of solving this is with symlinks - then you do not have to copy the library to perhaps several directories, and redo when it is updated. 
+    Sometimes a program expects a library to be in another directory than it is. An easy way of solving this is with symlinks - then you do not have to copy the library to perhaps several directories, and redo when it is updated.
 
     ```bash
     ln -s /usr/lib64/libfancy.a /usr/lib/libfancy.a
     ```
 
-!!! note "Remove a symlink" 
+!!! note "Remove a symlink"
 
-    You can remove a symbolic link either with 
+    You can remove a symbolic link either with
 
     ```bash
     unlink <path-to-symlink>
     ```
 
-    or 
+    or
 
     ```bash
     rm <path-to-symlink>
-    ``` 
+    ```
 
-    The main benefit of rm over unlink is that you can remove multiple symlinks at once, like you can with files. 
+    The main benefit of rm over unlink is that you can remove multiple symlinks at once, like you can with files.
 
-    For me, it looks like this if I remove the symbolic link ``libcoolness.a`` I created above: 
+    For me, it looks like this if I remove the symbolic link ``libcoolness.a`` I created above:
 
-    ```bash 
+    ```bash
     bbrydsoe@enterprise:~/exercises/redirects-env-link$ rm libcoolness.a
     bbrydsoe@enterprise:~/exercises/redirects-env-link$
-    ``` 
+    ```
 
-!!! warning 
+!!! warning
 
-    When removing a symlink to a folder, do not include the / at the end since that will make bash think the symbolic link is a folder that you cannot remove directly like this. 
+    When removing a symlink to a folder, do not include the / at the end since that will make bash think the symbolic link is a folder that you cannot remove directly like this.
 
-## Summary 
+## Summary
 
-!!! note "Keypoints" 
+!!! note "Keypoints"
 
     - Symbolic links are pointers to another file or directory
-    - there are both soft/symbolic links and hard links 
-    - they are useful both for ease and to avoid renaming/copying files 
-    - you can remove symbolic links with ``rm`` or ``unlink`` 
+    - there are both soft/symbolic links and hard links
+    - they are useful both for ease and to avoid renaming/copying files
+    - you can remove symbolic links with ``rm`` or ``unlink``
 
 
 
