@@ -16,11 +16,11 @@ NOTE that the course starts at 9:00 not 9:15! See the schedule linked below.
 
 We will use Zoom for this online course. See below for the link (#6).
 
-1) Schedule: https://uppmax.github.io/naiss_intermediate_bash_linux/schedule/
+1) Schedule: <https://uppmax.github.io/naiss_intermediate_bash_linux/schedule/>
 
-2) Rendered presentations for the course: https://uppmax.github.io/naiss_intermediate_bash_linux/
+2) Rendered presentations for the course: <https://uppmax.github.io/naiss_intermediate_bash_linux/>
 
-3) Course GH repo: https://github.com/UPPMAX/naiss_intermediate_bash_linux
+3) Course GH repo: <https://github.com/UPPMAX/naiss_intermediate_bash_linux>
 
 4) Important information about the course is gathered here: `[shared_document_url]`
 
@@ -34,7 +34,7 @@ We will use Zoom for this online course. See below for the link (#6).
 
     - c) Please MUTE your microphone when you are not speaking and use the “Raise hand” functionality under the “Participants” window during the lecture. Please do not clutter the Zoom chat. Behave politely!
 
-    - d) If you have questions during the lectures, you can write them on this page: https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EU_ESLxmgMVPiNfwmoTF9LABFPGAgPtCkNs2GaTUKlbSlA
+    - d) If you have questions during the lectures, you can write them on this page: <https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EU_ESLxmgMVPiNfwmoTF9LABFPGAgPtCkNs2GaTUKlbSlA>
     - e) There may be breakout rooms used in the Zoom for the hands-ons and for discussions.
     - f) The lectures and demos will be recorded, but not the hands-ons sessions. If you ask questions during the lectures, you may thus be recorded. If you do not wish to be recorded, then please keep your microphone muted and your camera off and write your questions in the Q/A document.
 
