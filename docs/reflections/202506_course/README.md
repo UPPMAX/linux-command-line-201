@@ -92,7 +92,7 @@ This matches my ideas and I already suggested to replace `awk` by `sed`.
 - The pace was excellent
 - Ok on Monday, a bit rushed towards the end on Tuesday
 
-Does not apply to me, as I was not teching then.
+Does not apply to me, as I was not teaching then.
 
 - Maybe it was a bit quick? I mean, it was easy to follow and understand,
   but then there was very little time to actually practice the exercises
@@ -108,7 +108,7 @@ as I had 5x more time for exercises.
 
 Python is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/),
-but it is mentioned in the same newletter this course was part of (i.e.
+but it is mentioned in the same newsletter this course was part of (i.e.
 the NAISS newsletter).
 
 - Different file systems, efficient editing of text files using Vim
@@ -116,7 +116,7 @@ the NAISS newsletter).
 
 File transfer is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/),
-but it is mentioned in the same newletter this course was part of (i.e.
+but it is mentioned in the same newsletter this course was part of (i.e.
 the NAISS newsletter).
 
 Efficient vim is not among the courses at all.
