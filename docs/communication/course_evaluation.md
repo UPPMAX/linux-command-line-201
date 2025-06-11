@@ -1,10 +1,11 @@
 # Course evaluation email
 
-- Title: Evaluation survey and recordings from the course "Intermediate Linux/Bash", `[dates]`
+- Title: Evaluation survey and recordings
+  from the course "Command Line 201", `[dates]`
 
 Hello!
 
-Thank you for participating in the NAISS course "Intermediate Linux/bash"!
+Thank you for participating in the NAISS course "Command Line 201"!
 
 We have an evaluation survey for the course, which we would very much
 like you to fill in, if you have not already. It will be very helpful
@@ -19,18 +20,18 @@ us something about how well (or not) we communicated the various subjects.
 
 Link to the evaluation survey: `[survey_url]`
 
-The evaluation survey is open until Tuesday, 2025-06-10, 23:45.
+The evaluation survey is open until `[survey_closing_date_and_time]`.
 
 The recordings from the course have been processed and uploaded to
 HPC2N's YouTube channel, on a separate playlist here:
 <https://www.youtube.com/playlist?list=PL6jMHLEmPVLzPdi1CsGWFQETAHykdbf7B>
 
 The presentations for the course will remain available for the
-foreseeable future at: <https://uppmax.github.io/naiss_intermediate_bash_linux/>
+foreseeable future at: <https://uppmax.github.io/linux-command-line-201/>
 
 The GitHub page for the course, with the rest of the material, including
 the tarball with the exercises, will also remain for the foreseeable
-future at: <https://github.com/UPPMAX/naiss_intermediate_bash_linux/>
+future at: <https://github.com/UPPMAX/linux-command-line-201>
 
 Best wishes,
 
