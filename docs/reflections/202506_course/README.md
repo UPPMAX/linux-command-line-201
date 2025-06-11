@@ -147,7 +147,7 @@ R (and machine learning in R) is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/).
 I am unsure if the R-MATLAB-Julia course is part of the NAISS newsletter.
 
-- [ ] Check if R-MATLAB-Julia course is part of the NAISS newsletter
+- [Check if R-MATLAB-Julia course is part of the NAISS newsletter](https://github.com/UPPMAX/linux-command-line-201/issues/20)
 
 - Fortran course, Object-oriented-programming in Python course
 
