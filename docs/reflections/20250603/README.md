@@ -189,3 +189,6 @@ Here are my current ideas:
     - B will have more time for the quality of life session
     - R thinks `sed` is a better follow-up after `grep`
     - R thinks `awk` is useless
+
+
+- [The full course reflection](../202506_course/README.md)
