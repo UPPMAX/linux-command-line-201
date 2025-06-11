@@ -29,7 +29,7 @@ B  |(18+16+0)/3=11%
 R  |(49+50+65)/3=55%
 
 
-- [ ] Use 1 session per page in my paper logbook
+- [x] Use 1 session per page in my paper logbook
 - [Ask PDC to install `nano` on Dardel](https://github.com/UPPMAX/linux-command-line-201/issues/17)
 - [Suggest to replace `awk` by `sed`](https://github.com/UPPMAX/linux-command-line-201/issues/18):
 
@@ -135,7 +135,7 @@ This is not my session.
 I agree it would be (even more) interesting
 to look at research scripts.
 
-- [ ] Consider using real examples
+- [x] Consider using real examples
 
 - Advanced Bash and Linux of course! :)
 
