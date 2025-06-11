@@ -37,7 +37,6 @@ by showing all admonitions in [the documentation](https://mkdocs-material-rtd-te
 
     `todo`
 
-
 ???- tip "My tip"
 
     `tip`
@@ -65,7 +64,6 @@ by showing all admonitions in [the documentation](https://mkdocs-material-rtd-te
 ???- question "My question"
 
     `question`
-
 
 ???- help "My help"
 

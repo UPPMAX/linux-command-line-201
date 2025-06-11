@@ -18,4 +18,4 @@ if [[ "$PWD" =~ scripts$ ]]; then
 	exit 42
 fi
 
-npx prettier .github/workflows --write
+npx prettier . --write

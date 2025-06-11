@@ -10,13 +10,13 @@
 
 I am scheduled second:
 
-Time        | Topic                 |Teacher
-------------|-----------------------|-------
-9:00-10:00  |Linux pipe, `wc`, `cut`|BB
-10:00-10:15 |Break                  |.
-10:15-11:00 |`grep`                 |RB
-11:00-11:15 |Break                  |.
-11:15-12:00 |`awk`                  |RB
+| Time        | Topic                   | Teacher |
+| ----------- | ----------------------- | ------- |
+| 9:00-10:00  | Linux pipe, `wc`, `cut` | BB      |
+| 10:00-10:15 | Break                   | .       |
+| 10:15-11:00 | `grep`                  | RB      |
+| 11:00-11:15 | Break                   | .       |
+| 11:15-12:00 | `awk`                   | RB      |
 
 I should assume the learners can use a pipe.
 
@@ -153,10 +153,10 @@ I will mention this to them, so they are less disappointed.
 I think this problem is worse for AWK, as it has less
 time and its video is longer:
 
-Session  |Scheduled time|Video duration
----------|--------------|--------------
-`grep`   |45 minutes    |27 minutes
-AWK      |40 minutes    |31 minutes
+| Session | Scheduled time | Video duration |
+| ------- | -------------- | -------------- |
+| `grep`  | 45 minutes     | 27 minutes     |
+| AWK     | 40 minutes     | 31 minutes     |
 
 I do think AWK is useless, so I hope we can remove this in the next
 course iteration. Instead, `sed` feels the more natural session

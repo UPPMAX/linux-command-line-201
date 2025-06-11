@@ -5,4 +5,3 @@
 - [Bash Beginners Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
 - [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual/)
 - [The Linux Command Line](https://linuxcommand.org/tlcl.php)
-

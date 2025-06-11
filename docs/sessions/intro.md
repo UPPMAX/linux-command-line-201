@@ -8,13 +8,13 @@ tags:
 # Introduction
 
 - Welcome page and syllabus: <a href="https://uppmax.github.io/linux-command-line-201/" target="_blank">https://uppmax.github.io/linux-command-line-201/</a>
-    - Also link at the House symbol at the top of the page.
+  - Also link at the House symbol at the top of the page.
 
 Most of the commands you learn in this course is agnostic and works on any Linux/Unix like system.
 
-Most HPC centers has ``bash`` as default. There are several reasons, but one is that it is what is compatible with SLURM - the batch scheduler used at most centers in Sweden. ``bash`` is also good for scripting.
+Most HPC centers has `bash` as default. There are several reasons, but one is that it is what is compatible with SLURM - the batch scheduler used at most centers in Sweden. `bash` is also good for scripting.
 
-For many commands it does not matter which shell you are using, but there are several where it is relevant, particularly for scripting. We will therefore be using ``bash`` for this course.
+For many commands it does not matter which shell you are using, but there are several where it is relevant, particularly for scripting. We will therefore be using `bash` for this course.
 
 ## Important stuff
 
@@ -31,10 +31,9 @@ You get it with:
 
 Then you unpack it with:
 
-- ``tar -zxvf exercises.tar.gz``
+- `tar -zxvf exercises.tar.gz`
 
 ## Evaluation
 
 - This course is running for the first time and we would very much like some input on how we did so we can develop and improve the course.
 - Here is the link to the evaluation survey: <a href="https://forms.office.com/e/dNviziEA6c" target="_blank">https://forms.office.com/e/dNviziEA6c</a>
-
