@@ -12,7 +12,7 @@ like you to fill in, if you have not already. It will be very helpful
 for us in planning and designing future courses, as well as adjusting
 this course before giving it again. We will post the results of the
 evaluation some time after the survey closes. The link will be found on
-the GitHib page for the course.
+the GitHub page for the course.
 
 Note, that if you watch the recordings afterwards during the rest of the
 week, you are also very welcome to answer the evaluation since it tells
