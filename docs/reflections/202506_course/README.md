@@ -30,8 +30,8 @@ R  |(49+50+65)/3=55%
 
 
 - [ ] Use 1 session per page in my paper logbook
-- [ ] [Ask PDC to install `nano` on Dardel](https://github.com/UPPMAX/linux-command-line-201/issues/17)
-- [ ] [Suggest to replace `awk` by `sed`](https://github.com/UPPMAX/linux-command-line-201/issues/18):
+- [Ask PDC to install `nano` on Dardel](https://github.com/UPPMAX/linux-command-line-201/issues/17)
+- [Suggest to replace `awk` by `sed`](https://github.com/UPPMAX/linux-command-line-201/issues/18):
 
     - B will have more time for the quality of life session
     - R thinks `sed` is a better follow-up after `grep`
@@ -121,7 +121,7 @@ the NAISS newsletter).
 
 Efficient vim is not among the courses at all.
 
-- [ ] Suggest to add course on efficient vim
+- [Suggest to add course on efficient vim](https://github.com/UPPMAX/linux-command-line-201/issues/19)
 
 - I don´t think anything else can be provided
 - same but advance and longer
@@ -139,7 +139,7 @@ to look at research scripts.
 
 - Advanced Bash and Linux of course! :)
 
-- [ ] Suggest to add 'Command Line 301' course
+- [Suggest to add 'Command Line 301' course](https://github.com/UPPMAX/linux-command-line-201/issues/19)
 
 - R and machine learning
 
@@ -151,8 +151,8 @@ I am unsure if the R-MATLAB-Julia course is part of the NAISS newsletter.
 
 - Fortran course, Object-oriented-programming in Python course
 
-- [ ] Suggest to add course on FORTRAN
-- [ ] Suggest to add course on OOP programming with Python
+- [Suggest to add course on FORTRAN](https://github.com/UPPMAX/linux-command-line-201/issues/19)
+- [Suggest to add course on OOP programming with Python](https://github.com/UPPMAX/linux-command-line-201/issues/19)
 
 ### Other comments
 
