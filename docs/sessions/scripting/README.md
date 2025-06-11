@@ -143,8 +143,8 @@ and allows you to continue studying after this course
   [chapter 4: 'Bash Variables'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/004-bash-variables.md)
 - Modify your Bash script called `greeter.sh` in such a way that
   it uses two variables:
-  - `greeting`, which should have value `Hello`
-  - `name`, which should have value `World`
+    - `greeting`, which should have value `Hello`
+    - `name`, which should have value `World`
     When it runs, it should (still) show 'Hello World!'
     on the screen. Run the script to verify
 
@@ -296,11 +296,11 @@ Write a script that counts and shows the number of files in our current folder:
   [chapter 11: 'Bash loops'](https://github.com/bobbyiliev/introduction-to-bash-scripting/blob/main/ebook/en/content/011-bash-loops.md)
 - Create a new Bash script called `greet_names.sh`.
   The script should:
-  - Ask who to greet, with the text `Who shall I greet?`.
+    - Ask who to greet, with the text `Who shall I greet?`.
     The expected input are names separated by spaces, e.g. `Anna Berndt Cindy`
-  - Greet all of these people in the form `Hello [name]!`,
+    - Greet all of these people in the form `Hello [name]!`,
     using a for loop to go through the names
-  - Run the script to verify
+    - Run the script to verify
 
 ??? tip "Answer"
 
@@ -335,10 +335,10 @@ such as the output of a Bash command.
 
 - Create a new Bash script called `show_files.sh`.
   The script should:
-  - Store the output of `ls` in a variable called `filenames`
-  - Per filename, show `I found a file called [filename]!`,
+    - Store the output of `ls` in a variable called `filenames`
+    - Per filename, show `I found a file called [filename]!`,
     where `[filename]` is the name of the file
-  - Run the script to verify
+    - Run the script to verify
 
 ??? tip "Answer"
 
