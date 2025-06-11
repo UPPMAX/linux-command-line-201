@@ -29,7 +29,6 @@ B  |(18+16+0)/3=11%
 R  |(49+50+65)/3=55%
 
 
-
 - [ ] Use 1 session per page in my paper logbook
 - [ ] Ask PDC to install `nano` on Dardel
 - [ ] Suggest to replace `awk` by `sed`:
@@ -77,11 +76,11 @@ Does not apply to me, as I do not do code-alongs.
 
 - today intensive and less time to do exercise
 
-Does not apply to me, as I had 5x more time for exercises. 
+Does not apply to me, as I had 5x more time for exercises.
 
 - Good! just tight for the exercises
 
-Does not apply to me, as I had 5x more time for exercises. 
+Does not apply to me, as I had 5x more time for exercises.
 
 - The pace was good, quite high but for this type of intermediate course
   I think that is not a problem.
@@ -101,7 +100,7 @@ Does not apply to me, as I was not teching then.
   I think it's normal given that the course was short!
 
 The little time for exercises does not apply to me,
-as I had 5x more time for exercises. 
+as I had 5x more time for exercises.
 
 ### Future topics
 
@@ -110,7 +109,7 @@ as I had 5x more time for exercises.
 Python is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/),
 but it is mentioned in the same newletter this course was part of (i.e.
-the NAISS newsletter). 
+the NAISS newsletter).
 
 - Different file systems, efficient editing of text files using Vim
   e.g. multiline find and replace, substitution etc.
@@ -118,7 +117,7 @@ the NAISS newsletter).
 File transfer is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/),
 but it is mentioned in the same newletter this course was part of (i.e.
-the NAISS newsletter). 
+the NAISS newsletter).
 
 Efficient vim is not among the courses at all.
 
@@ -136,7 +135,7 @@ This is not my session.
 I agree it would be (even more) interesting
 to look at research scripts.
 
-- [ ] Consider using real examples 
+- [ ] Consider using real examples
 
 - Advanced Bash and Linux of course! :)
 
@@ -148,7 +147,7 @@ R (and machine learning in R) is not among
 [the courses we link to](https://uppmax.github.io/linux-command-line-201/courses/).
 I am unsure if the R-MATLAB-Julia course is part of the NAISS newsletter.
 
--  [ ] Check if R-MATLAB-Julia course is part of the NAISS newsletter
+- [ ] Check if R-MATLAB-Julia course is part of the NAISS newsletter
 
 - Fortran course, Object-oriented-programming in Python course
 
@@ -170,7 +169,7 @@ Great!
 - More takeaway exercises
 
 The little time for exercises does not apply to me,
-as I had 5x more time for exercises. 
+as I had 5x more time for exercises.
 
 - Thanks
 
@@ -254,7 +253,7 @@ e.g. Command Line 301 will be a way forward here.
 This matches my ideas and I already suggested to replace `awk` by `sed`.
 Else I would consider following up on this, as I am unsure if the
 AWK book is good enough to keep: maybe I will add the `awk` commands
-needed to my course material. 
+needed to my course material.
 
 - I think everything was great considering how short the training event was.
   I would maybe separate the two days next time:

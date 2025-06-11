@@ -188,4 +188,4 @@ even though I agree with my choices in the moment.
 Self-grade: 6
 
 - [The full course reflection](../202506_course/README.md)
- 
+
