@@ -265,7 +265,7 @@ needed to my course material.
 
 Interesting idea. Let's ask
 
-- [ ] Suggest to add a empty day between the course days.
+- [Suggest to add a empty day between the course days](https://github.com/UPPMAX/linux-command-line-201/issues/21)
 
 ## Feedback in chat
 
