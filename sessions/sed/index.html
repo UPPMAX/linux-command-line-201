@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Linux tools (sed) - Intermediate bash/Linux</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_markdown_exec_pyodide.css" rel="stylesheet" />
+        <link href="../../assets/_markdown_exec_ansi.css" rel="stylesheet" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Linux tools (sed)";
+        var mkdocs_page_input_path = "sessions/sed.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../images/logo-cli-naiss.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Common</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../learning_outcomes/">Learning outcomes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course_dates/">Course dates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../schedule/">Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/">Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../evaluation/">Evaluation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 1 (smarter command line)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipe/">Linux pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wc_cut/">Linux tools (wc, cut)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../regular_expressions_and_grep/">Searching using regular expressions and grep</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../awk/">Using the programming language AWK</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 2 (smarter bash)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redirects/">Redirects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../env_vars/">Environment variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../symlinks/">Symbolic links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arch/">Archiving/compressing data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux tools (sed)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common__sed__options">Common sed options</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#commonly__used__regular__expression__meta__characters">Commonly used regular expression meta characters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#substitution__command">Substitution command</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other__common__commands">Other common commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using__the__d__command__to__filter__out__specific__lines">Using the d command to filter out specific lines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#filtering">Filtering</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#in-place__editing">In-place editing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qual/">Quality of life</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other teaching materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../books/">Books</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../courses/">Courses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../videos/">Videos</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../communication/">Communication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../evaluations/">Evaluations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lesson_plans/">Lesson plans</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../meeting_notes/">Meeting notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reflections/">Reflections</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Intermediate bash/Linux</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lessons Day 2 (smarter bash)</li>
+      <li class="breadcrumb-item active">Linux tools (sed)</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/blob/main/docs/sessions/sed.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">&para;</a></h1>
+<p>The command <code>sed</code> (stream editor) is one of the most powerful commands. It is used for textual processing - parsing and transforming text. It uses a simple, but compact programming language.</p>
+<p>After the programming language AWK was developed, <code>sed</code> and <code>awk</code> are often used together, particularly in scripts. Together they are commonly considered progenitors and inspiration for Perl.</p>
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="s1">&#39;command&#39;</span><span class="w"> </span><span class="o">[</span>inputfile...<span class="o">]</span>
+</span></code></pre></div>
+<p>where</p>
+<ul>
+<li><strong>options</strong> are optional flags that modify the behavior of the sed command</li>
+<li><strong>command</strong> is a command or sequence of commands to execute on the inputfile(s)</li>
+<li><strong>inputfile</strong> is one or more inputfiles that is to be processed</li>
+</ul>
+<h2 id="common__sed__options">Common <code>sed</code> options<a class="headerlink" href="#common__sed__options" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>-i</strong> - Edit the file in place without printing to the console (overwrite the file).</li>
+<li><strong>-n</strong> - Suppress automatic printing of lines.</li>
+<li><strong>-e</strong> - Allows multiple commands to be executed.</li>
+<li><strong>-f</strong> - Reads <code>sed</code> commands from a file instead of the command line.</li>
+<li><strong>-r</strong> - Enables extended regular expressions.</li>
+</ul>
+<h2 id="commonly__used__regular__expression__meta__characters">Commonly used regular expression meta characters<a class="headerlink" href="#commonly__used__regular__expression__meta__characters" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>caret (^)</strong> matches the beginning of the line.</li>
+<li><strong>dollar sign ($)</strong> matches the end of the line.</li>
+<li><strong>asterisk (*)</strong> matches zero or more occurrences of the previous character.</li>
+<li><strong>plus (+)</strong> matches one or more occurrence(s) of the previous character.</li>
+<li><strong>question mark (?)</strong> matches zero or one occurrence of the previous character.</li>
+<li><strong>dot (.)</strong> matches exactly one character.</li>
+</ul>
+<p>Some examples inspired by:</p>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/">https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sed">https://en.wikipedia.org/wiki/Sed</a></li>
+</ul>
+<h2 id="substitution__command">Substitution command<a class="headerlink" href="#substitution__command" title="Permanent link">&para;</a></h2>
+<p>This is probably what <code>sed</code> is most commonly used for: substitution. It is also the original motivation for creating it.</p>
+<p><strong>Syntax</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/regexp/replacement/g&#39;</span><span class="w"> </span>inputFileName<span class="w"> </span>&gt;<span class="w"> </span>outputFileName
+</span></code></pre></div>
+<ul>
+<li><strong>regexp</strong> is a regular expression (pattern) to be searched, including a text.</li>
+<li><strong>replacement</strong> is what should be replaced for the matched patterns - literal text or format string the characters <code>&amp;</code> for &ldquo;entire match&rdquo; or the special escape sequences <code>\1</code> through <code>\9</code> for the nth saved sub-expression.</li>
+<li><strong>inputFileName</strong> is the file(s) to be searched</li>
+<li><strong>outputFileName</strong> is the name(s) of the changed files - if not given the changed content is just shown on screen.</li>
+</ul>
+<p><strong>s</strong> stands for substitute, <strong>g</strong> for global (all instances), and <strong>/</strong> is the conventional delimiting symbol used.</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Replace all instances of &lsquo;cat&rsquo; with &lsquo;ferret&rsquo; and send to screen</p>
+<p>Use the file &ldquo;file1.txt&rdquo; in &ldquo;exercises -&gt; &ldquo;sed&rdquo;</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/cat/ferret/g&#39;</span><span class="w"> </span>file1.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Replace all instances of &lsquo;cat&rsquo; with &lsquo;ferret&rsquo; and write to a file</p>
+<p>Use the file &ldquo;file1.txt&rdquo; in &ldquo;exercises -&gt; &ldquo;sed&rdquo;</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/cat/ferret/g&#39;</span><span class="w"> </span>file1.txt<span class="w"> </span>&gt;<span class="w"> </span>output.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Replace the nth occurrence of a pattern in a line</p>
+<p>Let us change the 3rd occurrence in the same line of word to book in file3.txt</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/word/book/3&#39;</span><span class="w"> </span>file3.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Replace occurrences from n and the rest of the way</p>
+<p>Here from 3rd occurrence</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sed<span class="w"> </span><span class="s1">&#39;s/word/book/3g&#39;</span><span class="w"> </span>file3.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Replace only the occurrence of a string on a specific line</p>
+<p>This for line 3</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sed<span class="w"> </span><span class="s1">&#39;3 s/word/book/&#39;</span><span class="w"> </span>file3.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Put a parentheses around the first character of each word</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello I am learning more Linux&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/\(\b[A-Z]\)/\(\1\)/g&#39;</span>
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Replace all instances of &lsquo;cat&rsquo; or &lsquo;dog&rsquo; with &lsquo;cats&rsquo; or &lsquo;dogs&rsquo; - do not duplicate existing plurals</p>
+<p>Use all files named starting with &ldquo;file&rdquo; in the &ldquo;exercises&rdquo; -&gt; &ldquo;sed&rdquo; folder (but not subdirs). Here the changed text is just thrown to screen.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sed<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;s/(cat|dog)s?/\1s/g&quot;</span><span class="w"> </span>file*
+</span></code></pre></div>
+<ul>
+<li>(cat|dog) is the 1st (and only) saved sub-expression in the regexp, and \1 in the format string substitutes this into the output.</li>
+<li>You can see in the output that i.e. &ldquo;dogs&rdquo; did not get turned into &ldquo;dogss&rdquo;</li>
+<li>However, it did not catch things were for instance &ldquo;cat&rdquo; is in the middle of a word, like &ldquo;located&rdquo; which did get changed to &ldquo;locatsed&rdquo;</li>
+<li>This could be fixed with <code>sed -r "s/(' cat '|dog)s?/\1s/g" file*</code></li>
+</ul>
+</div>
+<h2 id="other__common__commands">Other common commands<a class="headerlink" href="#other__common__commands" title="Permanent link">&para;</a></h2>
+<p>Besides substitution, <code>sed</code> can do many other things. There are around 25 <code>sed</code> commands. Here we will only look at the command to filter out specific lines.</p>
+<h3 id="using__the__d__command__to__filter__out__specific__lines">Using the <code>d</code> command to filter out specific lines<a class="headerlink" href="#using__the__d__command__to__filter__out__specific__lines" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">filter lines that only contain spaces, or only contain the end of line character</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sed<span class="w"> </span><span class="s1">&#39;/^ *$/d&#39;</span><span class="w"> </span>inputFile
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deleting a specific line from a specific file</p>
+<p>Delete line 4</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sed<span class="w"> </span><span class="s1">&#39;4d&#39;</span><span class="w"> </span>file1.txt
+</span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Delete a line containing a matching pattern</p>
+<p>Lines matching the string &ldquo;cat&rdquo;</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sed<span class="w"> </span><span class="s1">&#39;/cat/d&#39;</span><span class="w"> </span>file1.txt
+</span></code></pre></div>
+</div>
+<h2 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h2>
+<p>It is also common to use <code>sed</code> as a filter, as part of a &ldquo;pipeline&rdquo;.</p>
+<p>In this example, the program &ldquo;data-generating-program&rdquo; is creating some data, but you named something wrong perhaps, and now you need to replace all instances of &ldquo;right&rdquo; with &ldquo;left&rdquo;:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>data-generating-program<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/right/left/g&#39;</span>
+</span></code></pre></div>
+<h2 id="in-place__editing">In-place editing<a class="headerlink" href="#in-place__editing" title="Permanent link">&para;</a></h2>
+<p>Using the <code>-i</code> option allows &ldquo;in-place&rdquo; editing instead of creating a new file with the editions (though in reality a temporary file is created in the background and then the original file is replaced by the temporary file).</p>
+<p><strong>Example - change cat to dog</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/cat/dog/&#39;</span><span class="w"> </span>file1.txt
+</span></code></pre></div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Keypoints</p>
+<ul>
+<li>we have learned about <code>sed</code> and some of its common commands</li>
+<li>we have used <code>sed</code> to replace strings matching a pattern</li>
+<li>we have used <code>sed</code> to delete specific lines</li>
+<li>we have learned about <code>sed</code> for filtering</li>
+<li>we have learned about <code>sed</code> in-place editing</li>
+</ul>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../arch/" class="btn btn-neutral float-left" title="Archiving/compressing data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../qual/" class="btn btn-neutral float-right" title="Quality of life">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../arch/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../qual/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
