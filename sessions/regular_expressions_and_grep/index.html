@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Searching using regular expressions and grep - Intermediate bash/Linux</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_markdown_exec_pyodide.css" rel="stylesheet" />
+        <link href="../../assets/_markdown_exec_ansi.css" rel="stylesheet" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Searching using regular expressions and grep";
+        var mkdocs_page_input_path = "sessions/regular_expressions_and_grep/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../images/logo-cli-naiss.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Common</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../learning_outcomes/">Learning outcomes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course_dates/">Course dates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../schedule/">Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/">Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../evaluation/">Evaluation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 1 (smarter command line)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipe/">Linux pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wc_cut/">Linux tools (wc, cut)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Searching using regular expressions and grep</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why__use__regular__expressions">Why use regular expressions?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why__use__grep">Why use grep?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercise__1__use__the__grep__manual">Exercise 1: use the grep manual</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#exercise__11__view__the__grep__manual">Exercise 1.1: view the grep manual</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exercise__12__what__does__grep__do">Exercise 1.2: what does grep do?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exercise__13__what__are__the__other__greps">Exercise 1.3: what are the other greps?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercise__2__use__grep__with__a__pipe">Exercise 2: use grep with a pipe</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#exercise__21__read__a__command__that__has__a__grep__with__a__pipe">Exercise 2.1: read a command that has a grep with a pipe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exercise__22__run__a__command__that__has__a__grep__with__a__pipe">Exercise 2.2: run a command that has a grep with a pipe</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercise__3__practice__regular__expressions">Exercise 3: practice regular expressions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#optional__exercise__4__can__grep__do">(optional) Exercise 4: can grep do &hellip;?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusions">Conclusions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next__session">Next session</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../awk/">Using the programming language AWK</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 2 (smarter bash)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redirects/">Redirects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../env_vars/">Environment variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../symlinks/">Symbolic links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arch/">Archiving/compressing data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sed/">Linux tools (sed)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qual/">Quality of life</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other teaching materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../books/">Books</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../courses/">Courses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../videos/">Videos</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../communication/">Communication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../evaluations/">Evaluations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lesson_plans/">Lesson plans</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../meeting_notes/">Meeting notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reflections/">Reflections</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Intermediate bash/Linux</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lessons Day 1 (smarter command line)</li>
+      <li class="breadcrumb-item active">Searching using regular expressions and grep</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/blob/main/docs/sessions/regular_expressions_and_grep/README.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="regular__expressions__and__grep">Regular expressions and <code>grep</code><a class="headerlink" href="#regular__expressions__and__grep" title="Permanent link">&para;</a></h1>
+<details class="- note">
+<summary>Need a video?</summary>
+<ul>
+<li><a href="https://youtu.be/sh52duacLWY">Introduction</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=155">Exercise 1</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=349">Exercise 2</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=455">Exercise 3</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=875">Exercise 4</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=1279">Feedback</a></li>
+<li><a href="https://youtu.be/sh52duacLWY?t=1486">Conclusion</a></li>
+</ul>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Learning outcomes</p>
+<ul>
+<li>Learners know there are multiple flavours of regular expressions</li>
+<li>Learners can use <code>.</code>, <code>*</code>, <code>+</code>, <code>?</code>, <code>[]</code>, <code>[^]</code>, <code>{}</code>, <code>()</code> in regular expressions</li>
+<li>Learners can use <code>grep</code></li>
+<li>Learners have practiced using the <code>grep</code> manual</li>
+<li>Learners can use <code>grep</code> to search for a regular expression</li>
+<li>Learners can send text to <code>grep</code> using a pipe</li>
+<li>(optional) Learners have seen the flexibility of <code>grep</code></li>
+</ul>
+</div>
+<details class="- note">
+<summary>For teachers</summary>
+<p>Lesson plan:</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Minutes</th>
+<th>Duration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:20-10:30</td>
+<td>0-10</td>
+<td>10</td>
+<td>Prior</td>
+</tr>
+<tr>
+<td>10:30-10:35</td>
+<td>10-15</td>
+<td>5</td>
+<td>Present</td>
+</tr>
+<tr>
+<td>10:35-10:55</td>
+<td>15-35</td>
+<td>20</td>
+<td>Challenge</td>
+</tr>
+<tr>
+<td>10:55-11:05</td>
+<td>35-45</td>
+<td>10</td>
+<td>Feedback and conclusion</td>
+</tr>
+</tbody>
+</table>
+<p>Prior:</p>
+<ul>
+<li>How would tell an alien how a human name is made up
+  out of English characters?</li>
+<li>And a human phone number?</li>
+<li>Are there more things that have certain features like that?</li>
+<li>What is a regular expression?</li>
+<li>What is <code>grep</code>?</li>
+<li>What is GNU?</li>
+<li>In the context of software, what is a parser?</li>
+<li>In the context of command-line tools, what is a filter?</li>
+</ul>
+</details>
+<h2 id="why__use__regular__expressions">Why use regular expressions?<a class="headerlink" href="#why__use__regular__expressions" title="Permanent link">&para;</a></h2>
+<p>Regular expressions are used to filter for text that contains a pattern,
+such as a first name, a last name, a phone number, etc.</p>
+<p><img alt="What regular expressions are used for" src="why_regular_expressions.png" /></p>
+<h2 id="why__use__grep">Why use <code>grep</code>?<a class="headerlink" href="#why__use__grep" title="Permanent link">&para;</a></h2>
+<p>The tool <code>grep</code> comes installed with Linux.</p>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h2 id="exercise__1__use__the__grep__manual">Exercise 1: use the <code>grep</code> manual<a class="headerlink" href="#exercise__1__use__the__grep__manual" title="Permanent link">&para;</a></h2>
+<p>In this exercise, we&rsquo;ll use the <code>grep</code> manual.</p>
+<hr />
+<h3 id="exercise__11__view__the__grep__manual">Exercise 1.1: view the <code>grep</code> manual<a class="headerlink" href="#exercise__11__view__the__grep__manual" title="Permanent link">&para;</a></h3>
+<p>View the <code>grep</code> manual.</p>
+<p>Tip: <code>man</code> is the command to view a manual.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>In the terminal, type:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>man<span class="w"> </span>grep
+</span></code></pre></div>
+<p>Use the arrow keys to navigate and <code>q</code> to quit</p>
+</details>
+<hr />
+<h3 id="exercise__12__what__does__grep__do">Exercise 1.2: what does <code>grep</code> do?<a class="headerlink" href="#exercise__12__what__does__grep__do" title="Permanent link">&para;</a></h3>
+<p>According to the <code>grep</code> manual, <strong>in a one-liner</strong>, what does <code>grep</code> do?</p>
+<p>Tip: it is at the top.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p><code>grep</code> is a tool to &lsquo;print lines that match patterns&rsquo;
+It is in the fourth line:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">NAME</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">       grep, egrep, fgrep, rgrep - print lines that match patterns</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h3 id="exercise__13__what__are__the__other__greps">Exercise 1.3: what are the other <code>grep</code>s?<a class="headerlink" href="#exercise__13__what__are__the__other__greps" title="Permanent link">&para;</a></h3>
+<p>In the fourth line of the <code>grep</code> manual, the
+<code>grep</code>-like tools <code>egrep</code>, <code>fgrep</code> and <code>rgrep</code> are mentioned.
+What are these?</p>
+<p>Tips:</p>
+<ul>
+<li>it is in the first two screens.</li>
+<li>The first part of the answer can be found
+  in the <code>DESCRIPTION</code> section,</li>
+<li>The second part of the answer can be found
+  in the <code>OPTIONS | Pattern syntax</code> section</li>
+</ul>
+<details class="tip">
+<summary>Answer</summary>
+<p>The first part of the answer is in the description:</p>
+<p><!-- markdownlint-disable MD013 --><!-- Answer will be shown as-is, hence will break 80 characters per line --></p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">DESCRIPTION</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">       grep  searches  for  PATTERNS  in  each  FILE. [...]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">       [...]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">       Debian also includes the variant programs egrep, fgrep and rgrep.  These programs</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="go">       are the same as grep -E, grep -F, and grep -r, respectively.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="go">      [...]</span>
+</span></code></pre></div>
+<!-- markdownlint-enable MD013 -->
+<p>Searching for <code>-E</code>, <code>-F</code> and <code>-r</code> takes us to the
+&lsquo;OPTIONS | Pattern Syntax&rsquo; subsection:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">Pattern Syntax</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">   -E, --extended-regexp</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">          Interpret PATTERNS as extended regular expressions [...].</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="go">   [...]</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="go">   -G, --basic-regexp</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="go">          Interpret  PATTERNS  as basic regular expressions [...].</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="go">   -P, --perl-regexp</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="go">          Interpret PATTERNS as Perl-compatible regular expressions [...].</span>
+</span></code></pre></div>
+<p>We can conclude from this that the different <code>grep</code>s have different types
+of regular expressions, such as a regular, extended and Perl-compatible
+regular expressions.</p>
+</details>
+<hr />
+<h2 id="exercise__2__use__grep__with__a__pipe">Exercise 2: use <code>grep</code> with a pipe<a class="headerlink" href="#exercise__2__use__grep__with__a__pipe" title="Permanent link">&para;</a></h2>
+<p>In this exercise, we use <code>grep</code> with a pipe.</p>
+<h3 id="exercise__21__read__a__command__that__has__a__grep__with__a__pipe">Exercise 2.1: read a command that has a <code>grep</code> with a pipe<a class="headerlink" href="#exercise__21__read__a__command__that__has__a__grep__with__a__pipe" title="Permanent link">&para;</a></h3>
+<p>How would you explain the command below in English?
+Use &lsquo;some regular expression&rsquo; if you see a regular expression.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>man<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^[A-Z]&quot;</span>
+</span></code></pre></div>
+<details class="tip">
+<summary>Answer</summary>
+<p>The manual of <code>grep</code>, send it to <code>grep</code> and let it filter for
+some regular expression.</p>
+</details>
+<hr />
+<h3 id="exercise__22__run__a__command__that__has__a__grep__with__a__pipe">Exercise 2.2: run a command that has a <code>grep</code> with a pipe<a class="headerlink" href="#exercise__22__run__a__command__that__has__a__grep__with__a__pipe" title="Permanent link">&para;</a></h3>
+<p>Run the command above. What does it show on screen?
+What did that regular expression do?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>This is what is shown on screen:</p>
+<p><!-- markdownlint-disable MD013 --><!-- Answer will be shown as-is, hence will break 80 characters per line --></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>man<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^[A-Z]&quot;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>GREP<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w">                               </span>User<span class="w"> </span>Commands<span class="w">                              </span>GREP<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>NAME
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>SYNOPSIS
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>DESCRIPTION
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>OPTIONS
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>REGULAR<span class="w"> </span>EXPRESSIONS
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>EXIT<span class="w"> </span>STATUS
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>ENVIRONMENT
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>NOTES
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>COPYRIGHT
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>BUGS
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>EXAMPLE
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>SEE<span class="w"> </span>ALSO
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>GNU<span class="w"> </span>grep<span class="w"> </span><span class="m">3</span>.11<span class="w">                          </span><span class="m">2019</span>-12-29<span class="w">                                </span>GREP<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+</span></code></pre></div>
+<p>It shows all lines that start with an uppercase character.</p>
+<!-- markdownlint-enable MD013 -->
+</details>
+<hr />
+<h2 id="exercise__3__practice__regular__expressions">Exercise 3: practice regular expressions<a class="headerlink" href="#exercise__3__practice__regular__expressions" title="Permanent link">&para;</a></h2>
+<p>Go to <a href="https://www.regexone.com/">https://www.regexone.com/</a>
+and do lessons 1 to (and including) 11.</p>
+<details class="- info">
+<summary>Overview of these lessons</summary>
+<p>Here is an overview of the regular expression patterns in each lesson:</p>
+<table>
+<thead>
+<tr>
+<th>Lesson</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td><code>\d</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>[^]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>[A-Z]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>*</code> (Kleene star) and <code>+</code> (Kleene plus)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>?</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>\s</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>^</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h2 id="optional__exercise__4__can__grep__do">(optional) Exercise 4: can <code>grep</code> do &hellip;?<a class="headerlink" href="#optional__exercise__4__can__grep__do" title="Permanent link">&para;</a></h2>
+<p>Here we&rsquo;ll experience the flexibility of <code>grep</code>.
+Pick those topics you are interested in.</p>
+<details class="seealso">
+<summary>(optional) Exercise 4.1: Can <code>grep</code> do a case-insensitive match?</summary>
+<p>Can <code>grep</code> do a case-insensitive match?</p>
+<p>The answer is: yes!</p>
+<p>Use the <code>grep</code> manual to answer this question.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes.</p>
+<p>The <code>--ignore-case</code> allows you
+to let <code>grep</code> do a case-insensitive search.</p>
+<p>For example, in the command below,
+the word &lsquo;options&rsquo; is searched in the manual
+in a case-insensitive manner.</p>
+<p><!-- markdownlint-disable MD013 --><!-- Verbatim text will be shown as-is, hence will break 80 characters per line --></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>man<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>--ignore-case<span class="w"> </span><span class="s2">&quot;options&quot;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>OPTIONS
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">              </span>use<span class="w"> </span>-i,<span class="w"> </span>to<span class="w"> </span>cancel<span class="w"> </span>its<span class="w"> </span>effects<span class="w"> </span>because<span class="w"> </span>the<span class="w"> </span>two<span class="w"> </span>options<span class="w"> </span>override<span class="w"> </span>each<span class="w"> </span>other.
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">              </span>options<span class="w"> </span>that<span class="w"> </span>prefix<span class="w"> </span>their<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>actual<span class="w"> </span>content:<span class="w"> </span>-H,-n,<span class="w"> </span>and<span class="w"> </span>-b.<span class="w">  </span>In
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">              </span>options<span class="w"> </span>are<span class="w"> </span>given,<span class="w"> </span>the<span class="w">  </span>last<span class="w">  </span>matching<span class="w">  </span>one<span class="w">  </span>wins.<span class="w">   </span>If<span class="w">  </span>no<span class="w">  </span>--include<span class="w">  </span>or
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">              </span>--exclude<span class="w">  </span>options<span class="w">  </span>match,<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>is<span class="w"> </span>included<span class="w"> </span>unless<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>such<span class="w"> </span>option
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">   </span>Other<span class="w"> </span>Options
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">              </span>other<span class="w"> </span>GNU<span class="w"> </span>programs.<span class="w">  </span>POSIX<span class="w"> </span>requires<span class="w"> </span>that<span class="w"> </span>options<span class="w"> </span>that<span class="w">  </span>follow<span class="w">  </span>file<span class="w">  </span>names
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">              </span>must<span class="w">  </span>be<span class="w">  </span>treated<span class="w">  </span>as<span class="w"> </span>file<span class="w"> </span>names<span class="p">;</span><span class="w"> </span>by<span class="w"> </span>default,<span class="w"> </span>such<span class="w"> </span>options<span class="w"> </span>are<span class="w"> </span>permuted<span class="w"> </span>to
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">              </span>the<span class="w"> </span>front<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>operand<span class="w"> </span>list<span class="w"> </span>and<span class="w"> </span>are<span class="w"> </span>treated<span class="w">  </span>as<span class="w">  </span>options.<span class="w">   </span>Also,<span class="w">  </span>POSIX
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">              </span>requires<span class="w">  </span>that<span class="w">  </span>unrecognized<span class="w">  </span>options<span class="w"> </span>be<span class="w"> </span>diagnosed<span class="w"> </span>as<span class="w"> </span>“illegal”,<span class="w"> </span>but<span class="w"> </span>since
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">       </span>treats<span class="w"> </span>expansions<span class="w"> </span>of<span class="w"> </span>“*g*.h”<span class="w"> </span>starting<span class="w"> </span>with<span class="w"> </span>“-”<span class="w"> </span>as<span class="w"> </span>file<span class="w"> </span>names<span class="w"> </span>not<span class="w"> </span>options,<span class="w"> </span>and<span class="w"> </span>the
+</span></code></pre></div>
+<!-- markdownlint-enable MD013 -->
+</details>
+</details>
+<details class="seealso">
+<summary>(optional) Exercise 4.2: Can <code>grep</code> show the lines that do not match?</summary>
+<p>Can <code>grep</code> show the lines that <strong>do not</strong> match?</p>
+<p>The answer is: yes!</p>
+<p>Use the <code>grep</code> manual to answer this question.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes.</p>
+<p>The <code>--invert-match</code> allows you
+to let <code>grep</code> show lines that do not match.</p>
+<p>For example, in the command below,
+the <code>grep</code> manual is search for lines that <em>do not</em> have a space.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>man<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>--invert-match<span class="w"> </span><span class="s2">&quot; &quot;</span>
+</span></code></pre></div>
+</details>
+</details>
+<details class="seealso">
+<summary>(optional) Exercise 4.3: Can <code>grep</code> detect lines in multiple files?</summary>
+<p>Can <code>grep</code> detect lines in multiple files?</p>
+<p>The answer is: yes!</p>
+<p>Use the <code>grep</code> manual to answer this question.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes.</p>
+<p>The <code>--recursive</code> allows you to let <code>grep</code>
+search in multiple files.</p>
+<p>For example, in the commands below,
+the folder <code>/etc</code> is searched for files that contain the text &lsquo;ubuntu&rsquo;:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>/etc
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>grep<span class="w"> </span>--recursive<span class="w"> </span><span class="s2">&quot;ubuntu&quot;</span>
+</span></code></pre></div>
+</details>
+</details>
+<details class="seealso">
+<summary>(optional) Exercise 4.4: Can <code>grep</code> detect which files contain a match?</summary>
+<p>Can <code>grep</code> detect which files contain a match?</p>
+<p>The answer is: yes!</p>
+<p>Use the <code>grep</code> manual to answer this question.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes.</p>
+<p>The <code>--files-with-matches</code> allows you to let <code>grep</code>
+output which files contained a match.</p>
+<p>For example, in the commands below,
+the folder <code>/etc</code> is searched for files that contain the text &lsquo;ubuntu&rsquo;,
+showing the files in which a match is found:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/etc
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>grep<span class="w"> </span>--recursive<span class="w"> </span>--files-with-matches<span class="w"> </span><span class="s2">&quot;ubuntu&quot;</span>
+</span></code></pre></div>
+</details>
+</details>
+<!-- markdownlint-disable MD013 -->
+<details class="seealso">
+<summary>(optional) Exercise 4.5: Can <code>grep</code> detect which files-with-a-certain-extension contain a match?</summary>
+<!-- markdownlint-enable MD013 -->
+<p>Can <code>grep</code> detect which files-with-a-certain-extension contain a match?</p>
+<p>The answer is: yes!</p>
+<p>Use the <code>grep</code> manual to answer this question.</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes.</p>
+<p>The <code>--include</code> allows you to let <code>grep</code>
+only include files in its</p>
+<p>For example, in the commands below,
+the folder <code>/etc</code> is searched in configuration (<code>.conf</code>)
+files that contain the text &lsquo;ubuntu&rsquo;.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>/etc
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>grep<span class="w"> </span>--recursive<span class="w"> </span><span class="s2">&quot;ubuntu&quot;</span><span class="w"> </span>--include<span class="w"> </span><span class="s2">&quot;*.conf&quot;</span>
+</span></code></pre></div>
+</details>
+</details>
+<details class="note">
+<summary>For teachers</summary>
+<p>How many regular expression dialects exist?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>At least 3:</p>
+<ul>
+<li><code>grep</code> (basic)</li>
+<li><code>egrep</code> (extended)</li>
+<li><code>pgrep</code> (Perl-like)</li>
+</ul>
+</details>
+<hr />
+<p>We have sent the <code>grep</code> manual to <code>grep</code> using a pipe.
+Can we use any text?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes: the <code>grep</code> manual is just text like any other.</p>
+</details>
+<hr />
+<p>Can we send the output of <code>grep</code> to <code>grep</code>?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Yes: the <code>grep</code> output is just text like any other.</p>
+</details>
+<hr />
+<p>What is a Kleene star and what does it do?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>The Kleene star is the regular expression pattern <code>*</code>.
+In English it would be read as: &lsquo;the thing before it
+repeated at least zero times&rsquo;.</p>
+</details>
+<hr />
+<p>What is the difference between <code>[^A-Z]</code> and <code>^[A-Z]</code>?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>The first regular expression means: &lsquo;All characters, except all uppercase
+letters&rsquo;.</p>
+<p>The second regular expression means: &lsquo;At the start of a line, any uppercase
+letter&rsquo;.</p>
+</details>
+<hr />
+<p>What is regular expression for &lsquo;any line of text&rsquo; (including empty ones)?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>The regular expression for &lsquo;any line of text&rsquo; is <code>.*</code>,
+as <code>.</code> means &lsquo;Any character&rsquo; and <code>*</code> means &lsquo;repeated at least zero times&rsquo;.</p>
+</details>
+<hr />
+<p>Why does <code>man grep | grep .*</code> not work, where <code>man grep | grep ".*"</code> does?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>The double-quotes assure that the regular expression patter <code>.*</code> is
+read as such.</p>
+<p>The &lsquo;naked&rsquo; <code>.*</code> is a <code>bash</code> expression of &lsquo;all hidden files&rsquo;,
+as hidden files start with a <code>.</code> (e.g. <code>ls .*</code>).
+This meaning can change depending on context (e.g. <code>cat .*</code>).</p>
+</details>
+<hr />
+<p>Knowing that <code>grep --ignore-case</code> ignores case, and <code>grep --invert-match</code>
+inverts the match (i.e. showing non-matching lines), how to combine these
+in the same command?</p>
+<details class="tip">
+<summary>Answer</summary>
+<p>Write these one after the other:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grep<span class="w"> </span>--ignore-case<span class="w"> </span>--invert-match
+</span></code></pre></div>
+<p>For example, the command below shows all lines in the <code>grep</code> manual
+that do not have the lower-case, nor upper-case letters &lsquo;a&rsquo; to
+(and including) &lsquo;f&rsquo;.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>man<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>--ignore-case<span class="w"> </span>--invert-match<span class="w"> </span><span class="s2">&quot;[a-f]&quot;</span>
+</span></code></pre></div>
+</details>
+</details>
+<hr />
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Conclusions</p>
+<ul>
+<li><code>grep</code> is used for pattern matching</li>
+<li><code>grep</code> has a useful manual</li>
+<li><code>grep</code> is a filter</li>
+<li><code>grep</code> works well with pipes</li>
+<li>There are multiple regular expression dialects</li>
+<li>The pattern <code>.</code>, <code>[]</code> and <code>[^]</code> are used
+  to (not) match a (set of) characters</li>
+<li>The pattern <code>*</code>, <code>+</code>, <code>?</code> and <code>{}</code> are used to indicate an amount</li>
+<li>The pattern <code>()</code> is used to capture a set of a match</li>
+<li>(optional) <code>grep</code> can do a lot of different things</li>
+</ul>
+</div>
+<hr />
+<h2 id="next__session">Next session<a class="headerlink" href="#next__session" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Next session</p>
+<ul>
+<li><code>grep</code> is not a programming language: use <code>awk</code> instead.</li>
+</ul>
+</div>
+<!-- Indeed a long title, hence will break 80 characters per line -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../wc_cut/" class="btn btn-neutral float-left" title="Linux tools (wc, cut)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../awk/" class="btn btn-neutral float-right" title="Using the programming language AWK">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../wc_cut/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../awk/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
