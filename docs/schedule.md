@@ -21,7 +21,7 @@ tags:
 | 10:05-10:20 | Break                                                                          | .       |
 | 10:20-11:05 | [Regular expressions, `grep`](sessions/regular_expressions_and_grep/README.md) | R       |
 | 11:05-11:20 | Break                                                                          | .       |
-| 11:20-12:00 | [`awk`](sessions/awk/README.md)                                                | R       |
+| 11:20-12:00 | `sed` and mention of AWK                                                       | R       |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -35,7 +35,7 @@ tags:
 | 10:00-10:15 | Break                                           | .       |
 | 10:15-11:00 | Advanced redirect, environment variables, links | B       |
 | 11:00-11:15 | Break                                           | .       |
-| 11:15-11:53 | Quality of life, compressing, `sed`             | B       |
+| 11:15-11:53 | Quality of life, compressing,                   | B       |
 | 11:53-12:00 | [Evaluation](evaluation.md)                     | R       |
 
 - Teachers: `B`: Birgitte Brydsö, `R`: Richèl Bilderbeek
