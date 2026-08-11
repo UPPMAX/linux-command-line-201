@@ -54,7 +54,7 @@ Yay :-) .
 Great
 
 - It was a bit fast.
-  I think it would benefit from going thorugh the exercises together briefly
+  I think it would benefit from going through the exercises together briefly
   after we have done them each, to discuss any questions/issues in the group.
 
 Yes, I agree I should practice my Feedback more.

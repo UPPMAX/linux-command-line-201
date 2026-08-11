@@ -23,10 +23,10 @@
 
 ### [Pace](pace.txt)
 
-- Richael is a very nice teacher
+- Richel is a very nice teacher
 - Great
 - It was a bit fast.
-  I think it would benefit from going thorugh the exercises together briefly
+  I think it would benefit from going through the exercises together briefly
   after we have done them each, to discuss any questions/issues in the group.
 - First it was i a bit fast but then it was better-
 - Overall good but as a first timer I need to go away and consolidate
