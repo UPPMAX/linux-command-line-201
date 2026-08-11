@@ -24,7 +24,7 @@ that this is their first time creating a Bash
 script. This means they did not even remember
 when it was taught twice before! The other 1 learner
 was already experienced in Bash, so I did not ask
-her if she remembered the sessions on Bash. 
+her if she remembered the sessions on Bash.
 
 - [x] Share with BB
 
@@ -87,7 +87,7 @@ Here I go through these suggestions:
   this is an interesting idea,
   now we do this in a lot of courses (e.g. HPC Python, or Intro to Bianca),
   but not as a standalone course
-- job submission scripts: 
+- job submission scripts:
   we do this in all courses, but not as a standalone course
 - environment modules: no idea
 - data processing with grep/sed/awk:
@@ -97,7 +97,7 @@ Here I go through these suggestions:
 - practical examples for scientific computing:
   we do this in some NBIS courses
 
-- [ ] Consider 'Programming Formalisms for HPC' 
+- [ ] Consider 'Programming Formalisms for HPC'
 
 Back the suggestions by the learners!
 
@@ -109,7 +109,7 @@ This is [already considered](https://github.com/UPPMAX/linux-command-line-102/is
 
 We teach some of these already.
 
-- [ ] Consider 'Docker for HPC' 
+- [ ] Consider 'Docker for HPC'
 
 ### [Other comments](../../evaluations/20260603/comments.txt)
 

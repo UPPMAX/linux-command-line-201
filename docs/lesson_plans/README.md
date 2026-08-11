@@ -10,6 +10,7 @@ Here are the lesson plans of this course:
 | 2.2 | 2025-12-05, Day 2  | [Lesson plan](20251205/README.md) |
 | 3   | 2026-02-04, both   | [Lesson plan](20260204/README.md) |
 | 4   | 2026-06-03, both   | [Lesson plan](20260603/README.md) |
+| 5   | 2026-09-16, both   | [Lesson plan](20260916/README.md) |
 
 - `No`: `x` means 'the full course iteration `x`, `x.y` denotes
   'the `y'th` part of course iteration `x`
